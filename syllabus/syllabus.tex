@@ -1,0 +1,170 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{fancyvrb}
+\usepackage{xcolor}
+
+\newcommand{\nop}[1]{}
+
+\begin{document}
+
+
+\centerline{\Large \bf CSCI 305: Analysis of Algorithms I}
+
+\centerline{\bf Syllabus,  Spring, 2018}
+
+\begin{description}
+
+\item[Instructor:] Geoffrey Matthews, x3797,
+ geoffrey dot matthews at wwu dot edu
+
+\item[Office hours:] MTWF 10:00-10:50, CF 469
+
+\item[Lectures:] MTWF 12:00-12:50am, CF 227
+
+\item [Webpages:] \mbox{}\begin{itemize}
+\item\url{https://wwu.instructure.com} 
+\item\url{https://github.com/geofmatthews/csci305}
+\end{itemize}
+
+\item
+[Catalog Description:] Introduction to the analysis of algorithms and
+data structures in a mathematically rigorous fashion. Mathematical
+fundamentals, counting, discrete probability, asymptotic notation,
+recurrences, loop invariants. Worst-case, probabilistic and amortized
+analysis techniques applied to sorting algorithms and classic data
+structures such as heaps, trees and hash tables. Design techniques
+such as branch and bound, divide and conquer, will be introduced as
+will correctness proofs for algorithms.
+
+\item[Course Outcomes:] On completion of this course students will
+  demonstrate:
+  \begin{itemize}
+\item
+Basic understanding of the mathematical concepts of asymptotic
+notation, recurrence relations 
+and loop invariants.
+\item
+ Basic understanding of worst-case, probabilistic and amortized
+analysis techniques.
+\item
+ Thorough understanding of the complexity of sorting algorithms and
+common data structures, 
+such as heaps, trees and hash tables.
+\item
+   Thorough understanding of divide and conquer.
+  \item
+ Basic understanding of the formulation and analysis of probabilistic
+algorithms.
+\item
+ The ability to analyze and formulate solutions for abstract
+problems.
+\item
+ The ability to derive the time and space complexity of basic
+algorithms.
+\item
+ The ability to use mathematical reasoning in correctness proofs of
+algorithms.
+  \end{itemize}
+  
+
+  \item[Text:] {\em Introduction to Algorithms,} 3rd ed., Cormen,
+    Leiserson, Rivest, and Stein.
+
+
+\item[Quizzes:] Except for the first and last week of class, and the
+  week of the midterm, there will be a quiz every Friday.  There will
+  be no excused absenses for the quizzes, but the two lowest quiz
+  scores will be dropped.
+
+\item[Exams:] A midterm and a final, according to the schedule below.
+  The final will be cumulative.
+
+  Exams are closed book, with the exception that you may consult two
+  pieces of paper during the exam.  You may print or write whatever
+  you wish on these pages.
+
+  If you have to miss the midterm exam, notify me as soon as
+  possible.  I will handle each case individually.
+
+\item[Homework:] Homework must be typeset using \LaTeX.  The easiest
+  way to get started is using one of the online \LaTeX\ tools, such as
+  \url{https://www.overleaf.com/}.
+
+   Homework must be submitted to canvas by midnight of the due date.
+   Late homework will not be accepted.  There will always be
+   sufficient time given to complete the homework in a timely manner
+   if you don't wait to the last night.
+
+   Homework may not be graded promptly, but solutions will be posted
+   online shortly after the due date.  Only a subset of the submitted
+   problems will be graded.
+
+   There may be an assignment due during dead week.
+
+ \item[Assessment:] Assessment will be based on homework, quizzes, the
+   midterm, and the final.  There are no extra credit opportunities in
+   this class.  Assignment of $\pm$ grades is at the discretion of the
+   instructor. 
+
+   \begin{tabular}{|c|c|c|c|}\hline
+     Homework & Quizzes & Midterm & Final\\\hline
+       20\% & 20\% & 25\%& 35\%\\\hline
+   \end{tabular}
+   \hfill
+   \begin{tabular}{|c|c|c|c|c|}\hline
+     A & B & C & D & F\\\hline
+    100-90& 89-80 & 79-70 & 69-60 & 59-0\\\hline
+   \end{tabular}
+
+
+\item [Schedule:]\mbox{}
+
+\begin{tabular}{r|ll}                      
+     Week & Reading & Important dates \\\hline  
+     April 1--7& 1,2,A\\
+     April 8--14& 3\\
+     April 15--21 & 4\\
+     April 22--28 & 5,C\\
+     April 29--May 5 & 6,7\\
+     May 6--12 && Midterm, Wednesday, May 9\\
+     May 13--19 & 8 (\S 1,2,3) \\ 
+     May 20--26 & 11 (\S 1,2)\\
+     May 27--June 2 & 12 (\S 1,2,3) & Monday, May 28, Holiday\\
+     June 3--9 &17 (\S 1,2,3)\\
+     June 10--17 && Final Exam, Tuesday, June 12, 8:00am \\
+\end{tabular}
+
+
+\item [Academic dishonesty:] Academic dishonesty policy and
+  procedure is discussed in the University Catalog, Appendix D.  All
+  students should read this section of the catalog.  Academic
+  dishonesty consists of misrepresentation by deception or other
+  fraudulent means.  In computer science courses this frequently takes
+  the form of copying another's program, either a fellow student's
+  program, or copying one from the web.  Due diligence should be
+  exercised in the labs at all times, since both copying and letting
+  someone else copy your program are equally culpable.  Do not walk
+  away from your computer in the lab without logging out or locking
+  the screen.  Do not print out code and then throw it away in the lab
+  trash cans. Do not share files, even if it is just to ``show them
+  something.''  Describe it in words, or talk to them in person, never
+  share code.
+
+\item [Collaboration:] Collaboration with your fellow students is
+  a good way to learn.  Feel free to share ideas, solve problems, and
+  discuss your programs with other students.  However, collaboration
+  is {\em not} copying.  All code should be original.  Remember the
+  \fbox{\bf Long Term Memory Rule}: After discussing homework with
+  another student, each of you must destroy all written notes,
+  pictures, files that you shared, erase the board, {\em
+    etc.}.  After that, you must watch a rerun of {\em the Simpson's},
+  play a round of ping-pong, go for a walk, or do something else
+  unrelated, for half an hour.  Then you can take the knowledge you
+  gained from another student and put it to work, since it is now not
+  copying, but learning.  You have made it your own.
+
+\end{description}
+
+\end{document}
