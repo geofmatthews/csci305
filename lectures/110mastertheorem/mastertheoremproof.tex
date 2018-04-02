@@ -1,0 +1,266 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\title{Proof of Master Theorem}
+\author{Geoffrey Matthews}
+\begin{document}
+\maketitle
+\centerline{\Large $T(n) = 3T(n/4) + cn^2$}
+\hrulefill
+
+\includegraphics[width=\textwidth]{Fig-4-5.pdf}
+
+
+\section{Divide and Conquer Recurrence}
+Suppose that $a\geq 1$ and $b\geq 1$ are constants, let $f(n)$ be a
+function, and let $T(n)$ be defined on natural numbers with
+the recurrence:
+\LARGE
+\begin{align}
+T(n) = aT\left(\frac{n}{b}\right) + f(n)
+\end{align}
+\normalsize
+Let's assume $n$ is a power of $b$, so that
+\LARGE
+\begin{align}
+n &= b^k\\
+k&=\log_b(n)\end{align}
+\normalsize
+Now 
+let's see what we get by trying to spell out terms and then cancel:
+\LARGE
+\begin{align}
+T(b^k) &= aT(b^{k-1}) + f(b^k)\\
+aT(b^{k-1})
+&=
+a^2T(b^{k-2}) + af(b^{k-1})
+\\
+a^2T(b^{k-2})
+&=
+a^3T(b^{k-3}) + a^2f(b^{k-2})
+\\
+&\ldots
+\\
+a^{k-1}T(b^{1})
+&=
+a^kT(1) + a^{k-1}f(b)
+\end{align}
+\normalsize
+Adding up both sides while cancelling terms, we get
+\LARGE
+\begin{align}
+T(b^k) &= a^kT(1) + \sum_{i=1}^{k} a^{k-i}f(b^{i})
+\\
+&=
+a^{\log_b(n)}T(1) + \sum_{i=1}^{\log_b(n)} a^{k-i}f(b^{i})
+\\
+&=
+n^{\log_b(a)}T(1) + \sum_{i=1}^{\log_b(n)} a^{k-i}f(b^{i}) \label{tcomplexity}
+\end{align}
+\normalsize
+Since $T(1)$ will be a constant, the complexity of the whole thing
+depends on whether 
+\LARGE
+\begin{align} n^{\log_b(a)}\label{base}\end{align}
+\normalsize
+grows faster or slower than
+\LARGE
+\begin{align}
+  \sum_{i=1}^{\log_b(n)} a^{k-i}f(b^{i}) \label{expression1}
+\end{align}
+\normalsize
+Note that expression \ref{expression1}\ can be rewritten as
+\LARGE
+\begin{align}
+    \sum_{i=1}^{\log_b(n)} a^{k-i}f(b^{i})
+  &=   \sum_{i=0}^{\log_b(n)-1} a^{i}f(b^{k-i}) \\
+  &=   \sum_{i=0}^{\log_b(n)-1} a^{i}f\left(\frac{b^{k}}{b^{i}}\right)\\
+  &=   \sum_{i=0}^{\log_b(n)-1} a^{i}f\left(\frac{n}{b^{i}}\right)
+\label{expression2}
+\end{align}
+\normalsize
+Let's see what we can find out about this expression, using either
+\ref{expression1}\ or \ref{expression2}, and how it compares to
+\ref{base}. 
+
+\pagebreak
+\section{$f(n) = \Theta\left(n^{\log_b(a)}\right)$}
+Let's first suppose
+\LARGE
+\begin{align}
+  f(n) &= \Theta\left(n^{\log_b(a)}\right) \label{assumption1}
+\end{align}
+\normalsize
+then
+\LARGE
+\begin{align}
+f(b^i) &= \Theta\left((b^i)^{\log_b(a)}\right)\\
+ &= \Theta\left(b^{i\log_b(a)}\right)\\
+&= \Theta\left(\left(b^{\log_b(a)}\right)^i\right)\\
+&= \Theta(a^i)
+\end{align}
+\normalsize
+Plugging this back in our expression \ref{expression1}, gives
+\LARGE
+\begin{align}
+\sum_{i=1}^{\log_b(n)} a^{k-i}f(b^{i}) &= \sum_{i=1}^{\log_b(n)} a^{k-i}\Theta(a^i)\\
+&= \sum_{i=1}^{\log_b(n)} \Theta(a^k)\\
+&= \sum_{i=1}^{\log_b(n)} \Theta(a^{\log_b(n)})\\
+&= \sum_{i=1}^{\log_b(n)} \Theta(n^{\log_b(a)})\\
+&= (\log_b(n)) \Theta(n^{\log_b(a)})\\
+&=  \Theta(\lg(n)n^{\log_b(a)}) \label{fcomplexity}
+\end{align}
+\normalsize
+Recall the expression for the complexity of $T(n)=T(b^k)$ in equation
+\ref{tcomplexity}: 
+\LARGE
+\begin{align*}
+T(b^k)
+&=
+n^{\log_b(a)}T(1) + \sum_{i=1}^{\log_b(n)} a^{k-i}f(b^{i})
+\tag{\ref{tcomplexity}, revisited}
+\end{align*}
+\normalsize
+Putting \ref{fcomplexity}\  into
+\ref{tcomplexity}, the complexity of $T(n)$, 
+shows that if
+\LARGE
+\begin{align*}
+f(n) &= \Theta\left(n^{\log_b(a)}\right)\tag{\ref{assumption1}, revisited}
+\end{align*}
+\normalsize
+then
+\LARGE
+\begin{align}
+T(n) &= \Theta\left(\lg(n)n^{\log_b(a)}\right)
+\end{align}
+
+\pagebreak
+\section{$f(n) = O\left(n^{\log_b(a)-\epsilon}\right)$}
+\normalsize
+Now let's suppose that $f(n)$ has some slightly lower complexity.
+Suppose $0< \epsilon < \log_b(a)$ is some (small) positive real number, and
+\LARGE
+\begin{align}
+  f(n) &= O\left(n^{\log_b(a)-\epsilon}\right)\label{assumption2}
+\end{align}
+\normalsize
+then
+\LARGE
+\begin{align}
+f\left(\frac{n}{b^i}\right) &=
+O\left(
+\left(
+\frac{n}{b^i}
+\right)^{\log_b(a) - \epsilon}
+\right)
+\\
+&=
+O\left(
+\frac{n^{\log_b(a)-\epsilon}}{b^{i\log_b(a)-i\epsilon}}
+\right)
+\\
+&=
+O\left(
+\left(
+\frac{n^{\log_b(a)}} {n^{\epsilon}}
+\right)
+\left(
+\frac{b^{i\epsilon}} {b^{i\log_b(a)}} 
+\right)
+\right)
+\\
+&=
+O\left(
+\frac{b^{\epsilon}} {b^{\log_b(a)}} 
+\right)^i
+\\
+&=
+O\left(
+\frac{b^{\epsilon}} {a} 
+\right)^i
+\end{align}
+\normalsize
+Plugging this back into expression \ref{expression2} gives a geometric
+series which can be solved:
+\LARGE
+\begin{align}
+  \sum_{i=0}^{\log_b(n)-1} a^{i}f\left(\frac{n}{b^{i}}\right)
+  &=
+  O\left(
+  \sum_{i=0}^{\log_b(n)-1} a^{i}
+  \left(\frac{b^\epsilon}{a}\right)^i
+  \right)
+  \\
+  &=
+  O\left(
+  \sum_{i=0}^{\log_b(n)-1} (b^\epsilon)^{i}
+  \right)
+  \\
+  &=
+  O  \left(
+  \frac{(b^\epsilon)^{\log_b(n)} - 1}
+       {b^\epsilon - 1}
+       \right)
+       \\
+  &=
+  O  \left(
+  \frac{(n)^{\log_b(b^\epsilon)} - 1}
+       {b^\epsilon - 1}
+       \right)
+       \\
+  &=
+  O  \left(
+  \frac{n^\epsilon - 1}
+       {b^\epsilon - 1}
+       \right)\\
+  &=
+       O\left(n^\epsilon\right)\\
+       &=
+  O\left(n^{\log_b(a)}\right)       \label{fcomplexity2}
+\end{align}
+\normalsize
+Since $b$ and $\epsilon$ are constants, and $0<\epsilon < \log_b(a)$.
+
+Recall again the expression for the complexity of $T(n)=T(b^k)$ in equation
+\ref{tcomplexity}: 
+\LARGE
+\begin{align*}
+T(b^k)
+&=
+n^{\log_b(a)}T(1) + \sum_{i=1}^{\log_b(n)} a^{k-i}f(b^{i})
+\tag{\ref{tcomplexity}, revisited}
+\end{align*}
+\normalsize
+Plugging \ref{fcomplexity2} into \ref{tcomplexity}\ shows that if
+\LARGE
+\begin{align*}
+f(n) = O\left(n^{\log_b(a)-\epsilon}\right)\tag{\ref{assumption2}, revisited}
+  \end{align*}
+\normalsize
+then
+\LARGE
+\begin{align}
+  T(n) = \Theta\left(n^{\log_b(a)}\right)
+  \end{align}
+
+
+\section{$f(n) = \Omega\left(n^{\log_b(a)+\epsilon}\right)$}
+\normalsize
+We leave it as an exercise to show that if $f$ has some slightly
+higher complexity,
+\LARGE
+\begin{align}
+  f(n) = \Omega\left(n^{\log_b(a)+\epsilon}\right)
+\end{align}
+\normalsize
+and $af\left(\frac{n}{b}\right) \leq cf(n)$ for some $c$ and large
+enough $n$, then
+\LARGE
+\begin{align}
+  T(n) = \Theta(f(n))
+\end{align}
+
+\end{document}
+

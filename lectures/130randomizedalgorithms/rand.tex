@@ -1,0 +1,93 @@
+\documentclass[landscape]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{clrscode3e}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\title{Notes on Probability}
+\author{Geoffrey Matthews}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bn}{\begin{enumerate}}
+\newcommand{\en}{\end{enumerate}}
+\newcommand{\set}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\sect}[1]{\newpage{\bf #1}}
+\newcommand{\pr}[1]{\ensuremath{\mbox{Pr}\left\{#1\right\}}}
+
+\setlength{\parindent}{0in}
+
+\begin{document}
+\maketitle
+\titlepage
+\huge
+
+
+
+\begin{codebox}
+  \Procname{$\proc{Hire-Assistant}(n)$}
+  \li $\id{best}\gets 0$
+  \li \For $i\gets 1$ \To $n$ \Do
+  \li interview candidate $i$
+  \li \If candidate $i$ is better than candidate $\id{best}$ \Do
+  \li $\id{best} \gets i$
+  \li hire candidate $i$
+\End
+\End
+\end{codebox}
+
+\vfill
+
+\begin{codebox}
+  \Procname{$\proc{Randomized-Hire-Assistant}(n)$}
+  \li randomly permute the list of candidates
+  \li $\id{best}\gets 0$
+  \li \For $i\gets 1$ \To $n$ \Do
+  \li interview candidate $i$
+  \li \If candidate $i$ is better than candidate $\id{best}$ \Do
+  \li $\id{best} \gets i$
+  \li hire candidate $i$
+\End
+\End
+\end{codebox}
+
+\vfill
+\newpage
+
+\begin{codebox}
+  \Procname{$\proc{Permute-By-Sorting}(A)$}
+  \li $n \gets A.length$
+  \li let $P[1...n]$ be a new array
+  \li \For $i\gets 1$ \To n \Do
+  \li $P[i] \gets \proc{Random}(1,n^3)$
+\End
+\li sort $A$ using $P$ as sort keys
+\end{codebox}
+
+\vfill
+
+\begin{codebox}
+  \Procname{$\proc{Randomize-In-Place}(A)$}
+  \li $n \gets A.length$
+  \li \For $i\gets 1$ \To n \Do
+  \li swap $A[i]$ with $A[\proc{Random}(i,n)]$
+\End
+\end{codebox}
+\vfill
+
+\newpage
+
+{\bf The birthday paradox}
+\bi
+\item
+How many people must be in a room before there is a 50\% chance of two
+of them having the same birthday? Assumptions:
+\item
+ \[\pr{b_i = r} = 1/n\mbox{ for }i=1..k\mbox{ and }r=1..n\]
+\item
+  \begin{align*}
+    \pr{b_i=r \mbox{ and } b_j=r} &=
+    \pr{b_i=r}\pr{b_j=r}\\ &= 1/n^2
+    \end{align*}
+\item Hence
+  
+\ei
+\end{document}

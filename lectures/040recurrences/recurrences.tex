@@ -1,0 +1,402 @@
+\documentclass{article}
+\usepackage{fullpage}
+
+\usepackage{amsmath,cancel}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{alltt}
+\newcommand{\red}[1]{{\color{red}#1}}
+\newcommand{\cyan}[1]{{\color{cyan}#1}}
+\newcommand{\blue}[1]{{\color{blue}#1}}
+\newcommand{\magenta}[1]{{\color{magenta}#1}}
+\newcommand{\yellow}[1]{{\color{yellow}#1}}
+\newcommand{\green}[1]{{\color{green}#1}}
+ 
+\newcommand{\bkt}[1]{\langle \mbox{ #1 } \rangle}
+\newcommand{\br}{\mbox{~}|\mbox{~}}
+ 
+\newcommand{\ns}[1]{\newpage\noindent {\bf #1}}
+
+\setlength{\parindent}{0in}
+ 
+\begin{document}
+ 
+\huge
+
+{\bf Recurrences}
+\begin{align*}
+f(1) &= 5\\
+f(n) &= f(n-1) + 3  \tag{if $n>1$}
+\end{align*}
+Find some simple cases:
+\begin{align*}
+f(1) &= 5\\
+f(2) &= f(1) + 3
+ = 8\\
+f(3) &= f(2) + 3
+ = 11\\
+f(4) &= f(3) + 3
+ = 14
+\end{align*}
+Guess a solution:  $f(n) =  3n + 2$.  This is called a {\em
+  closed form} since there is no recursion in the definition.
+
+Check that it works on
+the simple cases:
+\begin{align*}
+3(1) + 2 &= 5\\
+3(2) + 2 &= 8\\
+3(3) + 2 &= 11\\
+3(4) +2 &= 14
+\end{align*}
+So it looks like we're on the right track.
+
+How can you {\em prove} that it's the correct solution?
+
+\ns{Proving recurrence solution by induction}
+\begin{align*}
+f(1) &= 5\\
+f(n) &= f(n-1) + 3  \tag{if $n>1$}
+\end{align*}
+
+Prove $f(n) = 3n+2$ by
+induction.  Base:
+\[
+f(1) = 5 = 
+3(1) + 2
+\]
+So $f(n) = 3n+2$ is true when $n=1$.
+
+
+
+Now assume \[f(n) = 3n + 2\] and prove \[f(n+1) = 3(n+1) + 2\]
+Proof:
+\begin{align*}
+f(n+1) &= f(n) + 3\\
+&= 3n+2 + 3\\
+&= 3(n+1) + 2
+\end{align*}
+Guess checks out.  We have proved it is a correct solution by
+induction.
+
+\ns{Proof by induction for recurrence relations}
+
+A simpler form of proof involves just plugging the closed form in for
+$f$ and checking both clauses of the recurrence.
+\begin{align*}
+f(1) &= 5\\
+f(n) &= f(n-1) + 3  \tag{if $n>1$}
+\end{align*}
+Plugging in $f(n) = 3n+2$ gives
+\begin{align*}
+3(1)+2 &= 5\\
+3(n)+2 &= 3(n-1)+ 2 + 3  \tag{if $n>1$}
+\end{align*}
+and both of these check out, so it is proved by induction.
+
+
+\ns{Solving recurrences without guessing}
+\begin{align*}
+f(1) &= 5\\
+f(n) &= f(n-1) + 3 \tag{if $n>1$}
+\end{align*}
+Note that the second line represents infinitely many equations:
+\begin{align*}
+f(n) &= f(n-1) + 3\\
+f(n-1) &= f(n-2) + 3\\
+f(n-2) &= f(n-3) +3\\
+f(n-3) &= f(n-4) + 3\\
+\ldots\\
+f(n-(k-1)) &= f(n-k) + 3\\
+\ldots\\
+f(n-(n-2)) &= f(n-(n-1)) + 3\\
+&= f(1) + 3\\
+&= 8
+\end{align*}
+As long as the argument to $f$ never goes below 1, all these are true.
+
+\ns{Solving recurrences without guessing}
+\begin{align*}
+f(1) &= 5\\
+f(n) &= f(n-1) + 3  \tag{if $n>1$}
+\end{align*}
+Let's {\bf add up} the left and right hand sides of 
+some equations: 
+\begin{align*}
+f(n) &= f(n-1) + 3\\
+f(n-1) &= f(n-2) + 3\\
+f(n-2) &= f(n-3) +3\\
+f(n-3) &= f(n-4) + 3
+\end{align*}
+Note that many of the terms appear on both sides, so we can subtract
+them from the final equation:
+\begin{align*}
+f(n) &= \cancel{f(n-1)} + 3\\
+\cancel{f(n-1)} &= \cancel{f(n-2)} + 3\\
+\cancel{f(n-2)} &= \cancel{f(n-3)} +3\\
+\cancel{f(n-3)} &= f(n-4) + 3
+\end{align*}
+We are left with:
+\begin{align*}
+f(n)
+&=
+f(n-4) +  3 +  + 3 +  3 + 3\\
+&=f(n-4) +  4(3)
+\end{align*}
+If we added up 10 terms, we would get
+\begin{align*}
+f(n)
+&=f(n-10) +  10(3)
+\end{align*}
+
+\ns{Adding up recurrence equations}
+\begin{align*}
+f(1) &= 5\\
+f(n) &= f(n-1) + 3  \tag{if $n>1$}
+\end{align*}
+If we added up $k$ terms, we would get
+\begin{align*}
+f(n)
+&=f(n-k) +  k(3)
+\end{align*}
+We can do this as long as $n-k \geq 1$.  If we let $n-k=1$, then
+$k=n-1$ and we have
+\begin{align*}
+  f(n) &=
+  f(n - (n - 1)) + (n-1)3\\
+&= f(1) + (n-1)3\\
+&= 5 + (n-1)3\\
+&= 3n + 2
+\end{align*}
+Magic!
+
+\ns{Let's see that again}
+\begin{align*}
+f(1) &= 5\\
+f(n) &= f(n-1) + 3  \tag{if $n>1$}
+\end{align*}
+The recurrence gives us lots of equations:
+\begin{align*}
+f(n) &= \cancel{f(n-1)} + 3\\
+\cancel{f(n-1)} &= \cancel{f(n-2)} + 3\\
+\cancel{f(n-2)} &= \cancel{f(n-3)} +3\\
+\cancel{f(n-3)} &= \cancel{f(n-4)} + 3\\
+\ldots\\
+\cancel{f(n-(n-2))} &= {f(n-(n-1))} + 3
+\end{align*}
+Add them all up and cancelling gives:
+\begin{align*}
+  f(n) &= f(1) + \sum_{k=1}^{n-1} 3\\
+  &= 5 + (n-1)3 \\
+  &= 3n + 2
+  \end{align*}
+
+
+\ns{Recurrences}
+\begin{align*}
+  f(1) &= 1\\
+  f(n) &= 2f(n-1)  \tag{if $n>1$}
+\end{align*}
+Find some simple cases:
+\begin{align*}
+  f(1) &= 1\\
+  f(2) &= 2f(1)= 2\\
+  f(3) &= 2f(2)= 4\\
+  f(4) &= 2f(3)= 8
+\end{align*}
+We can guess $f(n) = 2^{n-1}$. Trying some simple cases shows
+this is a good guess:
+\begin{align*}
+  2^{1-1} &= 1\\
+  2^{2-1} &= 2\\
+2^{3-1} &= 4\\
+2^{4-1} &= 8
+\end{align*}
+  We can now prove this guess correct
+by induction.  Plug the closed form solution into the recursive equations:
+\begin{align*}
+  2^{(1-1)} &= 1\\
+  2^{(n-1)} &= 2(2^{((n-1)-1)}) \tag{if $n>1$}
+\end{align*}
+And it checks out.
+
+Now let's try to find that solution without guessing.
+
+\ns{Recurrences solved without guessing}
+\begin{align*}
+  f(1) &= 1\\
+  f(n) &= 2f(n-1)  \tag{if $n>1$}
+\end{align*}
+Get lots of equations:
+\begin{align*}
+  f(n) &= 2f(n-1)\\
+  2f(n-1) &= 2(2(f(n-2)))\\
+          &= 2^2f(n-2)\\
+  2^2f(n-2) &= 2^2(2f(n-3))\\
+  &= 2^3f(n-3)\\
+  2^3f(n-3) &= 2^4f(n-4)\\
+  &\ldots\\
+  2^{k-1}f(n-(k-1)) &= 2^{k}f(n-k)\\
+  &\ldots\\
+  2^{n-2}f(2) &= 2^{n-1}f(1)
+\end{align*}
+We got that last one by considering the case where \[n-k=1\]
+or, in other words, \[k = n-1\]
+
+\ns{Add and cancel}
+\begin{align*}
+  f(1) &= 1\\
+  f(n) &= 2f(n-1)  \tag{if $n>1$}
+\end{align*}
+\begin{align*}
+  f(n) &= \cancel{2f(n-1)}\\
+  \cancel{2f(n-1)} &= \cancel{2^2f(n-2)}\\
+  \cancel{2^2f(n-2)} &= \cancel{2^3f(n-3)}\\
+  \cancel{2^3f(n-3)} &= \cancel{2^4f(n-4)}\\
+  &\ldots\\
+  \cancel{2^{n-2}f(2)} &= 2^{n-1}f(1)
+  \end{align*}
+Using the fact that $f(1)=1$ gives 
+\begin{align*}
+  f(n)
+  &= 2^{n-1}
+\end{align*}
+That's the same solution that we guessed in the beginning.
+
+
+We already demonstrated that this solution works on small cases,
+and we proved it works on all cases by induction.
+
+\ns{A more tricky example}
+\begin{align*}
+  f(1) &= 5\\
+  f(n) &= 3f(n-1) + 7
+\end{align*}
+Find some simple examples:
+\begin{align*}
+  f(1) &= 5\\
+  f(2) &= 3f(1) + 7= 22\\
+  f(3) &= 3f(2) + 7= 73\\
+  f(4) &= 3f(3) + 7= 226
+\end{align*}
+
+What's the next number in the sequence?
+\[
+5,22,73,226,?
+\]
+Guessing may not be so helpful here.
+
+\ns{Solve without guessing}
+\begin{align*}
+  f(1) &= 5\\
+  f(n) &= 3f(n-1) + 7
+\end{align*}
+Get lots of equations:
+\begin{align*}
+  f(n) &= 3f(n-1) + 7\\
+  3f(n-1) &= 3(3f(n-2) + 7)\\
+          &= 3^2f(n-2) + 3(7)\\
+  3^2f(n-2) &= 3^2(3f(n-3) + 7)\\
+  &= 3^3f(n-3) + 3^2(7)\\
+  3^3f(n-3) &= 3^4f(n-4) + 3^3(7)\\
+  &\ldots\\
+  3^{k-1}f(n-(k-1)) &= 3^kf(n-k) + 3^{k-1}(7)\\
+  &\ldots\\
+  {3^{n-2}f(2)} &= 3^{n-1}f(1) + 3^{n-2}(7)
+\end{align*}
+
+
+\ns{Solve without guessing}
+\begin{align*}
+  f(1) &= 5\\
+  f(n) &= 3f(n-1) + 7
+\end{align*}
+Add and cancel:
+\begin{align*}
+  f(n) &= \cancel{3f(n-1)} + 7\\
+  \cancel{3f(n-1)} &= \cancel{3^2f(n-2)} + 3(7)\\
+  \cancel{3^2f(n-2)} &= \cancel{3^3f(n-3)} + 3^2(7)\\
+  \cancel{3^3f(n-3)} &= \cancel{3^4f(n-4)} + 3^3(7)\\
+  &\ldots\\
+  \cancel{3^{k-1}f(n-(k-1))} &= \cancel{3^kf(n-k)} + 3^{k-1}(7)\\
+  &\ldots\\
+  \cancel{3^{n-2}f(2)} &= 3^{n-1}f(1) + 3^{n-2}7
+  \end{align*}
+We are left with
+\begin{align*}
+  f(n) &= 3^{n-1}(5) + \sum_{i=0}^{n-2} 3^i(7)\\
+  &= 5(3^{n-1}) + 7\sum_{i=0}^{n-2} 3^i
+\end{align*}
+
+\ns{Solve the summation}
+\begin{align*}
+  f(1) &= 5\\
+  f(n) &= 3f(n-1) + 7
+\end{align*}
+We have a geometric series, so
+\begin{align*}
+  f(n)   &=5(3^{n-1}) + 7\sum_{i=0}^{n-2} 3^i\\
+  &= 5(3^{n-1}) + 7\frac{3^{n-1} -1}{3-1}\\\\
+&= \frac{10(3^{n-1}) + 7(3^{n-1}) - 7}{2}\\\\
+  &= \frac{17(3^{n-1}) - 7}{2}
+\end{align*}
+Seriously?
+
+\ns{Check our solution}
+\begin{align*}
+  f(1) &= 5\\
+  f(n) &= 3f(n-1) + 7
+\end{align*}
+Closed form:
+\begin{align*}
+  f(n)  
+  &= \frac{17(3^{n-1}) - 7}{2}
+\end{align*}
+Remember our sequence?
+\[
+5,22,73,226,?
+\]
+Let's test $f(4)=226$:
+\begin{align*}
+  f(4) &= \frac{17(3^{4-1}) - 7}{2}\\
+  &= \frac{17(27) - 7}{2}\\
+  &= \frac{459 - 7}{2}\\
+  &= \frac{452}{2}\\
+  &= 226
+\end{align*}
+Wow.
+
+\bigskip
+
+(Next number is 685, by the way.  Obvious, no?)
+
+\ns{Prove correct by induction}
+\begin{align*}
+  f(1) &= 5\\
+  f(n) &= 3f(n-1) + 7
+\end{align*}
+Closed form:
+\begin{align*}
+  f(n)  
+  &= \frac{17(3^{n-1}) - 7}{2}
+\end{align*}
+Base:
+\begin{align*}
+  \frac{17(3^{1-1}) - 7}{2}  &\stackrel{?}{=} 5 \tag{Correct}
+\end{align*}
+Step:
+\begin{align*}
+  \frac{17(3^{n-1}) - 7}{2}
+  &\stackrel{?}{=}
+  3 \left(\frac{17(3^{n-2}) - 7}{2}\right) + 7\\\\
+  &=\frac{17(3^{n-1}) - 3(7) + 14}{2}\\\\
+    &=\frac{17(3^{n-1}) - 7}{2}\tag{Correct}
+\end{align*}
+We have proved by induction that our closed form is a solution to the
+original recurrence.
+\end{document}
+
+
+
+
+

@@ -1,0 +1,256 @@
+\documentclass{article}
+\usepackage{fullpage}
+
+\usepackage{amsmath,cancel}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{alltt}
+\newcommand{\red}[1]{{\color{red}#1}}
+\newcommand{\cyan}[1]{{\color{cyan}#1}}
+\newcommand{\blue}[1]{{\color{blue}#1}}
+\newcommand{\magenta}[1]{{\color{magenta}#1}}
+\newcommand{\yellow}[1]{{\color{yellow}#1}}
+\newcommand{\green}[1]{{\color{green}#1}}
+ 
+\newcommand{\bkt}[1]{\langle \mbox{ #1 } \rangle}
+\newcommand{\br}{\mbox{~}|\mbox{~}}
+ 
+\newcommand{\ns}[1]{\newpage {\bf #1}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ii}{\item}
+\newcommand{\ei}{\end{itemize}}
+
+\setlength{\parindent}{0in}
+ 
+\begin{document}
+
+ 
+\LARGE
+
+\newpage
+
+{\bf Equations and recurrences}
+\bi
+\ii
+Let's start backwards.
+Suppose we know what the function is, for example:
+\begin{align*}
+  f(n) &= 3n^2 + 5
+\end{align*}
+\ii
+We want to get a recurrence for this function,
+so let's try some of our favorite recurrences.
+\ii
+First, $f(n-1)$:
+\begin{align*}
+  f(n-1) &= 3(n-1)^2 + 5\\
+  &= 3n^2 -6n + 3 + 5\\
+  &= (3n^2 + 5) -6n + 3\\
+  &= f(n) -6n + 3
+\end{align*}
+\ii
+And now we have it!  Our original function is the solution to
+the recurrence:
+\begin{align*}
+  f(n) &= f(n-1) + 6n - 3
+\end{align*}
+\ii
+We can check this by substituting the original function in both sides
+of this:
+\begin{align*}
+  3n^2 + 5 &= 3(n-1)^2 + 5 + 6n - 3\\
+  &= 3n^2 - 6n + 3 + 5 + 6n - 3\\
+  &= 3n^2 + 5
+  \end{align*}
+
+\ei
+
+\newpage
+
+{\bf Equations and recurrences}
+\bi
+\ii
+Let's try a different recurrence for the same function.
+\begin{align*}
+  f(n) &= 3n^2 + 5
+\end{align*}
+\ii
+Let's try , $f(n/2)$:
+\begin{align*}
+  f(n/2) &= 3(n/2)^2 + 5\\
+  &= (3/4)n^2 + 5\\
+  &= 3n^2 + 5 - (9/4)n^2 \\
+  &= f(n) - (9/4)n^2
+\end{align*}
+\ii
+And now we have it!  Our original function is the solution to
+the recurrence:
+\begin{align*}
+  f(n) &= f(n/2) + (9/4)n^2
+\end{align*}
+\ii
+Now let's check this with our original equation plugged into both
+sides:
+\begin{align*}
+  3n^2 + 5 &= 3(n/2)^2 + 5 + (9/4)n^2\\
+  &= (3/4)n^2 + 5 + (9/4)n^2\\
+  &= 3n^2 + 5
+\end{align*}
+\ii
+So, again, we have verified that our original function is a solution
+to this recurrence.
+
+\ei
+\newpage
+
+{\bf Substitution method, big-$O$}
+\bi
+\ii
+Now let's go the other way.  Suppose we have an innocent recurrence,
+like this one:
+\begin{align*}
+  f(n) &= f(n-1) + 6n - 3
+\end{align*}
+\ii
+And we want to solve it.  (Don't tell anybody we already know the
+solution.)
+\ii
+And suppose that we suspect the solution is $O(n^2)$.
+How can we \textit{prove} this?  
+\ii
+Put in other words, can we prove by induction that there exists some
+$c$ such that $f(n) \leq cn^2$ for sufficiently large $n$?
+Can we prove that this is a solution by induction?
+\ii
+The base case is trivial, since we just have to show there exists some
+$c$ such that $f(1)\leq c$, which will always be true.
+\ei
+
+\newpage
+
+{\bf Substitution method, big-$O$, inductive step}
+\bi
+\ii Now for the inductive step.  
+\begin{align*}
+  f(n) &= f(n-1) + 6n - 3
+\end{align*}
+\ii
+Since our recurrence is on $f(n-1)$, we
+will assume, by inductive hypothesis, that $f(n-1) \leq c(n-1)^2$ and
+on the basis of this try to prove that $f(n) \leq cn^2$.
+\begin{align*}
+  f(n) &= f(n-1) + 6n - 3\\
+  &\leq c(n-1)^2 + 6n - 3\\
+  &= cn^2 -2cn + c + 6n - 3\\
+  &= cn^2 + (6 -2c)n + (c - 3)\\
+  &\leq cn^2
+\end{align*}
+\ii
+So long as
+\begin{align*}
+  (6 -2c)n + (c - 3) &\leq 0\\
+  (6 -2c)n   &\leq 3-2\\
+  n   &\leq \frac{3-2}{6 -2c}\\
+  n   &\geq \frac{1}{2c-6}\\
+\end{align*}
+which we can use in our definition of ``sufficiently large'' $n$, so
+this checks out, too.
+
+\ei
+  
+    
+\newpage
+
+{\bf Substitution method, big-$\Omega$, inductive step}
+\bi
+\ii Now let's try that method for $\Omega$.
+\begin{align*}
+  f(n) &= f(n-1) + 6n - 3
+\end{align*}
+\ii Suppose $f(n-1)\geq c(n-1)^2$ and prove
+$f(n)\geq cn^2$ 
+\begin{align*}
+  f(n) &= f(n-1) + 6n - 3\\
+  &\geq c(n-1)^2 + 6n - 3\\
+  &= cn^2 -2cn + c + 6n - 3\\
+  &= cn^2 + (6 -2c)n + (c - 3)\\
+  &\geq cn^2
+\end{align*}
+So long as $2c<6$, and sufficiently large $n$.
+
+\ei
+
+
+\newpage
+{\bf Substitution method}
+\begin{align*}
+  T(1) &= c\\
+  T(n) &= 8T(n/2) + \Theta(n^2)
+\end{align*}
+\begin{itemize}
+  \item
+We guess that $T(n) = O(n^3)$ and prove it true by induction.
+\item
+Base case is some constant, which can always be chosen large enough.
+\item
+Induction, we need to show there is some constant
+$c_0$ such that
+if we assume $T(m) \leq c_0m^3$ for all $m<n$ (strong induction),
+we can then prove $T(n) \leq c_0n^3$ (same constant).
+\item
+First try:
+\begin{align*}
+  T(n) &= 8T(n/2) + \Theta(n^2)&\mbox{use definition of $\Theta$}\\
+  &\leq  8T(n/2) + cn^2 & n > n_0\\
+  &\leq 8c_0n^3/2^3 +  cn^2 & \mbox{since $n/2 < n$}\\
+  &= c_0n^3 +  cn^2\\
+  &\stackrel{?}{\leq} c_0n^3
+\end{align*}
+\item
+  We can't really prove what we want.
+\item
+  We can't guarantee it is smaller than our target, because we don't know
+  what $c$ is.
+\item
+  Be careful!  Don't be tempted to say
+  $cn^2$ doesn't matter in a big-$0$ proof.
+\item
+  It {\em does}
+  here because this is just one step
+in an inductive proof.
+\end{itemize}
+
+\newpage
+{\bf Substitution method, second try}
+\begin{align*}
+  T(1) &= c\\
+  T(n) &= 8T(n/2) + \Theta(n^2)
+\end{align*}
+\begin{itemize}
+  \item
+We guess that $T(n) = O(n^3)$ and prove it true by induction.
+\item
+Base case is some constant, which can always be chosen large enough.
+\item
+We use a different member of $O(n^3)$ for induction.
+\item
+  We need to show that there exist some constantes
+$c_0,c_1$ such that
+if we assume $T(m) \leq c_0m^3-c_1m^2$ for all $m<n$ (strong induction),
+we can then prove $T(n) \leq c_0n^3-c_1n^2$ (same constants).  
+\begin{align*}
+  T(n) &= 8T(n/2) + \Theta(n^2)&\mbox{use definition of $\Theta$}\\
+  &\leq  8T(n/2) + cn^2 & n > n_0\\
+  &\leq 8(c_0n^3/2^3 - c_1n^2/2^2)+  cn^2 & \mbox{since $n/2 < n$}\\
+  &= c_0n^3 -  2c_1n^2 + cn^2\\
+  &= c_0n^3 - c_1n^2 &\mbox{choose $c_1 = c$}
+\end{align*}
+\end{itemize}
+
+\end{document}
+
+
+
+
+

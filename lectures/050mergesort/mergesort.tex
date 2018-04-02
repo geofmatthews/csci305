@@ -1,0 +1,115 @@
+\documentclass{article}
+\usepackage{fullpage}
+
+\usepackage{amsmath,cancel}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{alltt}
+\newcommand{\red}[1]{{\color{red}#1}}
+\newcommand{\cyan}[1]{{\color{cyan}#1}}
+\newcommand{\blue}[1]{{\color{blue}#1}}
+\newcommand{\magenta}[1]{{\color{magenta}#1}}
+\newcommand{\yellow}[1]{{\color{yellow}#1}}
+\newcommand{\green}[1]{{\color{green}#1}}
+ 
+\newcommand{\bkt}[1]{\langle \mbox{ #1 } \rangle}
+\newcommand{\br}{\mbox{~}|\mbox{~}}
+ 
+\newcommand{\ns}[1]{\newpage {\bf #1}}
+
+\setlength{\parindent}{0in}
+ 
+\begin{document}
+ 
+\huge
+
+{\bf Mergesort Recurrence}
+\begin{align*}
+T(1) &= c\\
+f(n) &= 2T(n/2) + cn  \tag{if $n>1$}
+\end{align*}
+Let's make this easier by assuming $n$ is a power of two:
+\begin{align*}
+  n &= 2^j\\
+  j &= \log_2(n)
+\end{align*}
+Now we can rewrite our equations:
+\begin{align*}
+T(2^0) &= c\\
+f(2^j) &= 2T(2^{j-1}) + cn  \tag{if $j>0$}
+\end{align*}
+Now we can introduce a new function, $f(j) = T(2^j)$, and we have
+\begin{align*}
+  f(0) &= c\\
+  f(j) &= 2f(j-1) + c2^j
+\end{align*}
+Let's try to solve this recurrence.
+
+\ns{Solve the recurrence}
+\begin{align*}
+  f(0) &= c\\
+  f(j) &= 2f(j-1) + c2^j
+\end{align*}
+Get lots of equations
+\begin{align*}
+  f(j) &= 2f(j-1) + c2^j\\
+  2  f(j-1) &= 2^2f(j-2) + c2(2^{j-1})\\
+  &=  2^2f(j-2) + c2^{j}\\
+  2^2f(j-2) &= 2^3f(j-3) + c2^2(2^{j-2})\\
+  &= 2^3f(j-3) + c2^{j}\\
+  &\ldots\\
+  2^{k-1}f(j-(k-1)) &= 2^kf(j-k) + c2^j\\
+  &\ldots\\
+  2^{j-1}f(j-(j-1)) &= 2^jf(j-j) + c2^j\\
+2^{j-1}f(j-1)  &= c2^j + c2^j
+\end{align*}
+
+\ns{Simplify and cancel}
+\begin{align*}
+  f(0) &= c\\
+  f(j) &= 2f(j-1) + c2^j
+\end{align*}
+Cancelling:
+\begin{align*}
+  f(j) &= \cancel{2f(j-1)} + c2^j\\
+  \cancel{2  f(j-1)}
+  &=  \cancel{2^2f(j-2)} + c2^{j}\\
+ \cancel{ 2^2f(j-2)}
+  &= \cancel{2^3f(j-3)} + c2^{j}\\
+  &\ldots\\
+  \cancel{2^{k-1}f(j-(k-1))} &= \cancel{2^kf(j-k)} + c2^j\\
+  &\ldots\\
+  \cancel{2^{j-1}f(1)}
+  &= c2^j + c2^j
+\end{align*}
+Gives
+\begin{align*}
+  f(j) &= c2^j + \sum_{k=1}^{j} c2^j\\
+  &= (j+1)c2^j
+\end{align*}
+
+\ns{Remembering $f(j) = T(2^j)$}
+\begin{align*}
+T(1) &= c\\
+T(n) &= 2T(n/1) + cn  \tag{if $n>1$}\\\\
+n &=  2^j \\
+  j &= \log_2(n)\\\\
+  f(0) &= c\\
+  f(j) &= 2f(j-1) + c2^j\\\\
+  f(j)  &= (j+1)c2^j\\\\
+  T(n) &= T(2^j)\\
+  &= f(j)\\
+  &= (j+1)c2^{j}\\
+  &= (\log_2(n) + 1)c2^{\log_2(n)}\\
+  &= cn\log_2(n) + cn\\
+  &= \Theta(n\lg(n))
+\end{align*}
+
+
+
+\end{document}
+
+
+
+
+

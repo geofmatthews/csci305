@@ -1,0 +1,229 @@
+\documentclass{article}
+\usepackage{fullpage}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{alltt}
+\newcommand{\red}[1]{{\color{red}#1}}
+\newcommand{\cyan}[1]{{\color{cyan}#1}}
+\newcommand{\blue}[1]{{\color{blue}#1}}
+\newcommand{\magenta}[1]{{\color{magenta}#1}}
+\newcommand{\yellow}[1]{{\color{yellow}#1}}
+\newcommand{\green}[1]{{\color{green}#1}}
+ 
+\newcommand{\bkt}[1]{\langle \mbox{ #1 } \rangle}
+\newcommand{\br}{\mbox{~}|\mbox{~}}
+ 
+\newcommand{\ns}[1]{\newpage {\bf #1}}
+ 
+\begin{document}
+ 
+\huge
+
+{\bf Summation Facts}
+\begin{eqnarray*}
+\sum_{i=m}^n c &=& (n - m + 1)c 
+\\\\
+\sum_{i=m}^n ca_i &=& c\sum_{i=m}^n a_i 
+\\\\
+\sum_{i=m}^n (a_i + b_i) &=& \sum_{i=m}^n a_i + \sum_{i=m}^n + b_i
+\\\\
+\sum_{i=m}^n a_{i+k} &=& \sum_{i=m+k}^{n+k} a_{i}
+\\\\
+\sum_{i=m}^n a_{i}x^{i+k} &=& x^k \sum_{i=m}^{n} a_{i}x^i
+\\\\
+\sum_{i=m}^n (a_i - a_{i-1}) &=& a_n - a_{m-1}
+\end{eqnarray*}
+
+\ns{Sum of 1}
+\begin{eqnarray*}
+  \sum_{i=1}^n 1 &=& \sum_{i=1}^n (i - (i - 1))
+  \\
+  &=& n - 0
+  \\
+  &=& n
+\end{eqnarray*}
+
+\ns{Sum of $i$}
+\[
+\begin{array}{cccccccccc}
+ & \sum_{i=1}^n i &=& 1 &+& 2 &+& \ldots  &+& n
+\\
++&  \sum_{i=1}^n i  &=& n &+& n-1 &+& \ldots  &+& 1
+\\
+\multicolumn{10}{c}{\hrulefill}
+\\
+ &&=& n+1 &+& n+1 &+& \ldots  &+& n+1
+  \\
+ & &=& \multicolumn{3}{l}{n(n+1)}
+  \\\\\\
+\Rightarrow&  \sum_{i=1}^n i &=& \multicolumn{3}{l}{{n(n+1)}/{2}}
+\end{array}
+\]
+
+\ns{Sum of $i$}
+\begin{eqnarray*}
+  n^2 &=& n^2 - 0^2
+  \\
+  &=& \sum_{i=1}^n (i^2 - (i-1)^2)
+  \\
+  &=& \sum_{i=1}^n (2i - 1)
+  \\
+  &=& 2\sum_{i=1}^n i - \sum_{i=1}^n 1
+  \\
+  &=& 2\sum_{i=1}^n i - n
+  \\\\\\
+  &\Rightarrow & \sum_{i=1}^n i = n(n+1)/2
+\end{eqnarray*}
+
+\ns{Sum of $i$}
+\begin{eqnarray*}
+\sum_{i=1}^{n+1}i^2 &=& \sum_{i=1}^{n}i^2 + (n+1)^2 \\
+                 &=& \sum_{i=1}^{n}i^2 + n^2 + 2n + 1 \\
+\sum_{i=1}^{n+1}i^2 &=& \sum_{i=0}^{n}(i+1)^2 \\
+                 &=& \sum_{i=0}^{n}(i^2 + 2i + 1) \\
+                 &=& \sum_{i=0}^{n}i^2 + \sum_{i=0}^{n}2i + \sum_{i=0}^{n}1 \\
+                 &=& \sum_{i=0}^{n}i^2 + \sum_{i=0}^{n}2i + n+1 \\
+\sum_{i=1}^{n}i^2 + n^2 + 2n + 1 
+    &=& \sum_{i=0}^{n}i^2 + \sum_{i=0}^{n}2i + n+1 \\
+ n^2 + 2n + 1  &=&  \sum_{i=0}^{n}2i + n+1 \\
+ \sum_{i=0}^{n}2i &=& n^2 + n \\
+ \sum_{i=0}^{n}i &=& n(n+1)/2
+\end{eqnarray*}
+
+\ns{Sum of Odd Numbers}
+\begin{eqnarray*}
+1 + 3 + \ldots + (2n+1) &=& \sum_{i=0}^n (2i+1) 
+\\
+&=& \sum_{i=0}^n 2i + \sum_{i=0}^n 1
+\\
+&=& 2\sum_{i=0}^n i + (n+1)
+\\
+&=& 2n(n+1)/2 + (n+1)
+\\
+&=& (n+1)^2
+\end{eqnarray*}
+
+\ns{Geometric Sum}
+\begin{eqnarray*}
+  S_n &=& 1 + a + a^2 + \ldots + a^n
+  \\
+  &=& \sum_{i=0}^n a^i
+  \\
+  S_{n+1} &=& (1 + a + a^2 + \ldots + a^n) + a^{n+1}
+  \\
+  &=& S_{n} + a^{n+1}
+  \\
+  S_{n+1} &=& 1 + (a + a^2 + \ldots + a^n + a^{n+1})
+  \\
+  &=& 1 + a(1 + a + a^2  +  \ldots + a^n)
+  \\
+  &=& 1 + aS_n
+  \\
+  &\Rightarrow&
+  \\
+  S_n + a^{n+1} &=& 1 + aS_n
+  \\
+  &\Rightarrow&
+  \\
+  \sum_{i=0}^n a^i &=& S_n
+  \\
+  &=& \frac{a^{n+1} - 1}{a-1}
+\end{eqnarray*}
+
+
+\ns{Geometric Sum}
+\begin{eqnarray*}
+  (a-1)\sum_{i=0}^n a^i &=& \sum_{i=0}^n (a^{i+1} - a^i)
+  \\
+  &=&  \sum_{j=1}^{n+1} (a^j - a^{j-1})
+  \\
+  &=& a^{n+1} - a^0
+  \\
+  &=& a^{n+1} - 1
+\end{eqnarray*}
+
+Also do division: \[\frac{a^{n+1}-1}{a-1}\]
+
+\ns{Sum of $ia^i$}
+\begin{eqnarray*}
+  S_n = \sum_{i=1}^n ia^i 
+    &=& 1+a+2a^2+\ldots + na^n
+  \\
+  S_{n+1} = \sum_{i=1}^{n+1} ia^i
+  &=&  \sum_{i=1}^n ia^i + (n+1)a^{n+1}
+  \\
+  &=& S_n + (n+1)a^{n+1}
+  \\
+  S_{n+1} = \sum_{i=1}^{n+1} ia^i
+  &=& \sum_{i=0}^{n} (i+1)a^{i+1}
+  \\
+  &=& \sum_{i=0}^{n} ia^{i+1} + \sum_{i=0}^{n} a^{i+1}
+  \\
+  &=& a\sum_{i=0}^{n} ia^{i} + a\sum_{i=0}^{n} a^{i}
+  \\
+  &=& aS_n + a(a^{n+1} - 1)/(a-1)
+  \\
+  &\Rightarrow&
+  \\
+  S_n + (n+1)a^{n+1}  &=& aS_n + a(a^{n+1} - 1)/(a-1)
+  \\
+  &\Rightarrow&
+  \\
+  S_n  &=& \frac{a - (n+1)a^{n+1} + na^{n+2}}{(a-1)^2}
+\end{eqnarray*}
+  
+\ns{Sum of $ia^{i-1}$}
+
+Don't forget your calculus!
+\begin{eqnarray*}
+  \frac{d}{dx}(f+g) &=& \frac{df}{dx} + \frac{dg}{dx}
+  \\\\\\
+  \sum_{i=0}^n ia^{i-1} &=&   \sum_{i=0}^n \frac{d}{da} (a^i)
+  \\
+  &=&   \frac{d}{da}  \sum_{i=0}^n (a^i)
+  \\
+  &=&   \frac{d}{da} \left(  \frac{a^{n+1} - 1}{a-1} \right)
+\end{eqnarray*}
+
+\ns{Sum of $i^2$}
+\begin{eqnarray*}
+  \sum_{i=1}^{n+1} i^3 &=& \sum_{i=1}^n i^3 + (n+1)^3
+  \\
+  \sum_{i=1}^{n+1} i^3 &=&\sum_{i=0}^{n} (i+1)^3
+  \\
+  &=&  \sum_{i=0}^{n} (i^3 + 3i^2 + 3i +1)
+  \\
+  &=& \sum_{i=0}^{n} i^3 +
+      \sum_{i=0}^{n} 3i^2 + 
+      \sum_{i=0}^{n} 3i + 
+      \sum_{i=0}^{n} 1
+  \\
+  &=& \sum_{i=1}^{n} i^3 +
+      3\sum_{i=1}^{n} i^2 + 
+      3\sum_{i=1}^{n} i + 
+      (n+1)      
+  \\
+  &=& \sum_{i=1}^{n} i^3 +
+      3\sum_{i=1}^{n} i^2 + 
+      3\frac{n(n+1)}{2} +
+      (n+1)
+  \\\\\\
+  &\Rightarrow&
+  \\
+  (n+1)^3 &=&       3\sum_{i=1}^{n} i^2 + 
+      3\frac{n(n+1)}{2} +
+      (n+1)
+  \\\\\\
+  &\Rightarrow&
+  \\
+  \sum_{i=1}^n i^2 &=& \frac{n(n+1)(2n+1)}{6}
+\end{eqnarray*}
+
+\end{document}
+
+
+
+
+

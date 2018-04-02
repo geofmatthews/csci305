@@ -1,0 +1,271 @@
+\documentclass[landscape]{article}
+\usepackage{multicol}
+\usepackage[margin=1in]{geometry}
+\usepackage{clrscode3e}
+\usepackage{amsmath,amsfonts}
+\usepackage{graphicx,color}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ii}{\item}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\bn}{\begin{enumerate}}
+\newcommand{\en}{\end{enumerate}}
+\newcommand{\set}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\pr}[1]{\ensuremath{\mbox{Pr}\left\{#1\right\}}}
+\newcommand{\flr}[1]{\ensuremath{\left\lfloor#1\right\rfloor}}
+\newcommand{\ceil}[1]{\ensuremath{\left\lceil#1\right\rceil}}
+
+\newcommand{\sect}[1]{\newpage{\textbf{#1}}}
+
+\setlength{\parindent}{0in}
+\setlength{\tabcolsep}{4\tabcolsep}
+
+\newcommand{\nop}[1]{}
+
+\title{Notes on Amortized Analysis}
+\author{Geoffrey Matthews}
+\begin{document}
+\maketitle
+\titlepage
+\huge
+
+\sect{Red-black trees}
+\bi
+\ii A variation of binary search trees.
+\ii \textbf{Balanced:} height is $O(\lg n)$, where $n$ is number of nodes.
+\ii Operations will take $O(\lg n)$ in worst case.
+\ei
+
+\sect{Red-black trees}
+\bi
+\ii A \textbf{red-black tree} is a binary search tree.
+\ii One bit per node stores an attribute \textit{color}, red or black.
+\ii All leaves are empty (nil) and colored black.
+\ii We use a sentinel $\attrib{T}{nil}$ for all the leaves of a
+red-black tree $T$.
+\ii $\attrib{\attrib{T}{nil}}{color}$ is black.
+\ii The root's parent is also $\attrib{T}{nil}$.
+\ei
+
+
+\sect{Red-black tree properties}
+\begin{enumerate}
+  \ii Every node is either red or black.
+  \ii The root is black.
+  \ii Every leaf ($\attrib{T}{nil}$) is black.
+  \ii If a node is red, then both its children are black
+  \bi\ii Hence no two reds in a row.\ei
+  \ii For each node, all paths from the node to descendant leaves
+  contain the same number of black nodes.
+\end{enumerate}
+
+\includegraphics[height=\textheight]{Fig-13-1.pdf}
+
+\sect{Height of a red-black tree}
+\bi
+\ii \textbf{Height of a node} is the number of edges in longest path
+to leaf.
+\ii \textbf{Black-height} of a node $x$: bh($x$) is the number of
+black nodes (including $\attrib{T}{nil}$) on the path from $x$ to
+leaf, not counting $x$.
+\bi\ii By property 5, black-height is well defined.\ei
+
+\ei
+
+\sect{Claim: Any node with height $h$ has black-height $\geq h/2$.}
+
+  \textbf{Proof}
+\bi\ii
+  By property 4, $\leq h/2$ nodes on the path from node to a leaf are
+  red.\ii  Hence $\geq h/2$ are black.\ei
+
+\sect{Claim: The subtree rooted at any node $x$ contains $\geq
+  2^{\id{bh}(x)}   - 1$ internal nodes.}
+  
+\textbf{Proof.}  By induction on height of $x$.
+
+\textbf{Basis:} Height of $x=0\Rightarrow x$ is a leaf and so
+$\id{bh}(x)=0$, $2^0-1=0$.
+
+\textbf{Inductive step:}
+\bi
+\ii Let the height of $x$ be $h$ and
+$\id{bh}(x)=b$.
+\ii Any child of $x$ has height $h-1$ and black-height
+either $b$ (if the child is red) or $b-1$ (if the child is black).
+\ii By
+inductive hypothesis, each child has $\geq 2^{\id{bh}(x)-1}-1$
+internal nodes. \ii
+Thus, the subtree rooted at $x$ contains $\geq 2\cdot
+(2^{\id{bh}(x)-1}-1) + 1 = 2^{\id{bh}(x)}-1$ internal nodes.
+\ei  
+
+\sect{Lemma: A red-black tree with $n$ internal nodes has height
+  $\leq 2\lg (n+1)$.}
+
+\textbf{Proof}
+
+
+ Let $h$ and $b$ be the height and black-height of the root,
+ respectively.
+ 
+ By the above two claims,
+\[ n \geq 2^b-1 \geq 2^{h/2} - 1 \]
+Adding 1 to both sides and then taking logs gives
+\[ \lg(n+1) \geq h/2\]
+which implies that
+\[
+h \leq 2\lg(n+1)
+\]
+
+\sect{Operations on red-black trees}
+\bi
+\ii $\proc{Minimum}$, $\proc{Maximum}$, $\proc{Successor}$,
+$\proc{Predecessor}$ and $\proc{Search}$ all run in $O(h) = O(\lg n)$
+time.
+\ii $\proc{Insert}$, what color to make the new node?
+\bi \ii Red?  Might violate property 4.
+\ii Black?  Might violate property 5.
+\ei
+\ii $\proc{Delete}$, what color was the old node?
+\bi
+\ii Red?  OK.
+\ii Black? Could cause two reds in a row, and violate properties 2 and 5.
+\ei
+\ei
+
+\sect{Rotations}
+\bi
+\ii Only pointers are changed.
+\ii Won't upset binary-search-tree property.
+\ii Doesn't care about red-black.
+\ei
+
+\begin{multicols}{2}
+\begin{codebox}
+  \Procname{$\proc{Left-Rotate}(T,x)$}
+  \li $y \gets \attrib{x}{right}$
+  \li $\attrib{x}{right} \gets \attrib{y}{left}$
+  \li \If $\attrib{y}{left}\not = \attrib{T}{nil}$ \Do
+  \li $\attrib{\attrib{y}{left}}{p} \gets x$ \End
+  \li $\attrib{y}{p} \gets \attrib{x}{p}$
+  \li \If $\attrib{x}{p} \isequal \attrib{T}{nil}$ \Do
+  \li  $\attrib{T}{root} \gets y$ 
+  \li \ElseIf $x \isequal \attrib{\attrib{x}{p}}{left}$ \Do
+  \li $\attrib{\attrib{x}{p}}{left} \gets y$
+  \li \Else $\attrib{\attrib{x}{p}}{right} \gets y$ \End
+  \li $\attrib{y}{left} \gets x$
+  \li $\attrib{x}{p} \gets y$
+\end{codebox}
+\columnbreak
+\includegraphics[width=0.5\textwidth]{Fig-13-2.pdf}
+
+\vfill
+
+ Assumes
+\bi
+\ii $\attrib{x}{right}\not = \attrib{T}{nil}$
+\ii root's parent is $\attrib{T}{nil}$
+\ei
+
+\vfill
+
+\end{multicols}
+
+
+
+\includegraphics[width=\textwidth]{Fig-13-3.pdf}
+
+
+\sect{Insertions}
+\bi
+\ii Start by doing regular binary-tree insertion.
+\ii Color new node red.
+\ii May violate red-black tree properties:
+
+
+\begin{enumerate}
+  \ii Every node is either red or black.
+  \bi\ii OK.\ei
+  \ii The root is black.
+  \bi\ii New node might be root.\ei
+  \ii Every leaf ($\attrib{T}{nil}$) is black.
+  \bi\ii OK.\ei
+  \ii If a node is red, then both its children are black.
+  \bi\ii New node's parent might be red.\ei
+  \ii For each node, all paths from the node to descendant leaves
+  contain the same number of black nodes.
+  \bi\ii OK.\ei
+\end{enumerate}
+
+\ei
+
+\begin{codebox}
+  \Procname{$\proc{RB-Insert-Fixup}(T,z)$}
+  \li \While $\attrib{\attrib{z}{p}}{color} \isequal \const{red}$\Do
+  \li \If $\attrib{z}{p} \isequal
+  \attrib{\attrib{\attrib{z}{p}}{p}}{left}$ \Do
+  \li $y \gets \attrib{\attrib{\attrib{z}{p}}{p}}{right}$
+  \li \If $\attrib{y}{color} \isequal \const{red}$\Do 
+  \li $\attrib{\attrib{z}{p}}{color} \gets \const{black}$
+  \RComment{\color{red} case 1}
+  \li $\attrib{y}{color}\gets \const{black}$
+  \li $\attrib{\attrib{\attrib{z}{p}}{p}}{color} \gets \const{red}$
+  \li $z\gets\attrib{\attrib{z}{p}}{p}$
+  \li \Else \If $z\isequal\attrib{\attrib{z}{p}}{right}$ \Do
+             \li $z\gets\attrib{z}{p}$ \RComment{ \color{red} case 2}
+             \li $\proc{Left-Rotate}(T,z)$ \End
+  \li $\attrib{\attrib{z}{p}}{color} \gets \const{black}$
+  \RComment{\color{red} case 3}
+  \li $\attrib{\attrib{\attrib{z}{p}}{p}}{color} \gets \const{red}$
+  \li $\proc{Right-Rotate}(T,\attrib{\attrib{z}{p}}{p})$
+\End
+  \li \Else (same as \textbf{then}  with ``right'' and ``left'' exchanged) \End
+  \li $\attrib{\attrib{T}{root}}{color} \gets \const{black}$
+\end{codebox}
+
+\includegraphics[height=\textheight]{Fig-13-4.pdf}
+
+\sect{Insert fixup loop invariant.}
+\bi
+\ii $z$ is red
+\ii There is at most one red-black violation:
+\bi
+\ii $z$ is a red root.
+\ii $z$ and $\attrib{z}{p}$ are both red.
+\ei
+\ei
+
+\sect{Parent is red and  uncle is red:}
+
+\includegraphics[width=\textwidth]{Fig-13-5.pdf}
+
+\sect{Parent is red and  uncle is black:}
+
+\includegraphics[width=\textwidth]{Fig-13-6.pdf}
+
+\sect{Analysis}
+\bi
+\ii $O(\lg n)$ time to insert into binary tree.
+\ii Fixup also $O(\lg n)$:
+\bi
+\ii Each pass through the loop takes $O(1)$ time.
+\ii Each iteration moves $z$ up two levels.
+\ii $O(\lg n)$ levels.
+\ii Also note that there are at most 2 rotations overall.
+\ei
+\ii Insertion into red-black tree is $O(\lg n)$.
+\ei
+
+\sect{Deletion}
+
+\bi\ii Not covered here.
+\ii But also $O(\lg n)$.
+\ei
+
+
+%\includegraphics[width=\textwidth]{Fig-13-7.pdf}
+%\includegraphics[width=\textwidth]{Fig-13-8.pdf}
+%\includegraphics[width=\textwidth]{Fig-13-9.pdf}
+
+\end{document}

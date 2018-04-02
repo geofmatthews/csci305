@@ -1,0 +1,134 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\title{Proof of Master Theorem}
+\begin{document}
+\maketitle
+Suppose that $a\geq 1$ and $b\geq 1$ are constants, let $f(n)$ be a
+function, and let $T(n)$ be defined on natural numbers with
+ the recurrence:
+\[
+T(n) = aT\left(\frac{n}{b}\right) + f(n)
+\]
+Let's assume $n$ is a power of $b$, so that
+\begin{align}
+n &= b^k\\
+k&=\log_b(n)\end{align}
+Now 
+let's see what we get by trying to spell out terms and then cancel:
+\begin{align}
+T(b^k) &= aT(b^{k-1}) + f(b^k)\\
+aT(b^{k-1})
+&=
+a^2T(b^{k-2}) + af(b^{k-1})
+\\
+a^2T(b^{k-2})
+&=
+a^3T(b^{k-3}) + a^2f(b^{k-2})
+\\
+&\ldots&
+\\
+a^{k-1}T(b^{k-(k+1)})
+&=
+a^{k}T(b^{k-k}) + a^{k-1}f(b^{k-(k+1)})
+\\
+&=
+a^kT(1) + a^{k-1}f(b)
+\end{align}
+Adding up both sides while cancelling terms, we get
+\begin{align}
+T(b^k) &= a^kT(1) + \sum_{i=1}^{k} a^{k-i}f(b^{i})
+\\
+&=
+a^{\log_b(n)}T(1) + \sum_{i=1}^{\log_b(n)} a^{k-i}f(b^{i})
+\\
+&=
+n^{\log_b(a)}T(1) + \sum_{i=1}^{\log_b(n)} a^{k-i}f(b^{i}) \label{tcomplexity}
+\end{align}
+Since $T(1)$ will be a constant, the complexity of the whole thing
+depends on whether 
+\begin{align} n^{\log_b(a)}\end{align}
+grows faster or slower than
+\begin{align}
+\sum_{i=1}^{\log_b(n)} a^{k-i}f(b^{i})   \label{expression}
+\end{align}
+Let's see what we can find out about this expression.  Let's first suppose
+\begin{align}
+f(n) &= \Theta\left(n^{\log_b(a)}\right) \\
+f(b^i) &= \Theta\left((b^i)^{\log_b(a)}\right)\\
+ &= \Theta\left(b^{i\log_b(a)}\right)\\
+&= \Theta\left(\left(b^{\log_b(a)}\right)^i\right)\\
+&= \Theta(a^i)
+\end{align}
+Plugging this back in our expression \ref{expression}, gives
+\begin{align}
+\sum_{i=0}^{\log_b(n)} a^{k-i}f(b^{i}) &= \sum_{i=1}^{\log_b(n)} a^{k-i}\Theta(a^i)\\
+&= \sum_{i=1}^{\log_b(n)} \Theta(a^k)\\
+&= \sum_{i=1}^{\log_b(n)} \Theta(a^{\log_b(n)})\\
+&= \sum_{i=1}^{\log_b(n)} \Theta(n^{\log_b(a)})\\
+&= (\log_b(n)) \Theta(n^{\log_b(a)})\\
+&=  \Theta(\lg(n)n^{\log_b(a)})
+\end{align}
+Putting this back into the complexity of $T(n)$, equation
+\ref{tcomplexity},
+shows that if
+\begin{align}
+f(n) &= \Theta\left(n^{\log_b(a)}\right)
+\end{align}
+then
+\begin{align}
+T(n) &= \Theta\left(\lg(n)n^{\log_b(a)}\right)
+\end{align}
+Now let's suppose that $f(n)$ has some slightly lower complexity.
+Suppose $\epsilon>0$ is some (small) positive real number, and
+\begin{align}
+f(n) &= O\left(n^{\log_b(a)-\epsilon}\right)\\
+f(b^i) &= O\left((b^i)^{\log_b(a)-\epsilon}\right)\\
+ &= O\left(\left(b^{\log_b(a)-\epsilon}\right)^i\right)\\
+ &= O\left(\left(\frac{b^{\log_b(a)}}{b^\epsilon}\right)^i\right)\\
+ &= O\left(\left(\frac{a}{b^\epsilon}\right)^i\right)\\
+ &= O\left(\frac{a^i}{b^{i\epsilon}}\right)\\
+\end{align}
+Plugging this back into expression \ref{expression} gives
+\begin{align}
+\sum_{i=1}^{\log_b(n)} a^{k-i}f(b^{i})   &=
+\sum_{i=1}^{\log_b(n)} a^{k-i}O\left(\frac{a^i}{b^{i\epsilon}}\right)\\
+&=
+\sum_{i=1}^{\log_b(n)} O\left(\frac{a^k}{b^{i\epsilon}}\right)\\
+&=
+O\left(\sum_{i=1}^{\log_b(n)} \frac{a^k}{b^{i\epsilon}}\right)\\
+&=
+O\left(a^k\sum_{i=1}^{\log_b(n)} \frac{1}{b^{i\epsilon}}\right)\\
+&=
+O\left(\sum_{i=1}^{\log_b(n)} (b^{-\epsilon})^i\right)
+\end{align}
+Since $a^k=a^{\log_b(n)} = n^{\log_b(a)}$ is a constant.
+This is a geometric series, which we can sum by
+plugging $b^-\epsilon$ and $\log_b(n)$ for $r$ and $m$ into the rule
+\begin{align}
+\sum_{i=1}^m r^i&=
+\frac{r^{m + 1}-1}{r-1} - 1\\
+&= \frac{r^{m+1}-r}{r-1}
+\end{align}
+So
+\begin{align}
+\sum_{i=1}^{\log_b(n)} a^{k-i}f(b^{i})   &=
+O\left(\sum_{i=1}^{\log_b(n)} (b^{-\epsilon})^i\right)\\
+&=
+O\left(\frac{(b^{-\epsilon})^{\log_b(n)+1}-(b^{-\epsilon})}{(b^{-\epsilon})-1}\right)\\
+&=
+O\left(b^{(-\epsilon(\log_b(n)+1)})\right)\\
+&=
+O\left(b(b^{-\epsilon(\log_b(n)})\right)\\
+&=
+O\left(b^{-\epsilon(\log_b(n)}\right)\\
+&=
+O\left((b^{-\epsilon})^{\log_b(n)}\right)\\
+&=
+O\left(n^{\log_b(b^{-\epsilon})}\right)\\
+&=
+O\left(n^{\log_b(a)}\right)
+\end{align}
+
+\end{document}
+

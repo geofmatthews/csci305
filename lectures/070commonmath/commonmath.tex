@@ -1,0 +1,110 @@
+\documentclass{article}
+\usepackage{fullpage}
+
+\usepackage{amsmath,cancel}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{alltt}
+\newcommand{\red}[1]{{\color{red}#1}}
+\newcommand{\cyan}[1]{{\color{cyan}#1}}
+\newcommand{\blue}[1]{{\color{blue}#1}}
+\newcommand{\magenta}[1]{{\color{magenta}#1}}
+\newcommand{\yellow}[1]{{\color{yellow}#1}}
+\newcommand{\green}[1]{{\color{green}#1}}
+ 
+\newcommand{\bkt}[1]{\langle \mbox{ #1 } \rangle}
+\newcommand{\br}{\mbox{~}|\mbox{~}}
+ 
+\newcommand{\ns}[1]{\newpage {\bf #1}}
+\newcommand{\floor}[1]{\ensuremath{\left\lfloor #1 \right\rfloor}}
+\newcommand{\ceiling}[1]{\ensuremath{\left\lceil #1 \right\rceil}}
+\setlength{\parindent}{0in}
+ 
+\begin{document}
+ 
+\huge
+
+{\bf Monotonicity}
+\begin{description}
+  \item[monotonically increasing:] \[m \leq n \Rightarrow f(m) \leq f(n)\]
+  \item[monotonically decreasing:] \[m \leq n \Rightarrow f(m) \geq f(n)\]
+  \item[strictly increasing:] \[m < n \Rightarrow f(m) < f(n)\]
+  \item[strictly decreasing:] \[m < n \Rightarrow f(m) > f(n)\]
+\end{description}
+
+
+\ns{Floors and ceilings}
+\begin{description}
+  \item[floor:] $\floor{x}$ largest integer less than or equal to $x$
+  \item[ceiling:] $\ceiling{x}$ smallest integer greater than or equal to $x$
+\end{description}
+\[
+x-1 < \floor{x} \leq x \leq \ceiling{x} < x+1
+\]
+\begin{align*}
+  \floor{n/2} + \ceiling{n/2} &= n\\
+  \ceiling{\frac{\ceiling{x/a}}{b}} &= \ceiling{\frac{x}{ab}}\\
+  \floor{\frac{\floor{x/a}}{b}} &= \floor{\frac{x}{ab}}\\
+\ceiling{\frac{a}{b}} &\leq \frac{a+(b-1)}{b}\\
+\floor{\frac{a}{b}} &\leq \frac{a-(b-1)}{b}\\
+\end{align*}
+
+
+\ns{Exponentials and logarithms}
+
+If $a>1$:
+\begin{align*}
+\lim_{n\rightarrow\infty}\frac{n^b}{a^n} &= 0 &a>1
+\\
+e^x &= \sum_{i=0}^{\infty} \frac{x^i}{i!}
+\\
+e^x &\geq 1 + x
+\\
+1 + x &\leq e^x \leq 1 + x + x^2 & |x| \leq 1
+\\
+\lim_{n\rightarrow\infty}\left(1 + \frac{x}{n}\right)^n &= e^x
+\\
+\frac{x}{1+x} &\leq \ln(1+x) \leq x & x > -1
+\\
+\lim_{n\rightarrow\infty} \frac{\lg^b n}{(2^a)^{\lg n}} &=
+\lim_{n\rightarrow\infty} \frac{\lg^b n}{n^a} = 0
+\\
+\lg^b n &= o (n^a)
+\end{align*}
+All polynomials grow faster than polylogarithmic functions.
+
+
+\ns{Factorials}
+\begin{align*}
+  n! &\leq n^n
+  \\
+  n! &= \sqrt{2\pi n}\left(\frac{n}{e}\right)^n\left(1 + \Theta\left(\frac{1}{n}\right)\right)
+  \\
+  n! &= o(n^n)
+  \\
+  n! &= \omega(2^n)
+  \\
+  \lg(n!) &= \Theta(n\lg n)
+\end{align*}
+
+\ns{Fibonacci numbers}
+\begin{align*}
+  x^2 &= x + 1
+  \\
+  \phi &= \frac{1+\sqrt{5}}{2} \approx 1.618
+  \\
+  \hat{\phi} &= \frac{1-\sqrt{5}}{2} \approx -0.618
+  \\
+  F_i &= \frac{\phi^i - \hat{\phi}^i}{\sqrt{5}}
+  \\
+  F_i &= \floor{\frac{\phi^i}{\sqrt{5}} + \frac{1}{2}}
+\end{align*}
+
+
+
+\end{document}
+
+
+
+
+
