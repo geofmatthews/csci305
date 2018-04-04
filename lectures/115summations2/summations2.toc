@@ -1,0 +1,23 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Source}{2}{0}{1}
+\beamer@sectionintoc {2}{Summations}{3}{0}{2}
+\beamer@sectionintoc {3}{Definition using recurrences}{4}{0}{3}
+\beamer@sectionintoc {4}{Scope}{5}{0}{4}
+\beamer@sectionintoc {5}{Summation is linear}{6}{0}{5}
+\beamer@sectionintoc {6}{Multiple sums}{7}{0}{6}
+\beamer@sectionintoc {7}{Products of sums}{8}{0}{7}
+\beamer@sectionintoc {8}{Change of variables}{9}{0}{8}
+\beamer@sectionintoc {9}{Change of variables}{10}{0}{9}
+\beamer@sectionintoc {10}{Sums over index sets}{11}{0}{10}
+\beamer@sectionintoc {11}{Confusing index sets}{12}{0}{11}
+\beamer@sectionintoc {12}{Confusing index sets}{13}{0}{12}
+\beamer@sectionintoc {13}{Sums without explicit bounds}{14}{0}{13}
+\beamer@sectionintoc {14}{Double sums}{15}{0}{14}
+\beamer@sectionintoc {15}{Closed forms}{16}{0}{15}
+\beamer@sectionintoc {16}{Quick ``proof''}{17}{0}{16}
+\beamer@sectionintoc {17}{Solving summations}{18}{0}{17}
+\beamer@sectionintoc {18}{Guess but verify}{19}{0}{18}
+\beamer@sectionintoc {19}{Prove guess by induction}{20}{0}{19}
+\beamer@sectionintoc {20}{Strategies for asymptotic estimates}{21}{0}{20}
+\beamer@sectionintoc {21}{Strategies for asymptotic estimates}{22}{0}{21}

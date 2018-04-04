@@ -1,0 +1,13 @@
+\frametitle{Strategies for asymptotic estimates} 
+
+Bound using geometric series
+
+\begin{align*}
+  \sum_{i=1}^n x^i &= \frac{x^{n+1}-1}{x-1} =\Theta(x^{n})
+  \\\\
+  \sum_{i=1}^n 2^i &= \Theta(2^{n})
+  \\
+  \sum_{i=1}^n 2^{-i} &= \Theta(1)
+\end{align*}
+
+

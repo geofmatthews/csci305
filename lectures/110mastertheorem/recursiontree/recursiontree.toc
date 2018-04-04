@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.10pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Recursion Tree for p. 89}{2}{0}{1}
+\beamer@sectionintoc {2}{Recursion Tree for p. 89}{11}{0}{2}
+\beamer@sectionintoc {3}{{\bf Aha!} Revisited}{18}{0}{3}
+\beamer@sectionintoc {4}{{\bf Aha!} Revisited}{19}{0}{4}
