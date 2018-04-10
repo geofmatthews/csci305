@@ -1,13 +1,21 @@
-\frametitle{Strategies for asymptotic estimates} 
+\frametitle{Final Notes} 
+In practice, almost any sum you come across will be of the form:
+\[
+\sum_{i=1}^n f(i)
+\]
+where either:
+\begin{itemize}
+  \item
+    $f(n)$ is exponential.
 
-Bound using geometric series
+    Then it's bounded by a geometric series and
+the largest term dominates.
+\item
+  $f(n)$ is polynomial.
 
-\begin{align*}
-  \sum_{i=1}^n x^i &= \frac{x^{n+1}-1}{x-1} =\Theta(x^{n})
-  \\\\
-  \sum_{i=1}^n 2^i &= \Theta(2^{n})
-  \\
-  \sum_{i=1}^n 2^{-i} &= \Theta(1)
-\end{align*}
-
-
+  Then $f(n/2) =\Theta(f(n))$ and the sum is
+$\Theta(nf(n))$ using the lower bound:
+\[
+\sum_{i=n/2}^n f(n) =\Omega(nf(n))
+\]
+\end{itemize}

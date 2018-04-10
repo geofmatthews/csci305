@@ -21,3 +21,8 @@
 \beamer@sectionintoc {19}{Prove guess by induction}{20}{0}{19}
 \beamer@sectionintoc {20}{Strategies for asymptotic estimates}{21}{0}{20}
 \beamer@sectionintoc {21}{Strategies for asymptotic estimates}{22}{0}{21}
+\beamer@sectionintoc {22}{Strategies for asymptotic estimates}{23}{0}{22}
+\beamer@sectionintoc {23}{Strategies for asymptotic estimates}{24}{0}{23}
+\beamer@sectionintoc {24}{Strategies for asymptotic estimates}{25}{0}{24}
+\beamer@sectionintoc {25}{Strategies for asymptotic estimates}{26}{0}{25}
+\beamer@sectionintoc {26}{Final Notes}{27}{0}{26}

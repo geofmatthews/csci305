@@ -26,7 +26,7 @@
 
 {\bf Mergesort Recurrence}
 \begin{align*}
-T(1) &= c\\
+T(1) &= c_1\\
 T(n) &= 2T(n/2) + cn  \tag{if $n>1$}
 \end{align*}
 Get lots of equations:
@@ -40,14 +40,12 @@ Get lots of equations:
  2^{k-1}T(n/2^{k-1}) &= 2^kT(n/2^k) + cn\\
  &\ldots\\
  2^{\lg n - 1}T(n/2^{\lg n - 1}) &= 2^{\lg n}T(n/2^{\lg n}) + cn\\
- &= nT(1) + cn\\
- &= cn + cn
  \end{align*}
 
 \ns{Mergesort Recurrence}
 
 \begin{align*}
-T(1) &= c\\
+T(1) &= c_1\\
 T(n) &= 2T(n/2) + cn  \tag{if $n>1$}
 \end{align*}
 Rewrite equations, sum and cancel:
@@ -67,7 +65,7 @@ Rewrite equations, sum and cancel:
 Which results in
 \begin{align*}
   T(n) &= 2^{\lg n}T(N/2^{\lg n}) + \sum_{k=1}^{\lg n} cn\\
-  &= cn + cn\lg n\\
+  &= c_1n + cn\lg n\\
   &= \Theta(n\lg n)
 \end{align*}
 

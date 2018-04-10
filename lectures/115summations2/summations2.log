@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  4 APR 2018 11:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  10 APR 2018 11:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**summations2.tex
+**summations2
 (./summations2.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
@@ -1035,6 +1035,33 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  (./summations2.vrb) [22
 
 ]
+\openout4 = `summations2.vrb'.
+
+ (./summations2.vrb) [23
+
+]
+\openout4 = `summations2.vrb'.
+
+
+(./summations2.vrb) [24
+
+]
+\openout4 = `summations2.vrb'.
+
+ (./summations2.vrb) [25
+
+]
+\openout4 = `summations2.vrb'.
+
+ (./summations2.vrb) [26
+
+]
+\openout4 = `summations2.vrb'.
+
+
+(./summations2.vrb) [27
+
+]
 \tf@nav=\write7
 \openout7 = `summations2.nav'.
 
@@ -1044,28 +1071,28 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@snm=\write9
 \openout9 = `summations2.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 351.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 351.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 421.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 421.
  (./summations2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 351.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 351.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 421.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 421.
 Package rerunfilecheck Info: File `summations2.out' has not changed.
-(rerunfilecheck)             Checksum: 91F2780719CD72A1D53260FE932112FC;1148.
+(rerunfilecheck)             Checksum: EDDFCA5C2849C7412B86B847F2E1DB7E;1484.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 351.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 421.
  ) 
 Here is how much of TeX's memory you used:
- 17499 strings out of 494827
- 328737 string characters out of 6176977
+ 17554 strings out of 494827
+ 329337 string characters out of 6176977
  407994 words of memory out of 5000000
- 20296 multiletter control sequences out of 15000+600000
+ 20326 multiletter control sequences out of 15000+600000
  13788 words of font info for 52 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
- 48i,16n,51p,410b,551s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,16n,51p,406b,551s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
@@ -1079,10 +1106,10 @@ fonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
 /msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msam7.pfb>
-Output written on summations2.pdf (22 pages, 160751 bytes).
+Output written on summations2.pdf (27 pages, 171575 bytes).
 PDF statistics:
- 732 PDF objects out of 1000 (max. 8388607)
- 682 compressed objects within 7 object streams
- 66 named destinations out of 1000 (max. 500000)
- 211 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 884 PDF objects out of 1000 (max. 8388607)
+ 827 compressed objects within 9 object streams
+ 81 named destinations out of 1000 (max. 500000)
+ 251 words of extra memory for PDF output out of 10000 (max. 10000000)
 
