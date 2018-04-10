@@ -1,4 +1,5 @@
 \documentclass{article}
+\pagestyle{empty}
 \usepackage{fullpage}
 \usepackage{polynom}
 
@@ -38,8 +39,18 @@
 \end{eqnarray*}
 
 \ns{Sum of 1}
+
+Use telescoping:
 \begin{eqnarray*}
-  \sum_{i=1}^n 1 &=& \sum_{i=1}^n (i - (i - 1))
+\sum_{i=m}^n (a_i - a_{i-1}) &=& a_n - a_{m-1}
+\end{eqnarray*}
+Let $a_i = i$:
+\begin{eqnarray*}
+  \sum_{i=1}^n (a_i - a_{i-1}) &=&  \sum_{i=1}^n (i - (i - 1))
+  \\
+  &=&  \sum_{i=1}^n 1
+  \\
+   &=&  a_n - a_{m-1}
   \\
   &=& n - 0
   \\
@@ -74,8 +85,12 @@
   &=& 2\sum_{i=1}^n i - \sum_{i=1}^n 1
   \\
   &=& 2\sum_{i=1}^n i - n
-  \\\\\\
-  &\Rightarrow & \sum_{i=1}^n i = n(n+1)/2
+  \\
+  n^2 + n   &=& 2\sum_{i=1}^n i
+  \\
+  \sum_{i=1}^{n} i &=& \frac{n^2+n}{2}
+  \\
+   &=& \frac{n(n+1)}{2}
 \end{eqnarray*}
 
 \ns{Sum of $i$}

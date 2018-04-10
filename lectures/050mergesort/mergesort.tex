@@ -23,10 +23,61 @@
  
 \huge
 
+
 {\bf Mergesort Recurrence}
 \begin{align*}
 T(1) &= c\\
-f(n) &= 2T(n/2) + cn  \tag{if $n>1$}
+T(n) &= 2T(n/2) + cn  \tag{if $n>1$}
+\end{align*}
+Get lots of equations:
+\begin{align*}
+  T(n) &= 2T(n/2) + cn  \\
+  2T(n/2) &= 2[2T(n/2^2) + cn/2]\\
+          &= 2^2T(n/2^2) + cn\\
+ 2^2T(n/2^2) &= 2^2[2T(n/2^3) + cn/2^2]\\
+             &= 2^3T(n/2^3) + cn\\
+ &\ldots\\
+ 2^{k-1}T(n/2^{k-1}) &= 2^kT(n/2^k) + cn\\
+ &\ldots\\
+ 2^{\lg n - 1}T(n/2^{\lg n - 1}) &= 2^{\lg n}T(n/2^{\lg n}) + cn\\
+ &= nT(1) + cn\\
+ &= cn + cn
+ \end{align*}
+
+\ns{Mergesort Recurrence}
+
+\begin{align*}
+T(1) &= c\\
+T(n) &= 2T(n/2) + cn  \tag{if $n>1$}
+\end{align*}
+Rewrite equations, sum and cancel:
+
+\begin{align*}
+  T(n) &= \cancel{2T(n/2)} + cn  \\
+  \cancel{2T(n/2)} 
+          &= \cancel{2^2T(n/2^2)} + cn\\
+ \cancel{2^2T(n/2^2)}
+             &= \cancel{2^3T(n/2^3)} + cn\\
+ &\ldots\\
+ \cancel{2^{k-1}T(n/2^{k-1})} &= \cancel{2^kT(n/2^k)} + cn\\
+ &\ldots\\
+ \cancel{2^{\lg n - 1}T(n/2^{\lg n - 1})}
+ &= 2^{\lg n}T(n/2^{\lg n}) + cn\\
+ \end{align*}
+Which results in
+\begin{align*}
+  T(n) &= 2^{\lg n}T(N/2^{\lg n}) + \sum_{k=1}^{\lg n} cn\\
+  &= cn + cn\lg n\\
+  &= \Theta(n\lg n)
+\end{align*}
+
+
+
+\ns{Mergesort Recurrence, changing function}
+
+\begin{align*}
+T(1) &= c\\
+T(n) &= 2T(n/2) + cn  \tag{if $n>1$}
 \end{align*}
 Let's make this easier by assuming $n$ is a power of two:
 \begin{align*}
@@ -36,7 +87,7 @@ Let's make this easier by assuming $n$ is a power of two:
 Now we can rewrite our equations:
 \begin{align*}
 T(2^0) &= c\\
-f(2^j) &= 2T(2^{j-1}) + cn  \tag{if $j>0$}
+T(2^j) &= 2T(2^{j-1}) + cn  \tag{if $j>0$}
 \end{align*}
 Now we can introduce a new function, $f(j) = T(2^j)$, and we have
 \begin{align*}
@@ -104,7 +155,6 @@ n &=  2^j \\
   &= cn\log_2(n) + cn\\
   &= \Theta(n\lg(n))
 \end{align*}
-
 
 
 \end{document}
