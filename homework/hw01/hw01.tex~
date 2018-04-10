@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+
+\title{CSCI 305, Homework \# 1}
+\author{YOUR NAME HERE}
+\date{Spring 2018}
+
+
+\begin{document}
+
+\maketitle
+
+Find solutions to each of the following recurrences
+using the techniques outlined in the lecture notes (``without guessing'').
+Demonstrate that your closed form finds the same values for several
+small numbers, and prove by induction that your closed form satisfies
+the recurrence in general.
+
+\begin{enumerate}
+\item
+  \begin{align*}
+    f(0) &= 3\\
+    f(n) &= 5f(n-1)
+  \end{align*}
+
+\item
+  \begin{align*}
+    f(0) &= 5\\
+    f(n) &= f(n-1) + 4
+  \end{align*}
+
+\item
+  \begin{align*}
+    f(0) &= 2\\
+    f(n) &= 4f(n-1) + 6
+  \end{align*}
+
+\item
+  \begin{align*}
+    f(0) &= 3\\
+    f(n) &= 5f(n-1) + n
+  \end{align*}
+
+
+\end{enumerate}
+
+\end{document}
