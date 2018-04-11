@@ -24,9 +24,10 @@
 \huge
 
 {\bf Big O definition}
+
 \begin{align*}
   O(g(n)) &= \{ f(n) : &\mbox{there exists positive constants $c$ and $n_0$}\\
-          &&\mbox{such that $f(n) \leq cg(n)$ for all $n \geq n_0$}\}
+          &&\mbox{such that $0 \leq f(n) \leq cg(n)$ for all $n \geq n_0$}\}
 \end{align*}
 When we say
 \begin{align*}
@@ -128,6 +129,44 @@ $(n^2 + 5\lg n)/(2n+1) = O(n)$ for $c=3$ and $n_0=1$
 
 \end{itemize}
 
+\ns{Other sets}
+
+\begin{align*}
+  o(g(n))
+  &=\\
+  \{ f(n) : & \mbox{ for any positive constant $c$}\\
+    &\mbox{there exists positive $n_0$ such that}\\
+  &\mbox{$0 \leq f(n) < cg(n)$ for all $n \geq n_0$}\}\\
+  O(g(n))
+  &=\\
+  \{ f(n) : & \mbox{ there exist positive constants $c$ and $n_0$ such that}\\
+  &\mbox{$0 \leq f(n) \leq cg(n)$ for all $n \geq n_0$}\}\\
+  \Theta(g(n))
+  &=\\
+  \{ f(n) : & \mbox{ there exist positive constants $c,d$ and $n_0$ such that}\\
+  &\mbox{$0 \leq cg(n) \leq f(n) \leq dg(n)$ for all $n \geq n_0$}\}\\
+  \Omega(g(n))
+  &=\\
+  \{ f(n) : & \mbox{ there exist positive constants $c$ and $n_0$ such that}\\
+  &\mbox{$0  \leq f(n) \leq cg(n)$ for all $n \geq n_0$}\}\\
+  \omega(g(n))
+  &=\\
+  \{ f(n) : & \mbox{ for any positive constant $c$}\\
+    &\mbox{there exists positive $n_0$ such that}\\
+  &\mbox{$0 \leq cg(n) < f(n)$ for all $n \geq n_0$}\}\\
+\end{align*}
+
+\ns{Number of anonymous functions}
+
+
+The number of anonymous functions is equal to the number of times the
+asymptotic notation appears.
+
+\[\sum_{i=1}^{n} O(i) \]
+
+Here we assume there is only one function, not $n$ different functions.
+
+
 \ns{Asymptotic notation in equations}
 \begin{description}
   \item[Right hand side:]
@@ -155,6 +194,7 @@ means for {\em all} $f(n)\in\Theta(n)$,
   
 \end{description}
 
+
 \ns{Relational properties}
 \begin{description}
 \item[Reflexive:]
@@ -181,11 +221,53 @@ means for {\em all} $f(n)\in\Theta(n)$,
 \item
   Note:  We may have two functions $f$ and $g$ such that
   \begin{align*}
+    f(n) &\not= o(g(n))\\
     f(n) &\not= O(g(n))\\
     f(n) &\not= \Theta(g(n))\\
-    f(n) &\not= \Omega(g(n))
+    f(n) &\not= \Omega(g(n))\\
+    f(n) &\not= \omega(g(n))
     \end{align*}
 \end{description}
+
+For example, $n^{1+\sin(n)}$ and $n$.
+
+\ns{Limits}
+
+\begin{align*}
+  \lim_{n\rightarrow\infty} \frac{f(n)}{g(n)} = 0
+  &\Longrightarrow
+  f(n) = o(g(n))
+  \\\\
+  \lim_{n\rightarrow\infty} \frac{f(n)}{g(n)} = \infty
+  &\Longrightarrow
+  f(n) = \omega(g(n))
+  \\\\
+  \lim_{n\rightarrow\infty} \frac{f(n)}{g(n)} < \infty
+  &\Longrightarrow
+  f(n) = O(g(n))
+  \\\\
+  \lim_{n\rightarrow\infty} \frac{f(n)}{g(n)} > 0
+  &\Longrightarrow
+  f(n) = \Omega(g(n))
+  \\\\
+  \lim_{n\rightarrow\infty} \frac{f(n)}{g(n)} \in (0,\infty)
+  &\Longrightarrow
+  f(n) = \Theta(g(n))
+\end{align*}
+
+\ns{L'Hospital's Rule}
+
+When
+\begin{align*}
+  \lim_{x\rightarrow\infty} f(x) &= \infty\\
+  \mbox{and}\\
+  \lim_{x\rightarrow\infty} g(x) &= \infty\\
+\end{align*}
+then
+\begin{align*}
+  \lim_{x\rightarrow\infty} \frac{f(x)}{g(x)} &= 
+  \lim_{x\rightarrow\infty} \frac{f'(x)}{g'(x)}
+\end{align*}
 
 \end{document}
 
