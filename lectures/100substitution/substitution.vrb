@@ -1,0 +1,21 @@
+\frametitle{Substitution method, big-$\Omega $} 
+\bi
+\ii To prove $\Theta(n^2)$ we also need $\Omega(n^2)$.
+\begin{align*}
+  f(n) &= f(n-1) + 6n - 3
+\end{align*}
+\ii
+Suppose $f(n-1)\geq c(n-1)^2$ and prove
+$f(n)\geq cn^2$
+\begin{align*}
+  f(n) &= f(n-1) + 6n - 3\\
+  &\geq c(n-1)^2 + 6n - 3\\
+  &= cn^2 -2cn + c + 6n - 3\\
+  &= cn^2 + (6 -2c)n + (c - 3)\\
+  &\geq cn^2
+\end{align*}
+\ii
+So long as $c<3$, and sufficiently large $n$.
+\ii
+Since $f(n) = O(n^2)$ and $f(n) = \Omega(n^2)$, $f(n) = \Theta(n^2)$.
+\ei

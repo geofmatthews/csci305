@@ -1,0 +1,21 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Big O definition}{1}{0}{1}
+\beamer@sectionintoc {2}{$n^2 + 42n + 7 = O(n^2)$}{2}{0}{2}
+\beamer@sectionintoc {3}{Proof of $n^2 + 42n + 7 = O(n^2)$}{3}{0}{3}
+\beamer@sectionintoc {4}{Proof of $4n^2 + 5 n + 3 = O(n^2)$}{4}{0}{4}
+\beamer@sectionintoc {5}{Proof of $5n\qopname \relax o{lg}n + 8n - 200 = O(n\qopname \relax o{lg}n)$}{5}{0}{5}
+\beamer@sectionintoc {6}{Proof of $(n+5)\qopname \relax o{lg}(3n^2+7) = O(n\qopname \relax o{lg}n)$}{6}{0}{6}
+\beamer@sectionintoc {7}{Proof of $(n^2 + 5\qopname \relax o{lg}n)/(2n+1) = O(n)$}{7}{0}{7}
+\beamer@sectionintoc {8}{Useful facts}{8}{0}{8}
+\beamer@sectionintoc {9}{Other sets}{9}{0}{9}
+\beamer@sectionintoc {10}{When limits exist}{10}{0}{10}
+\beamer@sectionintoc {11}{Other sets}{11}{0}{11}
+\beamer@sectionintoc {12}{Number of anonymous functions}{12}{0}{12}
+\beamer@sectionintoc {13}{Asymptotic notation in equations}{13}{0}{13}
+\beamer@sectionintoc {14}{Relational properties}{14}{0}{14}
+\beamer@sectionintoc {15}{Relations are not exhaustive}{15}{0}{15}
+\beamer@sectionintoc {16}{Limits}{16}{0}{16}
+\beamer@sectionintoc {17}{L'H\^opital's Rule}{17}{0}{17}
+\beamer@sectionintoc {18}{L'H\^opital example}{18}{0}{18}
+\beamer@sectionintoc {19}{L'H\^opital example}{19}{0}{19}
+\beamer@sectionintoc {20}{L'H\^opital example}{20}{0}{20}

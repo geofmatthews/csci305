@@ -134,6 +134,27 @@ The last one only if $af(\frac{n}{b}) \leq cf(n)$ for some $c<1$
 and large enough $n$.
 \end{frame}
 
+\sect{Master theorem examples}
+
+\begin{align*}
+  T(n) &= aT\left(\frac{n}{b}\right) + f(n)\\
+O(n^{\log_b a - \epsilon})&\Leftrightarrow \Theta(n^{\log_b a })\\
+\Theta(n^{\log_b a}) &\Leftrightarrow \Theta(f(n)\lg n)\\
+\Omega(n^{\log_b a + \epsilon}) &\Leftrightarrow \Theta(f(n))
+\end{align*}
+
+\begin{align*}
+  T(n) &= 2T\left(\frac{n}{2}\right) + n\\
+  \log_b a &= 1\\
+  f(n) &= \Theta(n^{\log_b a})\\
+  T(n) &= \Theta(n\lg n)
+\end{align*}
+
+
+\end{frame}
+
+
+
 \sect{Master theorem does not apply}
 \begin{align*}
   T(n) &= 2T(n/2) + n\lg n\\

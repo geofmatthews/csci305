@@ -1,0 +1,14 @@
+\frametitle{Fibonacci numbers} 
+
+\begin{align*}
+  0 &= x^2 - x - 1 & \mbox{roots are $\phi$ and $\hat{\phi}$}
+  \\
+  \phi &= \frac{1+\sqrt{5}}{2} \approx 1.618
+  \\
+  \hat{\phi} &= \frac{1-\sqrt{5}}{2} \approx -0.618
+  \\
+  F_i &= \frac{\phi^i - \hat{\phi}^i}{\sqrt{5}}
+  \\
+  F_i &= \floor{\frac{\phi^i}{\sqrt{5}} + \frac{1}{2}}
+\end{align*}
+

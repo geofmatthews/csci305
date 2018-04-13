@@ -1,0 +1,20 @@
+\frametitle{L'H\^opital example} 
+
+\begin{align*}
+  f(n) &= n^a\\
+  g(n) &= b^n& b > 1\\\\
+  \lim_{n\rightarrow\infty} \frac{n^0}{b^n}
+  &=
+  0 & a=0\\
+  \lim_{n\rightarrow\infty} \frac{n^a}{b^n}
+  &=
+  \lim_{n\rightarrow\infty} \frac{an^{a-1}}{(\ln b)b^{n}} & a > 0\\
+  &=
+   \left(\frac{a}{\ln b}\right)\lim_{n\rightarrow\infty}\frac{n^{a-1}}{b^{n}} \\
+  &= 0 & \mbox{by induction}
+\end{align*}
+
+Therefore
+\[
+f(n) = o(g(n))
+\]

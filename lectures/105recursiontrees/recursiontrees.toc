@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Using trees to guess}{1}{0}{1}
+\beamer@sectionintoc {3}{Bound the summation}{3}{0}{2}
+\beamer@sectionintoc {4}{Explicitly Solving Recursion of p. 89}{4}{0}{3}
+\beamer@sectionintoc {5}{Explicitly Solving Recursion of p. 89}{5}{0}{4}
+\beamer@sectionintoc {6}{Second recursion tree example}{6}{0}{5}

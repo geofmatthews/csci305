@@ -1,21 +1,26 @@
-\beamer@endinputifotherversion {3.33pt}
+\beamer@endinputifotherversion {3.36pt}
 \headcommand {\sectionentry {1}{Master Theorem}{1}{Master Theorem}{0}}
 \headcommand {\beamer@sectionpages {1}{0}}
 \headcommand {\beamer@subsectionpages {1}{0}}
 \headcommand {\slideentry {1}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
-\headcommand {\sectionentry {2}{Master theorem does not apply}{2}{Master theorem does not apply}{0}}
+\headcommand {\sectionentry {2}{Master theorem examples}{2}{Master theorem examples}{0}}
 \headcommand {\beamer@sectionpages {1}{1}}
 \headcommand {\beamer@subsectionpages {1}{1}}
-\headcommand {\slideentry {2}{0}{2}{2/2}{}{0}}
+\headcommand {\slideentry {2}{0}{1}{2/2}{}{0}}
 \headcommand {\beamer@framepages {2}{2}}
-\headcommand {\sectionentry {3}{Master theorem does apply}{3}{Master theorem does apply}{0}}
+\headcommand {\sectionentry {3}{Master theorem does not apply}{3}{Master theorem does not apply}{0}}
 \headcommand {\beamer@sectionpages {2}{2}}
 \headcommand {\beamer@subsectionpages {2}{2}}
-\headcommand {\slideentry {3}{0}{3}{3/3}{}{0}}
+\headcommand {\slideentry {3}{0}{1}{3/3}{}{0}}
 \headcommand {\beamer@framepages {3}{3}}
-\headcommand {\beamer@partpages {1}{3}}
-\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\sectionentry {4}{Master theorem does apply}{4}{Master theorem does apply}{0}}
 \headcommand {\beamer@sectionpages {3}{3}}
-\headcommand {\beamer@documentpages {3}}
-\headcommand {\def \inserttotalframenumber {3}}
+\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\slideentry {4}{0}{1}{4/4}{}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\beamer@partpages {1}{4}}
+\headcommand {\beamer@subsectionpages {4}{4}}
+\headcommand {\beamer@sectionpages {4}{4}}
+\headcommand {\beamer@documentpages {4}}
+\headcommand {\def \inserttotalframenumber {4}}

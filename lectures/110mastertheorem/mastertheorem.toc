@@ -1,5 +1,6 @@
-\beamer@endinputifotherversion {3.33pt}
+\beamer@endinputifotherversion {3.36pt}
 \select@language {english}
 \beamer@sectionintoc {1}{Master Theorem}{1}{0}{1}
-\beamer@sectionintoc {2}{Master theorem does not apply}{2}{0}{2}
-\beamer@sectionintoc {3}{Master theorem does apply}{3}{0}{3}
+\beamer@sectionintoc {2}{Master theorem examples}{2}{0}{2}
+\beamer@sectionintoc {3}{Master theorem does not apply}{3}{0}{3}
+\beamer@sectionintoc {4}{Master theorem does apply}{4}{0}{4}

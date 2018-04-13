@@ -1,0 +1,14 @@
+\frametitle{Second recursion tree example} 
+\[ T(n) = T(n/3) + T(2n/3) + O(n) \]
+\vfill
+
+\includegraphics[scale=0.1]{Fig-4-6.pdf}
+\bi
+\pause
+\ii How long is the longest branch of this tree?
+\pause
+\ii $\log_{3/2} n$
+\pause
+\ii Prove your guess with substitution (induction).
+\ei
+

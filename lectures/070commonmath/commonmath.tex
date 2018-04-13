@@ -1,30 +1,23 @@
-\documentclass{article}
-\usepackage{fullpage}
+\documentclass{beamer}
 
 \usepackage{amsmath,cancel}
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{alltt}
-\newcommand{\red}[1]{{\color{red}#1}}
-\newcommand{\cyan}[1]{{\color{cyan}#1}}
-\newcommand{\blue}[1]{{\color{blue}#1}}
-\newcommand{\magenta}[1]{{\color{magenta}#1}}
-\newcommand{\yellow}[1]{{\color{yellow}#1}}
-\newcommand{\green}[1]{{\color{green}#1}}
+
+\newcommand{\sect}[1]{
+\section{#1}
+\begin{frame}[fragile]\frametitle{#1}
+}
  
-\newcommand{\bkt}[1]{\langle \mbox{ #1 } \rangle}
-\newcommand{\br}{\mbox{~}|\mbox{~}}
- 
-\newcommand{\ns}[1]{\newpage {\bf #1}}
 \newcommand{\floor}[1]{\ensuremath{\left\lfloor #1 \right\rfloor}}
 \newcommand{\ceiling}[1]{\ensuremath{\left\lceil #1 \right\rceil}}
-\setlength{\parindent}{0in}
+
  
 \begin{document}
  
-\huge
 
-{\bf Monotonicity}
+\sect{Monotonicity}
 \begin{description}
   \item[monotonically increasing:] \[m \leq n \Rightarrow f(m) \leq f(n)\]
   \item[monotonically decreasing:] \[m \leq n \Rightarrow f(m) \geq f(n)\]
@@ -33,7 +26,9 @@
 \end{description}
 
 
-\ns{Floors and ceilings}
+\end{frame}
+
+\sect{Floors and ceilings}
 \begin{description}
   \item[floor:] $\floor{x}$ largest integer less than or equal to $x$
   \item[ceiling:] $\ceiling{x}$ smallest integer greater than or equal to $x$
@@ -50,35 +45,45 @@ x-1 < \floor{x} \leq x \leq \ceiling{x} < x+1
 \end{align*}
 
 
-\ns{Exponentials and logarithms}
+\end{frame}
 
-If $a>1$:
+\sect{Logarithms}
+
 \begin{align*}
-\lim_{n\rightarrow\infty}\frac{n^b}{a^n} &= 0 &a>1
+  \lg^k n &= (\lg n)^k
+  \\
+  \lg \lg n &= \lg(\lg n)
 \\
-e^x &= \sum_{i=0}^{\infty} \frac{x^i}{i!}
+b^{\log_b(x)} &= x
 \\
-e^x &\geq 1 + x
+\log_a(xy) &= \log_a(x) + \log_a(y)
 \\
-1 + x &\leq e^x \leq 1 + x + x^2 & |x| \leq 1
+\log_a(x/y) &= \log_a(x) - \log_a(y)
 \\
-\lim_{n\rightarrow\infty}\left(1 + \frac{x}{n}\right)^n &= e^x
+\log_a(x^r) &= r\log_a(x)
 \\
-\frac{x}{1+x} &\leq \ln(1+x) \leq x & x > -1
+\log_a(a^r) &= r
 \\
-\lim_{n\rightarrow\infty} \frac{\lg^b n}{(2^a)^{\lg n}} &=
-\lim_{n\rightarrow\infty} \frac{\lg^b n}{n^a} = 0
+ \log_a(x) &= (\log_a(b))(\log_b(x))
 \\
-\lg^b n &= o (n^a)
+ \log_a(x) &= \frac{\log_b(x)}{\log_b(a)}
+ \\
+ \log_a(b) &= \frac{1}{\log_b(a)}
+\\
+a^{\log_b(c)} &= c^{\log_b(a)}
 \end{align*}
-All polynomials grow faster than polylogarithmic functions.
 
 
-\ns{Factorials}
+\end{frame}
+
+\sect{Factorials}
 \begin{align*}
   n! &\leq n^n
   \\
   n! &= \sqrt{2\pi n}\left(\frac{n}{e}\right)^n\left(1 + \Theta\left(\frac{1}{n}\right)\right)
+  \\
+  &= \sqrt{2\pi n}\left(\frac{n}{e}\right)^n e^{\alpha_n}
+  &\frac{1}{12n+1} < \alpha_n < \frac{1}{12n}
   \\
   n! &= o(n^n)
   \\
@@ -87,9 +92,25 @@ All polynomials grow faster than polylogarithmic functions.
   \lg(n!) &= \Theta(n\lg n)
 \end{align*}
 
-\ns{Fibonacci numbers}
+\end{frame}
+
+\sect{Iterated log function}
+
 \begin{align*}
-  x^2 &= x + 1
+  \lg^* (n) &= \min\{i\geq 0 : \lg^{(i)} n \leq 1\}\\\\
+  \lg^* 2 &= 1\\
+  \lg^* 4 &= 2\\
+  \lg^* 16 &= 3\\
+  \lg^* 65536 &= 4\\
+  \lg^* 2^{65536} &= 5\\
+\end{align*}
+\end{frame}
+
+
+\sect{Fibonacci numbers}
+
+\begin{align*}
+  0 &= x^2 - x - 1 & \mbox{roots are $\phi$ and $\hat{\phi}$}
   \\
   \phi &= \frac{1+\sqrt{5}}{2} \approx 1.618
   \\
@@ -100,7 +121,7 @@ All polynomials grow faster than polylogarithmic functions.
   F_i &= \floor{\frac{\phi^i}{\sqrt{5}} + \frac{1}{2}}
 \end{align*}
 
-
+\end{frame}
 
 \end{document}
 

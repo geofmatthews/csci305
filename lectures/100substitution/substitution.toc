@@ -1,0 +1,18 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Finding $\Theta $ for Recurrences}{1}{0}{1}
+\beamer@sectionintoc {2}{Substitution Method}{2}{0}{2}
+\beamer@sectionintoc {3}{Substitution Method}{3}{0}{3}
+\beamer@sectionintoc {4}{Base case}{4}{0}{4}
+\beamer@sectionintoc {5}{Substitution method, guessing wrong element of $O(n)$}{5}{0}{5}
+\beamer@sectionintoc {6}{Try a more general guess}{6}{0}{6}
+\beamer@sectionintoc {7}{Changing Variables}{7}{0}{7}
+\beamer@sectionintoc {8}{Another example}{8}{0}{8}
+\beamer@sectionintoc {9}{Substitution method, second try}{9}{0}{9}
+\beamer@sectionintoc {10}{The Jeopardy Method}{10}{0}{10}
+\beamer@sectionintoc {11}{The Jeopardy Method}{11}{0}{11}
+\beamer@sectionintoc {12}{Check your question to the solution}{12}{0}{12}
+\beamer@sectionintoc {13}{Equations and recurrences}{13}{0}{13}
+\beamer@sectionintoc {14}{Check your solution}{14}{0}{14}
+\beamer@sectionintoc {15}{Substitution method, random example}{15}{0}{15}
+\beamer@sectionintoc {16}{Picking $c$ and $n_0$}{16}{0}{16}
+\beamer@sectionintoc {17}{Substitution method, big-$\Omega $}{17}{0}{17}
