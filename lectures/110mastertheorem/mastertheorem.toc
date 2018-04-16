@@ -1,6 +1,11 @@
 \beamer@endinputifotherversion {3.36pt}
 \select@language {english}
-\beamer@sectionintoc {1}{Master Theorem}{1}{0}{1}
-\beamer@sectionintoc {2}{Master theorem examples}{2}{0}{2}
-\beamer@sectionintoc {3}{Master theorem does not apply}{3}{0}{3}
-\beamer@sectionintoc {4}{Master theorem does apply}{4}{0}{4}
+\beamer@sectionintoc {1}{Example 1: $T(n) = aT(n/b) + f(n)$ with $a=2, b=3$}{2}{0}{1}
+\beamer@sectionintoc {2}{Example 2: $T(n) = aT(n/b) + f(n)$ with $a=3, b=2$}{3}{0}{2}
+\beamer@sectionintoc {3}{Master Theorem}{4}{0}{3}
+\beamer@sectionintoc {4}{Master theorem example 1}{5}{0}{4}
+\beamer@sectionintoc {5}{Master theorem example 2}{6}{0}{5}
+\beamer@sectionintoc {6}{Master theorem example 3}{7}{0}{6}
+\beamer@sectionintoc {7}{Master theorem example 4}{8}{0}{7}
+\beamer@sectionintoc {8}{Master theorem does not apply}{9}{0}{8}
+\beamer@sectionintoc {9}{Master theorem does apply}{10}{0}{9}
