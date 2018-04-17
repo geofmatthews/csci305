@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  13 APR 2018 14:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  17 APR 2018 10:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -972,16 +972,6 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 [13
 
 ]
-\openout4 = `substitution.vrb'.
-
- (./substitution.vrb) [14
-
-]
-\openout4 = `substitution.vrb'.
-
- (./substitution.vrb) [15
-
-]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 368.
@@ -1004,7 +994,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 \openout4 = `substitution.vrb'.
 
-(./substitution.vrb) [16
+(./substitution.vrb) [14
 
 ]
 
@@ -1021,7 +1011,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 \openout4 = `substitution.vrb'.
 
-(./substitution.vrb) [17
+(./substitution.vrb) [15
 
 ]
 \tf@nav=\write6
@@ -1038,15 +1028,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 418.
  (./substitution.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 418.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 418.
+Package rerunfilecheck Info: File `substitution.out' has not changed.
+(rerunfilecheck)             Checksum: 72BCD791D3B7DBB3AF6ECB18FC6EEB27;899.
 
-
-Package rerunfilecheck Warning: File `substitution.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `substitution.out':
-(rerunfilecheck)             Before: 3EF54EFC0FBEB65708D06D59DB14924B;957
-(rerunfilecheck)             After:  34F0C40E34839D27C86883D7CF7A97A0;1019.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -1054,10 +1038,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 418.
  ) 
 Here is how much of TeX's memory you used:
- 16625 strings out of 494827
- 315892 string characters out of 6176977
- 388520 words of memory out of 5000000
- 19464 multiletter control sequences out of 15000+600000
+ 16604 strings out of 494827
+ 315671 string characters out of 6176977
+ 387520 words of memory out of 5000000
+ 19453 multiletter control sequences out of 15000+600000
  15226 words of font info for 57 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  48i,14n,51p,388b,551s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1073,10 +1057,10 @@ lic/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msam7.pfb>
-Output written on substitution.pdf (17 pages, 138493 bytes).
+Output written on substitution.pdf (15 pages, 133719 bytes).
 PDF statistics:
- 576 PDF objects out of 1000 (max. 8388607)
- 533 compressed objects within 6 object streams
- 52 named destinations out of 1000 (max. 500000)
- 171 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 519 PDF objects out of 1000 (max. 8388607)
+ 479 compressed objects within 5 object streams
+ 46 named destinations out of 1000 (max. 500000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -12,7 +12,7 @@
 }
 
 \newcommand{\bi}{\begin{itemize}}
-\newcommand{\li}{\item}
+\newcommand{\ii}{\item}
 \newcommand{\ei}{\end{itemize}}
 
 \usepackage[english]{babel}
@@ -183,6 +183,130 @@ $h = \log_2 n
 \hfill
 \sum_{i=0}^{\log_b n} a^i f(n/b^i)
 $
+
+\end{frame}
+
+\sect{Comparing leaves to internal nodes}
+\bi
+\ii Number of leaves: $n^{\log_b a}$
+\ii Internal time: $\sum_{i=0}^{\log_b n} a^if(n/b^i)$
+\ii Suppose $f(n) = n$, $a=b=4$, $n^{\log_b a} = n$
+\ei
+\begin{align*}
+  \sum_{i=0}^{\log_4 n} a^if(n/b^i)
+  &=
+  \sum_{i=0}^{\log_4 n} 4^i(n/4^i)\\
+  &=
+  \sum_{i=0}^{\log_4 n} n\\
+  &= \Theta(n\lg n)\\\\
+  n^{\log_b a} + \Theta(n\lg n) &= \Theta(n\lg n)
+\end{align*}
+
+\end{frame}
+
+
+\sect{Comparing leaves to internal nodes}
+\bi
+\ii Number of leaves: $n^{\log_b a}$
+\ii Internal time: $\sum_{i=0}^{\log_b n} a^if(n/b^i)$
+\ii Suppose $f(n) = n$, $a=4$, $b=2$, $n^{\log_b a} = n^2$
+\ei
+\begin{align*}
+  \sum_{i=0}^{\log_2 n} a^if(n/b^i)
+  &=
+  \sum_{i=0}^{\log_2 n} 4^i(n/2^i)\\
+  &=
+  n \sum_{i=0}^{\log_2 n} 2^i\\
+  &= \Theta(n^2)\\\\
+  n^{\log_b a} + \Theta(n^2) &= \Theta(n^2)
+\end{align*}
+
+\end{frame}
+
+\sect{Comparing leaves to internal nodes}
+\bi
+\ii Number of leaves: $n^{\log_b a}$
+\ii Internal time: $\sum_{i=0}^{\log_b n} a^if(n/b^i)$
+\ii Suppose $f(n) = n^2$, $a=b=4$, $n^{\log_b a} = n$
+\ei
+\begin{align*}
+  \sum_{i=0}^{\log_4 n} a^if(n/b^i)
+  &=
+  \sum_{i=0}^{\log_4 n} 4^i(n/4^i)^{2}\\
+  &=
+  \sum_{i=0}^{\log_4 n} \left(\frac{4}{4^{2}}\right)^in^{2}\\
+  &=
+  n^2\sum_{i=0}^{\log_4 n} (1/4)^i\\
+  &= \Theta(n^2)\\\\
+  n^{\log_b a} + \Theta(n^2) &= \Theta(n^2)
+\end{align*}
+
+\end{frame}
+
+
+
+
+\sect{Comparing leaves to internal nodes}
+\bi
+\ii Number of leaves: $n^{\log_b a}$
+\ii Internal time: $\sum_{i=0}^{\log_b n} a^if(n/b^i)$
+\ii Suppose $f(n) = n^2$, $a=4$, $b=2$, $n^{\log_b a} = n^2$
+\ei
+\begin{align*}
+  \sum_{i=0}^{\log_b n} a^if(n/b^i)
+  &=
+  \sum_{i=0}^{\log_2 n} 4^i(n/2^i)^{2}\\
+  &=
+  \sum_{i=0}^{\log_2 n} \left(\frac{4}{2^{2}}\right)^in^{2}\\
+  &=
+  n^2\sum_{i=0}^{\log_2 n} (1)^i\\
+  &= \Theta(n^2\lg n)\\\\
+  n^{\log_b a} + \Theta(n^2\lg n) &= \Theta(n^2\lg n)
+\end{align*}
+
+\end{frame}
+
+
+\sect{Comparing leaves to internal nodes}
+\bi
+\ii Number of leaves: $n^{\log_b a}$
+\ii Internal time: $\sum_{i=0}^{\log_b n} a^if(n/b^i)$
+\ii Suppose $f(n) = n^2$, $a=8$, $b=2$, $n^{\log_b a} = n^3$
+\ei
+\begin{align*}
+  \sum_{i=0}^{\log_4 n} a^if(n/b^i)
+  &=
+  \sum_{i=0}^{\log_b n} 8^i(n/2^i)^{2}\\
+  &=
+  \sum_{i=0}^{\log_b n} \left(\frac{8}{2^{2}}\right)^in^{2}\\
+  &=
+  n^2\sum_{i=0}^{\log_b n} 2^i\\
+  &= \Theta(n^2\lg n)\\\\
+  n^{\log_b a} + \Theta(n^2\lg n) &= \Theta(n^2\lg n)
+\end{align*}
+
+\end{frame}
+
+
+
+\sect{Comparing leaves to internal nodes}
+\bi
+\ii Number of leaves: $n^{\log_b a}$
+\ii Internal time: $\sum_{i=0}^{\log_b n} a^if(n/b^i)$
+\ii Suppose $f(n) = n^{\log_b a}$ 
+\ei
+\begin{align*}
+  \sum_{i=0}^{\log_b n} a^if(n/b^i)
+  &=
+  \sum_{i=0}^{\log_b n} a^i(n/b^i)^{\log_b a}\\
+  &=
+  \sum_{i=0}^{\log_b n} \left(\frac{a}{b^{\log_b a}}\right)^in^{\log_b a}\\
+  &=
+  \sum_{i=0}^{\log_b n} n^{\log_b a}\\
+  &=
+  n^{\log_b a} \log_b n\\
+  &= \Theta(f(n)\lg n)
+\end{align*}
 
 \end{frame}
 

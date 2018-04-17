@@ -1,9 +1,15 @@
 \BOOKMARK [2][]{Outline0.1}{Example 1: T\(n\) = aT\(n/b\) + f\(n\) with a=2, b=3}{}% 1
 \BOOKMARK [2][]{Outline0.2}{Example 2: T\(n\) = aT\(n/b\) + f\(n\) with a=3, b=2}{}% 2
-\BOOKMARK [2][]{Outline0.3}{Master Theorem}{}% 3
-\BOOKMARK [2][]{Outline0.4}{Master theorem example 1}{}% 4
-\BOOKMARK [2][]{Outline0.5}{Master theorem example 2}{}% 5
-\BOOKMARK [2][]{Outline0.6}{Master theorem example 3}{}% 6
-\BOOKMARK [2][]{Outline0.7}{Master theorem example 4}{}% 7
-\BOOKMARK [2][]{Outline0.8}{Master theorem does not apply}{}% 8
-\BOOKMARK [2][]{Outline0.9}{Master theorem does apply}{}% 9
+\BOOKMARK [2][]{Outline0.3}{Comparing leaves to internal nodes}{}% 3
+\BOOKMARK [2][]{Outline0.4}{Comparing leaves to internal nodes}{}% 4
+\BOOKMARK [2][]{Outline0.5}{Comparing leaves to internal nodes}{}% 5
+\BOOKMARK [2][]{Outline0.6}{Comparing leaves to internal nodes}{}% 6
+\BOOKMARK [2][]{Outline0.7}{Comparing leaves to internal nodes}{}% 7
+\BOOKMARK [2][]{Outline0.8}{Comparing leaves to internal nodes}{}% 8
+\BOOKMARK [2][]{Outline0.9}{Master Theorem}{}% 9
+\BOOKMARK [2][]{Outline0.10}{Master theorem example 1}{}% 10
+\BOOKMARK [2][]{Outline0.11}{Master theorem example 2}{}% 11
+\BOOKMARK [2][]{Outline0.12}{Master theorem example 3}{}% 12
+\BOOKMARK [2][]{Outline0.13}{Master theorem example 4}{}% 13
+\BOOKMARK [2][]{Outline0.14}{Master theorem does not apply}{}% 14
+\BOOKMARK [2][]{Outline0.15}{Master theorem does apply}{}% 15

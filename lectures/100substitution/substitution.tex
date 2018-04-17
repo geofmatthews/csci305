@@ -81,8 +81,8 @@ Assume that $T(x) \leq cx\lg x$ for all $x < n$ and prove:
   T(n) &= 2T(n/2) + n & \mbox{by recurrence}\\
   &\leq 2(c(n/2)\lg(n/2)) + n &\mbox{by inductive hypothesis}\\
   &= cn\lg(n/2) + n\\
-  &= cn\lg n -cn\lg 2 + n\\
-  &= cn\lg - cn + n\\
+  &= cn\lg n - cn\lg 2 + n\\
+  &= cn\lg n - cn + n\\
   &\leq cn\lg n &\mbox{for $c \geq 1$}
 \end{align*}
 \ii
@@ -175,55 +175,55 @@ T(n) = T(2^m) = S(m) =O(m \lg m) = O(\lg n \lg \lg n)
 
 
 
-\sect{Another example}
-\bi
-\ii
-Show that $T(n) = O(n^3)$ for
-\begin{align*}
-  T(n) &= 8T(n/2) + \Theta(n^2)
-\end{align*}
-\ii
-Assume $T(x) \leq cx^3$ for all $x<n$ (strong induction).
-\ii
-Try to prove $T(n) \leq cn^3$ (same constant).
-\begin{align*}
-  T(n) &= 8T(n/2) + \Theta(n^2)\\
-  &\leq  8T(n/2) + an^2  &\mbox{definition of $\Theta$}\\
-  &\leq 8cn^3/2^3 +  an^2 & \mbox{since $n/2 < n$}\\
-  &= cn^3 +  an^2
-\end{align*}
-\ii
-We cannot use $cn^3 +  an^2 = O(n^3)$.
-\ii
-We need a more general hypothesis.
-\ei
-\end{frame}
-
-\sect{Substitution method, second try}
-\bi
-\ii
-Show that $T(n) = O(n^3)$ for
-\begin{align*}
-  T(n) &= 8T(n/2) + \Theta(n^2)
-\end{align*}
-\ii
-Assume $T(x) \leq cx^3 + dx^2$ for all $x<n$.
-\ii
-Try to prove $T(n) \leq cn^3 + dx^2$.
-\begin{align*}
-  T(n) &= 8T(n/2) + \Theta(n^2)\\
-  &\leq  8T(n/2) + an^2  &\mbox{definition of $\Theta$}\\
-  &\leq 8(cn^3/2^3 + dn^2/2^3) +  an^2 & \mbox{inductive hypothesis}\\
-  &= cn^3 +  dn^2 + an^2 &\mbox{let $d = -a$}\\
-  &= cn^3 \leq cn^3 + dn^2
-\end{align*}
-\ii
-Note that there is only {\em one} $\Theta(n^2)$ function in question.
-\ii
- Therefore
-there is only one constant, $a$, for all recurrence equations.
-\ei
-\end{frame}
+%\sect{Another example}
+%\bi
+%\ii
+%Show that $T(n) = O(n^3)$ for
+%\begin{align*}
+%  T(n) &= 8T(n/2) + \Theta(n^2)
+%\end{align*}
+%\ii
+%Assume $T(x) \leq cx^3$ for all $x<n$ (strong induction).
+%\ii
+%Try to prove $T(n) \leq cn^3$ (same constant).
+%\begin{align*}
+%  T(n) &= 8T(n/2) + \Theta(n^2)\\
+%  &\leq  8T(n/2) + an^2  &\mbox{definition of $\Theta$}\\
+%  &\leq 8cn^3/2^3 +  an^2 & \mbox{since $n/2 < n$}\\
+%  &= cn^3 +  an^2
+%\end{align*}
+%\ii
+%We cannot use $cn^3 +  an^2 = O(n^3)$.
+%\ii
+%We need a more general hypothesis.
+%\ei
+%\end{frame}
+%
+%\sect{Substitution method, second try}
+%\bi
+%\ii
+%Show that $T(n) = O(n^3)$ for
+%\begin{align*}
+%  T(n) &= 8T(n/2) + \Theta(n^2)
+%\end{align*}
+%\ii
+%Assume $T(x) \leq cx^3 + dx^2$ for all $x<n$.
+%\ii
+%Try to prove $T(n) \leq cn^3 + dx^2$.
+%\begin{align*}
+%  T(n) &= 8T(n/2) + \Theta(n^2)\\
+%  &\leq  8T(n/2) + an^2  &\mbox{definition of $\Theta$}\\
+%  &\leq 8(cn^3/2^3 + dn^2/2^3) +  an^2 & \mbox{inductive hypothesis}\\
+%  &= cn^3 +  dn^2 + an^2 &\mbox{let $d = -a$}\\
+%  &= cn^3 \leq cn^3 + dn^2
+%\end{align*}
+%\ii
+%Note that there is only {\em one} $\Theta(n^2)$ function in question.
+%\ii
+% Therefore
+%there is only one constant, $a$, for all recurrence equations.
+%\ei
+%\end{frame}
 
 
 \sect{The Jeopardy Method}
