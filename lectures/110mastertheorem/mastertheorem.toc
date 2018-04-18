@@ -2,16 +2,18 @@
 \select@language {english}
 \beamer@sectionintoc {1}{Example 1: $T(n) = aT(n/b) + f(n)$ with $a=2, b=3$}{2}{0}{1}
 \beamer@sectionintoc {2}{Example 2: $T(n) = aT(n/b) + f(n)$ with $a=3, b=2$}{3}{0}{2}
-\beamer@sectionintoc {3}{Comparing leaves to internal nodes}{4}{0}{3}
-\beamer@sectionintoc {4}{Comparing leaves to internal nodes}{5}{0}{4}
-\beamer@sectionintoc {5}{Comparing leaves to internal nodes}{6}{0}{5}
-\beamer@sectionintoc {6}{Comparing leaves to internal nodes}{7}{0}{6}
-\beamer@sectionintoc {7}{Comparing leaves to internal nodes}{8}{0}{7}
-\beamer@sectionintoc {8}{Comparing leaves to internal nodes}{9}{0}{8}
-\beamer@sectionintoc {9}{Master Theorem}{10}{0}{9}
-\beamer@sectionintoc {10}{Master theorem example 1}{11}{0}{10}
-\beamer@sectionintoc {11}{Master theorem example 2}{12}{0}{11}
-\beamer@sectionintoc {12}{Master theorem example 3}{13}{0}{12}
-\beamer@sectionintoc {13}{Master theorem example 4}{14}{0}{13}
-\beamer@sectionintoc {14}{Master theorem does not apply}{15}{0}{14}
-\beamer@sectionintoc {15}{Master theorem does apply}{16}{0}{15}
+\beamer@sectionintoc {3}{Comparing leaves to internal nodes, case 1}{4}{0}{3}
+\beamer@sectionintoc {4}{Comparing leaves to internal nodes, case 2}{5}{0}{4}
+\beamer@sectionintoc {5}{Comparing leaves to internal nodes, case 3}{6}{0}{5}
+\beamer@sectionintoc {6}{Comparing leaves to internal nodes, case 4}{7}{0}{6}
+\beamer@sectionintoc {7}{Comparing leaves to internal nodes, case 5}{8}{0}{7}
+\beamer@sectionintoc {8}{Comparing leaves to internal nodes, case 6}{9}{0}{8}
+\beamer@sectionintoc {9}{Comparing leaves to internal nodes, case 7}{10}{0}{9}
+\beamer@sectionintoc {10}{Comparing leaves to internal nodes, case 8}{11}{0}{10}
+\beamer@sectionintoc {11}{Master Theorem}{12}{0}{11}
+\beamer@sectionintoc {12}{Master theorem example 1}{13}{0}{12}
+\beamer@sectionintoc {13}{Master theorem example 2}{14}{0}{13}
+\beamer@sectionintoc {14}{Master theorem example 3}{15}{0}{14}
+\beamer@sectionintoc {15}{Master theorem example 4}{16}{0}{15}
+\beamer@sectionintoc {16}{Master theorem does not apply}{17}{0}{16}
+\beamer@sectionintoc {17}{Master theorem does apply}{18}{0}{17}

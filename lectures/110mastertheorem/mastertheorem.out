@@ -1,15 +1,17 @@
 \BOOKMARK [2][]{Outline0.1}{Example 1: T\(n\) = aT\(n/b\) + f\(n\) with a=2, b=3}{}% 1
 \BOOKMARK [2][]{Outline0.2}{Example 2: T\(n\) = aT\(n/b\) + f\(n\) with a=3, b=2}{}% 2
-\BOOKMARK [2][]{Outline0.3}{Comparing leaves to internal nodes}{}% 3
-\BOOKMARK [2][]{Outline0.4}{Comparing leaves to internal nodes}{}% 4
-\BOOKMARK [2][]{Outline0.5}{Comparing leaves to internal nodes}{}% 5
-\BOOKMARK [2][]{Outline0.6}{Comparing leaves to internal nodes}{}% 6
-\BOOKMARK [2][]{Outline0.7}{Comparing leaves to internal nodes}{}% 7
-\BOOKMARK [2][]{Outline0.8}{Comparing leaves to internal nodes}{}% 8
-\BOOKMARK [2][]{Outline0.9}{Master Theorem}{}% 9
-\BOOKMARK [2][]{Outline0.10}{Master theorem example 1}{}% 10
-\BOOKMARK [2][]{Outline0.11}{Master theorem example 2}{}% 11
-\BOOKMARK [2][]{Outline0.12}{Master theorem example 3}{}% 12
-\BOOKMARK [2][]{Outline0.13}{Master theorem example 4}{}% 13
-\BOOKMARK [2][]{Outline0.14}{Master theorem does not apply}{}% 14
-\BOOKMARK [2][]{Outline0.15}{Master theorem does apply}{}% 15
+\BOOKMARK [2][]{Outline0.3}{Comparing leaves to internal nodes, case 1}{}% 3
+\BOOKMARK [2][]{Outline0.4}{Comparing leaves to internal nodes, case 2}{}% 4
+\BOOKMARK [2][]{Outline0.5}{Comparing leaves to internal nodes, case 3}{}% 5
+\BOOKMARK [2][]{Outline0.6}{Comparing leaves to internal nodes, case 4}{}% 6
+\BOOKMARK [2][]{Outline0.7}{Comparing leaves to internal nodes, case 5}{}% 7
+\BOOKMARK [2][]{Outline0.8}{Comparing leaves to internal nodes, case 6}{}% 8
+\BOOKMARK [2][]{Outline0.9}{Comparing leaves to internal nodes, case 7}{}% 9
+\BOOKMARK [2][]{Outline0.10}{Comparing leaves to internal nodes, case 8}{}% 10
+\BOOKMARK [2][]{Outline0.11}{Master Theorem}{}% 11
+\BOOKMARK [2][]{Outline0.12}{Master theorem example 1}{}% 12
+\BOOKMARK [2][]{Outline0.13}{Master theorem example 2}{}% 13
+\BOOKMARK [2][]{Outline0.14}{Master theorem example 3}{}% 14
+\BOOKMARK [2][]{Outline0.15}{Master theorem example 4}{}% 15
+\BOOKMARK [2][]{Outline0.16}{Master theorem does not apply}{}% 16
+\BOOKMARK [2][]{Outline0.17}{Master theorem does apply}{}% 17
