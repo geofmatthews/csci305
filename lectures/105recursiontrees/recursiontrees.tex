@@ -82,17 +82,20 @@ T(n) &=&3^{\log_4 n}T\left(\frac{n}{4^{\log_4 n}}\right)  + \sum_{i=0}^{\log_4 n
 
 
 \sect{Second recursion tree example}
+\footnotesize
 \[ T(n) = T(n/3) + T(2n/3) + O(n) \]
 \vfill
 
 \includegraphics[scale=0.1]{Fig-4-6.pdf}
 \bi
 \pause
-\ii How long is the longest branch of this tree?
-\pause
-\ii $\log_{3/2} n$
-\pause
 \ii Prove your guess with substitution (induction).
+\pause
+\ii Can you bound the leaves?
+\pause
+\ii $n^{\log_{3/2} 2} \approx n^{1.7} =\Omega(n\lg n)$
+\pause
+\ii Substitution will assure you this is not a problem.
 \ei
 
 \end{frame}

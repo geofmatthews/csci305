@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+
+\title{CSCI 305, Homework \# 2}
+\author{YOUR NAME HERE}
+
+
+\begin{document}
+
+\maketitle
+
+In all cases,
+we require that $f(n)$ and $g(n)$ be positive functions,
+{\em i.e.} $f(n) > 0$ and $g(n) > 0$ for all $n > 0$.
+
+Prove or disprove each of the following conjectures.
+
+
+\begin{enumerate}
+\item
+  \(f(n) = O((f(n))^2)\)
+
+\item
+  $f(n) = \Theta(f(n/2))$.
+
+\item
+  $f(n) + o(f(n)) = \Theta(f(n))$
+
+\item
+  If $f(n) = O(g(n))$ then $f(n) + g(n) = O(f(n))$.
+
+\end{enumerate}
+
+\end{document}

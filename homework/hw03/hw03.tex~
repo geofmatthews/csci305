@@ -1,0 +1,190 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,cancel}
+
+\title{CSCI 305, Homework \# 3}
+\author{SOLUTIONS}
+\date{Due date:  Sunday, April 24}
+
+
+\begin{document}
+
+\maketitle
+
+
+Recurrence examples.  Give asymptotic upper and lower bounds for
+$T(n)$ in each of the following recurrences.  Assume $T(n)$ is
+constant for $n\leq 2$.  Make your bounds as tight as possible, and
+justify your answers.
+
+\begin{enumerate}
+\item
+  $T(n) = 2T(n/2) + n^4$
+
+  We solve this one three different ways:  master theorem,
+  substitution method, and cancellation method.
+\begin{enumerate}
+\item {\bf Master Theorem}
+  
+  Using the master theorem, with
+  \begin{align*}
+    a &= 2\\
+    b &= 2\\
+    f(n) &= n^4\\
+    n^{\log_b a} &= n^{\log_2 2} = n
+  \end{align*}
+Hence  we have 
+\begin{align*}
+  n^4  &= \Omega(n)\\
+  f(n) &= \Omega(n^{\log_b a})
+\end{align*}
+and the master theorem tell us:
+\begin{align*}
+  T(n) &= \Theta(f(n))\\
+  &= \Theta(n^4)
+\end{align*}
+provided that there exists some $c$ such that, asymptotically,
+\begin{align*}
+  af(n/b) &\leq cf(n)\\
+a\frac{n^4}{b^4} &\leq cn^4
+\end{align*}
+which is true if we set $c=a/b^4$.
+
+\item {\bf Substitution method}
+
+Let's guess that $T(n) =\Theta(n^4)$ and try to prove it by induction.
+
+First, try
+\begin{align*}
+  T(n) &= cn^4\\
+  T(n) &= 2T(n/2) + n^4\\
+  cn^4   &= 2cn^4/2^4 + n^4\\
+  &= (c/8 + 1)n^4\\
+  c &= c/8 + 1\\
+  c &= 8/7
+\end{align*}
+That was easy!  But we got a lucky guess.  Note that this solution
+implies $T(1) = 8/7$.  No other value will work.
+
+\item {\bf Cancellation method}
+  
+First find the summation:
+\begin{align*}
+  T(n) &= \cancel{2T(n/2)} + n^4\\
+  \cancel{2T(n/2)} &= \cancel{2^2T(n/2^2)} + 2(n/2)^4\\
+  \cancel{2^2T(n/2^2)} &= \cancel{2^3T(n/2^3)} + 2^2(n/2^2)^4\\
+  \cancel{2^3T(n/2^3)} &= \cancel{2^4T(n/2^4)} + 2^3(n/2^3)^4\\
+&\ldots\\
+  \cancel{2^{k-1}T(n/2^{k-1})} &= \cancel{2^kT(n/2^k)} + 2^{k-1}(n/2^{k-1})^4\\
+  &\ldots\\
+  \cancel{2^{\lg n-1}T(n/2^{\lg n-1})} &= 2^{\lg n}T(n/2^{\lg n}) +
+  2^{\lg n - 1} (n/2^{\lg n-1})^4
+\end{align*}
+Now solve that summation:
+\begin{align*}
+T(n) &= nT(1) + \sum_{k=0}^{\lg n-1 }  2^{k}(n/2^{k})^4\\
+ &= nT(1) + \sum_{k=0}^{\lg n-1 }  \frac{2^kn^4}{2^{4k}}\\
+ &= nT(1) + n^4 \sum_{k=0}^{\lg n-1 }  (2^{-3})^k\\
+ &= nT(1) + n^4 \frac{1-2^{-3\lg n} }{1-2^{-3}}\\
+ &= nT(1) + n^4 \frac{1-n^{-3} }{7/8}\\
+&= nT(1) + (8/7)n^4 - (8/7)n \\
+&= \Theta(n^4)
+\end{align*}
+That was a little tougher, but we get an exact solution, not just
+$\Theta$.  Notice that the solution by the substitution method works
+if $T(1) = 8/7$, but for other values of $T(1)$ we would get a $c_1n$
+term in the polynomial.  This explains why our ``easy'' guess of $n^4$
+in the substitution method worked without any lower order terms.
+
+\end{enumerate}
+
+\item
+  $T(n) = 16T(n/4) + n^2$
+
+  Use the master theorem with
+  \begin{align*}
+    a &= 16\\
+    b &= 4\\
+    f(n) &= n^2\\
+    n^{\log_b a} &= n^{\log_{4} 16} = n^2\\
+    f(n) &= \Theta(n^{\log_b a})
+  \end{align*}
+  Hence
+  \begin{align*}
+    T(n) &= \Theta(f(n)\lg n)\\
+    &= \Theta(n^2\lg n)
+  \end{align*}
+  
+\item
+  $T(n) = 2T(n/4) + \sqrt{n}$
+
+  Use the master theorem with
+  \begin{align*}
+    a &= 2\\
+    b &= 4\\
+    f(n) &= \sqrt{n}\\
+    n^{\log_b a} &= n^{\log_4 2} = \sqrt{n}\\
+    f(n) &= \Theta(n^{\log_b a})
+  \end{align*}
+  Hence
+  \begin{align*}
+    T(n) &= \Theta(f(n)\lg n)\\
+    &= \Theta(\sqrt{n}\lg n)
+  \end{align*}
+  
+
+\item
+  $T(n) = 4T(n/3) + n\lg n$
+
+  Use the master theorem with
+  \begin{align*}
+    a &= 4\\
+    b &= 3\\
+    f(n) &= n\lg n\\
+    n^{\log_b a} &= n^{\log_3 4} \leq n^{1.262}
+  \end{align*}
+  It's proved in the book (p. 57) that any polylog function grows slower
+  than any polynomial, so
+  \begin{align*}
+   \lg n = o(n^{0.262})
+  \end{align*}
+hence
+    \begin{align*}
+        n\lg n = o(n^{1.262})
+    \end{align*}
+    so
+    \begin{align*}
+      f(n) = o( n^{\log_b a})
+    \end{align*}
+    So, by the master theorem
+    \begin{align*}
+      T(n) &= \Theta(n^{\log_b a}) = \Theta(n^{\log_3 4})
+      \end{align*}
+    
+\item
+  $T(n) = 4T(n/2) + n^2\sqrt{n}$
+
+  Use the master theorem with
+  \begin{align*}
+    a &= 4\\
+    b &= 2\\
+    f(n) &= n^2\sqrt{n}\\
+    n^{\log_b a} &= n^{\log_2 4} = n^2\\
+    f(n) &= \Omega(n^{\log_b a})
+  \end{align*}
+  Hence
+  \begin{align*}
+T(n) &= \Theta(f(n)) = \Theta(n^2\sqrt{n})
+  \end{align*}
+  provided that there is some $c$ such that, asymptotically,
+  \begin{align*}
+    af(n/b) &\leq cf(n)\\
+    4(n/2)^2\sqrt{n/2} &\leq cn^2\sqrt{n}
+  \end{align*}
+  which is true with $c=4/(2^2\sqrt{2})$.
+  
+
+
+\end{enumerate}
+
+\end{document}
