@@ -1,10 +1,14 @@
 \frametitle{Master theorem does apply} 
 \begin{align*}
   T(n) &= 4T(n/3) + n\lg n\\
-  n^{\log_b a} &= n^{\log_c 4} = n^{1.26...}\\
+  n^{\log_b a} &= n^{\log_3 4} = n^{1.26...}\\
   f(n) &= n\lg n\\
   f(n) &= O(n^{\log_b a}) = O(n^{1.26...})\\
   f(n) &= O(n^{\log_b a-\epsilon}) = O(n^{1.2}) & \epsilon = 0.06...\\
   n\lg n &= O(n^{1.2})\\
-  \lg n &= O(n^{0.2})\\
+  \lg n &= O(n^{0.2})
 \end{align*}
+\begin{eqnarray*}
+  T(n) &=& \pause\Theta(n^{\log_3 4})
+\end{eqnarray*}
+

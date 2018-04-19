@@ -1,0 +1,8 @@
+\frametitle{Binomial tails} 
+\begin{align*}
+\pr{X\geq k} &= \sum_{i=k}^n b(i:n,p)\\
+&\leq \binom{n}{k} p^k\\
+\pr{X\leq k} &= \sum_{i=0}^k b(i:n,p)\\
+&\leq \binom{n}{k} (1-p)^{n-k}
+\end{align*}
+

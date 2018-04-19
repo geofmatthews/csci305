@@ -11,6 +11,8 @@
 \ii Can you bound the leaves?
 \pause
 \ii $n^{\log_{3/2} 2} \approx n^{1.7} =\Omega(n\lg n)$
+\hfill
+$n^{\log_{3} 2} \approx n^{0.6} = O(n\lg n)$
 \pause
 \ii Substitution will assure you this is not a problem.
 \ei

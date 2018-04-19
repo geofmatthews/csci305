@@ -1,46 +1,23 @@
-\documentclass{beamer}
-
+\documentclass[landscape]{article}
+\usepackage[margin=1in]{geometry}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\title{Probability and Counting, Appendix C}
+\title{Notes on Probability}
 \author{Geoffrey Matthews}
 \newcommand{\bi}{\begin{itemize}}
 \newcommand{\ei}{\end{itemize}}
 \newcommand{\bn}{\begin{enumerate}}
 \newcommand{\en}{\end{enumerate}}
 \newcommand{\set}[1]{\ensuremath{\left\{#1\right\}}}
-\newcommand{\sect}[1]{
-\section{#1}
-\begin{frame}[fragile]\frametitle{#1}
-}
+\newcommand{\sect}[1]{\newpage{\bf #1}}
 \newcommand{\pr}[1]{\ensuremath{\mbox{Pr}\left\{#1\right\}}}
 
 \setlength{\parindent}{0in}
 
 \begin{document}
-\begin{frame}
 \maketitle
+\huge
 
-\end{frame}
-\sect{Binomial Coefficients}
-
-\begin{align*}
-  \binom{n}{k} &=  \frac{n!}{k!(n-k)!} = \binom{n}{n-k}\\
-  (x+y)^n &= \sum_{k=0}^n\binom{n}{k} x^ky^{n-k}\\
-  2^n &= \sum_{k=0}^n\binom{n}{k} \\
-\end{align*}
-\end{frame}
-\sect{Binomial Bounds}
-\begin{align*}
-  \binom{n}{k} &\geq \left(\frac{n}{k}\right)^k\\
-  \binom{n}{k} &\leq \left(\frac{en}{k}\right)^k\\
-  \binom{n}{k} &\leq \frac{n^n}{k^k(n-k)^{n-k}}\\
-  \binom{n}{\lambda k} &\leq 2^{nH(\lambda)}\\
-  H(\lambda) &= -\lambda \lg \lambda - (1-\lambda)\lg(1-\lambda)
-\end{align*}
-
-
-\end{frame}
 \sect{Sample Space}
 \bi
 \item Set of all possible things that can happen.
@@ -59,8 +36,7 @@
   \ei
 
 
-\end{frame}
-\sect{Events}
+  \sect{Events}
 \bi
 \item A subset of the sample space, $S$.
 \item Examples:
@@ -75,7 +51,6 @@
   \ei
 \ei
 
-\end{frame}
 \sect{A probability distribution on a sample space $S$}
 
 \pr{} is a mapping from events to real numbers such that:
@@ -93,7 +68,6 @@
   \end{align*}
   \ei
 
-\end{frame}
 \sect{Discrete probability distribution}
 \bi
 \item If $S$ is finite or countably infinite.
@@ -105,7 +79,6 @@
     \]
     \ei
 
-\end{frame}
 \sect{Continuous uniform distribution}
 \bi
 \item Each real number between $a$ and $b$ is equally likely.
@@ -117,8 +90,7 @@
   \ei
 
 
-\end{frame}
-\sect{Conditional probability}
+  \sect{Conditional probability}
 
   \[
   \pr{A\mid B} = \frac{\pr{A\cap B}}{\pr{B}}
@@ -134,7 +106,6 @@
         \end{align*}
       \ei
       
-\end{frame}
 \sect{Independence}
 \[
 \pr{A\cap B} = \pr{A}\pr{B}
@@ -144,7 +115,6 @@ This implies
 \pr{A \mid B} = \pr{A}
 \]
 
-\end{frame}
 \sect{Bayes's theorem}
 
 \[
@@ -161,10 +131,9 @@ This implies
   \pr{A \mid B} = \frac{\pr{A}\pr{B\mid A}}{
 \pr{A}\pr{B\mid A} + \pr{\overline{A}}\pr{B\mid \overline{A}}}
   \]
-\ei
-\end{frame}
+
 \sect{Bayes's theorem example}
-\bi
+
   \item  We have a fair coin and a biased coin with
     $\pr{H}=2/3$. We choose a coin at random and flip it twice.  It comes up
     heads both times.  What is the probability we chose the biased coin?
@@ -181,7 +150,6 @@ This implies
       \end{align*}
       \ei
 
-\end{frame}
 \sect{Discrete random variables}
 \bi
 \item Given finite or countable $S$, a {\bf random variable} $X$ is a
@@ -205,7 +173,6 @@ This implies
 
     \ei
 
-\end{frame}
 \sect{Expected value}
 \bi
 \item The {\bf expected value} or {\bf expectation} or {\bf mean}:
@@ -219,7 +186,6 @@ This implies
   Holds even if $X$ and $Y$ are not independent.
   \ei
 
-\end{frame}
 \sect{Variance}
 \begin{align*}
 \mbox{Var}[X] &= E[X-E[X]]^2\\    
@@ -236,7 +202,6 @@ This implies
   \item The variance is denoted $\sigma^2$.
     \ei
 
-\end{frame}
 \sect{Bernoulli trials}
 
 \bi
@@ -246,7 +211,6 @@ This implies
   failure}.
   \ei
 
-\end{frame}
 \sect{Geometric distribution}
 
 \bi
@@ -263,14 +227,13 @@ This implies
   \[\mbox{Var}[X] = q/p^3\]
 \ei
 
-\end{frame}
-\sect{Geometric distribution}
+\newpage
+{\bf Geometric distribution}
 \vfill
 
-\includegraphics[height=.8\textheight]{Fig-C-1.pdf}
+\includegraphics[height=.9\textheight]{Fig-C-1.pdf}
 
 
-\end{frame}
 \sect{Binomial distribution}
 \bi
 \item Probability of $k$ successes occur in $n$ Bernoulli trials with
@@ -284,14 +247,13 @@ This implies
   \]
   \ei
   
-\end{frame}
-\sect{Binomial distribution}
+\newpage
+{\bf Binomial distribution}
 \vfill
 
 \includegraphics[width=\textwidth]{Fig-C-2.pdf}
 
 
-\end{frame}
 \sect{Binomial distribution expectation}
   \[
   \pr{X=k} = {n\choose k}p^k(1-p)^{n-k}
@@ -304,7 +266,6 @@ This implies
   \end{align*}
   \ei
 
-\end{frame}
 \sect{Binomial distribution expectation}
   \[
   \pr{X=k} = {n\choose k}p^k(1-p)^{n-k}
@@ -322,7 +283,6 @@ This implies
 
   \ei
 
-\end{frame}
 \sect{Binomial distribution variance}
   \[
   \pr{X=k} = {n\choose k}p^k(1-p)^{n-k}
@@ -340,20 +300,10 @@ This implies
   \mbox{Var}[X] 
   &= \mbox{Var}\left[\sum_{i=1}^{n} X_i\right]\\
 &= \sum_{i=1}^{n} \mbox{Var}[X_i] \\
-&= \sum_{i=1}^{n}  pq = npq
+&= \sum_{i=1}^{n}  pq \\
+&= npq
 \end{align*}
 
-\end{frame}
-
-\sect{Binomial tails}
-\begin{align*}
-\pr{X\geq k} &= \sum_{i=k}^n b(i:n,p)\\
-&\leq \binom{n}{k} p^k\\
-\pr{X\leq k} &= \sum_{i=0}^k b(i:n,p)\\
-&\leq \binom{n}{k} (1-p)^{n-k}
-\end{align*}
-
-\end{frame}
 
 
 \end{document}

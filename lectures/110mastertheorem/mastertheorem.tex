@@ -402,12 +402,12 @@ O(n^{\log_b a - \epsilon})&\Leftrightarrow \Theta(n^{\log_b a })\\
 &\mbox{when } af(n/b) \leq cf(n)
 \end{align*}
 
-\begin{align*}
-  T(n) &= 2T\left(\frac{n}{2}\right) + n\\
-  \log_b a &= 1\\
-  f(n) &= \Theta(n^{\log_b a})\\
-  T(n) &= \Theta(n\lg n)
-\end{align*}
+\begin{eqnarray*}
+  T(n) &=& 2T\left(\frac{n}{2}\right) + n\\
+  \log_b a &=& \pause 1\\
+  f(n) &=& \pause  \Theta(n^{\log_b a})\\
+  T(n) &=& \pause  \Theta(n\lg n)
+\end{eqnarray*}
 
 \end{frame}
 
@@ -421,12 +421,12 @@ O(n^{\log_b a - \epsilon})&\Leftrightarrow \Theta(n^{\log_b a })\\
 &\mbox{when } af(n/b) \leq cf(n)
 \end{align*}
 
-\begin{align*}
-  T(n) &= 4T(n/2) + n^2\\
-  \log_b a &= 2\\
-  f(n) &= \Theta(n^{\log_b a})\\
-  T(n) &= \Theta(n^2\lg n)
-\end{align*}
+\begin{eqnarray*}
+  T(n) &=& 4T(n/2) + n^2\\
+  \log_b a &=& \pause  2\\
+  f(n) &=& \pause  \Theta(n^{\log_b a})\\
+  T(n) &=& \pause  \Theta(n^2\lg n)
+\end{eqnarray*}
 
 \end{frame}
 
@@ -441,12 +441,12 @@ O(n^{\log_b a - \epsilon})&\Leftrightarrow \Theta(n^{\log_b a })\\
 &\mbox{when } af(n/b) \leq cf(n)
 \end{align*}
 
-\begin{align*}
-  T(n) &= 4T(n/2) + \lg n\\
-  \log_b a &= 2\\
-  f(n) &= O(n^{\log_b a - \epsilon})\\
-  T(n) &= \Theta(n^2)
-\end{align*}
+\begin{eqnarray*}
+  T(n) &=& 4T(n/2) + \lg n\\
+  \log_b a &=& \pause  2\\
+  f(n) &=& \pause  O(n^{\log_b a - \epsilon})\\
+  T(n) &=& \pause  \Theta(n^2)
+\end{eqnarray*}
 
 \end{frame}
 
@@ -461,13 +461,13 @@ O(n^{\log_b a - \epsilon})&\Leftrightarrow \Theta(n^{\log_b a })\\
 &\mbox{when } af(n/b) \leq cf(n)
 \end{align*}
 
-\begin{align*}
-  T(n) &= 4T(n/2) + n^3\\
-  \log_b a &= 2\\
-  f(n) &= \Omega(n^{\log_b a + \epsilon})\\
-  T(n) &= \Theta(n^3)
-\end{align*}
-because
+\begin{eqnarray*}
+  T(n) &=& 4T(n/2) + n^3\\
+  \log_b a &=&  \pause 2\\
+  f(n) &=&  \pause \Omega(n^{\log_b a + \epsilon})\\
+  T(n) &=& \pause  \Theta(n^3)
+\end{eqnarray*}
+because  \pause 
 \begin{align*}
   af(n/b) &= 4f(n/2)\\
   &= 4/2^3 f(n) \leq cf(n)\\
@@ -493,12 +493,16 @@ n\lg n &\not= \Omega(n^{1.0000000000001})\\
 \sect{Master theorem does apply}
 \begin{align*}
   T(n) &= 4T(n/3) + n\lg n\\
-  n^{\log_b a} &= n^{\log_c 4} = n^{1.26...}\\
+  n^{\log_b a} &= n^{\log_3 4} = n^{1.26...}\\
   f(n) &= n\lg n\\
   f(n) &= O(n^{\log_b a}) = O(n^{1.26...})\\
   f(n) &= O(n^{\log_b a-\epsilon}) = O(n^{1.2}) & \epsilon = 0.06...\\
   n\lg n &= O(n^{1.2})\\
-  \lg n &= O(n^{0.2})\\
+  \lg n &= O(n^{0.2})
 \end{align*}
+\begin{eqnarray*}
+  T(n) &=& \pause\Theta(n^{\log_3 4})
+\end{eqnarray*}
+
 \end{frame}
 \end{document}
