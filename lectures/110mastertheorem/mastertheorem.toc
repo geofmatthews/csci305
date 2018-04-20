@@ -13,8 +13,8 @@
 \beamer@sectionintoc {11}{Comparing leaves to internal nodes, case 10}{12}{0}{11}
 \beamer@sectionintoc {12}{Master Theorem}{13}{0}{12}
 \beamer@sectionintoc {13}{Master theorem example 1}{14}{0}{13}
-\beamer@sectionintoc {14}{Master theorem example 2}{18}{0}{14}
-\beamer@sectionintoc {15}{Master theorem example 3}{22}{0}{15}
-\beamer@sectionintoc {16}{Master theorem example 4}{26}{0}{16}
-\beamer@sectionintoc {17}{Master theorem does not apply}{31}{0}{17}
-\beamer@sectionintoc {18}{Master theorem does apply}{32}{0}{18}
+\beamer@sectionintoc {14}{Master theorem example 2}{19}{0}{14}
+\beamer@sectionintoc {15}{Master theorem example 3}{23}{0}{15}
+\beamer@sectionintoc {16}{Master theorem example 4}{28}{0}{16}
+\beamer@sectionintoc {17}{Master theorem example 5}{34}{0}{17}
+\beamer@sectionintoc {18}{Master theorem example 6}{38}{0}{18}

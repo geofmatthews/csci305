@@ -1,14 +1,16 @@
-\frametitle{Master theorem does apply} 
+\frametitle{Master theorem example 6} 
 \begin{align*}
-  T(n) &= 4T(n/3) + n\lg n\\
-  n^{\log_b a} &= n^{\log_3 4} = n^{1.26...}\\
-  f(n) &= n\lg n\\
-  f(n) &= O(n^{\log_b a}) = O(n^{1.26...})\\
-  f(n) &= O(n^{\log_b a-\epsilon}) = O(n^{1.2}) & \epsilon = 0.06...\\
-  n\lg n &= O(n^{1.2})\\
-  \lg n &= O(n^{0.2})
+  T(n) &= aT\left(\frac{n}{b}\right) + f(n)\\
+O(n^{\log_b a - \epsilon})&\Leftrightarrow \Theta(n^{\log_b a })\\
+\Theta(n^{\log_b a}\lg^k n) &\Leftrightarrow \Theta(f(n)\lg n)\\
+\Omega(n^{\log_b a + \epsilon}) &\Leftrightarrow \Theta(f(n))
+&\mbox{when } af(n/b) \leq cf(n)
 \end{align*}
-\begin{eqnarray*}
-  T(n) &=& \pause\Theta(n^{\log_3 4})
-\end{eqnarray*}
 
+\begin{eqnarray*}
+  T(n) &=& 2T(n/2) + n\lg n\\
+  f(n)&vs.& n^{\log_b a} \\ \pause
+  n\lg n &vs.& n\\\pause
+  f(n) &=& \Theta(n^{\log_b a} \lg^1 n) \\\pause
+  T(n) &=& \Theta(n\lg^2 n)\\
+\end{eqnarray*}

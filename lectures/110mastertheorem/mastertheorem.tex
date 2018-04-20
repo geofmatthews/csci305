@@ -375,14 +375,14 @@ let $T(n)$ be defined on nonnegative integers by
 \[
 T(n) = aT\left(\frac{n}{b}\right) + f(n)
 \]
-Then $T(n)$ has the following asymptotic bounds:
+Then $T(n)$ has the following asymptotic bounds ($k\geq 0$):
 \bigskip
 \begin{center}
 {\large
 \begin{tabular}{r|l}
 $f(n)$ & $T(n)$ \\\hline 
 $\mbox{O}(n^{\log_b a - \epsilon})$& $ \Theta(n^{\log_b a })$\\
-$\Theta(n^{\log_b a})$ & $\Theta(f(n)\lg n)$\\
+$\Theta(n^{\log_b a}\lg^k n)$ & $\Theta(f(n)\lg n)$ \\
 $\Omega(n^{\log_b a + \epsilon})$ & $\Theta(f(n))$\\
 \end{tabular}
 }\end{center}
@@ -397,14 +397,15 @@ and large enough $n$.
 \begin{align*}
   T(n) &= aT\left(\frac{n}{b}\right) + f(n)\\
 O(n^{\log_b a - \epsilon})&\Leftrightarrow \Theta(n^{\log_b a })\\
-\Theta(n^{\log_b a}) &\Leftrightarrow \Theta(f(n)\lg n)\\
+\Theta(n^{\log_b a}\lg^k n) &\Leftrightarrow \Theta(f(n)\lg n)\\
 \Omega(n^{\log_b a + \epsilon}) &\Leftrightarrow \Theta(f(n))
 &\mbox{when } af(n/b) \leq cf(n)
 \end{align*}
 
 \begin{eqnarray*}
   T(n) &=& 2T\left(\frac{n}{2}\right) + n\\
-  \log_b a &=& \pause 1\\
+  f(n)&vs.& n^{\log_b a} \pause \\
+  n &vs.& n^1 \pause \\
   f(n) &=& \pause  \Theta(n^{\log_b a})\\
   T(n) &=& \pause  \Theta(n\lg n)
 \end{eqnarray*}
@@ -415,15 +416,16 @@ O(n^{\log_b a - \epsilon})&\Leftrightarrow \Theta(n^{\log_b a })\\
 
 \begin{align*}
   T(n) &= aT\left(\frac{n}{b}\right) + f(n)\\
-O(n^{\log_b a - \epsilon})&\Leftrightarrow \Theta(n^{\log_b a })\\
-\Theta(n^{\log_b a}) &\Leftrightarrow \Theta(f(n)\lg n)\\
+  O(n^{\log_b a - \epsilon})&\Leftrightarrow \Theta(n^{\log_b a })\\
+\Theta(n^{\log_b a}\lg^k n) &\Leftrightarrow \Theta(f(n)\lg n)\\
 \Omega(n^{\log_b a + \epsilon}) &\Leftrightarrow \Theta(f(n))
 &\mbox{when } af(n/b) \leq cf(n)
 \end{align*}
 
 \begin{eqnarray*}
   T(n) &=& 4T(n/2) + n^2\\
-  \log_b a &=& \pause  2\\
+  f(n)&vs.& n^{\log_b a} \pause \\
+  n^2 &vs.& n^2\\
   f(n) &=& \pause  \Theta(n^{\log_b a})\\
   T(n) &=& \pause  \Theta(n^2\lg n)
 \end{eqnarray*}
@@ -436,14 +438,15 @@ O(n^{\log_b a - \epsilon})&\Leftrightarrow \Theta(n^{\log_b a })\\
 \begin{align*}
   T(n) &= aT\left(\frac{n}{b}\right) + f(n)\\
 O(n^{\log_b a - \epsilon})&\Leftrightarrow \Theta(n^{\log_b a })\\
-\Theta(n^{\log_b a}) &\Leftrightarrow \Theta(f(n)\lg n)\\
+\Theta(n^{\log_b a}\lg^k n) &\Leftrightarrow \Theta(f(n)\lg n)\\
 \Omega(n^{\log_b a + \epsilon}) &\Leftrightarrow \Theta(f(n))
 &\mbox{when } af(n/b) \leq cf(n)
 \end{align*}
 
 \begin{eqnarray*}
   T(n) &=& 4T(n/2) + \lg n\\
-  \log_b a &=& \pause  2\\
+  f(n)&vs.& n^{\log_b a} \\ \pause 
+  \lg n &=& n^2\\ \pause
   f(n) &=& \pause  O(n^{\log_b a - \epsilon})\\
   T(n) &=& \pause  \Theta(n^2)
 \end{eqnarray*}
@@ -456,53 +459,64 @@ O(n^{\log_b a - \epsilon})&\Leftrightarrow \Theta(n^{\log_b a })\\
 \begin{align*}
   T(n) &= aT\left(\frac{n}{b}\right) + f(n)\\
 O(n^{\log_b a - \epsilon})&\Leftrightarrow \Theta(n^{\log_b a })\\
-\Theta(n^{\log_b a}) &\Leftrightarrow \Theta(f(n)\lg n)\\
+\Theta(n^{\log_b a}\lg^k n) &\Leftrightarrow \Theta(f(n)\lg n)\\
 \Omega(n^{\log_b a + \epsilon}) &\Leftrightarrow \Theta(f(n))
 &\mbox{when } af(n/b) \leq cf(n)
 \end{align*}
 
 \begin{eqnarray*}
   T(n) &=& 4T(n/2) + n^3\\
-  \log_b a &=&  \pause 2\\
+  f(n)&vs.& n^{\log_b a} \\ \pause 
+  n^3 &vs.& n^2 \\\pause
   f(n) &=&  \pause \Omega(n^{\log_b a + \epsilon})\\
   T(n) &=& \pause  \Theta(n^3)
 \end{eqnarray*}
 because  \pause 
-\begin{align*}
-  af(n/b) &= 4f(n/2)\\
-  &= 4/2^3 f(n) \leq cf(n)\\
-\end{align*}
+\[
+  af(n/b) = 4f(n/2)
+  = 4/2^3 f(n) \leq cf(n)
+\]
 
 
 \end{frame}
 
+\sect{Master theorem example 5}
 
-
-\sect{Master theorem does not apply}
 \begin{align*}
-  T(n) &= 2T(n/2) + n\lg n\\
-  n^{\log_b a} &= n\\
-  f(n) &= n\lg n\\
-  f(n) &= \Omega(n^{\log_b a}) = \Omega(n)\\
-  f(n) &\not= \Omega(n^{\log_b a+\epsilon}) = \Omega(n^{1+\epsilon})\\
-n\lg n &\not= \Omega(n^{1.0000000000001})\\
-\lg n &\not= \Omega(n^{0.0000000000001})\\
+  T(n) &= aT\left(\frac{n}{b}\right) + f(n)\\
+O(n^{\log_b a - \epsilon})&\Leftrightarrow \Theta(n^{\log_b a })\\
+\Theta(n^{\log_b a}\lg^k n) &\Leftrightarrow \Theta(f(n)\lg n)\\
+\Omega(n^{\log_b a + \epsilon}) &\Leftrightarrow \Theta(f(n))
+&\mbox{when } af(n/b) \leq cf(n)
 \end{align*}
-\end{frame}
 
-\sect{Master theorem does apply}
-\begin{align*}
-  T(n) &= 4T(n/3) + n\lg n\\
-  n^{\log_b a} &= n^{\log_3 4} = n^{1.26...}\\
-  f(n) &= n\lg n\\
-  f(n) &= O(n^{\log_b a}) = O(n^{1.26...})\\
-  f(n) &= O(n^{\log_b a-\epsilon}) = O(n^{1.2}) & \epsilon = 0.06...\\
-  n\lg n &= O(n^{1.2})\\
-  \lg n &= O(n^{0.2})
-\end{align*}
 \begin{eqnarray*}
-  T(n) &=& \pause\Theta(n^{\log_3 4})
+  T(n) &=& 4T(n/3) + n\lg n\\
+  f(n)&vs.& n^{\log_b a} \\ \pause 
+  n\lg n &vs.& n^{\log_3 4} = n^{1.26...}\\\pause
+  f(n) &=& O(n^{\log_b a-\epsilon})\\\pause
+  T(n) &=& \Theta(n^{\log_3 4})
 \end{eqnarray*}
 
 \end{frame}
+
+\sect{Master theorem example 6}
+\begin{align*}
+  T(n) &= aT\left(\frac{n}{b}\right) + f(n)\\
+O(n^{\log_b a - \epsilon})&\Leftrightarrow \Theta(n^{\log_b a })\\
+\Theta(n^{\log_b a}\lg^k n) &\Leftrightarrow \Theta(f(n)\lg n)\\
+\Omega(n^{\log_b a + \epsilon}) &\Leftrightarrow \Theta(f(n))
+&\mbox{when } af(n/b) \leq cf(n)
+\end{align*}
+
+\begin{eqnarray*}
+  T(n) &=& 2T(n/2) + n\lg n\\
+  f(n)&vs.& n^{\log_b a} \\ \pause 
+  n\lg n &vs.& n\\\pause
+  f(n) &=& \Theta(n^{\log_b a} \lg^1 n) \\\pause
+  T(n) &=& \Theta(n\lg^2 n)\\
+\end{eqnarray*}
+\end{frame}
+
+
 \end{document}
