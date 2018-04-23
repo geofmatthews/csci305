@@ -1,24 +1,25 @@
 \beamer@endinputifotherversion {3.36pt}
 \beamer@sectionintoc {1}{Binomial Coefficients}{2}{0}{1}
-\beamer@sectionintoc {2}{Binomial Bounds}{3}{0}{2}
-\beamer@sectionintoc {3}{Sample Space}{4}{0}{3}
-\beamer@sectionintoc {4}{Events}{5}{0}{4}
-\beamer@sectionintoc {5}{A probability distribution on a sample space $S$}{6}{0}{5}
-\beamer@sectionintoc {6}{Discrete probability distribution}{7}{0}{6}
-\beamer@sectionintoc {7}{Continuous uniform distribution}{8}{0}{7}
-\beamer@sectionintoc {8}{Conditional probability}{9}{0}{8}
-\beamer@sectionintoc {9}{Independence}{10}{0}{9}
-\beamer@sectionintoc {10}{Bayes's theorem}{11}{0}{10}
-\beamer@sectionintoc {11}{Bayes's theorem example}{12}{0}{11}
-\beamer@sectionintoc {12}{Discrete random variables}{13}{0}{12}
-\beamer@sectionintoc {13}{Expected value}{14}{0}{13}
-\beamer@sectionintoc {14}{Variance}{15}{0}{14}
-\beamer@sectionintoc {15}{Bernoulli trials}{16}{0}{15}
-\beamer@sectionintoc {16}{Geometric distribution}{17}{0}{16}
-\beamer@sectionintoc {17}{Geometric distribution}{18}{0}{17}
-\beamer@sectionintoc {18}{Binomial distribution}{19}{0}{18}
-\beamer@sectionintoc {19}{Binomial distribution}{20}{0}{19}
-\beamer@sectionintoc {20}{Binomial distribution expectation}{21}{0}{20}
-\beamer@sectionintoc {21}{Binomial distribution expectation}{22}{0}{21}
-\beamer@sectionintoc {22}{Binomial distribution variance}{23}{0}{22}
-\beamer@sectionintoc {23}{Binomial tails}{24}{0}{23}
+\beamer@sectionintoc {2}{$(n+a)^b =O(n^b)$}{3}{0}{2}
+\beamer@sectionintoc {3}{Binomial Bounds}{5}{0}{3}
+\beamer@sectionintoc {4}{Sample Space}{6}{0}{4}
+\beamer@sectionintoc {5}{Events}{7}{0}{5}
+\beamer@sectionintoc {6}{A probability distribution on a sample space $S$}{8}{0}{6}
+\beamer@sectionintoc {7}{Discrete probability distribution}{9}{0}{7}
+\beamer@sectionintoc {8}{Continuous uniform distribution}{10}{0}{8}
+\beamer@sectionintoc {9}{Conditional probability}{11}{0}{9}
+\beamer@sectionintoc {10}{Independence}{12}{0}{10}
+\beamer@sectionintoc {11}{Bayes's theorem}{13}{0}{11}
+\beamer@sectionintoc {12}{Bayes's theorem example}{14}{0}{12}
+\beamer@sectionintoc {13}{Discrete random variables}{15}{0}{13}
+\beamer@sectionintoc {14}{Expected value}{16}{0}{14}
+\beamer@sectionintoc {15}{Variance}{17}{0}{15}
+\beamer@sectionintoc {16}{Bernoulli trials}{18}{0}{16}
+\beamer@sectionintoc {17}{Geometric distribution}{19}{0}{17}
+\beamer@sectionintoc {18}{Geometric distribution}{20}{0}{18}
+\beamer@sectionintoc {19}{Binomial distribution}{21}{0}{19}
+\beamer@sectionintoc {20}{Binomial distribution}{22}{0}{20}
+\beamer@sectionintoc {21}{Binomial distribution expectation}{23}{0}{21}
+\beamer@sectionintoc {22}{Binomial distribution expectation}{24}{0}{22}
+\beamer@sectionintoc {23}{Binomial distribution variance}{25}{0}{23}
+\beamer@sectionintoc {24}{Binomial tails}{26}{0}{24}

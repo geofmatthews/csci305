@@ -1,0 +1,422 @@
+\documentclass{beamer}
+\usepackage{cancel}
+\usepackage{fancyvrb}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage{amsmath,amssymb,amsfonts}
+\newcommand{\sect}[1]{
+\section{#1}
+\begin{frame}[fragile]\frametitle{#1}
+}
+
+\newtheorem{theo}{Theorem}[section]
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ii}{\item}
+\newcommand{\ei}{\end{itemize}}
+
+
+\mode<presentation>
+{
+%  \usetheme{Madrid}
+  % or ...
+
+%  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+\usepackage[english]{babel}
+
+\usepackage[latin1]{inputenc}
+
+\title[Summations 2]
+{
+Summations 2
+}
+
+\subtitle{} % (optional)
+
+\author
+{Based on Notes by James Aspnes}
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[WWU/CS]
+{
+  Department of Computer Science\\
+  Western Washington University
+}
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date{\today}
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+%\pgfdeclareimage[height=0.5cm]{university-logo}{WWULogoProColor}
+%\logo{\pgfuseimage{university-logo}}
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\sect{Source}
+
+
+These notes are based on chapter 6 of
+
+\url{http://www.cs.yale.edu/homes/aspnes/classes/202/notes.pdf}
+
+and
+
+\url{http://www.cs.yale.edu/homes/aspnes/pinewiki/attachments/SummationNotation/summation-notation.pdf}
+
+
+\end{frame}
+
+\sect{Summations}
+
+\[
+\sum_{i=0}^{n}(2i+1) = 1 + 3 + 5 + 7 + ... + (2n+1)
+\]
+\end{frame}
+
+\sect{Definition using recurrences}
+\begin{align*}
+  \sum_{i=a}^{b} f(i) &=
+  \left\{
+  \begin{array}{ll}
+    0 & \mbox{if $b < a$} \\
+    f(a) + \sum_{i=a+1}^{b} f(i) & \mbox{otherwise.}\\
+  \end{array}
+  \right.
+\\\\
+  \sum_{i=a}^{b} f(i) &=
+  \left\{
+  \begin{array}{ll}
+    0 & \mbox{if $b < a$} \\
+    \sum_{i=a}^{b-1} f(i) + f(b) & \mbox{otherwise.}\\
+  \end{array}
+  \right.
+\end{align*}
+
+\end{frame}
+
+\sect{Scope}
+\bi
+\ii Scope extends to the first addition or subtraction symbol.
+\ii Best to include parentheses to avoid confusion,
+\ii or move trailing terms to the beginning.
+\ei
+\begin{align*}
+  \sum_{i=1}^n i^2 + 1
+  &= \left(  \sum_{i=1}^n i^2 \right) + 1 \\
+  &= 1 + \left(  \sum_{i=1}^n i^2 \right) \\
+  &= 1 +  \sum_{i=1}^n i^2  \\
+  &\neq   \sum_{i=1}^n (i^2 + 1)
+\end{align*}
+\end{frame}
+
+\sect{Summation is linear}
+\begin{align*}
+  \sum_{i=n}^{m} ax_i &= a  \sum_{i=n}^{m} x_i \\\\
+  \sum_{i=n}^{m}( x_i + y_i) &= 
+  \sum_{i=n}^{m} x_i  +
+  \sum_{i=n}^{m} y_i \\
+\end{align*}
+
+\end{frame}
+
+\sect{Multiple sums}
+\bi
+\ii The order is not important, provided the bounds of the inner sum
+don't depend on the index of the outer sum:
+\ei
+
+\begin{align*}
+  \sum_{i=a}^{b}\sum_{j=c}^{d} x_{ij} &=
+  \sum_{j=c}^{d} \sum_{i=a}^{b} x_{ij}
+\end{align*}
+\end{frame}
+
+\sect{Products of sums}
+
+\begin{align*}
+  (a + b)(x + y + z) &= ax + ay + az + bx + by + bz\\\\
+  \left(\sum_{i=a}^{b}x_i\right)\left(\sum_{j=c}^{d} y_j\right) &=
+  \sum_{i=a}^{b}\sum_{j=c}^{d} x_iy_j
+\end{align*}
+\end{frame}
+
+\sect{Change of variables}
+Let
+\begin{align*}
+  j &= i-1\\
+  i &= j+1
+\end{align*}
+then,
+\begin{align*}
+  \sum_{i=1}^{n} (i-1) 
+  &= \sum_{(j+1)=1}^{n} j \\
+  &= \sum_{j=0}^{n-1} j \\
+  &= \sum_{i=0}^{n-1} i \\
+\end{align*}
+\end{frame}
+
+\sect{Change of variables}
+Let
+\begin{align*}
+  j &= i+1\\
+  i &= j-1
+\end{align*}
+then,
+\begin{align*}
+  \sum_{i=a}^{b} (i+1)^2 
+  &= \sum_{(j-1)=a}^{b} j^2 \\
+  &= \sum_{j=a+1}^{b+1} j^2 \\
+  &= \sum_{i=a+1}^{b+1} i^2 \\
+\end{align*}
+\end{frame}
+  
+\sect{Sums over index sets}
+\begin{align*}
+  \sum_{i\in\{3,5,7\}} i^2 &= 3^2 + 5^2 + 7^2
+  \\\\
+  \sum_{A\subseteq S} |A|
+  \\\\
+  \sum_{\mbox{$p < 1000$, $p$ is prime}} p^2
+\end{align*}
+\end{frame}
+
+\sect{Confusing index sets}
+\[
+\sum_{1 \leq i < j \leq n} \frac{i}{j}
+\]
+\bi
+\ii The sum over all pairs of values $(i,j)$ such that
+\bi
+\ii $1\leq i$
+\ii $i < j$
+\ii $j \leq n$
+\ei
+with each pair appearing exactly once.
+\ei
+\end{frame}
+    
+\sect{Confusing index sets}
+\[
+\sum_{x\in A\subseteq S} |A|
+\]
+\bi
+\ii The sum over all sets $A$ such that
+\bi
+\ii $x\in A$
+\ii $A\subseteq S$
+\ei
+assuming that $x$ and $S$ are defined outside the summation.
+\ei
+\end{frame}
+
+\sect{Sums without explicit bounds}
+
+When the index set is understood from context some books use:
+\[
+\sum_i i^2
+\]
+Very sloppy, and discouraged.
+
+\end{frame}
+
+\sect{Double sums}
+\[
+\sum_{i=0}^{n}\sum_{j=0}^{i} (i+1)(j+1)
+\]
+When $n=1$ we get
+\[
+  (0+1)(0+1) + [ (1+1)(0+1) + (1+1)(1+1) ] = 7
+\]
+\end{frame}
+
+\sect{Closed forms}
+\begin{align*}
+  \sum_{i=1}^{n} 1 &= n \\\\
+  \sum_{i=1}^{n} i &= \frac{n(n+1)}{2}\\\\
+  \sum_{i=0}^{n} r^i &= \frac{1-r^{n+1}}{1-r} \\
+                   &= \frac{r^{n+1}-1}{r-1} \\
+\end{align*}
+\end{frame}
+
+\sect{Quick ``proof''}
+Start with
+\[
+\sum_{i=0}^{\infty} r^i = \frac{1}{1-r}
+\]
+Then
+\begin{align*}
+  \sum_{i=0}^n r^i
+  &=   \sum_{i=0}^\infty r^i - r^{n+1} \sum_{i=0}^\infty r^i \\
+  &= \frac{1}{1-r} - \frac{r^{n+1}}{1-r}\\
+  &= \frac{1-r^{n+1}}{1-r}
+\end{align*}
+\end{frame}
+
+
+\sect{Solving summations}
+\begin{align*}
+  \sum_{i=0}^n (3(2^n) + 5)
+  &= 3  \sum_{i=0}^n 2^n + 5  \sum_{i=0}^n 1\\
+  &= 3(2^{n+1} - 1) + 5(n+1) \\
+  &= 3(2^{n+1}) + 5n + 2
+\end{align*}
+\end{frame}
+
+\sect{Guess but verify}
+\[
+S(n) = \sum_{k=1}^n (2k-1)
+\]
+\[
+\begin{array}{cr}
+  n & S(n) \\\hline
+  0 & 0 \\
+  1 & 1 \\
+  2 & 1 + 3 = 4\\
+  3 & 4 + 5 = 9\\
+  4 & 9 + 7 = 16\\
+  5 & 16 + 9 = 25\\
+\end{array}
+\]
+
+\begin{align*}
+S(n) &= n^2  &\mbox{Guess!}
+\end{align*}
+
+\end{frame}
+\sect{Prove guess by induction}
+\[
+S(n) = \sum_{k=1}^n (2k-1)
+\stackrel{?}{\Longleftrightarrow}
+S(n) = n^2 
+\]
+\begin{align*}
+S(0) &=  \sum_{k=1}^0 (2k-1) = 0 & \mbox{Base case}\\
+  S(n+1)
+  &= \sum_{k=1}^{n+1} (2k-1) &\mbox{Step} \\
+  &= \sum_{k=1}^{n} (2k-1) + (2(n+1) - 1)\\
+  &= n^2 + 2(n+1) - 1 &\mbox{Inductive hypothesis}\\
+  &= (n+1)^2
+\end{align*}
+
+\end{frame}
+
+\sect{Strategies for asymptotic estimates}
+
+Pull out constant factors
+
+\begin{align*}
+  \sum_{i=1}^n \frac{n}{i}
+  &= n  \sum_{i=1}^n \frac{1}{i}\\
+  &= nH_n\\
+  &= \Theta(n\log n)
+\end{align*}
+
+
+\end{frame}
+
+\sect{Strategies for asymptotic estimates}
+
+Bound using geometric series
+
+\begin{align*}
+  \sum_{i=1}^n x^i &= \frac{x^{n+1}-1}{x-1} =\Theta(x^{n})
+  \\\\
+  \sum_{i=1}^n 2^i &= \Theta(2^{n})
+  \\
+  \sum_{i=1}^n 2^{-i} &= \Theta(1)
+\end{align*}
+
+\end{frame}
+\sect{Strategies for asymptotic estimates}
+
+Harmonic series
+
+\begin{align*}
+  \sum_{i=1}^n \frac{1}{i} &= H_n = \Theta(\lg n)
+\end{align*}
+
+\end{frame}
+\sect{Strategies for asymptotic estimates}
+
+Bound part of the sum.
+
+\begin{align*}
+  \sum_{i=1}^n i^3 &\leq   \sum_{i=1}^n n^3 \\
+                  &= O(n^4)\\
+  \sum_{i=1}^n i^3 &\geq   \sum_{i=n/2}^n i^3 \\
+                  &\geq   \sum_{i=n/2}^n (n/2)^3 \\
+                  &= \Omega(n^4)
+\end{align*}
+
+\end{frame}
+\sect{Strategies for asymptotic estimates}
+
+Integrate!
+
+For increasing functions:
+
+\begin{align*}
+\int_{a-1}^b f(x)dx \leq \sum_{i=a}^b f(i) \leq \int_{a}^{b+1} f(x)dx
+\end{align*}
+
+ Most of the functions we see in algorithms yield to this method!
+\end{frame}
+
+\sect{Strategies for asymptotic estimates}
+
+Grouping terms.
+
+The standard trick for showing that the harmonic series is unbounded.
+
+\begin{align*}
+  &1 + 1/2 + (1/3 + 1/4) + (1/5 + 1/6 + 1/7 + 1/8) + ...\\
+  &\geq\\
+  &1 + 1/2 + (1/4 + 1/4) + (1/8 + 1/8 + 1/8 + 1/8) + ... \\
+  &=\\
+  &1 + 1/2 + 1/2 + 1/2 + ...
+\end{align*}
+
+
+\end{frame}
+
+\sect{Final Notes}
+In practice, almost any sum you come across will be of the form:
+\[
+\sum_{i=1}^n f(i)
+\]
+where either:
+\begin{itemize}
+  \item
+    $f(n)$ is exponential.
+
+    Then it's bounded by a geometric series and
+the largest term dominates.
+\item
+  $f(n)$ is polynomial.
+
+  Then $f(n/2) =\Theta(f(n))$ and the sum is
+$\Theta(nf(n))$ using the lower bound:
+\[
+\sum_{i=n/2}^n f(n) =\Omega(nf(n))
+\]
+\end{itemize}
+\end{frame}
+
+\end{document}

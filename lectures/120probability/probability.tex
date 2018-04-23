@@ -30,17 +30,34 @@
   2^n &= \sum_{k=0}^n\binom{n}{k} \\
 \end{align*}
 \end{frame}
+
+\sect{$(n+a)^b =O(n^b)$}
+\pause
+\begin{align*}
+  (n+a)^b
+  &= \sum_{k=0}^b\binom{n}{k} n^ka^{b-k}\\
+  &\leq \sum_{k=0}^b\binom{n}{k} n^ba^{b-k}\\
+  &= n^b\sum_{k=0}^b\binom{n}{k} a^{b-k}\\
+  &= n^b\sum_{k=0}^b\binom{n}{k} 1^ka^{b-k}\\
+  &= n^b(1+a)^b\\
+  &=O(n^b)
+\end{align*}
+\end{frame}
+
 \sect{Binomial Bounds}
 \begin{align*}
   \binom{n}{k} &\geq \left(\frac{n}{k}\right)^k\\
-  \binom{n}{k} &\leq \left(\frac{en}{k}\right)^k\\
-  \binom{n}{k} &\leq \frac{n^n}{k^k(n-k)^{n-k}}\\
-  \binom{n}{\lambda k} &\leq 2^{nH(\lambda)}\\
-  H(\lambda) &= -\lambda \lg \lambda - (1-\lambda)\lg(1-\lambda)
+  \binom{n}{k} &\leq \left(\frac{en}{k}\right)^k
+  &\mbox{Stirling: } k!\geq (k/e)^k\\
+  \binom{n}{k} &\leq \frac{n^n}{k^k(n-k)^{n-k}}
+  &\mbox{by induction}\\
+  \binom{n}{\lambda n} &\leq 2^{nH(\lambda)}&
+  H(\lambda) = -\lambda \lg \lambda - (1-\lambda)\lg(1-\lambda)
 \end{align*}
 
 
 \end{frame}
+
 \sect{Sample Space}
 \bi
 \item Set of all possible things that can happen.
