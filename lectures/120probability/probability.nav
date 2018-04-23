@@ -46,83 +46,88 @@
 \headcommand {\beamer@subsectionpages {10}{10}}
 \headcommand {\slideentry {9}{0}{1}{11/11}{}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\sectionentry {10}{Independence}{12}{Independence}{0}}
+\headcommand {\sectionentry {10}{Conditioning example}{12}{Conditioning example}{0}}
 \headcommand {\beamer@sectionpages {11}{11}}
 \headcommand {\beamer@subsectionpages {11}{11}}
-\headcommand {\slideentry {10}{0}{1}{12/12}{}{0}}
-\headcommand {\beamer@framepages {12}{12}}
-\headcommand {\sectionentry {11}{Bayes's theorem}{13}{Bayes's theorem}{0}}
-\headcommand {\beamer@sectionpages {12}{12}}
-\headcommand {\beamer@subsectionpages {12}{12}}
-\headcommand {\slideentry {11}{0}{1}{13/13}{}{0}}
-\headcommand {\beamer@framepages {13}{13}}
-\headcommand {\sectionentry {12}{Bayes's theorem example}{14}{Bayes's theorem example}{0}}
-\headcommand {\beamer@sectionpages {13}{13}}
-\headcommand {\beamer@subsectionpages {13}{13}}
-\headcommand {\slideentry {12}{0}{1}{14/14}{}{0}}
+\headcommand {\slideentry {10}{0}{1}{12/13}{}{0}}
+\headcommand {\beamer@framepages {12}{13}}
+\headcommand {\sectionentry {11}{Independence}{14}{Independence}{0}}
+\headcommand {\beamer@sectionpages {12}{13}}
+\headcommand {\beamer@subsectionpages {12}{13}}
+\headcommand {\slideentry {11}{0}{1}{14/14}{}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\sectionentry {13}{Discrete random variables}{15}{Discrete random variables}{0}}
+\headcommand {\sectionentry {12}{Bayes's theorem}{15}{Bayes's theorem}{0}}
 \headcommand {\beamer@sectionpages {14}{14}}
 \headcommand {\beamer@subsectionpages {14}{14}}
-\headcommand {\slideentry {13}{0}{1}{15/15}{}{0}}
+\headcommand {\slideentry {12}{0}{1}{15/15}{}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\sectionentry {14}{Expected value}{16}{Expected value}{0}}
+\headcommand {\sectionentry {13}{Bayes's theorem example}{16}{Bayes's theorem example}{0}}
 \headcommand {\beamer@sectionpages {15}{15}}
 \headcommand {\beamer@subsectionpages {15}{15}}
-\headcommand {\slideentry {14}{0}{1}{16/16}{}{0}}
+\headcommand {\slideentry {13}{0}{1}{16/16}{}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\sectionentry {15}{Variance}{17}{Variance}{0}}
+\headcommand {\sectionentry {14}{Discrete random variables}{17}{Discrete random variables}{0}}
 \headcommand {\beamer@sectionpages {16}{16}}
 \headcommand {\beamer@subsectionpages {16}{16}}
-\headcommand {\slideentry {15}{0}{1}{17/17}{}{0}}
+\headcommand {\slideentry {14}{0}{1}{17/17}{}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\sectionentry {16}{Bernoulli trials}{18}{Bernoulli trials}{0}}
+\headcommand {\sectionentry {15}{Expected value}{18}{Expected value}{0}}
 \headcommand {\beamer@sectionpages {17}{17}}
 \headcommand {\beamer@subsectionpages {17}{17}}
-\headcommand {\slideentry {16}{0}{1}{18/18}{}{0}}
+\headcommand {\slideentry {15}{0}{1}{18/18}{}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\sectionentry {17}{Geometric distribution}{19}{Geometric distribution}{0}}
+\headcommand {\sectionentry {16}{Variance}{19}{Variance}{0}}
 \headcommand {\beamer@sectionpages {18}{18}}
 \headcommand {\beamer@subsectionpages {18}{18}}
-\headcommand {\slideentry {17}{0}{1}{19/19}{}{0}}
+\headcommand {\slideentry {16}{0}{1}{19/19}{}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\sectionentry {18}{Geometric distribution}{20}{Geometric distribution}{0}}
+\headcommand {\sectionentry {17}{Bernoulli trials}{20}{Bernoulli trials}{0}}
 \headcommand {\beamer@sectionpages {19}{19}}
 \headcommand {\beamer@subsectionpages {19}{19}}
-\headcommand {\slideentry {18}{0}{1}{20/20}{}{0}}
+\headcommand {\slideentry {17}{0}{1}{20/20}{}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\sectionentry {19}{Binomial distribution}{21}{Binomial distribution}{0}}
+\headcommand {\sectionentry {18}{Geometric distribution}{21}{Geometric distribution}{0}}
 \headcommand {\beamer@sectionpages {20}{20}}
 \headcommand {\beamer@subsectionpages {20}{20}}
-\headcommand {\slideentry {19}{0}{1}{21/21}{}{0}}
+\headcommand {\slideentry {18}{0}{1}{21/21}{}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\sectionentry {20}{Binomial distribution}{22}{Binomial distribution}{0}}
+\headcommand {\sectionentry {19}{Geometric distribution}{22}{Geometric distribution}{0}}
 \headcommand {\beamer@sectionpages {21}{21}}
 \headcommand {\beamer@subsectionpages {21}{21}}
-\headcommand {\slideentry {20}{0}{1}{22/22}{}{0}}
+\headcommand {\slideentry {19}{0}{1}{22/22}{}{0}}
 \headcommand {\beamer@framepages {22}{22}}
-\headcommand {\sectionentry {21}{Binomial distribution expectation}{23}{Binomial distribution expectation}{0}}
+\headcommand {\sectionentry {20}{Binomial distribution}{23}{Binomial distribution}{0}}
 \headcommand {\beamer@sectionpages {22}{22}}
 \headcommand {\beamer@subsectionpages {22}{22}}
-\headcommand {\slideentry {21}{0}{1}{23/23}{}{0}}
+\headcommand {\slideentry {20}{0}{1}{23/23}{}{0}}
 \headcommand {\beamer@framepages {23}{23}}
-\headcommand {\sectionentry {22}{Binomial distribution expectation}{24}{Binomial distribution expectation}{0}}
+\headcommand {\sectionentry {21}{Binomial distribution}{24}{Binomial distribution}{0}}
 \headcommand {\beamer@sectionpages {23}{23}}
 \headcommand {\beamer@subsectionpages {23}{23}}
-\headcommand {\slideentry {22}{0}{1}{24/24}{}{0}}
+\headcommand {\slideentry {21}{0}{1}{24/24}{}{0}}
 \headcommand {\beamer@framepages {24}{24}}
-\headcommand {\sectionentry {23}{Binomial distribution variance}{25}{Binomial distribution variance}{0}}
+\headcommand {\sectionentry {22}{Binomial distribution expectation}{25}{Binomial distribution expectation}{0}}
 \headcommand {\beamer@sectionpages {24}{24}}
 \headcommand {\beamer@subsectionpages {24}{24}}
-\headcommand {\slideentry {23}{0}{1}{25/25}{}{0}}
+\headcommand {\slideentry {22}{0}{1}{25/25}{}{0}}
 \headcommand {\beamer@framepages {25}{25}}
-\headcommand {\sectionentry {24}{Binomial tails}{26}{Binomial tails}{0}}
+\headcommand {\sectionentry {23}{Binomial distribution expectation}{26}{Binomial distribution expectation}{0}}
 \headcommand {\beamer@sectionpages {25}{25}}
 \headcommand {\beamer@subsectionpages {25}{25}}
-\headcommand {\slideentry {24}{0}{1}{26/26}{}{0}}
+\headcommand {\slideentry {23}{0}{1}{26/26}{}{0}}
 \headcommand {\beamer@framepages {26}{26}}
-\headcommand {\beamer@partpages {1}{26}}
-\headcommand {\beamer@subsectionpages {26}{26}}
+\headcommand {\sectionentry {24}{Binomial distribution variance}{27}{Binomial distribution variance}{0}}
 \headcommand {\beamer@sectionpages {26}{26}}
-\headcommand {\beamer@documentpages {26}}
-\headcommand {\def \inserttotalframenumber {25}}
+\headcommand {\beamer@subsectionpages {26}{26}}
+\headcommand {\slideentry {24}{0}{1}{27/27}{}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\sectionentry {25}{Binomial tails}{28}{Binomial tails}{0}}
+\headcommand {\beamer@sectionpages {27}{27}}
+\headcommand {\beamer@subsectionpages {27}{27}}
+\headcommand {\slideentry {25}{0}{1}{28/28}{}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\beamer@partpages {1}{28}}
+\headcommand {\beamer@subsectionpages {28}{28}}
+\headcommand {\beamer@sectionpages {28}{28}}
+\headcommand {\beamer@documentpages {28}}
+\headcommand {\def \inserttotalframenumber {26}}

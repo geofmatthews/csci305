@@ -137,21 +137,45 @@
 \end{frame}
 \sect{Conditional probability}
 
-  \[
-  \pr{A\mid B} = \frac{\pr{A\cap B}}{\pr{B}}
-    \]
+\[
+\pr{A\mid B} = \frac{\pr{A\cap B}}{\pr{B}}
+\]
 
-    \bi
-    \item
-      Probability as if $B$ were the sample space.
-    \item Can condition a variable on events:
-      \begin{align*}
-        \pr{B} &= \pr{B\cap A} + \pr{B\cap \overline{A}}\\
-        &= \pr{A}\pr{B\mid A} + \pr{\overline{A}}\pr{B\mid \overline{A}}
-        \end{align*}
-      \ei
-      
+\bi
+\item
+  Probability as if $B$ were the sample space.
+\item Can condition a variable on events:
+  \begin{align*}
+    \pr{B} &= \pr{B\cap A} + \pr{B\cap \overline{A}}\\
+    &= \pr{A}\pr{B\mid A} + \pr{\overline{A}}\pr{B\mid \overline{A}}
+  \end{align*}
+\ei
+  
 \end{frame}
+
+\sect{Conditioning example}
+\bi
+\item
+Suppose we flip a coin.
+\item
+If it's heads, we roll a 6-sided die; if it's tails an 8-sided die.
+\item
+What's the probability of getting a 6?
+\pause
+\item
+  \begin{align*}
+    \pr{B} &= \pr{B\cap A} + \pr{B\cap \overline{A}}\\
+    &= \pr{A}\pr{B\mid A} + \pr{\overline{A}}\pr{B\mid \overline{A}}
+\\
+    \pr{6} &= \pr{6\cap H} + \pr{6\cap \overline{H}}\\
+    &= \pr{H}\pr{6\mid H} + \pr{\overline{H}}\pr{6\mid \overline{H}}\\
+    &= (1/2)(1/6) + (1/2)(1/8)\\
+    &= 7/48
+  \end{align*}
+\ei
+\end{frame}  
+
+
 \sect{Independence}
 \[
 \pr{A\cap B} = \pr{A}\pr{B}

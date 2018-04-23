@@ -8,18 +8,19 @@
 \beamer@sectionintoc {7}{Discrete probability distribution}{9}{0}{7}
 \beamer@sectionintoc {8}{Continuous uniform distribution}{10}{0}{8}
 \beamer@sectionintoc {9}{Conditional probability}{11}{0}{9}
-\beamer@sectionintoc {10}{Independence}{12}{0}{10}
-\beamer@sectionintoc {11}{Bayes's theorem}{13}{0}{11}
-\beamer@sectionintoc {12}{Bayes's theorem example}{14}{0}{12}
-\beamer@sectionintoc {13}{Discrete random variables}{15}{0}{13}
-\beamer@sectionintoc {14}{Expected value}{16}{0}{14}
-\beamer@sectionintoc {15}{Variance}{17}{0}{15}
-\beamer@sectionintoc {16}{Bernoulli trials}{18}{0}{16}
-\beamer@sectionintoc {17}{Geometric distribution}{19}{0}{17}
-\beamer@sectionintoc {18}{Geometric distribution}{20}{0}{18}
-\beamer@sectionintoc {19}{Binomial distribution}{21}{0}{19}
-\beamer@sectionintoc {20}{Binomial distribution}{22}{0}{20}
-\beamer@sectionintoc {21}{Binomial distribution expectation}{23}{0}{21}
-\beamer@sectionintoc {22}{Binomial distribution expectation}{24}{0}{22}
-\beamer@sectionintoc {23}{Binomial distribution variance}{25}{0}{23}
-\beamer@sectionintoc {24}{Binomial tails}{26}{0}{24}
+\beamer@sectionintoc {10}{Conditioning example}{12}{0}{10}
+\beamer@sectionintoc {11}{Independence}{14}{0}{11}
+\beamer@sectionintoc {12}{Bayes's theorem}{15}{0}{12}
+\beamer@sectionintoc {13}{Bayes's theorem example}{16}{0}{13}
+\beamer@sectionintoc {14}{Discrete random variables}{17}{0}{14}
+\beamer@sectionintoc {15}{Expected value}{18}{0}{15}
+\beamer@sectionintoc {16}{Variance}{19}{0}{16}
+\beamer@sectionintoc {17}{Bernoulli trials}{20}{0}{17}
+\beamer@sectionintoc {18}{Geometric distribution}{21}{0}{18}
+\beamer@sectionintoc {19}{Geometric distribution}{22}{0}{19}
+\beamer@sectionintoc {20}{Binomial distribution}{23}{0}{20}
+\beamer@sectionintoc {21}{Binomial distribution}{24}{0}{21}
+\beamer@sectionintoc {22}{Binomial distribution expectation}{25}{0}{22}
+\beamer@sectionintoc {23}{Binomial distribution expectation}{26}{0}{23}
+\beamer@sectionintoc {24}{Binomial distribution variance}{27}{0}{24}
+\beamer@sectionintoc {25}{Binomial tails}{28}{0}{25}
