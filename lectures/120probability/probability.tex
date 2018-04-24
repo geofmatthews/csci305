@@ -179,41 +179,6 @@ What's the probability of getting a 6?
 \end{frame}  
 
 
-\sect{Independence}
-\[
-\pr{A\cap B} = \pr{A}\pr{B}
-\]
-This implies
-\[
-\pr{A \mid B} = \pr{A}
-\]
-
-\end{frame}
-
-\sect{Joint Probability Distribution, Marginal Distributions}
-\begin{tabular}{cc|llll|c}
-  &&\multicolumn{4}{|c|}{$X$} &\\
-      && 2 & 3 & 4 & 5 & $\sum_x f(x,y)$ \\\hline
-     &A& 0.30 & 0.00  & 0.10  & 0.21  & 0.61 \\
-$Y$  &B& 0.03 & 0.04  & 0.10  & 0.08  & 0.25 \\
-     &C& 0.00 & 0.03  & 0.10  & 0.01  & 0.14 \\\hline
-  \multicolumn{2}{c|}{$\sum_y f(x,y)$}
-       & 0.33 & 0.07 & 0.30 & 0.30 &
-\end{tabular}
-\end{frame}
-
-\sect{Joint Probability Distribution, Independent Distributions}
-\begin{tabular}{cc|llll|c}
-  &&\multicolumn{4}{|c|}{$X$} &\\
-      && 2 & 3 & 4 & 5 & $\sum_x f(x,y)$ \\\hline
-     &A& 0.18 & 0.18  & 0.18  & 0.06  & 0.6 \\
-$Y$  &B& 0.09 & 0.09  & 0.09  & 0.03  & 0.3 \\
-     &C& 0.03 & 0.03  & 0.03  & 0.01  & 0.1 \\\hline
-  \multicolumn{2}{c|}{$\sum_y f(x,y)$}
-       & 0.3 & 0.3 & 0.3 & 0.1 &
-\end{tabular}
-\end{frame}
-
 \sect{Bayes's theorem}
 
 \[
@@ -251,6 +216,42 @@ $Y$  &B& 0.09 & 0.09  & 0.09  & 0.03  & 0.3 \\
       \ei
 
 \end{frame}
+
+\sect{Joint Probability Distribution, Marginal Distributions}
+\begin{tabular}{cc|llll|c}
+  &&\multicolumn{4}{|c|}{$X$} &\\
+      && 2 & 3 & 4 & 5 & $\sum_x f(x,y)$ \\\hline
+     &A& 0.30 & 0.00  & 0.10  & 0.21  & 0.61 \\
+$Y$  &B& 0.03 & 0.04  & 0.10  & 0.08  & 0.25 \\
+     &C& 0.00 & 0.03  & 0.10  & 0.01  & 0.14 \\\hline
+  \multicolumn{2}{c|}{$\sum_y f(x,y)$}
+       & 0.33 & 0.07 & 0.30 & 0.30 &
+\end{tabular}
+\end{frame}
+
+\sect{Independence}
+\[
+\pr{A\cap B} = \pr{A}\pr{B}
+\]
+This implies
+\[
+\pr{A \mid B} = \pr{A}
+\]
+
+\end{frame}
+
+\sect{Joint Probability Distribution, Independent Distributions}
+\begin{tabular}{cc|llll|c}
+  &&\multicolumn{4}{|c|}{$X$} &\\
+      && 2 & 3 & 4 & 5 & $\sum_x f(x,y)$ \\\hline
+     &A& 0.18 & 0.18  & 0.18  & 0.06  & 0.6 \\
+$Y$  &B& 0.09 & 0.09  & 0.09  & 0.03  & 0.3 \\
+     &C& 0.03 & 0.03  & 0.03  & 0.01  & 0.1 \\\hline
+  \multicolumn{2}{c|}{$\sum_y f(x,y)$}
+       & 0.3 & 0.3 & 0.3 & 0.1 &
+\end{tabular}
+\end{frame}
+
 \sect{Discrete random variables}
 \bi
 \item Given finite or countable $S$, a {\bf random variable} $X$ is a

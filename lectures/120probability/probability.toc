@@ -9,11 +9,11 @@
 \beamer@sectionintoc {8}{Continuous uniform distribution}{10}{0}{8}
 \beamer@sectionintoc {9}{Conditional probability}{11}{0}{9}
 \beamer@sectionintoc {10}{Conditioning example}{12}{0}{10}
-\beamer@sectionintoc {11}{Independence}{14}{0}{11}
-\beamer@sectionintoc {12}{Joint Probability Distribution, Marginal Distributions}{15}{0}{12}
-\beamer@sectionintoc {13}{Joint Probability Distribution, Independent Distributions}{16}{0}{13}
-\beamer@sectionintoc {14}{Bayes's theorem}{17}{0}{14}
-\beamer@sectionintoc {15}{Bayes's theorem example}{18}{0}{15}
+\beamer@sectionintoc {11}{Bayes's theorem}{14}{0}{11}
+\beamer@sectionintoc {12}{Bayes's theorem example}{15}{0}{12}
+\beamer@sectionintoc {13}{Joint Probability Distribution, Marginal Distributions}{16}{0}{13}
+\beamer@sectionintoc {14}{Independence}{17}{0}{14}
+\beamer@sectionintoc {15}{Joint Probability Distribution, Independent Distributions}{18}{0}{15}
 \beamer@sectionintoc {16}{Discrete random variables}{19}{0}{16}
 \beamer@sectionintoc {17}{Expected value}{20}{0}{17}
 \beamer@sectionintoc {18}{Variance}{21}{0}{18}
