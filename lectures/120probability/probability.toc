@@ -10,17 +10,19 @@
 \beamer@sectionintoc {9}{Conditional probability}{11}{0}{9}
 \beamer@sectionintoc {10}{Conditioning example}{12}{0}{10}
 \beamer@sectionintoc {11}{Independence}{14}{0}{11}
-\beamer@sectionintoc {12}{Bayes's theorem}{15}{0}{12}
-\beamer@sectionintoc {13}{Bayes's theorem example}{16}{0}{13}
-\beamer@sectionintoc {14}{Discrete random variables}{17}{0}{14}
-\beamer@sectionintoc {15}{Expected value}{18}{0}{15}
-\beamer@sectionintoc {16}{Variance}{19}{0}{16}
-\beamer@sectionintoc {17}{Bernoulli trials}{20}{0}{17}
-\beamer@sectionintoc {18}{Geometric distribution}{21}{0}{18}
-\beamer@sectionintoc {19}{Geometric distribution}{22}{0}{19}
-\beamer@sectionintoc {20}{Binomial distribution}{23}{0}{20}
-\beamer@sectionintoc {21}{Binomial distribution}{24}{0}{21}
-\beamer@sectionintoc {22}{Binomial distribution expectation}{25}{0}{22}
-\beamer@sectionintoc {23}{Binomial distribution expectation}{26}{0}{23}
-\beamer@sectionintoc {24}{Binomial distribution variance}{27}{0}{24}
-\beamer@sectionintoc {25}{Binomial tails}{28}{0}{25}
+\beamer@sectionintoc {12}{Joint Probability Distribution, Marginal Distributions}{15}{0}{12}
+\beamer@sectionintoc {13}{Joint Probability Distribution, Independent Distributions}{16}{0}{13}
+\beamer@sectionintoc {14}{Bayes's theorem}{17}{0}{14}
+\beamer@sectionintoc {15}{Bayes's theorem example}{18}{0}{15}
+\beamer@sectionintoc {16}{Discrete random variables}{19}{0}{16}
+\beamer@sectionintoc {17}{Expected value}{20}{0}{17}
+\beamer@sectionintoc {18}{Variance}{21}{0}{18}
+\beamer@sectionintoc {19}{Bernoulli trials}{22}{0}{19}
+\beamer@sectionintoc {20}{Geometric distribution}{23}{0}{20}
+\beamer@sectionintoc {21}{Geometric distribution}{24}{0}{21}
+\beamer@sectionintoc {22}{Binomial distribution}{25}{0}{22}
+\beamer@sectionintoc {23}{Binomial distribution}{26}{0}{23}
+\beamer@sectionintoc {24}{Binomial distribution expectation}{27}{0}{24}
+\beamer@sectionintoc {25}{Binomial distribution expectation}{28}{0}{25}
+\beamer@sectionintoc {26}{Binomial distribution variance}{29}{0}{26}
+\beamer@sectionintoc {27}{Binomial tails}{30}{0}{27}

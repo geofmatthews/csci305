@@ -25,6 +25,7 @@
 \end{frame}
 
 
+
 \sect{Binomial Coefficients}
 
 \begin{align*}
@@ -189,31 +190,6 @@ This implies
 \]
 
 \end{frame}
-
-\sect{Joint Probability Distribution, Marginal Distributions}
-\begin{tabular}{cc|llll|c}
-  &&\multicolumn{4}{|c|}{$X$} &\\
-      && 2 & 3 & 4 & 5 & $\sum_x f(x,y)$ \\\hline
-     &A& 0.30 & 0.00  & 0.10  & 0.21  & 0.61 \\
-$Y$  &B& 0.03 & 0.04  & 0.10  & 0.08  & 0.25 \\
-     &C& 0.00 & 0.03  & 0.10  & 0.01  & 0.14 \\\hline
-  \multicolumn{2}{c|}{$\sum_y f(x,y)$}
-       & 0.33 & 0.07 & 0.30 & 0.30 &
-\end{tabular}
-\end{frame}
-
-\sect{Joint Probability Distribution, Independent Distributions}
-\begin{tabular}{cc|llll|c}
-  &&\multicolumn{4}{|c|}{$X$} &\\
-      && 2 & 3 & 4 & 5 & $\sum_x f(x,y)$ \\\hline
-     &A& 0.18 & 0.18  & 0.18  & 0.06  & 0.6 \\
-$Y$  &B& 0.09 & 0.09  & 0.09  & 0.03  & 0.3 \\
-     &C& 0.03 & 0.03  & 0.03  & 0.01  & 0.1 \\\hline
-  \multicolumn{2}{c|}{$\sum_y f(x,y)$}
-       & 0.3 & 0.3 & 0.3 & 0.1 &
-\end{tabular}
-\end{frame}
-
 \sect{Bayes's theorem}
 
 \[
@@ -251,179 +227,32 @@ $Y$  &B& 0.09 & 0.09  & 0.09  & 0.03  & 0.3 \\
       \ei
 
 \end{frame}
+
 \sect{Discrete random variables}
-\bi
+\begin{itemize}
 \item Given finite or countable $S$, a {\bf random variable} $X$ is a
   function from $S$ to the real numbers.
 \item The event $X=x$ is
-  \[\set{s\in S : X(s) = x}
+  \[
+  \set{s\in S : X(s) = x}
   \]
 \item Therefore
   \[
   \pr{X=x} = \sum_{s\in S:X(s)=x} \pr{s}
   \]
 \item The {\bf probability density function}:
-  \[f(x) = \pr{X=x}
+  \[
+  f(x) = \pr{X=x}
   \]
-  \item With two random variables $X$ and $Y$, the {\bf joint
-    probability density}:
-    \[
-    f(x,y) = \pr{X=x \mbox{\ and\ } Y=x}
-    \]
+\item With two random variables $X$ and $Y$, the {\bf joint
+  probability density}:
+  \[
+  f(x,y) = \pr{X=x \mbox{\ and\ } Y=x}
+  \]
 \item What does independence imply about the joint distribution?
-
-    \ei
-
-\end{frame}
-
-\sect{Expected value}
-\bi
-\item The {\bf expected value} or {\bf expectation} or {\bf mean}:
-  \[
-  E[X] = \sum_x x\cdot\pr{X=x}
-  \]
-\item Denoted by $\mu_X$ or $\mu$
-\item {\bf Linearity of expectation:}
-  \[E[X+Y] = E[X] + E[Y]
-  \]
-  Holds even if $X$ and $Y$ are not independent.
-  \ei
-
-\end{frame}
-\sect{Variance}
-\begin{align*}
-\mbox{Var}[X] &= E[X-E[X]]^2\\    
-&= E[X^2] - E^2[X]
-\end{align*}
-\bi
-\item The latter can be computed in one pass, but is not as
-  numerically stable as the first.
-\item If $X$ and $Y$ are independent:
-  \[ \mbox{Var}[X+Y] = \mbox{Var}[X] + \mbox{Var}[Y] \]
-
-\item The {\bf standard deviation} is the square root of the variance.
-\bi\item It is denoted $\sigma_X$ or $\sigma$.\ei
-  \item The variance is denoted $\sigma^2$.
-    \ei
-
-\end{frame}
-\sect{Bernoulli trials}
-
-\bi
-\item Repeatedly flip a biased coin with probability $p$ of heads.
-\item Each flip is independent of the others.
-\item Instead of heads and tails we say {\bf success} and {\bf
-  failure}.
-  \ei
-
-\end{frame}
-\sect{Geometric distribution}
-
-\bi
-\item With Bernoulli trials with probability of success
-  $p$, what is the probability we try $k$ times 
-  to get the first success?
-  \[  \pr{X=k} = q^{k-1}p  \]
-\item Expectation:
-  \begin{align*}
-    E[X] &= \sum_{k=1}^\infty kq^{k-1}p\\
-    &= 1/p
-  \end{align*}
-\item Variance:
-  \[\mbox{Var}[X] = q/p^3\]
-\ei
-
-\end{frame}
-\sect{Geometric distribution}
-\vfill
-
-\includegraphics[height=.8\textheight]{Fig-C-1.pdf}
+\end{itemize}
 
 
-\end{frame}
-\sect{Binomial distribution}
-\bi
-\item Probability of $k$ successes occur in $n$ Bernoulli trials with
-   probability $p$:
-  \[
-  \pr{X=k} = {n\choose k}p^k(1-p)^{n-k}
-  \]
-\item We define a family of distributions:
-  \[
-  b(k:n,p) = {n\choose k}p^k(1-p)^{n-k}
-  \]
-  \ei
-  
-\end{frame}
-\sect{Binomial distribution}
-\vfill
-
-\includegraphics[width=\textwidth]{Fig-C-2.pdf}
-
-
-\end{frame}
-\sect{Binomial distribution expectation}
-  \[
-  \pr{X=k} = {n\choose k}p^k(1-p)^{n-k}
-  \]
-\bi
-\item Expectation:
-  \begin{align*}
-    E[X] &= \sum_{k=0}^n k\cdot \pr{X=k}\\
-    &= \sum_{k=0}^nk{n\choose k}p^kq^{n-k}\\ &= \mbox{\bf ?}
-  \end{align*}
-  \ei
-
-\end{frame}
-\sect{Binomial distribution expectation}
-  \[
-  \pr{X=k} = {n\choose k}p^k(1-p)^{n-k}
-  \]
-\bi
-\item Let $X_i$ be an {\bf indicator random variable} for the $i$th trial.
-\bi\item $X_i$ is 1 if the $i$th trial is a success, 0 otherwise.\ei
-\item Easier math:
-  \begin{align*}
-    E[X] 
-    &= E\left[\sum_{i=1}^{n} X_i\right]\\
-    &= \sum_{i=1}^{n} E[X_i] & \mbox{linearity of expectation}\\
-    &= \sum_{i=1}^{n} p = np
-  \end{align*}
-
-  \ei
-
-\end{frame}
-\sect{Binomial distribution variance}
-  \[
-  \pr{X=k} = {n\choose k}p^k(1-p)^{n-k}
-  \]
-
-
-\begin{align*}
-  \mbox{Var}[X_i] &= E[X_i^2] - E^2[X_i]\\
-  &=   E[X_i] - E^2[X_i]\\
-  &= p - p^2 = pq
-\end{align*}
-
-
-\begin{align*}
-  \mbox{Var}[X] 
-  &= \mbox{Var}\left[\sum_{i=1}^{n} X_i\right]\\
-&= \sum_{i=1}^{n} \mbox{Var}[X_i] \\
-&= \sum_{i=1}^{n}  pq = npq
-\end{align*}
-
-\end{frame}
-
-\sect{Binomial tails}
-\begin{align*}
-\pr{X\geq k} &= \sum_{i=k}^n b(i:n,p)\\
-&\leq \binom{n}{k} p^k\\
-\pr{X\leq k} &= \sum_{i=0}^k b(i:n,p)\\
-&\leq \binom{n}{k} (1-p)^{n-k}
-\end{align*}
-
-\end{frame}
-
+  \end{frame}
 
 \end{document}

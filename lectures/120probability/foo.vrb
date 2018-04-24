@@ -1,0 +1,28 @@
+\frametitle{Discrete random variables} 
+\begin{itemize}
+\item Given finite or countable $S$, a {\bf random variable} $X$ is a
+  function from $S$ to the real numbers.
+\item The event $X=x$ is
+  \[
+  \set{s\in S : X(s) = x}
+  \]
+\item Therefore
+  \[
+  \pr{X=x} = \sum_{s\in S:X(s)=x} \pr{s}
+  \]
+\item The {\bf probability density function}:
+  \[
+  f(x) = \pr{X=x}
+  \]
+\item With two random variables $X$ and $Y$, the {\bf joint
+  probability density}:
+  \[
+  f(x,y) = \pr{X=x \mbox{\ and\ } Y=x}
+  \]
+\item What does independence imply about the joint distribution?
+\end{itemize}
+
+
+  \end{frame}
+
+\end{document}
