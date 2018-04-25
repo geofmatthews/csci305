@@ -1,15 +1,12 @@
-\frametitle{The birthday paradox} 
+\frametitle{Difference between the analyses} 
 \bi
+\item First analysis determined the number necessary for the
+  probability of at least two people with the same birthday
+  to exceed 1/2.
 \item
-How many people must be in a room before there is a 50\% chance of two
-of them having the same birthday? Assumptions:
+  Second analysis determined the number necessary for the expected
+  number of pairs of matching birthdays to be at least 1.
 \item
- \[\pr{b_i = r} = 1/n\mbox{ for }i=1..k\mbox{ and }r=1..n\]
-\item
-  \begin{align*}
-    \pr{b_i=r \mbox{ and } b_j=r} &=
-    \pr{b_i=r}\pr{b_j=r}\\ &= 1/n^2
-    \end{align*}
-\item Hence
-
+  The exact numbers differ, but both are $\Theta(\sqrt{n})$.
 \ei
+

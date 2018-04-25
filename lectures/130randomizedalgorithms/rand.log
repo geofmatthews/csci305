@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  25 APR 2018 11:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  25 APR 2018 15:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -894,7 +894,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 \openout4 = `rand.vrb'.
 
- (./rand.vrb <Hire-Assistant.pdf, id=191, 311.88521pt x 89.2936pt>
+ (./rand.vrb <Hire-Assistant.pdf, id=215, 311.88521pt x 89.2936pt>
 File: Hire-Assistant.pdf Graphic file (type pdf)
 
 <use Hire-Assistant.pdf>
@@ -980,7 +980,7 @@ Missing character: There is no ™ in font cmss10!
 \openout4 = `rand.vrb'.
 
  (./rand.vrb
-<Randomized-Hire-Assistant.pdf, id=559, 180.1932pt x 39.5076pt>
+<Randomized-Hire-Assistant.pdf, id=583, 180.1932pt x 39.5076pt>
 File: Randomized-Hire-Assistant.pdf Graphic file (type pdf)
 
 <use Randomized-Hire-Assistant.pdf>
@@ -1003,7 +1003,7 @@ Package pdftex.def Info: Randomized-Hire-Assistant.pdf used on input line 3.
 \openout4 = `rand.vrb'.
 
  (./rand.vrb
-<Randomize-In-Place.pdf, id=620, 175.53581pt x 39.5076pt>
+<Randomize-In-Place.pdf, id=644, 175.53581pt x 39.5076pt>
 File: Randomize-In-Place.pdf Graphic file (type pdf)
 
 <use Randomize-In-Place.pdf>
@@ -1077,6 +1077,49 @@ Package pdftex.def Info: Randomize-In-Place.pdf used on input line 2.
 
  (./rand.vrb) [28
 
+] (./rand.vrb) [29
+
+] (./rand.vrb) [30
+
+]
+\openout4 = `rand.vrb'.
+
+ (./rand.vrb)
+[31
+
+]
+\openout4 = `rand.vrb'.
+
+ (./rand.vrb) [32
+
+]
+\openout4 = `rand.vrb'.
+
+ (./rand.vrb) [33
+
+] (./rand.vrb) [34
+
+]
+\openout4 = `rand.vrb'.
+
+ (./rand.vrb)
+Overfull \vbox (1.1935pt too high) detected at line 559
+ []
+
+[35
+
+]
+\openout4 = `rand.vrb'.
+
+ (./rand.vrb) [36
+
+] (./rand.vrb) [37
+
+]
+\openout4 = `rand.vrb'.
+
+ (./rand.vrb) [38
+
 ]
 \tf@nav=\write6
 \openout6 = `rand.nav'.
@@ -1087,45 +1130,46 @@ Package pdftex.def Info: Randomize-In-Place.pdf used on input line 2.
 \tf@snm=\write8
 \openout8 = `rand.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 465.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 465.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 594.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 594.
  (./rand.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 465.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 465.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 594.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 594.
 Package rerunfilecheck Info: File `rand.out' has not changed.
-(rerunfilecheck)             Checksum: 536E269D7E928BC7495420352A524DBF;1400.
+(rerunfilecheck)             Checksum: 730DC840CAF4DFD267E6DD66BA724464;1793.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 465.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 594.
  ) 
 Here is how much of TeX's memory you used:
- 16745 strings out of 494827
- 317346 string characters out of 6176977
+ 16827 strings out of 494827
+ 318130 string characters out of 6176977
  385690 words of memory out of 5000000
- 19540 multiletter control sequences out of 15000+600000
+ 19576 multiletter control sequences out of 15000+600000
  14082 words of font info for 53 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  48i,14n,51p,380b,555s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
-ols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbo
-ls/msam7.pfb>
-Output written on rand.pdf (28 pages, 276433 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+Output written on rand.pdf (38 pages, 316036 bytes).
 PDF statistics:
- 920 PDF objects out of 1000 (max. 8388607)
- 853 compressed objects within 9 object streams
- 80 named destinations out of 1000 (max. 500000)
- 242 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1213 PDF objects out of 1440 (max. 8388607)
+ 1131 compressed objects within 12 object streams
+ 106 named destinations out of 1000 (max. 500000)
+ 290 words of extra memory for PDF output out of 10000 (max. 10000000)
 

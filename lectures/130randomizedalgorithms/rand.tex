@@ -449,17 +449,146 @@ There are $n!/(n-k)!$ possible $k$-permutations.
 \bi
 \item
 How many people must be in a room before there is a 50\% chance of two
-of them having the same birthday? Assumptions:
+of them having the same birthday?
+\pause
 \item
- \[\pr{b_i = r} = 1/n\mbox{ for }i=1..k\mbox{ and }r=1..n\]
+  Assumptions:
+\bi
 \item
+$\pr{b_i = r} = 1/n\mbox{ for }i=1..k\mbox{ and }r=1..n$
+\item
+$
+    \pr{b_i=r \mbox{ and } b_j=r} =
+    \pr{b_i=r}\pr{b_j=r} = 1/n^2
+    $
+    
+    \ei
+    \pause
+\item Hence,
+  the probability that two randomly selected people have the same birthday:
   \begin{align*}
-    \pr{b_i=r \mbox{ and } b_j=r} &=
-    \pr{b_i=r}\pr{b_j=r}\\ &= 1/n^2
-    \end{align*}
-\item Hence
-  
+    \pr{b_i = b_j}
+    &=
+    \sum_{i=1}^n \pr{b_i=r\mbox{ and } b_j=r}\\
+    &=
+    \sum_{i=1}^n (1/n^2)\\
+    &= 1/n
+  \end{align*}
+
 \ei
 \end{frame}
 
+\sect{The birthday paradox}
+\bi
+\item
+  The probability that two or more people have the same
+  birthday, is 1 minus the probability that everybody's birthday
+  is different.
+\item Event that $k$ people have different birthdays:
+  \begin{align*}
+    B_k &= \bigcap_{i=1}^k A_i\\
+    A_i &= \set{\mbox{events where $i$'s birthday $\neq$ $j$'s,
+        for all $j < i$}}
+\\\\
+    B_k &= A_k \cap B_{k-1}\\
+    \pr{B_k} &= \pr{B_{k-1}}\pr{A_k | B_{k-1}}\\
+    \pr{B_1} &= \pr{A_1} = 1\\
+    \pr{A_k | B_{k-1}} &= (n-(k-1))/n
+  \end{align*}
+\item What is the recurrence?
+\ei
+
+\end{frame}
+
+\sect{The birthday paradox}
+  \begin{align*}
+    \pr{B_k}
+    &= \pr{B_1}\pr{A_2 | B_{1}}\pr{A_3 | B_{2}}\cdots\pr{A_k | B_{k-1}}\\
+    &= 1\cdot\left(\frac{n-1}{n}\right)
+    \cdot\left(\frac{n-2}{n}\right)
+    \cdots
+    \left(\frac{n-k+1}{n}\right)\\
+    &= 1\cdot\left(1-\frac{1}{n}\right)
+    \cdot\left(1-\frac{2}{n}\right)
+    \cdots
+    \left(1-\frac{k-1}{n}\right)
+  \end{align*}
+  \begin{align*}
+    \pr{B_k}
+    &\leq e^{-1/n}e^{-2/n}\cdots e^{-(k-1)/n} & \mbox{since } 1 + x &\leq e^x\\
+    &= e^{-k(k-1)/2n} \leq 1/2 
+  \end{align*}
+  when $ -k(k-1)/2n \leq \ln(1/2)$, or
+  \[k\geq \frac{1+\sqrt{1+(8\ln 2)n} }{ 2}= \Theta(\sqrt{n})\]
+
+
+\end{frame}
+
+\sect{The birthday paradox}
+  \begin{align*}
+    \pr{B_k}
+    &\leq 1/2 
+  \end{align*}
+  when 
+  \[k\geq \frac{1+\sqrt{1+(8\ln 2)n} }{ 2}= \Theta(\sqrt{n})\]
+  \vfill
+  When $k=365$ we must have $k\geq 23$.
+  \pause
+  
+  \vfill
+
+  On Mars, a year is $669$ days long, so we need 31 Martians.
+\end{frame}
+
+\sect{The birthday paradox using indicator RVs}
+\begin{align*}
+  X_{ij}
+  &=
+  I\set{\mbox{person $i$ and $j$ have the same birthday}}\\
+  E[X_{ij}] &= \pr{\mbox{person $i$ and $j$ have the same birthday}}\\
+  &= 1/n
+\end{align*}
+Expected number of pairs of people with the same birthday:
+\begin{align*}
+  X &= \sum_{i=1}^{k-1}\sum_{j=i+1}^{k} X_{ij}\\
+  E[X] &= E\left[\sum_{i=1}^{k-1}\sum_{j=i+1}^{k} X_{ij}\right]\\
+   &= \sum_{i=1}^{k-1}\sum_{j=i+1}^{k} E[X_{ij}]\\  
+  &= \binom{k}{2}\frac{1}{n} = \frac{k(k-1)}{2n}
+\end{align*}
+
+\end{frame}
+
+
+\sect{The birthday paradox using indicator RVs}
+\bi
+\item
+  Expected number of pairs of people with the same birthday:
+  \begin{align*}
+    E[X]  &= \frac{k(k-1)}{2n}\\
+    E[X] \geq 1 &\Longleftrightarrow k(k-1) \geq 2n
+  \end{align*}
+\item
+  Thus, if we have at least $\sqrt{2n}+1$ people in the room,
+  we can expect at least two have the same birthday.
+\item
+  On earth, 28 people will make the expected value 1.0356.
+\item
+  On Mars, 38 Martians are needed.
+  \pause
+\ei  
+\end{frame}
+
+\sect{Difference between the analyses}
+\bi
+\item First analysis determined the number necessary for the
+  probability of at least two people with the same birthday
+  to exceed 1/2.
+\item
+  Second analysis determined the number necessary for the expected
+  number of pairs of matching birthdays to be at least 1.
+\item
+  The exact numbers differ, but both are $\Theta(\sqrt{n})$.
+\ei
+
+\end{frame}
 \end{document}

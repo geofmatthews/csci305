@@ -22,3 +22,9 @@
 \beamer@sectionintoc {21}{Algorithm computes a uniform random permutation}{24}{0}{21}
 \beamer@sectionintoc {22}{Algorithm computes a uniform random permutation}{26}{0}{22}
 \beamer@sectionintoc {23}{The birthday paradox}{28}{0}{23}
+\beamer@sectionintoc {24}{The birthday paradox}{31}{0}{24}
+\beamer@sectionintoc {25}{The birthday paradox}{32}{0}{25}
+\beamer@sectionintoc {26}{The birthday paradox}{33}{0}{26}
+\beamer@sectionintoc {27}{The birthday paradox using indicator RVs}{35}{0}{27}
+\beamer@sectionintoc {28}{The birthday paradox using indicator RVs}{36}{0}{28}
+\beamer@sectionintoc {29}{Difference between the analyses}{38}{0}{29}

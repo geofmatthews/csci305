@@ -114,10 +114,40 @@
 \headcommand {\sectionentry {23}{The birthday paradox}{28}{The birthday paradox}{0}}
 \headcommand {\beamer@sectionpages {26}{27}}
 \headcommand {\beamer@subsectionpages {26}{27}}
-\headcommand {\slideentry {23}{0}{1}{28/28}{}{0}}
-\headcommand {\beamer@framepages {28}{28}}
-\headcommand {\beamer@partpages {1}{28}}
-\headcommand {\beamer@subsectionpages {28}{28}}
-\headcommand {\beamer@sectionpages {28}{28}}
-\headcommand {\beamer@documentpages {28}}
-\headcommand {\def \inserttotalframenumber {24}}
+\headcommand {\slideentry {23}{0}{1}{28/30}{}{0}}
+\headcommand {\beamer@framepages {28}{30}}
+\headcommand {\sectionentry {24}{The birthday paradox}{31}{The birthday paradox}{0}}
+\headcommand {\beamer@sectionpages {28}{30}}
+\headcommand {\beamer@subsectionpages {28}{30}}
+\headcommand {\slideentry {24}{0}{1}{31/31}{}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\sectionentry {25}{The birthday paradox}{32}{The birthday paradox}{0}}
+\headcommand {\beamer@sectionpages {31}{31}}
+\headcommand {\beamer@subsectionpages {31}{31}}
+\headcommand {\slideentry {25}{0}{1}{32/32}{}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\sectionentry {26}{The birthday paradox}{33}{The birthday paradox}{0}}
+\headcommand {\beamer@sectionpages {32}{32}}
+\headcommand {\beamer@subsectionpages {32}{32}}
+\headcommand {\slideentry {26}{0}{1}{33/34}{}{0}}
+\headcommand {\beamer@framepages {33}{34}}
+\headcommand {\sectionentry {27}{The birthday paradox using indicator RVs}{35}{The birthday paradox using indicator RVs}{0}}
+\headcommand {\beamer@sectionpages {33}{34}}
+\headcommand {\beamer@subsectionpages {33}{34}}
+\headcommand {\slideentry {27}{0}{1}{35/35}{}{0}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\sectionentry {28}{The birthday paradox using indicator RVs}{36}{The birthday paradox using indicator RVs}{0}}
+\headcommand {\beamer@sectionpages {35}{35}}
+\headcommand {\beamer@subsectionpages {35}{35}}
+\headcommand {\slideentry {28}{0}{1}{36/37}{}{0}}
+\headcommand {\beamer@framepages {36}{37}}
+\headcommand {\sectionentry {29}{Difference between the analyses}{38}{Difference between the analyses}{0}}
+\headcommand {\beamer@sectionpages {36}{37}}
+\headcommand {\beamer@subsectionpages {36}{37}}
+\headcommand {\slideentry {29}{0}{1}{38/38}{}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\beamer@partpages {1}{38}}
+\headcommand {\beamer@subsectionpages {38}{38}}
+\headcommand {\beamer@sectionpages {38}{38}}
+\headcommand {\beamer@documentpages {38}}
+\headcommand {\def \inserttotalframenumber {30}}
