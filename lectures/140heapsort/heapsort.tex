@@ -1,8 +1,9 @@
-\documentclass[landscape]{article}
-\usepackage[margin=1in]{geometry}
+\documentclass{beamer}
+
 \usepackage{clrscode3e}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{multicol}
 
 \newcommand{\bi}{\begin{itemize}}
 \newcommand{\ii}{\item}
@@ -14,16 +15,21 @@
 \newcommand{\flr}[1]{\ensuremath{\left\lfloor#1\right\rfloor}}
 \newcommand{\ceil}[1]{\ensuremath{\left\lceil#1\right\rceil}}
 
-\newcommand{\sect}[1]{\newpage{\bf #1}}
+\newcommand{\sect}[1]{
+\section{#1}
+\begin{frame}[fragile]\frametitle{#1}
+}
 
-\setlength{\parindent}{0in}
 
 \title{Notes on Heapsort}
 \author{Geoffrey Matthews}
+
 \begin{document}
+
+\begin{frame}
 \maketitle
-\titlepage
-\huge
+\end{frame}
+
 
 \sect{Heapsort}
 \bi
@@ -32,6 +38,7 @@
 \ii Combines best of both algorithms
 \ei
 
+\end{frame}
 \sect{Heaps}
 \bi
 \ii A nearly complete binary tree.
@@ -46,6 +53,7 @@
 \ii Computing very fast
 \ei
   
+\end{frame}
 \sect{Example Max-heap}
 
 \includegraphics[width=\textwidth]{Fig-6-1.pdf}
@@ -56,6 +64,7 @@
 \ei
 
 
+\end{frame}
 \sect{\sc Max-Heapify}
 \bi
 \ii Preconditions:
@@ -81,9 +90,12 @@
   \li $\proc{Max-Heapify}(A,largest,n)$
 \End
 \end{codebox}
+\end{frame}
 
-
+\sect{\sc Max-Heapify}
 \includegraphics[width=\textwidth]{Fig-6-2.pdf}
+
+\end{frame}
 
 \sect{Time for {\tt Max-Heapify}}
 \bi
@@ -93,19 +105,25 @@ $O(\lg n)$
 Why?
 \ei
 
+\end{frame}
 \sect{\sc Build-Max-Heap}
 \bi
 \ii If $A$ is not a max-heap, this will make it one.
 \ei
+
 \begin{codebox}
   \Procname{$\proc{Build-Max-Heap}(A,n)$}
   \li \For $i=\lfloor{n/2}\rfloor \Downto 1$ \Do
   \li $\proc{Max-Heapify}(A,i,n)$
   \End
 \end{codebox}
+\end{frame}
+%\sect{\sc Build-Max-Heap}
+\sect{}
+\includegraphics[scale=0.07]{Fig-6-3.pdf}
 
-\includegraphics[height=\textheight]{Fig-6-3.pdf}
 
+\end{frame}
 \sect{Loop invariant for {\sc Build-Max-Heap}}
 
 \bi
@@ -124,6 +142,7 @@ each node $i+1, i+2, \ldots, n$ is root of a max-heap.
   \End
 \end{codebox}
 
+\end{frame}
 \sect{Running time of {\sc Build-Max-Heap}}
 \bi
 \ii Loose bound:  $O(n)$ calls to {\sc Max-Heapify}, which is $O(\lg
@@ -150,6 +169,7 @@ Note:
   \end{align*}
 
 
+\end{frame}
 \sect{\sc Heapsort}
 \bi
 \ii Builds max-heap in the array.
@@ -169,10 +189,13 @@ Note:
 \end{codebox}
 
 
-% heapsort
-\includegraphics[height=\textheight]{Fig-6-4.pdf}
+\end{frame}
+\sect{\sc Heapsort}
+
+\includegraphics[scale=0.07]{Fig-6-4.pdf}
 
 
+\end{frame}
 \sect{\sc Heapsort}
 
 
@@ -190,6 +213,7 @@ Note:
 \ei
 
 
+\end{frame}
 \sect{Priority queue}
 
 \bi
@@ -206,6 +230,7 @@ Note:
 \ii Min priority queue similar
 \ei
 
+\end{frame}
 \sect{\sc Heap-Maximum}
 \bi\ii Trivial\ii Should probably check for empty heap\ei
 \begin{codebox}
@@ -217,15 +242,9 @@ Note:
 \ii $O(1)$
 \ei
 
+\end{frame}
 \sect{\sc Heap-Extract-Max}
-\bi
-\ii Make sure heap is not empty.
-\ii Copy the max element (root)
-\ii Make the last node the new root.
-\ii Decrement the size.
-\ii Re-heapify starting at the root.
-\ii Return the max element copy.
-\ei
+
 \begin{codebox}
   \Procname{$\proc{Heap-Extract-Max}(A)$}
   \li \If $n < 1$ \Do
@@ -242,6 +261,7 @@ Note:
 \ii $O(\lg n)$
 \ei
 
+\end{frame}
 \sect{\sc Heap-Increase-Key}
 \bi
 \ii Make sure $k \geq x$'s current key
@@ -265,10 +285,12 @@ Note:
 \ii $O(\lg n)$
 \ei
 
+\end{frame}
+\sect{\sc Heap-Increase-Key}
 % priority queue heap increase key
-\includegraphics[height=\textheight]{Fig-6-5.pdf}
+\includegraphics[width=\textwidth]{Fig-6-5.pdf}
 
-\sect{Why can't we {\tt Heap-Decrease-Key} on a max-heap?}
+\end{frame}
 
 \sect{\sc Max-Heap-Insert}
 
@@ -282,4 +304,6 @@ Note:
 \bi
 \ii $O(\lg n)$
 \ei
+\end{frame}
+
 \end{document}

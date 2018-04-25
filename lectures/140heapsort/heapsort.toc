@@ -1,0 +1,19 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Heapsort}{2}{0}{1}
+\beamer@sectionintoc {2}{Heaps}{3}{0}{2}
+\beamer@sectionintoc {3}{Example Max-heap}{4}{0}{3}
+\beamer@sectionintoc {4}{\sc Max-Heapify}{5}{0}{4}
+\beamer@sectionintoc {5}{\sc Max-Heapify}{6}{0}{5}
+\beamer@sectionintoc {6}{Time for {\tt Max-Heapify}}{7}{0}{6}
+\beamer@sectionintoc {7}{\sc Build-Max-Heap}{8}{0}{7}
+\beamer@sectionintoc {9}{Loop invariant for {\sc Build-Max-Heap}}{10}{0}{8}
+\beamer@sectionintoc {10}{Running time of {\sc Build-Max-Heap}}{11}{0}{9}
+\beamer@sectionintoc {11}{\sc Heapsort}{12}{0}{10}
+\beamer@sectionintoc {12}{\sc Heapsort}{13}{0}{11}
+\beamer@sectionintoc {13}{\sc Heapsort}{14}{0}{12}
+\beamer@sectionintoc {14}{Priority queue}{15}{0}{13}
+\beamer@sectionintoc {15}{\sc Heap-Maximum}{16}{0}{14}
+\beamer@sectionintoc {16}{\sc Heap-Extract-Max}{17}{0}{15}
+\beamer@sectionintoc {17}{\sc Heap-Increase-Key}{18}{0}{16}
+\beamer@sectionintoc {18}{\sc Heap-Increase-Key}{19}{0}{17}
+\beamer@sectionintoc {19}{\sc Max-Heap-Insert}{20}{0}{18}

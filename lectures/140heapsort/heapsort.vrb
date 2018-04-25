@@ -1,0 +1,12 @@
+\frametitle{\sc Max-Heap-Insert} 
+
+\begin{codebox}
+  \Procname{$\proc{Max-Heap-Insert}(A,key,n)$}
+  \li $n \gets n+1$
+  \li $A[n] \gets -\infty$
+  \li $\proc{Heap-Increase-Key}(A,n,key)$
+\end{codebox}
+
+\bi
+\ii $O(\lg n)$
+\ei
