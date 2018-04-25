@@ -1,0 +1,24 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Goals}{2}{0}{1}
+\beamer@sectionintoc {2}{The Hiring Problem}{3}{0}{2}
+\beamer@sectionintoc {3}{Hire-Assistant}{4}{0}{3}
+\beamer@sectionintoc {4}{Costs}{5}{0}{4}
+\beamer@sectionintoc {5}{Worst-case analysis}{6}{0}{5}
+\beamer@sectionintoc {6}{Probabilistic analysis}{8}{0}{6}
+\beamer@sectionintoc {7}{Problem of probabilistic analysis}{9}{0}{7}
+\beamer@sectionintoc {8}{Randomized algorithms}{10}{0}{8}
+\beamer@sectionintoc {9}{Randomized-Hire-Assistant}{11}{0}{9}
+\beamer@sectionintoc {10}{What makes an algorithm randomized}{12}{0}{10}
+\beamer@sectionintoc {11}{Indicator random variables}{13}{0}{11}
+\beamer@sectionintoc {12}{Simple example}{14}{0}{12}
+\beamer@sectionintoc {13}{More complicated example}{15}{0}{13}
+\beamer@sectionintoc {14}{The hiring problem analysis}{16}{0}{14}
+\beamer@sectionintoc {15}{The hiring problem}{17}{0}{15}
+\beamer@sectionintoc {16}{Randomizing the hiring problem}{18}{0}{16}
+\beamer@sectionintoc {17}{Randomizing the hiring problem}{19}{0}{17}
+\beamer@sectionintoc {18}{Randomly permuting an array}{20}{0}{18}
+\beamer@sectionintoc {19}{k-permutations}{21}{0}{19}
+\beamer@sectionintoc {20}{Algorithm computes a uniform random permutation}{22}{0}{20}
+\beamer@sectionintoc {21}{Algorithm computes a uniform random permutation}{24}{0}{21}
+\beamer@sectionintoc {22}{Algorithm computes a uniform random permutation}{26}{0}{22}
+\beamer@sectionintoc {23}{The birthday paradox}{28}{0}{23}

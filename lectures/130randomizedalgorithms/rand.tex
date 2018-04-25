@@ -1,81 +1,451 @@
-\documentclass[landscape]{article}
-\usepackage[margin=1in]{geometry}
-\usepackage{clrscode3e}
+\documentclass{beamer}
+
 \usepackage{amsmath}
 \usepackage{graphicx}
-\title{Notes on Probability}
+\title{Probabilistic Analysis and Randomized Algorithms}
 \author{Geoffrey Matthews}
 \newcommand{\bi}{\begin{itemize}}
 \newcommand{\ei}{\end{itemize}}
 \newcommand{\bn}{\begin{enumerate}}
 \newcommand{\en}{\end{enumerate}}
 \newcommand{\set}[1]{\ensuremath{\left\{#1\right\}}}
-\newcommand{\sect}[1]{\newpage{\bf #1}}
+\newcommand{\sect}[1]{
+\section{#1}
+\begin{frame}[fragile]\frametitle{#1}
+}
 \newcommand{\pr}[1]{\ensuremath{\mbox{Pr}\left\{#1\right\}}}
 
-\setlength{\parindent}{0in}
 
 \begin{document}
+
+\begin{frame}
 \maketitle
-\titlepage
-\huge
+\end{frame}
+
+\sect{Goals}
+\bi
+\item Present difference between probabilistic analysis and randomized
+  algorithms.
+\item Present technique of indicator random variables.
+\item Analysis of randomized algorithm.
+  \ei
+\end{frame}
+
+\sect{The Hiring Problem}
+
+\bi
+\item
+  You are using an employment agency to hire a new office assistant.
+\item
+  The agency sends you one candidate each day.
+\item
+  You interview the candidate and must immediately decide whether or not to
+hire that person and fire the current one.
+\item
+  Cost to interview is $c_i$ per candidate
+Cost to hire is $c_h$ per candidate.
+\item
+  Assume that $c_h > c_i$.
+\item
+  You are committed to always have the best candidate seen so
+  far. 
+\item
+  {\bf Goal:}
+  Determine what the price of this strategy will be.
+\ei
+
+\end{frame}
 
 
+\sect{Hire-Assistant}
 
-\begin{codebox}
-  \Procname{$\proc{Hire-Assistant}(n)$}
-  \li $\id{best}\gets 0$
-  \li \For $i\gets 1$ \To $n$ \Do
-  \li interview candidate $i$
-  \li \If candidate $i$ is better than candidate $\id{best}$ \Do
-  \li $\id{best} \gets i$
-  \li hire candidate $i$
-\End
-\End
-\end{codebox}
+\includegraphics{Hire-Assistant.pdf}
+
+\end{frame}
+
+\sect{Costs}
+
+If there are $n$ candidates and we hire $m$ of them, cost is
+\[
+O(nc_i + mc_h)
+\]
+\bi
+\item Have to pay $nc_i$ no matter what.
+\item Focus on $mc_h$.
+\item $mc_h$ depends on the order of candidates.
+\item This is a common scenario.
+\ei
+
+\end{frame}
+
+\sect{Worst-case analysis}
+\pause
+\bi
+\item Candidates are sorted worst to best.
+\item We hire all candidates.
+\item Cost is
+  \[ O(nc_i + nc_h) = O(nc_h) \]
+\ei
+\end{frame}
+
+
+\sect{Probabilistic analysis}
+\bi
+\item
+  In general we have no control over the order.
+\item
+  We could assume candidates come in random order.
+\item
+  Assign a rank to reach candidate: $\mbox{rank}(i) \in
+  \{1,2,...,n\}$.
+
+  No ties.
+\item
+  The list $(\mbox{rank}(1),\mbox{rank}(2),...\mbox{rank}(n))$
+  is a permutation of $(1,2,...,n)$.
+\item
+  The list of ranks is equally likely to be any one of the $n!$
+  permutations.
+\item
+  The ranks form a {\bf uniform random permutation}.
+  \ei
+
+\end{frame}
+
+\sect{Problem of probabilistic analysis}
+\bi
+\item We must use knowledge of the distribution of inputs,
+  or make assumptions about it.
+\item
+  The expectation is over this distribution.
+\item
+  The technique requires that we can make reasonable assumptions about
+  the input.
+\item
+  Also that we can successfully model the presumed input distribution.
+  
+\ei
+\end{frame}
+
+\sect{Randomized algorithms}
+
+\bi
+\item
+  We might not know the input distribution, or be able to model it.
+\item
+  Instead, we randomize within the algorithm to impose a distribution.
+  
+\ei
+\end{frame}
+
+\sect{Randomized-Hire-Assistant}
+
+Change the scenario:
+\bi
+\item The employment agency sends us a list of all candidates in
+  advance.
+\item
+  On each day, we randomly choose a candidate from the list.
+\item
+  Instead of relying on the input distribution, we impose a uniform
+  random one.
+\ei
+
+\end{frame}
+
+\sect{What makes an algorithm randomized}
+
+
+\bi
+\item
+  An algorithm is {\bf randomized}
+  if its behavior is determined in part by values produced by a
+  {\bf random-number generator}.
+\item
+  {\tt RANDOM(a,b)}
+  returns an integer $r$, where $a \leq r \leq b$
+  and each of the $b - a +1$
+possible values of $r$ is equally likely.
+\item
+  In practice, {\tt RANDOM} is
+  implemented by a {\bf pseudorandom-number generator},
+  which is a deterministic method returning numbers that
+  ``look'' random and pass
+  statistical tests.
+\ei
+\end{frame}
+
+\sect{Indicator random variables}
+\bi
+\item
+A simple yet powerful technique for computing the expected value of a random
+variable.
+\item
+Helpful in situations in which there may be dependence.
+\item
+  Given a sample space and an event $A$,
+  we define the indicator random variable
+  \[
+  I\set{A} = \left\{\begin{array}{ll}
+  1 & \mbox{ if $A$ occurs}\\
+  0 & \mbox{ if $A$ does not occur}
+  \end{array}\right.
+  \]
+\item
+  {\bf Lemma}
+  
+For an event $A$, let $X_A = I\set{A}$. Then $E[X_A] = \pr{A}$.
+\item
+  {\bf Proof}
+
+  Letting $\overline{A}$ be the complement of $A$, we have
+  \begin{align*}
+    E[X_A]
+    &= E[I\set{A}]\\
+    &= 1\cdot\pr{A} + 0\cdot\pr{\overline{A}}\\
+    &= \pr{A}
+  \end{align*}
+  
+\ei
+\end{frame}
+
+\sect{Simple example}
+
+\bi
+\item
+  Determine expected number of heads if we flip a fair coin.
+\item
+  Sample space: \set{H,T}
+\item
+  $\pr{H} = \pr{T} = 1/2$
+\item
+  $X_H = I\set{H}$.
+\item
+  $X_H$ counts number of heads in one flip.
+\item
+  Since $\pr{H} = 1/2$, lemma says $E[X_H] = 1/2$.
+  \ei
+
+
+\end{frame}
+
+\sect{More complicated example}
+\bi
+\item Expected number of heads in $n$ flips.
+  Let $X$ be a random variable for number of heads in $n$ flips.
+\item
+  \[
+  E[X] = \sum_{k=0}^n k \cdot \pr{X=k}
+  \]
+\item
+  Instead, define $X_i = I\set{\mbox{the $i$th flip is $H$}}$, so
+ $X = \sum_{i=1}^n X_i$
+\item
+  Lemma says $E[X_i] = \pr{H} = 1/2$.
+  \begin{align*}
+    E[X]
+    &= E\left[\sum_{i=1}^n X_i\right] \\
+    &=   \sum_{i=1}^n E[X_i] \\
+    &=   \sum_{i=1}^n 1/2 = n/2
+  \end{align*}
+  
+\ei
+\end{frame}
+
+\sect{The hiring problem analysis}
+\bi
+\item
+  Assume canddiates arrive in random order.
+\item
+  Let $X$ be the RV that is the number of times we hire
+  someone.
+\item
+  Define $X_i = I\set{\mbox{candidate $i$ is hired}}$
+\item
+  Candidate $i$ is hired iff $i$ is better than $1,2,...,i-1$.
+\item
+  $\pr{\mbox{candidate $i$ is best so far}} = 1/i$
+\item
+  $E[X_i] = 1/i$.
+  \begin{align*}
+    E[X]
+    &= E\left[\sum_{i=1}^n X_i\right]\\
+    &=   \sum_{i=1}^n E[X_i]\\
+    &=   \sum_{i=1}^n 1/i\\
+    &= O(\lg n)
+  \end{align*}
+  
+
+\ei
+\end{frame}
+
+\sect{The hiring problem}
+
+\bi
+\item
+  The algorithm is deterministic:
+
+  For any given input, the number we hire is always the same.
+\item
+The number of times we hire a new office assistant depends only on the input.
+\item
+In fact, it depends only on the ordering of the candidates’ ranks that
+it is given.
+\item
+  Some rank orderings will always produce a high hiring cost.
+
+  (Sorted by increasing quality.)
+\item
+  Some will always produce a low hiring cost.
+  
+  (Any where the best candidate is first.)
+\item
+  Some may be in between.
+\ei
+
+\end{frame}
+
+\sect{Randomizing the hiring problem}
+
+\includegraphics{Randomized-Hire-Assistant.pdf}
+
+\vfill
+\bi
+\item
+The randomization is now in the algorithm, not in the input distribution.
+\item
+Given a particular input, we can no longer say what its hiring cost will be. Each
+time we run the algorithm, we can get a different hiring cost.
+\item
+In other words, each time we run the algorithm, the execution depends on the
+random choices made.
+\item
+No particular input always elicits worst-case behavior.
+\item
+Bad behavior occurs only if we get ``unlucky'' numbers from the
+randomnumber generator.
+\ei
+
+\end{frame}
+
+\sect{Randomizing the hiring problem}
+
+\includegraphics{Randomized-Hire-Assistant.pdf}
 
 \vfill
 
-\begin{codebox}
-  \Procname{$\proc{Randomized-Hire-Assistant}(n)$}
-  \li randomly permute the list of candidates
-  \li $\id{best}\gets 0$
-  \li \For $i\gets 1$ \To $n$ \Do
-  \li interview candidate $i$
-  \li \If candidate $i$ is better than candidate $\id{best}$ \Do
-  \li $\id{best} \gets i$
-  \li hire candidate $i$
-\End
-\End
-\end{codebox}
+\bi
+\item
+  The expected hiring cost is $O(c_h\lg n)$, regardless of input.
+  \ei
 
-\vfill
-\newpage
+\end{frame}
 
-\begin{codebox}
-  \Procname{$\proc{Permute-By-Sorting}(A)$}
-  \li $n \gets A.length$
-  \li let $P[1...n]$ be a new array
-  \li \For $i\gets 1$ \To n \Do
-  \li $P[i] \gets \proc{Random}(1,n^3)$
-\End
-\li sort $A$ using $P$ as sort keys
-\end{codebox}
+\sect{Randomly permuting an array}
 
+
+\includegraphics{Randomize-In-Place.pdf}
 \vfill
 
-\begin{codebox}
-  \Procname{$\proc{Randomize-In-Place}(A)$}
-  \li $n \gets A.length$
-  \li \For $i\gets 1$ \To n \Do
-  \li swap $A[i]$ with $A[\proc{Random}(i,n)]$
-\End
-\end{codebox}
+\bi
+\item {\bf Goal:}  Produce a uniform random permutation.
+
+  (Each of the $n!$ permutations is equally likely.)
+
+
+\item In iteration $i$, choose $A[i]$ randomly from $A[i..n]$.
+
+\item
+  Will never alter $A[i]$ after iteration $i$.
+\item
+  $O(1)$ per iteration, so $O(n)$.
+  
+\ei
+
+\end{frame}
+
+\sect{k-permutations}
+\bi
+\item
+Given a set of $n$ elements, a {\bf k-permuation} is a sequence
+containing $k$ of the $n$ elements.
+\item
+There are $n!/(n-k)!$ possible $k$-permutations.
+\ei
+\end{frame}
+
+
+\sect{Algorithm computes a uniform random
+  permutation}
+\includegraphics{Randomize-In-Place.pdf}
 \vfill
+\bi
+\item {\bf Loop invariant:}
+  Just prior to the $i$th iteration, for each possible
+  $(i-1)$-permutation,  $A[1..i-1]$ contains this $(i-1)$-permutation
+  with probability $(n-i+1)!/n!$.
+  \pause
+  \vfill
+\item {\bf Initialization:}
+  Just before iteration 1, $A[1..0]$ contains the 0-permutation with
+  probability 1.
 
-\newpage
+\ei
+\end{frame}
 
-{\bf The birthday paradox}
+\sect{Algorithm computes a uniform random
+  permutation}
+\includegraphics{Randomize-In-Place.pdf}
+\bi
+\item {\bf Loop invariant:}
+  Just prior to the $i$th iteration, for each possible
+  $(i-1)$-permutation,  $A[1..i-1]$ contains this $(i-1)$-permutation
+  with probability $(n-i+1)!/n!$.
+\item {\bf Maintenance:}
+  \pause
+\bi
+\item
+  Consider a $i$-permutation $\pi = (x_1,x_x,...x_i)$ .
+\item
+  It consists of $\pi' = (x_1,x_x,...x_{i-1})$ followed by $x_1$.
+\item
+  Let $E_1$ be the event that $\pi'$ is in $A[1..i-1]$.
+\item
+  Let $E_2$ be the event that $x_i$ is put into $A[i]$.
+  \begin{align*}
+    \pr{E_2 \cap E_1} &= \pr{E_2 | E_1} \pr{E_1}\\
+    &= \frac{1}{n-i+1} \cdot \frac{(n-i+1)!}{n!} \\
+    &= \frac{(n-i)!}{n!}
+  \end{align*}
+  
+\ei
+\ei
+\end{frame}
+
+
+\sect{Algorithm computes a uniform random
+  permutation}
+\includegraphics{Randomize-In-Place.pdf}
+\vfill
+\bi
+\item {\bf Loop invariant:}
+  Just prior to the $i$th iteration, for each possible
+  $(i-1)$-permutation,  $A[1..i-1]$ contains this $(i-1)$-permutation
+  with probability $(n-i+1)!/n!$.
+\item {\bf Termination:}
+  \pause
+\item
+  At termination, $i=n+1$, so $A[1..n]$ is a given $n$-permutation
+  with probability
+  \[
+  \frac{(n-n)!}{n!} = \frac{1}{n!}
+  \]
+\ei
+\end{frame}
+
+
+
+\sect{The birthday paradox}
 \bi
 \item
 How many people must be in a room before there is a 50\% chance of two
@@ -90,4 +460,6 @@ of them having the same birthday? Assumptions:
 \item Hence
   
 \ei
+\end{frame}
+
 \end{document}

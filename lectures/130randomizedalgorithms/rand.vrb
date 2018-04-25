@@ -1,0 +1,15 @@
+\frametitle{The birthday paradox} 
+\bi
+\item
+How many people must be in a room before there is a 50\% chance of two
+of them having the same birthday? Assumptions:
+\item
+ \[\pr{b_i = r} = 1/n\mbox{ for }i=1..k\mbox{ and }r=1..n\]
+\item
+  \begin{align*}
+    \pr{b_i=r \mbox{ and } b_j=r} &=
+    \pr{b_i=r}\pr{b_j=r}\\ &= 1/n^2
+    \end{align*}
+\item Hence
+
+\ei

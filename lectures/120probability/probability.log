@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  24 APR 2018 11:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  25 APR 2018 09:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1078,26 +1078,20 @@ Package pdftex.def Info: Fig-C-2.pdf used on input line 4.
 \tf@snm=\write8
 \openout8 = `probability.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 430.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 430.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 444.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 444.
 
 (./probability.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 430.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 430.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 444.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 444.
+Package rerunfilecheck Info: File `probability.out' has not changed.
+(rerunfilecheck)             Checksum: 5ECB461E7B1F46114A160AA85EC3E339;1625.
 
-
-Package rerunfilecheck Warning: File `probability.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `probability.out':
-(rerunfilecheck)             Before: 68ED928B5B4E315918F2549B776B9373;1625
-(rerunfilecheck)             After:  5ECB461E7B1F46114A160AA85EC3E339;1625.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 430.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 444.
  ) 
 Here is how much of TeX's memory you used:
  16792 strings out of 494827
@@ -1121,7 +1115,7 @@ ts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 am10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msa
 m7.pfb>
-Output written on probability.pdf (30 pages, 443246 bytes).
+Output written on probability.pdf (30 pages, 443466 bytes).
 PDF statistics:
  983 PDF objects out of 1000 (max. 8388607)
  915 compressed objects within 10 object streams
