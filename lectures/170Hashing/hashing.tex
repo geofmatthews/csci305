@@ -1,6 +1,6 @@
-\documentclass[landscape]{article}
+\documentclass{beamer}
+
 \usepackage{multicol}
-\usepackage[margin=1in]{geometry}
 \usepackage{clrscode3e}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -15,19 +15,21 @@
 \newcommand{\flr}[1]{\ensuremath{\left\lfloor#1\right\rfloor}}
 \newcommand{\ceil}[1]{\ensuremath{\left\lceil#1\right\rceil}}
 
-\newcommand{\sect}[1]{\newpage{\textbf{#1}}}
-
-\setlength{\parindent}{0in}
+\newcommand{\sect}[1]{
+\section{#1}
+\begin{frame}[fragile]\frametitle{#1}
+}
 
 \newcommand{\nop}[1]{}
 
 \title{Notes on Hash Tables}
 \author{Geoffrey Matthews}
-\begin{document}
-\maketitle
-\titlepage
-\huge
 
+\begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
 
 \sect{Dictionary Operations}
 \bi
@@ -36,11 +38,15 @@
 \ii \textsc{Delete}
 \ei
 
+\end{frame}
+
 \sect{Hash table implementation of Dictionary}
 \bi
 \ii Expected search time: $O(1)$
 \ii Worst case search: $O(n)$
 \ei
+
+\end{frame}
 
 \sect{Hash table is generalization of an ordinary array}
 \bi
@@ -50,6 +56,8 @@ by \textbf{direct addressing}.
 \ii Direct addressing only applicable when we can afford to
 allocate an array with one position for every key.
 \ei
+
+\end{frame}
 
 \sect{Use hash table when we don't have one position for each key}
 \bi
@@ -64,8 +72,10 @@ array.
 \ii Have to solve issue of what to do when hash function maps multiple
 keys to same table entry.
 \bi\ii chaining \ii open addressing \ei
-\ii We will not discuss open addressing.
+
 \ei
+
+\end{frame}
 
 \sect{Direct-address tables}
 \bi
@@ -86,7 +96,8 @@ pointer to $x$.
 \ei
 \ei
 
-
+\end{frame}
+\sect{Direct-address table}
 
 \includegraphics[width=\textwidth]{Fig-11-1.pdf}
 \begin{multicols}{2}
@@ -105,6 +116,8 @@ pointer to $x$.
 All operations $O(1)$.
 \end{multicols}
 
+\end{frame}
+
 \sect{Hash tables}
 \bi
 \ii If $U$ is large, storing a table of size $|U|$ is impractical.
@@ -117,6 +130,8 @@ space than a direct-address table.
   worst} case.
 \ei
 
+\end{frame}
+
 \sect{Hash table idea}
 \bi
 \ii Instead of storing an element with key $k$ in slot $k$,
@@ -128,9 +143,13 @@ use a function $h$ and store the element in slot $h(k)$.
 \ii We say $k$ {\em hashes} to $h(k)$
 \ei
 
+\end{frame}
+
 \sect{Collisions}
 
 \includegraphics[width=\textwidth]{Fig-11-2.pdf}
+
+\end{frame}
 
 \sect{Collisions}
 \bi
@@ -144,9 +163,11 @@ happen.
 \ii Two methods:
 \bi \ii chaining \ii open addressing \ei
 \ii Chaining is usually better.
-\ii We will not discuss open addressing.
+
 \ei
 
+
+\end{frame}
 
 \sect{Collision resolution by chaining}
 \bi
@@ -159,9 +180,9 @@ happen.
 \ii Doubly linked list allows easy deletion.
 \ei
 
+\end{frame}
+
 \sect{Implementation of heap with chaining}
-\begin{description}
-  \ii[Insertion:]\mbox{}
 
   \begin{codebox}
     \Procname{Chained-Hash-Insert$(T,x)$}
@@ -174,11 +195,9 @@ happen.
   inserted.
   \ei
 
-\end{description}
+\end{frame}
 
 \sect{Implementation of heap with chaining}
-\begin{description}
-  \ii[Search:]\mbox{}
 
   \begin{codebox}
     \Procname{Chained-Hash-Search$(T,k)$}
@@ -188,11 +207,9 @@ happen.
   \ii Running time proportional to length of list in slot $h(k)$
   \ei
 
-\end{description}
+\end{frame}
 
 \sect{Implementation of heap with chaining}
-\begin{description}
-  \ii[Deletion:]\mbox{}
 
   \begin{codebox}
     \Procname{Chained-Hash-Delete$(T,x)$}
@@ -206,7 +223,7 @@ happen.
   because we must find $x$'s predecessor.
   \ei
 
-\end{description}
+\end{frame}
 
 \sect{Analysis of hashing with chaining}
 \bi
@@ -226,12 +243,14 @@ key, or determine that there is no element with that key?
 keys among slots.
 \ei
 
+\end{frame}
+
 \sect{Average-case analysis of hashing with chaining}
 \bi
 \ii Assume \textbf{simple uniform hashing}: any given element is
 equally likely to hash to any of the $m$ slots.
 \ii For $j=0,1,\ldots,m-1$, denote the length of the list $T[j]$ by
-$n_n$.
+$n_j$.
 \ii $n=n_0+n_1+\cdots+n_{m-1}$
 \ii Average value of $n_j$ is $E[n_j] = \alpha = n/m$
 \ii Assume we can compute $h$ in $O(1)$ time, so that the time
@@ -243,6 +262,8 @@ list $T[h(k)]$.
 \ii Successful search:  hash table contains an element with key $k$
 \ei
 \ei
+
+\end{frame}
 
 \sect{Unsuccessful search}
 
@@ -264,6 +285,8 @@ list $T[h(k)]$.
     \ei
 \end{description}
 
+\end{frame}
+
 \sect{Successful search}
 
 \bi
@@ -273,34 +296,37 @@ $\Theta(1+\alpha)$.
 length of the list.
 \ei
 
+\end{frame}
+
 \sect{Successful search}
-\begin{description}
-\item[Theorem] \mbox{}
+{\bf Theorem}
 
   A successful search takes expected time
     $\Theta(1+\alpha)$.
 
-  \item[Proof]\mbox{}
+{\bf Proof}
     \bi
     \ii Assume the element $x$ is equally likely to be any of the $n$
     elements stored in the table.
-    \ii The number of elements examined during the search for $x$ is 1
+    \ii The number examined during the search for $x$ is 1
     more than the number of elements that appear before $x$ in $x$'s
     list.
     \ii These are the elements inserted {\em after} $x$ was inserted.
-    \ii We need to find the average, over $n$ elements $x$ in the
-    table, how many elements were inserted into $x$'s list after $x$
+    \ii We need to find the average, over $n$ elements, of
+    how many elements were inserted into $x$'s list after $x$
     was inserted.
-    \ii For $i=1,2,...,n$, let $x_i$ be the $i$th element inserted,
-    and let $k_k = key[x_i]$.
-    \ii For all $i$ and $j$ define
-    \[ X_{ij} = \textbf{I}\{h(k_i) = h(k_j)\}\]
+    \ii Let $x_i$ be the $i$th element inserted,
+    and let $k_i = key[x_i]$.
+    \ii For all $i$ and $j$, let
+    $ X_{ij} = I\{h(k_i) = h(k_j)\}$
     \ii Simple uniform hashing means
-    \[ Pr\{h[k_k)=h(k_j)\} = 1/m = E[X_{ij}]\]
+    \[ Pr\{h(k_k)=h(k_j)\} = 1/m = E[X_{ij}]\]
     \ei
-\end{description}
 
-\sect{Expected number of elements examined in successful search}
+
+\end{frame}
+
+\sect{Expected number of elements examined, successful search}
 \begin{align*}
   E\left[\frac{1}{n}\sum_{i=1}^{n}\left(1+\sum_{j=i+1}^{n}X_{ij}\right)\right]
   &=
@@ -314,25 +340,29 @@ length of the list.
   &=
   1+\frac{1}{nm}\frac{n(n-1)}{2}\\
   &=
-  1+\frac{n-1}{2m}\\
-  &= 1 + \frac{\alpha}{2} - \frac{\alpha}{2n} \\ &= \Theta(1+\alpha)
+  1+\frac{n-1}{2m}
+  = 1 + \frac{\alpha}{2} - \frac{\alpha}{2n} = \Theta(1+\alpha)
 \end{align*}
+
+\end{frame}
 
 \sect{Alternative analysis}
 \bi
-\ii $X_{ij\ell} = \textbf{I}\{\mbox{the search is for $x_i$,
+\ii $X_{ij\ell} = {I}\{\mbox{the search is for $x_i$,
   $h(k_i)=h(k_j)=\ell$\}}$
 \ii Simple uniform hashing means $Pr\{h(k_i)=\ell\}=Pr\{h(k_j)=\ell\}=
 1/m$
 \ii $Pr\{\mbox{the search is for $x_i$}\} = 1/n$
 \ii All these are independent: $Pr\{X_{ij\ell}=1\} =
-\textbf{E}[X_{ij\ell}] =1/nm^2 $
+{E}[X_{ij\ell}] =1/nm^2 $
 \begin{align*}
-Y_j &= \textbf{I}\{\mbox{$x_j$ appears in a list prior to the
+Y_j &= {I}\{\mbox{$x_j$ appears in a list prior to the
   $x_i$}\}\\
    &= \sum_{i=1}^{j-1}\sum_{\ell=0}^{m-1} X_{ij\ell}
 \end{align*}
 \ei
+
+\end{frame}
 
 \sect{Alternative analysis, continued}
 \begin{align*}
@@ -352,6 +382,8 @@ Y_j &= \textbf{I}\{\mbox{$x_j$ appears in a list prior to the
 \end{align*}
 
 
+\end{frame}
+
 \sect{Interpretation}
 \bi
 \ii If $n=O(m)$ then $\alpha = n/m = O(1)$, which means searching
@@ -360,6 +392,8 @@ takes constant time on average.
 all dictionary operations take average time $O(1)$.
 \ei
 
+\end{frame}
+
 \sect{Hash functions}
 \bi
 \ii Ideally, satisfies the assumption of simple uniform hashing.
@@ -367,6 +401,8 @@ all dictionary operations take average time $O(1)$.
 distribution of input keys.
 \ii In practice, many functions work OK.
 \ei
+
+\end{frame}
 
 \sect{Keys as natural numbers}
 \bi
@@ -379,89 +415,369 @@ distribution of input keys.
 \ei
 \ei
 
+\end{frame}
+
 \sect{Division method for hash functions}
 \[ h(k) = k \mbox{ mod } m \]
 \bi
 \ii Fast
-\ii Powers of 2 are bad values for $m$, just uses least significant bits.
-\ii Good choice for $m$:  prime number not too close to a power of 2.
+\ii Powers of 2 are bad values for $m$:\\ just uses least significant bits.
+\ii Good choice for $m$:\\  prime number not too close to a power of 2.
+\ii Example:
+\bi
+\ii Store $n \approx 2000$ character strings.
+\ii Don't mind searching 3 strings per unsuccessful search.
+\ii Choose $m=701$.
+\ii This is a prime near $2000/3$ but not near any power of 2.
+\ei
 \ei
 
+\end{frame}
+
+\sect{Multiplication method for hash functions}
+\begin{align*}
+  h(k) &= \lfloor m ((kA) \mbox{ mod } 1)\rfloor
+  & 0 < A < 1\\
+  && m = 2^p
+\end{align*}
+\vfill
+
+\includegraphics[height=0.5\textheight]{Fig-11-4.pdf}
+
+\end{frame}
 \sect{Multiplication method for hash functions}
   \[h(k) = \lfloor m ((kA) \mbox{ mod } 1)\rfloor\]
-
-\begin{enumerate}
-\item Choose $A$ in range $0<A<1$.
-\item Take fractional part of $kA$.
-\item Multiply by $m$.
-\item Take floor.
-\end{enumerate}
 \bi
 \ii Slower than division method.
 \ii Value of $m$ is not critical.
 \bi\ii Can even use $m=2^p$\ei 
-\ii Knuth suggests a good value for $A\approx (\sqrt{5} -1)/2$
+\ii Knuth suggests a good value for $A$:
+\[\frac{\sqrt{5} -1}{2} = 0.6180339887... \]
 \ei
 
+\end{frame}
+
+\sect{Open addressing}
+
+\bi
+\ii Instead of chaining, store all keys in hash table.
+\ii Must have $\alpha \leq 1$.
+\ii Use $h(key)+i\mod m, i=0,1,2,...m-1$ 
+\ii Example:  $h(n) = n\mod 10$ 
+\ei
+\vfill
+
+\begin{tabular}{|r|c|c|c|c|c|c|c|c|c|c|}\hline
+Index:&  0&1&2&3&4&5&6&7&8&9\\\hline
+Insert 12: & {\sf x} &{\sf x} &12 &{\sf x} &{\sf x} &{\sf x} &{\sf x} &{\sf x} &{\sf x} &{\sf x} \\\hline
+Insert 14:& {\sf x} &{\sf x} &12 &{\sf x} &14 &{\sf x} &{\sf x} &{\sf x} &{\sf x} &{\sf x} \\\hline
+ Insert 32:& {\sf x} &{\sf x} &12 &32 &14 &{\sf x} &{\sf x} &{\sf x} &{\sf x} &{\sf x} \\\hline
+ Insert 92:& {\sf x} &{\sf x} &12 &32 &14 &92 &{\sf x} &{\sf x} &{\sf x} &{\sf x} \\\hline
+ Insert 53: & {\sf x} &{\sf x} &12 &32 &14 &92 &53 &{\sf x} &{\sf x} &{\sf x} \\\hline
+  \end{tabular}
+
+\vfill
+
+\bi
+\ii Linear probing like this leads to \textbf{clustering}.
+\ei
+\end{frame}
 
 \sect{Open addressing}
 \bi
-\ii Store all keys in hash table, no linked lists.
-\ii Use $i+1$ until we find an empty cell.
+\ii More generally, use a hash function that takes both a key and a
+position and returns a position:
+\[
+h : U\times \{0,1,...,m-1\} \rightarrow \{0,1,...,m-1\}
+\]
+\ii
+Then use probe sequence
+\[
+h(k,0), h(k,1), ..., h(k,m-1)
+\]
+\ii
+We require that for every key, $k$, the probe sequence
+be a permutation of
+\[
+(0, 1, ..., m-1)
+\]
+so that all possible probes are examined in $m$ probes.
+\ii
+Linear probing satisfies this requirement, but has bad clustering.
 \ei
-Example:  $h(n) = n\mod 10$  (really bad hash function)\\
 
-\begin{minipage}{0.60\textwidth}
-\begin{enumerate}
-  \item Insert 12:
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}\hline
-  0&1&2&3&4&5&6&7&8&9\\\hline
-{\sf x} &{\sf x} &12 &{\sf x} &{\sf x} &{\sf x} &{\sf x} &{\sf x} &{\sf x} &{\sf x} \\\hline
-  \end{tabular}
+\end{frame}
 
-  \item Insert 14:
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}\hline
-  0&1&2&3&4&5&6&7&8&9\\\hline
-{\sf x} &{\sf x} &12 &{\sf x} &14 &{\sf x} &{\sf x} &{\sf x} &{\sf x} &{\sf x} \\\hline
-  \end{tabular}
+\sect{Hash insertion and search, open addressing}
+\includegraphics{Hash-Insert}
+\hfill
+\includegraphics{Hash-Search}
+\end{frame}
 
-  \item Insert 32:
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}\hline
-  0&1&2&3&4&5&6&7&8&9\\\hline
-{\sf x} &{\sf x} &12 &32 &14 &{\sf x} &{\sf x} &{\sf x} &{\sf x} &{\sf x} \\\hline
-  \end{tabular}
-
-  \item Insert 92:
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}\hline
-  0&1&2&3&4&5&6&7&8&9\\\hline
-{\sf x} &{\sf x} &12 &32 &14 &92 &{\sf x} &{\sf x} &{\sf x} &{\sf x} \\\hline
-  \end{tabular}
-
-  \item Insert 53:
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}\hline
-  0&1&2&3&4&5&6&7&8&9\\\hline
-{\sf x} &{\sf x} &12 &32 &14 &92 &53 &{\sf x} &{\sf x} &{\sf x} \\\hline
-  \end{tabular}
-
-\end{enumerate}
-\end{minipage}
-\begin{minipage}{0.40\textwidth}
+\sect{Hash deletion, open addressing}
 
 \bi
-\ii Linear probing leads to
-\bi\ii\textbf{primary clustering}.\ei
-\ii Better:
-\bi \ii quadratic probing \ii double hashing \ei
-\ii
-Expected number of probes \[\frac{1}{1-\alpha}\]
+\item We cannot simply replace a deleted element with {\sc nil}.
+\item
+  This might make search halt prematurely if clustering has occurred.
+\item
+  Instead we insert a special {\sc deleted} value.
+\item
+  Insert will treat {\sc deleted} as available.
+\item
+  Search will treat {\sc deleted} as full.
+\item
+  Search time no longer depends on $\alpha$ alone.
 \ei
-\end{minipage}
+\end{frame}
+
+\sect{Uniform hashing with open addressing}
+\bi
+\ii
+In our analysis, we assume {\bf uniform hashing}:
+\bi\ii
+The probe sequence for a key $k$
+is equally likely to be any of the $m!$ possible
+sequences.\ei
+\ii
+Open addressing has to generalize the notion of
+uniform hashing to a function that generates an entire sequence of
+probes.
+\ii True open uniform hashing is difficult.
+\ii In practice approximations are used.
+\ei
+\end{frame}
 
 
-%\includegraphics[width=\textwidth]{Fig-11-4.pdf}
-%\includegraphics[height=\textheight]{Fig-11-5.pdf}
+\sect{Linear probing}
+\bi
+\ii
+Given an ordinary hash function $h' : U \rightarrow \{0,...,m-1\}$,
+called an {\bf auxiliary hash function}, use
+\[
+h(k,i) = (h'(k) + i) \mod m
+\]
+\ii
+Only generates $m$ of the $m!$ possible permutations of $\{0,...,m-1\}$
+\ii
+Extremely susceptible to {\bf primary clustering}.
+\ii
+Any slot preceded by $i$ full slots gets filled with probability
+\[\frac{i+1}{m}\]
+and hence long chains get longer.
+\pause
+\ii
+Note: it does not matter if we use \[h(k,i) = h'(k) + ai + b\].  Why not?
+\ei
+\end{frame}
 
+\sect{Quadratic probing}
+
+\[
+h(k,i) = (h'(k) + c_1i + c_2i^2)\mod m
+\]
+\bi
+\ii $c_1, c_2, m$ must be carefully selected.
+\ii
+Primary clustering is eliminated.
+\ii
+If two keys have the same initial probe, their entire sequence
+is the same.
+\ii
+This is called {\bf secondary clustering} and is not as serious.
+\ii
+Only $m$ of the $m!$ possible permutations of $\{0,...,m-1\}$ are
+used. 
+\ei
+\end{frame}
+
+\sect{Double hashing}
+\[
+h(k,i) = (h_1(k) + i h_2(k)) \mod m
+\]
+\bi
+\ii Needs two auxiliary hash functions, $h_1, h_2$.
+\ii $h_2(k)$ must be relatively prime to $m$:
+\bi
+\ii Let $m=2^p$ and make $h_2(k)$ odd.
+\ii Let $m$ be prime and make $h_2(k) < m$:
+\begin{align*}
+  h_1(k) &= k \mod m\\
+  h_2(k) &= 1 + (k \mod (m-1))
+\end{align*}
+\ei
+\ii $\Theta(m^2)$ probe sequences used, instead of $\Theta(m)$.
+\ii Performance is very close to ideal uniform hashing.
+\ei
+\end{frame}
+
+
+\sect{Double hashing}
+\begin{multicols}{2}
+\includegraphics[height=0.75\textheight]{Fig-11-5.pdf}
+\columnbreak
+\begin{align*}
+  h_1(k) &= k \mod 13\\
+  h_2(k) &= 1 + (k \mod 11)\\\\
+  h_1(14) &= 1\\
+  h_2(14) &= 4
+\end{align*}
+
+\end{multicols}
+\end{frame}
+
+\sect{Analysis of open-address hashing, unsuccessful search}
+
+{\bf Theorem 11.6}
+
+Assuming uniform hashing
+and an open-address hash table with load factor
+$
+\alpha = {n}/{m} < 1
+$
+the expected number of probes in an unsuccessful search is at most
+$
+{1}/{(1-\alpha)}
+$.
+
+{\bf Proof}
+
+\begin{align*}
+  X &= \mbox{number of probes in unsuccessful search}\\
+  A_k &= \{\mbox{$k$th probe is to an occupied slot}\}\\
+\{X\geq i\} &= \bigcap_{k=1}^{i-1} A_k\\
+\pr{X\geq i} &=
+\pr{A_1}\cdot\pr{A_2|A_1}\cdot\pr{A_3|A_1\cap A_2}\\&\cdots
+\\&\cdot\pr{A_{i-1}|A_1\cap A_2\cap ...\cap A_{i-2}}
+\end{align*}
+\end{frame}
+
+\sect{Probability that $i$ probes find occupied slot}
+\begin{align*}
+  X &= \mbox{number of probes in unsuccessful search}\\
+  A_k &= \{\mbox{$k$th probe is to an occupied slot}\}\\
+\{X\geq i\} &= \bigcap_{k=1}^{i-1} A_k\\
+\pr{X\geq i} &=
+\pr{A_1}\cdot\pr{A_2|A_1}\cdot\pr{A_3|A_1\cap A_2}\\&\cdots
+\\&\cdot\pr{A_{i-1}|A_1\cap A_2\cap ...\cap A_{i-2}}\\
+&= \frac{n}{m}\cdot\frac{n-1}{m-1}\cdot\frac{n-2}{m-2}\cdots
+\frac{n-i+2}{m-i+2} \\
+&\leq \left(\frac{n}{m}\right)^{i-1}\\
+&= \alpha^{i-1}
+\end{align*}
+\end{frame}
+
+
+\sect{Expected number of probes in unsuccessful search}
+\begin{align*}
+  E[X] &= \sum_{i=1}^\infty \pr{X\geq i}\\
+  &\leq \sum_{i=1}^\infty \alpha^{i-1}\\
+  &= \sum_{i=0}^\infty \alpha^{i}\\
+  &= \frac{1}{1-\alpha}\\
+  &= 1 + \alpha + \alpha^2 + \alpha^3 + \alpha^4 + \cdots
+\end{align*}
+\vfill
+\bi
+\ii The last expression gives us an intuitive picture.
+\ei
+
+\end{frame}
+
+
+\sect{Analysis of open-address hashing, unsuccessful search}
+
+{\bf Theorem 11.6}
+
+Assuming uniform hashing
+and an open-address hash table with load factor
+$
+\alpha = {n}/{m} < 1
+$
+the expected number of probes in an unsuccessful search is at most
+$
+{1}/{(1-\alpha)}
+$.
+
+\bi
+\ii If $\alpha = 0.5$, then we expect less than 2 probes on average. 
+\ii If $\alpha = 0.9$, then we expect less than 10 probes on average.
+\ei
+\end{frame}
+
+\sect{Expected number of probes for {\sc Hash-Insert}}
+
+\bi
+\ii An element is inserted after finding an open slot.
+\ii This is the same procedure followed by an unsuccessful search.
+\ii Therefore the expected number of probes is at most
+\[\frac{1}{1-\alpha}\]
+\ei
+
+\end{frame}
+
+\sect{Analysis of open address hashing, successful search}
+
+{\bf Theorem 11.8}
+
+Assuming uniform hashing and every key is equally likely,
+in an open-address hash table with load factor $\alpha < 1$
+the expected number of probes in a successful search is at most
+\[
+\frac{1}{\alpha}\ln\frac{1}{1-\alpha}
+\]
+
+{\bf Proof}
+
+\bi
+\ii A successful search does the same as when the $k$ was
+inserted.
+\ii If $k$ was the $i$th key inserted, then $\alpha = i/m$ when
+inserted.
+\ii Therefore there were at most $1/(1-i/m) = m/(m-i)$ probes
+\ii The average over all $n$ keys is then
+\[  \frac{1}{n}\sum_{i=0}^{n-1}\frac{m}{m-i}\]
+\ei
+\end{frame}
+
+
+\sect{Averaging over the $n$ keys in the table:}
+
+\begin{align*}
+  \frac{1}{n}\sum_{i=0}^{n-1}\frac{m}{m-i}
+  &= \frac{m}{n}\sum_{i=0}^{n-1}\frac{1}{m-i}\\
+  &= \frac{1}{\alpha} \sum_{k=m-n+1}^m \frac{1}{k}\\
+  &\leq \frac{1}{\alpha}\int_{m-n}^m (1/x)dx\\
+  &= \frac{1}{\alpha}\ln \frac{m}{m-n}\\
+  &= \frac{1}{\alpha}\ln \frac{1}{1-\alpha}\\
+\end{align*}
+\end{frame}
+
+
+\sect{Analysis of open address hashing, successful search}
+
+{\bf Theorem 11.8}
+
+Assuming uniform hashing and every key is equally likely,
+in an open-address hash table with load factor $\alpha < 1$
+the expected number of probes in a successful search is at most
+\[
+\frac{1}{\alpha}\ln\frac{1}{1-\alpha}
+\]
+
+\bi
+\ii If $\alpha = 0.5$, then we expect less than 1.387 probes on
+average.
+\ii If $\alpha = 0.9$, then we expect less than 2.559 probes on
+average. 
+\ei
+
+\end{frame}
+
+
+%\sect{Perfect hashing}
 %\includegraphics[width=\textwidth]{Fig-11-6.pdf}
+%\end{frame}
+
 
 
 \end{document}

@@ -1,0 +1,156 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\title{CSCI 305, Homework \# 4}
+\author{SOLUTIONS}
+\date{Due date:  Sunday, May 1}
+
+
+\begin{document}
+
+\maketitle
+
+Explain the reasoning behind each answer.
+
+\begin{enumerate}
+
+\item
+  Suppose we shuffle a deck of 10 cards, each bearing a distinct
+  number from 1 to 10, to mix the cards thoroughly.  We then remove
+  three cards, one at a time, from the deck.  What is the probability
+  that we select the three cards in sorted (increasing) order?
+
+  {\bf Solution 1:}
+
+  The first card, $i$, must be $1, ..., 8$, each with probability
+  $1/10$.
+  After we choose the first card, $i$, 
+  the second card, $j$, must be among the $9-i$ cards greater than $i$
+  and less than 10.  Each of these choices has probability $1/9$,
+  since there are only 9 total cards left.
+  After we choose the second card, $j$,
+ the third card, $k$, must be among the $10-j$ cards greater than $j$,
+ and each has probability
+  $1/8$, since there are now 8 cards left.  Thus our probability is
+  \begin{align*}
+    \sum_{i=1}^{8} \frac{1}{10} \left(
+    \sum_{j=i+1}^{9} \frac{1}{9} \left(
+    \sum_{k=j+1}^{10} \frac{1}{8} \right)\right)
+    &=
+    \frac{1}{10\cdot 9 \cdot 8} \sum_{i=1}^{8} \left(
+      \sum_{j=i+1}^{9} \left(
+      \sum_{k=j+1}^{10} 1 \right)\right)\\
+    &=
+    \frac{1}{10\cdot 9 \cdot 8} \sum_{i=1}^{8} \left(
+      \sum_{j=i+1}^{9} \left(
+      10-j      \right)\right)\\
+    &=
+    \frac{1}{10\cdot 9 \cdot 8} \sum_{i=1}^{8} \left(
+    \sum_{j=1}^{9-i} j
+    \right)\\
+    &=
+    \frac{1}{10\cdot 9 \cdot 8} \sum_{i=1}^{8} \left(
+\frac{(9-i)(9-i+1)}{2}
+    \right)\\
+    &=
+    \frac{1}{10\cdot 9 \cdot 8\cdot 2} \sum_{i=1}^{8} \left(
+    {i^2  - 19i    + 10\cdot 9 }
+    \right)\\
+    &=
+    \frac{1}{10\cdot 9 \cdot 8\cdot 2}\left(
+    { \sum_{i=1}^{8} i^2  -  \sum_{i=1}^{8} 19i    +  \sum_{i=1}^{8} 10\cdot 9 }
+    \right)\\
+    &=
+    \frac{1}{10\cdot 9 \cdot 8\cdot 2}\left(
+          \frac{8\cdot 9\cdot 17}{6}
+           -
+           \frac{19\cdot 8\cdot 9}{2}
+           + 
+           10\cdot 9\cdot 8
+    \right)\\
+    &= 1/6
+  \end{align*}
+  Simplifications courtesy of numpy.
+
+
+  {\bf Solution 2:}  Rephrase the problem.  First pick three cards
+  at random, and then arrange them in a random order.  No matter which
+  three cards we pick, only one out of the $3!$ possible random orders 
+ will be sorted, so the probability is $1/6$.
+
+ \newpage
+ 
+\item
+  Use indicator random variables to solve the following problem,
+  known as the {\bf hat-check problem}.
+  Each of $n$ customers gives a hat to a hat-check person at a
+  restaurant.  The hat-check person gives the hats back to the customers
+  in a random order.  What is the expected number of customers who get
+  back their own hat?
+
+  {\bf Solution:}
+  Let $X_i$ be the indicator random variable that is 1 when person $i$
+  gets the right hat.  The probability that person $i$ gets the right
+  hat is $1/n$.  Let $X=\sum_i X_i$.
+  The expected number of people who get the right hat
+  back is then
+  \begin{align*}
+    E[X] &= E\left[\sum_{i=1}^{n} X_i\right] \\
+    &=    \sum_{i=1}^{n} E[X_i] \\
+    &=    \sum_{i=1}^{n} 1/n \\
+&= 1
+  \end{align*}
+  
+\item Suppose we toss balls into $b$ bins
+  until some bin contains two balls.  Each toss
+  is independent, and each ball is equally likely to end up in any bin.
+  What is the expected number of ball tosses?
+
+  {\bf Solution:}
+
+  This is the same setup as the birthday problem, we are just asking a
+  different question.  What is the average number of people you check before
+  you find a duplicated birthday?
+  
+  In this solution I use $n$ for the number of bins because it seems
+  more general.
+
+The probability that the first $i$ tosses land in different bins
+is (see text)
+\begin{align*}
+  P(X=i) &= \left(\frac{n}{n}\right)
+  \left(\frac{n-1}{n}\right)
+  \left(\frac{n-2}{n}\right)
+  \cdots
+  \left(\frac{n-i+1}{n}\right)\\
+&=  \frac{n!}{(n-i)!n^i}\\
+  &= \frac{n^{\underline{i}}}{n^i}
+\end{align*}
+where $n^{\underline{i}}$ denotes
+the falling factorial power\footnote{\url{https://en.wikipedia.org/wiki/Falling_and_rising_factorials}}.
+
+
+Let $X_i$ be the indicator variable for $i$ tosses, and $X=\sum_i X_i$.
+Then
+\begin{align*}
+E[X] &= \sum_{i=1}^{n} E[X_i]\\
+&=  \sum_{i=1}^{n}\frac{n^{\underline{i}}}{n^i}
+\end{align*}
+This is the expected number of tosses all into different bins.
+The first toss to duplicate a bin is one more than this, so the answer
+is
+\begin{align*}
+  1 + \sum_{i=1}^{n}\frac{n!}{(n-i)!n^i}
+  &=
+  1 + \sum_{i=1}^{n}\frac{n^{\underline{i}}}{n^i}
+\end{align*}
+This answer is also the one derived by
+Knuth\footnote{\url{https://en.wikipedia.org/wiki/Birthday_problem}},
+and apparently does not simplify.
+
+
+\end{enumerate}
+
+\end{document}

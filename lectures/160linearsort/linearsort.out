@@ -1,0 +1,21 @@
+\BOOKMARK [2][]{Outline0.1}{Comparison sorts}{}% 1
+\BOOKMARK [2][]{Outline0.2}{Lower bounds for comparison sorts}{}% 2
+\BOOKMARK [2][]{Outline0.3}{Decision tree}{}% 3
+\BOOKMARK [2][]{Outline0.4}{Insertion sort on three elements}{}% 4
+\BOOKMARK [2][]{Outline0.5}{For any comparison sort}{}% 5
+\BOOKMARK [2][]{Outline0.6}{What is the longest path from root to leaf?}{}% 6
+\BOOKMARK [2][]{Outline0.7}{Lemma: any binary tree of height h has 2h leaves.}{}% 7
+\BOOKMARK [2][]{Outline0.8}{Theorem: any decision tree that sorts n elements has height \(nlgn\) }{}% 8
+\BOOKMARK [2][]{Outline0.9}{Sorting in linear time}{}% 9
+\BOOKMARK [2][]{Outline0.10}{Counting sort example}{}% 10
+\BOOKMARK [2][]{Outline0.11}{Counting sort example}{}% 11
+\BOOKMARK [2][]{Outline0.12}{Counting sort analysis}{}% 12
+\BOOKMARK [2][]{Outline0.13}{Radix sort example}{}% 13
+\BOOKMARK [2][]{Outline0.14}{Radix sort}{}% 14
+\BOOKMARK [2][]{Outline0.15}{Radix sort}{}% 15
+\BOOKMARK [2][]{Outline0.16}{Radix sort correctness}{}% 16
+\BOOKMARK [2][]{Outline0.17}{Radix sort analysis}{}% 17
+\BOOKMARK [2][]{Outline0.18}{Radix sort: How to break each key into digits?}{}% 18
+\BOOKMARK [2][]{Outline0.19}{How to choose r?}{}% 19
+\BOOKMARK [2][]{Outline0.20}{Compare radix to merge and quick}{}% 20
+\BOOKMARK [2][]{Outline0.21}{How does radix sort violate the \(nlgn\) speed limit?}{}% 21

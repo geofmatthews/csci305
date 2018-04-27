@@ -1,0 +1,22 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Comparison sorts}{2}{0}{1}
+\beamer@sectionintoc {2}{Lower bounds for comparison sorts}{3}{0}{2}
+\beamer@sectionintoc {3}{Decision tree}{4}{0}{3}
+\beamer@sectionintoc {4}{Insertion sort on three elements}{5}{0}{4}
+\beamer@sectionintoc {5}{For any comparison sort}{6}{0}{5}
+\beamer@sectionintoc {6}{What is the longest path from root to leaf?}{7}{0}{6}
+\beamer@sectionintoc {7}{Lemma: any binary tree of height $h$ has $\leq 2^h$ leaves.}{8}{0}{7}
+\beamer@sectionintoc {8}{Theorem: any decision tree that sorts $n$ elements has height $\Omega (n\qopname \relax o{lg}n)$ }{9}{0}{8}
+\beamer@sectionintoc {9}{Sorting in linear time}{10}{0}{9}
+\beamer@sectionintoc {10}{Counting sort example}{11}{0}{10}
+\beamer@sectionintoc {11}{Counting sort example}{12}{0}{11}
+\beamer@sectionintoc {12}{Counting sort analysis}{13}{0}{12}
+\beamer@sectionintoc {13}{Radix sort example}{14}{0}{13}
+\beamer@sectionintoc {14}{Radix sort}{15}{0}{14}
+\beamer@sectionintoc {15}{Radix sort}{16}{0}{15}
+\beamer@sectionintoc {16}{Radix sort correctness}{17}{0}{16}
+\beamer@sectionintoc {17}{Radix sort analysis}{18}{0}{17}
+\beamer@sectionintoc {18}{Radix sort: How to break each key into digits?}{19}{0}{18}
+\beamer@sectionintoc {19}{How to choose $r$?}{20}{0}{19}
+\beamer@sectionintoc {20}{Compare radix to merge and quick}{21}{0}{20}
+\beamer@sectionintoc {21}{How does radix sort violate the $\Omega (n\qopname \relax o{lg}n)$ speed limit?}{22}{0}{21}

@@ -1,0 +1,11 @@
+\frametitle{How does radix sort violate the $\Omega (n\lg n)$ speed limit?} 
+\bi
+\ii Counting sort allows us to gain information
+about keys\bi\ii other than by directly comparing 2 keys.\ei
+\ii Used keys as array indices,
+\bi\ii thus getting far more information out
+of each key.
+\ii branching factor of the decision tree is $k$
+\ei
+\ei
+

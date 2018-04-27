@@ -1,0 +1,45 @@
+\BOOKMARK [2][]{Outline0.1}{Dictionary Operations}{}% 1
+\BOOKMARK [2][]{Outline0.2}{Hash table implementation of Dictionary}{}% 2
+\BOOKMARK [2][]{Outline0.3}{Hash table is generalization of an ordinary array}{}% 3
+\BOOKMARK [2][]{Outline0.4}{Use hash table when we don't have one position for each key}{}% 4
+\BOOKMARK [2][]{Outline0.5}{Direct-address tables}{}% 5
+\BOOKMARK [2][]{Outline0.6}{Direct-address table}{}% 6
+\BOOKMARK [2][]{Outline0.7}{Hash tables}{}% 7
+\BOOKMARK [2][]{Outline0.8}{Hash table idea}{}% 8
+\BOOKMARK [2][]{Outline0.9}{Collisions}{}% 9
+\BOOKMARK [2][]{Outline0.10}{Collisions}{}% 10
+\BOOKMARK [2][]{Outline0.11}{Collision resolution by chaining}{}% 11
+\BOOKMARK [2][]{Outline0.12}{Implementation of heap with chaining}{}% 12
+\BOOKMARK [2][]{Outline0.13}{Implementation of heap with chaining}{}% 13
+\BOOKMARK [2][]{Outline0.14}{Implementation of heap with chaining}{}% 14
+\BOOKMARK [2][]{Outline0.15}{Analysis of hashing with chaining}{}% 15
+\BOOKMARK [2][]{Outline0.16}{Average-case analysis of hashing with chaining}{}% 16
+\BOOKMARK [2][]{Outline0.17}{Unsuccessful search}{}% 17
+\BOOKMARK [2][]{Outline0.18}{Successful search}{}% 18
+\BOOKMARK [2][]{Outline0.19}{Successful search}{}% 19
+\BOOKMARK [2][]{Outline0.20}{Expected number of elements examined, successful search}{}% 20
+\BOOKMARK [2][]{Outline0.21}{Alternative analysis}{}% 21
+\BOOKMARK [2][]{Outline0.22}{Alternative analysis, continued}{}% 22
+\BOOKMARK [2][]{Outline0.23}{Interpretation}{}% 23
+\BOOKMARK [2][]{Outline0.24}{Hash functions}{}% 24
+\BOOKMARK [2][]{Outline0.25}{Keys as natural numbers}{}% 25
+\BOOKMARK [2][]{Outline0.26}{Division method for hash functions}{}% 26
+\BOOKMARK [2][]{Outline0.27}{Multiplication method for hash functions}{}% 27
+\BOOKMARK [2][]{Outline0.28}{Multiplication method for hash functions}{}% 28
+\BOOKMARK [2][]{Outline0.29}{Open addressing}{}% 29
+\BOOKMARK [2][]{Outline0.30}{Open addressing}{}% 30
+\BOOKMARK [2][]{Outline0.31}{Hash insertion and search, open addressing}{}% 31
+\BOOKMARK [2][]{Outline0.32}{Hash deletion, open addressing}{}% 32
+\BOOKMARK [2][]{Outline0.33}{Uniform hashing with open addressing}{}% 33
+\BOOKMARK [2][]{Outline0.34}{Linear probing}{}% 34
+\BOOKMARK [2][]{Outline0.35}{Quadratic probing}{}% 35
+\BOOKMARK [2][]{Outline0.36}{Double hashing}{}% 36
+\BOOKMARK [2][]{Outline0.37}{Double hashing}{}% 37
+\BOOKMARK [2][]{Outline0.38}{Analysis of open-address hashing, unsuccessful search}{}% 38
+\BOOKMARK [2][]{Outline0.39}{Probability that i probes find occupied slot}{}% 39
+\BOOKMARK [2][]{Outline0.40}{Expected number of probes in unsuccessful search}{}% 40
+\BOOKMARK [2][]{Outline0.41}{Analysis of open-address hashing, unsuccessful search}{}% 41
+\BOOKMARK [2][]{Outline0.42}{Expected number of probes for Hash-Insert}{}% 42
+\BOOKMARK [2][]{Outline0.43}{Analysis of open address hashing, successful search}{}% 43
+\BOOKMARK [2][]{Outline0.44}{Averaging over the n keys in the table:}{}% 44
+\BOOKMARK [2][]{Outline0.45}{Analysis of open address hashing, successful search}{}% 45

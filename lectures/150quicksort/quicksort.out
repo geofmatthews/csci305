@@ -1,0 +1,18 @@
+\BOOKMARK [2][]{Outline0.1}{Quicksort}{}% 1
+\BOOKMARK [2][]{Outline0.2}{Quicksort: three step process}{}% 2
+\BOOKMARK [2][]{Outline0.3}{Compare Quicksort and Mergesort}{}% 3
+\BOOKMARK [2][]{Outline0.4}{Compare Partition and Merge}{}% 4
+\BOOKMARK [2][]{Outline0.5}{Partition}{}% 5
+\BOOKMARK [2][]{Outline0.8}{Partition}{}% 6
+\BOOKMARK [2][]{Outline0.9}{Can Mergesort be done in place?}{}% 7
+\BOOKMARK [2][]{Outline0.10}{Running time of quicksort}{}% 8
+\BOOKMARK [2][]{Outline0.11}{Worst case for quicksort}{}% 9
+\BOOKMARK [2][]{Outline0.12}{Best case for quicksort}{}% 10
+\BOOKMARK [2][]{Outline0.13}{``Average'' running time for quicksort}{}% 11
+\BOOKMARK [2][]{Outline0.14}{``Average'' running time for quicksort}{}% 12
+\BOOKMARK [2][]{Outline0.15}{Randomized quicksort}{}% 13
+\BOOKMARK [2][]{Outline0.16}{Worst-case analysis of randomized quicksort}{}% 14
+\BOOKMARK [2][]{Outline0.17}{Average-case analysis of randomized quicksort}{}% 15
+\BOOKMARK [2][]{Outline0.18}{Average-case analysis of randomized quicksort}{}% 16
+\BOOKMARK [2][]{Outline0.19}{Probability zi is compared to zj }{}% 17
+\BOOKMARK [2][]{Outline0.20}{Expected number of comparisons}{}% 18

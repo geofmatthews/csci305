@@ -1,0 +1,46 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Dictionary Operations}{2}{0}{1}
+\beamer@sectionintoc {2}{Hash table implementation of Dictionary}{3}{0}{2}
+\beamer@sectionintoc {3}{Hash table is generalization of an ordinary array}{4}{0}{3}
+\beamer@sectionintoc {4}{Use hash table when we don't have one position for each key}{5}{0}{4}
+\beamer@sectionintoc {5}{Direct-address tables}{6}{0}{5}
+\beamer@sectionintoc {6}{Direct-address table}{7}{0}{6}
+\beamer@sectionintoc {7}{Hash tables}{8}{0}{7}
+\beamer@sectionintoc {8}{Hash table idea}{9}{0}{8}
+\beamer@sectionintoc {9}{Collisions}{10}{0}{9}
+\beamer@sectionintoc {10}{Collisions}{11}{0}{10}
+\beamer@sectionintoc {11}{Collision resolution by chaining}{12}{0}{11}
+\beamer@sectionintoc {12}{Implementation of heap with chaining}{13}{0}{12}
+\beamer@sectionintoc {13}{Implementation of heap with chaining}{14}{0}{13}
+\beamer@sectionintoc {14}{Implementation of heap with chaining}{15}{0}{14}
+\beamer@sectionintoc {15}{Analysis of hashing with chaining}{16}{0}{15}
+\beamer@sectionintoc {16}{Average-case analysis of hashing with chaining}{17}{0}{16}
+\beamer@sectionintoc {17}{Unsuccessful search}{18}{0}{17}
+\beamer@sectionintoc {18}{Successful search}{19}{0}{18}
+\beamer@sectionintoc {19}{Successful search}{20}{0}{19}
+\beamer@sectionintoc {20}{Expected number of elements examined, successful search}{21}{0}{20}
+\beamer@sectionintoc {21}{Alternative analysis}{22}{0}{21}
+\beamer@sectionintoc {22}{Alternative analysis, continued}{23}{0}{22}
+\beamer@sectionintoc {23}{Interpretation}{24}{0}{23}
+\beamer@sectionintoc {24}{Hash functions}{25}{0}{24}
+\beamer@sectionintoc {25}{Keys as natural numbers}{26}{0}{25}
+\beamer@sectionintoc {26}{Division method for hash functions}{27}{0}{26}
+\beamer@sectionintoc {27}{Multiplication method for hash functions}{28}{0}{27}
+\beamer@sectionintoc {28}{Multiplication method for hash functions}{29}{0}{28}
+\beamer@sectionintoc {29}{Open addressing}{30}{0}{29}
+\beamer@sectionintoc {30}{Open addressing}{31}{0}{30}
+\beamer@sectionintoc {31}{Hash insertion and search, open addressing}{32}{0}{31}
+\beamer@sectionintoc {32}{Hash deletion, open addressing}{33}{0}{32}
+\beamer@sectionintoc {33}{Uniform hashing with open addressing}{34}{0}{33}
+\beamer@sectionintoc {34}{Linear probing}{35}{0}{34}
+\beamer@sectionintoc {35}{Quadratic probing}{37}{0}{35}
+\beamer@sectionintoc {36}{Double hashing}{38}{0}{36}
+\beamer@sectionintoc {37}{Double hashing}{39}{0}{37}
+\beamer@sectionintoc {38}{Analysis of open-address hashing, unsuccessful search}{40}{0}{38}
+\beamer@sectionintoc {39}{Probability that $i$ probes find occupied slot}{41}{0}{39}
+\beamer@sectionintoc {40}{Expected number of probes in unsuccessful search}{42}{0}{40}
+\beamer@sectionintoc {41}{Analysis of open-address hashing, unsuccessful search}{43}{0}{41}
+\beamer@sectionintoc {42}{Expected number of probes for {\sc Hash-Insert}}{44}{0}{42}
+\beamer@sectionintoc {43}{Analysis of open address hashing, successful search}{45}{0}{43}
+\beamer@sectionintoc {44}{Averaging over the $n$ keys in the table:}{46}{0}{44}
+\beamer@sectionintoc {45}{Analysis of open address hashing, successful search}{47}{0}{45}

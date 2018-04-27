@@ -1,0 +1,13 @@
+\frametitle{Expected number of comparisons} 
+
+\begin{align*}
+  E[X] &=
+  \sum_{i=1}^{n-1}\sum_{j=i+1}^{n}\pr{z_i \mbox{ is compared to }
+    z_j}\\
+&=  \sum_{i=1}^{n-1}\sum_{j=i+1}^{n}  \frac{2}{j-i+1}  \\
+  &=  \sum_{i=1}^{n-1}\sum_{k=1}^{n-i}  \frac{2}{k+1}  \\
+  &< \sum_{i=1}^{n-1}\sum_{k=1}^{n}  \frac{2}{k}  \\
+  &= \sum_{i=1}^{n-1}O(\lg n)\\
+  &= O(n\lg n)
+\end{align*}
+

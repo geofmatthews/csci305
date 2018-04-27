@@ -1,9 +1,9 @@
-\documentclass[landscape]{article}
+\documentclass{beamer}
 
-\usepackage[margin=1in]{geometry}
 \usepackage{clrscode3e}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{multicol}
 
 \newcommand{\bi}{\begin{itemize}}
 \newcommand{\ii}{\item}
@@ -15,17 +15,19 @@
 \newcommand{\flr}[1]{\ensuremath{\left\lfloor#1\right\rfloor}}
 \newcommand{\ceil}[1]{\ensuremath{\left\lceil#1\right\rceil}}
 
-\newcommand{\sect}[1]{\newpage{\textbf{#1}}}
+\newcommand{\sect}[1]{
+\section{#1}
+\begin{frame}[fragile]\frametitle{#1}
+}
 
-\setlength{\parindent}{0in}
+
 
 \title{Notes on Quicksort}
 \author{Geoffrey Matthews}
 \begin{document}
-\maketitle
-\titlepage
-\huge
-
+\begin{frame}
+  \maketitle
+\end{frame}
 
 \sect{Quicksort}
 \bi
@@ -34,6 +36,8 @@
 \ii Constants are small.
 \ii Sorts in place.
 \ei
+
+\end{frame}
 
 \sect{Quicksort: three step process}
 \bi
@@ -60,33 +64,94 @@ second subarray.
 
 Initial call is \textsc{Quicksort$(A,1,n)$}
 
+\end{frame}
+
 \sect{Compare \textsc{Quicksort} and \textsc{Mergesort}}
 
-\begin{minipage}{4in}
-\begin{codebox}
-  \Procname{$\proc{Quicksort}(A,p,r)$}
-  \li \If $p < r$ \Do
-  \li $q\gets \proc{Partition}(A,p,r)$
-  \li $\proc{Quicksort}(A,p,q-1)$
-  \li $\proc{Quicksort}(A,q+1,r)$
-\End
-\end{codebox}
-\end{minipage}\hfill
-  \begin{minipage}{4in}
-\begin{codebox}
-  \Procname{$\proc{Mergesort}(A,p,r)$}
-  \li \If $p < r$ \Do
-  \li $q\gets \lfloor (p+r)/2 \rfloor$
-  \li $\proc{Mergesort}(A,p,q)$
-  \li $\proc{Mergesort}(A,q+1,r)$
-  \li $\proc{Merge}(A,p,q,r)$
-\End
-\end{codebox}
-  \end{minipage}
-  
+  \includegraphics{Quicksort}
+  \vfill
+  \includegraphics{Merge-Sort}
 
-\newpage
-\begin{minipage}{5in}
+
+\end{frame}
+
+\sect{Compare \textsc{Partition} and \textsc{Merge}}
+
+  \includegraphics[scale=0.8]{Partition}
+  \hfill
+  \includegraphics[scale=0.8]{Merge}
+
+
+\end{frame}
+
+%\begin{minipage}{4in}
+%\begin{codebox}
+%  \Procname{$\proc{Quicksort}(A,p,r)$}
+%  \li \If $p < r$ \Do
+%  \li $q\gets \proc{Partition}(A,p,r)$
+%  \li $\proc{Quicksort}(A,p,q-1)$
+%  \li $\proc{Quicksort}(A,q+1,r)$
+%\End
+%\end{codebox}
+%\end{minipage}\hfill
+%  \begin{minipage}{4in}
+%\begin{codebox}
+%  \Procname{$\proc{Mergesort}(A,p,r)$}
+%  \li \If $p < r$ \Do
+%  \li $q\gets \lfloor (p+r)/2 \rfloor$
+%  \li $\proc{Mergesort}(A,p,q)$
+%  \li $\proc{Mergesort}(A,q+1,r)$
+%  \li $\proc{Merge}(A,p,q,r)$
+%\End
+%\end{codebox}
+%  \end{minipage}
+%  
+%
+%\newpage
+%\begin{minipage}{5in}
+%\begin{codebox}
+%  \Procname{$\proc{Partition}(A,p,r)$}
+%  \li $x \gets A[r]$
+%  \li $i\gets p-1$
+%  \li \For $j=p$ \To $r-1$ \Do
+%  \li \If $A[j] \leq x$ \Do
+%  \li $i \gets i+1$
+%  \li exchange $A[i]$ with $A[j]$
+%\End
+%\End
+%\li exchange $A[i+1]$ with $A[r]$
+%\li \Return $i+1$
+%\end{codebox}
+%\end{minipage}
+
+\sect{Partition}
+
+\includegraphics[width=4in]{Fig-7-2.pdf}
+
+\vfill
+ Loop invariant:
+\begin{enumerate}
+  \ii All entries in $A[p..i]$ are $\leq$ pivot
+  \ii All entries in $A[i+1..j-1]$ are $>$ pivot
+  \ii $A[r] =$ pivot
+\end{enumerate}
+
+\end{frame}
+\sect{}
+
+\includegraphics[height=0.9\textheight]{Fig-7-1.pdf}
+
+\end{frame}
+\sect{}
+
+
+  \includegraphics[height=0.9\textheight]{Fig-7-3.pdf}
+
+\end{frame}
+
+\sect{Partition}
+
+\begin{minipage}{0.6\textwidth}
 \begin{codebox}
   \Procname{$\proc{Partition}(A,p,r)$}
   \li $x \gets A[r]$
@@ -101,7 +166,7 @@ Initial call is \textsc{Quicksort$(A,1,n)$}
 \li \Return $i+1$
 \end{codebox}
 \end{minipage}
-\includegraphics[width=4in]{Fig-7-2.pdf}
+
 
 \bi
 \ii Always selects $A[r]$ as the \textbf{pivot}
@@ -113,48 +178,12 @@ Initial call is \textsc{Quicksort$(A,1,n)$}
 \end{enumerate}
 \ei
 
-
-
-\begin{minipage}{0.6\textwidth}
-\begin{codebox}
-  \Procname{$\proc{Partition}(A,p,r)$}
-  \li $x \gets A[r]$
-  \li $i\gets p-1$
-  \li \For $j=p$ \To $r-1$ \Do
-  \li \If $A[j] \leq x$ \Do
-  \li $i \gets i+1$
-  \li exchange $A[i]$ with $A[j]$
-\End
-\End
-\li exchange $A[i+1]$ with $A[r]$
-\li \Return $i+1$
-\end{codebox}
-
-\vspace{2cm}
+\vfill
 
 $O(n)$
 
-\end{minipage}
-\begin{minipage}{0.4\textwidth}
-\includegraphics[height=\textheight]{Fig-7-1.pdf}
-\end{minipage}
 
-\begin{minipage}{0.6\textwidth}
-  \includegraphics[width=\textwidth]{Fig-7-3.pdf}
-\end{minipage}\hfill
-\begin{minipage}{0.3\textwidth}
-\bi
-\ii Case a:  $A[j] > x$
-\vspace{2in}
-\ii Case b: $A[j] \leq x$
-\ei
-\end{minipage}\\
- Loop invariant:
-\begin{enumerate}
-  \ii All entries in $A[p..i]$ are $\leq$ pivot
-  \ii All entries in $A[i+1..j-1]$ are $>$ pivot
-  \ii $A[r] =$ pivot
-\end{enumerate}
+\end{frame}
 
 \sect{Can \textsc{Mergesort} be done in place?}
 
@@ -163,6 +192,14 @@ $O(n)$
   1 & 3 & 5 & 7 & 9 & 0 & 2 & 4 & 6 & 8 \\\hline
   \end{tabular}
 }
+\vfill
+\pause
+\bi
+\item Yes, but {\em very} tricky!
+  \ei
+  
+
+\end{frame}
 
 \sect{Running time of quicksort}
 
@@ -171,6 +208,8 @@ $O(n)$
 \ii If subarrays are balanced: fast as mergesort.
 \ii If subarrays are unbalanced:  slow as insertion sort.
 \ei
+
+\end{frame}
 
 \sect{Worst case for quicksort}
 \bi
@@ -187,9 +226,11 @@ $O(n)$
 \ii This is the best case for insertion sort, which is $O(n)$.
 \ei
 
+\end{frame}
+
 \sect{Best case for quicksort}
 \bi
-\ii Each subarray has $\leq n/2$ elements.
+\ii Each subarray has $n/2$ elements.
 \ii Recurrence:
 \begin{align*}
   T(n) &= 2T(n/2) + \Theta(n)\\
@@ -199,23 +240,21 @@ $O(n)$
 \ei
 
 
-\sect{Average running time for quicksort}
-\bi
-\ii Assume \textsc{Partition} always makes a 9-to-1 split.
-\ii Recurrence:
-\begin{align*}
-  T(n) &\leq T(9n/10) + T(n/10) + \Theta(n)\\
-  &= O(n\lg n)
-\end{align*}
-\ei
+\end{frame}
+
+\sect{``Average'' running time for quicksort}
+Assume \textsc{Partition} always makes a 9-to-1 split.
+$
+  T(n) \leq T(9n/10) + T(n/10) + \Theta(n)
+  = O(n\lg n)$
+
 \vfill
-\mbox{~}
 
+\includegraphics[height=0.75\textheight]{Fig-7-4.pdf}
 
+\end{frame}
 
-\includegraphics[width=\textwidth]{Fig-7-4.pdf}
-
-
+\sect{``Average'' running time for quicksort}
 \includegraphics[width=\textwidth]{Fig-7-5.pdf}
 \bi
 \ii If levels alternate between good and bad splits, still $O(n\lg n)$
@@ -224,6 +263,8 @@ all of the choices will be worst case?
 \ii If we randomize choice of pivot, what is the probability that
 more than half of the choices will be worst case?
 \ei
+
+\end{frame}
 
 \sect{Randomized quicksort}
 \bi
@@ -248,6 +289,8 @@ constant factor, just randomize the choice of pivot.
 \ii Stops any bad input from causing worst-case behavior.
 \ei
 
+\end{frame}
+
 \sect{Worst-case analysis of randomized quicksort}
 \begin{align*}
   T(n) &= \max_{0\leq q\leq n-1} (T(q) + T(n-q-1)) + \Theta(n)
@@ -270,6 +313,7 @@ constant factor, just randomize the choice of pivot.
 \ii Can also show $T(n) =\Omega(n^2)$, so $T(n) =\Theta(n^2)$.
 \ei
 
+\end{frame}
 
 \sect{Average-case analysis of randomized quicksort}
 \bi
@@ -284,6 +328,8 @@ to  \textsc{Partition}.
 \ii Total work done is $O(n+ X)$.
 \ii We seek a bound on the total number of comparisons.
 \ei
+
+\end{frame}
 
 \sect{Average-case analysis of randomized quicksort}
 \bi
@@ -305,6 +351,8 @@ $i$th smallest.
   = \sum_{i=1}^{n-1}\sum_{j=i+1}^{n}\pr{z_i \mbox{ is compared to } z_j}
 \end{align*}
 \ei
+
+\end{frame}
 
 \sect{Probability $z_i$  is compared to  $z_j$ }
 \bi
@@ -333,6 +381,8 @@ $1/(j-i+1)$.
 
 \ei
 
+\end{frame}
+
 \sect{Expected number of comparisons}
 
 \begin{align*}
@@ -346,5 +396,6 @@ $1/(j-i+1)$.
   &= O(n\lg n)
 \end{align*}
 
+\end{frame}
 
 \end{document}

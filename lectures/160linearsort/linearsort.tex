@@ -1,6 +1,6 @@
-\documentclass[landscape]{article}
+\documentclass{beamer}
 \usepackage{multicol}
-\usepackage[margin=1in]{geometry}
+
 \usepackage{clrscode3e}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -15,19 +15,21 @@
 \newcommand{\flr}[1]{\ensuremath{\left\lfloor#1\right\rfloor}}
 \newcommand{\ceil}[1]{\ensuremath{\left\lceil#1\right\rceil}}
 
-\newcommand{\sect}[1]{\newpage{\textbf{#1}}}
-
-\setlength{\parindent}{0in}
+\newcommand{\sect}[1]{
+\section{#1}
+\begin{frame}[fragile]\frametitle{#1}
+}
 
 \newcommand{\nop}[1]{}
 
 \title{Notes on Linear Sorting}
 \author{Geoffrey Matthews}
-\begin{document}
-\maketitle
-\titlepage
-\huge
 
+\begin{document}
+
+\begin{frame}
+  \maketitle
+\end{frame}
 
 \sect{Comparison sorts}
 \bi
@@ -41,6 +43,7 @@ information about a sequence is comparisons between pairs of elements.
 \ii heapsort
 \ei
 \ei
+\end{frame}
 
 \sect{Lower bounds for comparison sorts}
 \bi
@@ -48,6 +51,8 @@ information about a sequence is comparisons between pairs of elements.
 \ii All sorts seen so far are $\Omega(n\lg n)$
 \ii We will show that all comparison sorts must be $\Omega(n\lg n)$
 \ei
+
+\end{frame}
 
 \sect{Decision tree}
 \bi
@@ -60,6 +65,7 @@ information about a sequence is comparisons between pairs of elements.
 \ii Abstracts away everything else: control and data movement.
 \ii We're counting {\em only} comparisons.
 \ei
+\end{frame}
 
 \sect{Insertion sort on three elements}
 \vspace{1cm}
@@ -73,6 +79,8 @@ information about a sequence is comparisons between pairs of elements.
 \ei
 
 
+\end{frame}
+
 \sect{For any comparison sort}
 
 \includegraphics[width=\textwidth]{Fig-8-1.pdf}
@@ -82,12 +90,16 @@ information about a sequence is comparisons between pairs of elements.
 \ii The tree models all possible execution traces.
 \ei
 
+\end{frame}
+
 \sect{What is the longest path from root to leaf?}
 \bi
 \ii Depends on the algorithm.
 \ii Insertion sort: $\Theta(n^2)$
 \ii Merge sort: $\Theta(n\lg n)$
 \ei
+
+\end{frame}
 
 \sect{Lemma: any binary tree of height $h$ has $\leq 2^h$ leaves.}
 \bi
@@ -109,6 +121,7 @@ Proof by induction on $h$:
     \end{align*}
 \end{description}
 
+\end{frame}
 
 \sect{Theorem: any decision tree that sorts $n$ elements has height
   $\Omega(n\lg n)$ }
@@ -127,6 +140,8 @@ Proof by induction on $h$:
 \end{align*}
 \ei
 
+\end{frame}
+
 \sect{Sorting in linear time}
 \bi
 \ii Impossible with any comparison sort.
@@ -141,7 +156,7 @@ Proof by induction on $h$:
   \ii[Auxiliary storage:] $C[0..k]$
 \end{description}
 
-
+\end{frame}
 
 \sect{Counting sort example}
 \begin{multicols}{2}
@@ -161,7 +176,7 @@ Proof by induction on $h$:
 \end{codebox}
 \columnbreak
 
-
+{\footnotesize
 
 {\bf A:}\begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
  $2_1$ & $5_1$ & $3_1$ & $0_1$ & $2_2$ & $3_2$ & $0_2$ & $3_3$ \\\hline
@@ -178,8 +193,10 @@ After third {\bf for} loop:\\
  2 & 2 & 4 & 7 & 7 & 8\\\hline
   \end{tabular}
 
-
+}
 \end{multicols}
+\end{frame}
+
 \sect{Counting sort example}
 \begin{multicols}{2}
 \begin{codebox}
@@ -198,6 +215,7 @@ After third {\bf for} loop:\\
 \end{codebox}
 \columnbreak
 
+{\footnotesize
 
 {\bf A:}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
@@ -220,6 +238,7 @@ $0_1$ & $0_2$ & & $2_2$ & $3_1$ & $3_2$ & $3_3$ & $5_1$\\\hline
 $0_1$ & $0_2$ & $2_1$ & $2_2$ & $3_1$ & $3_2$ & $3_3$ & $5_1$\\\hline
 \end{tabular}\\
 
+}
 
 \end{multicols}
 
@@ -228,6 +247,7 @@ $0_1$ & $0_2$ & $2_1$ & $2_2$ & $3_1$ & $3_2$ & $3_3$ & $5_1$\\\hline
 \ii Keys with the same value appear in the same order
 in output as in input.
 \ei
+\end{frame}
 
 \sect{Counting sort analysis}
 \begin{multicols}{2}
@@ -252,6 +272,7 @@ in output as in input.
 \bi\ii which is $\Theta(n)$ if $k=O(n)$.\ei
 \ii How big a $k$ is practical?
 \bi
+\ii 64-bit values?  Are you kidding?
 \ii 32-bit values?  No.
 \ii 16-bit?  Probably not.
 \ii 8-bit?  Maybe, depending on $n$.
@@ -267,28 +288,40 @@ in output as in input.
 \vfill
 
 
+\end{frame}
+
 \sect{Radix sort example}
 
 \includegraphics[width=\textwidth]{Fig-8-3.pdf}
 
+\vfill
+\bi
+\ii Sort on each digit individually.
+\ii Must use a stable sort subroutine.
+\ii Subroutine only works on a small range of numbers.
+\ei
+
+\end{frame}
+
 \sect{Radix sort}
 
-\vfill
+\begin{multicols}{2}
 
-\begin{minipage}[b]{0.45\textwidth}
 \bi
 \ii IBM in early 20th century.
 \ii Punch card sorting machines only sorted on one column.
 \ii Humans would reload the cards and change the column.
 \ii Human-machine cyborg algorithm!
+\ii {\bf Key idea:} Sort {\em least} significant digits first.
 \ei
-\begin{description}
-  \ii[Key idea:]\mbox{}\\ Sort {\em least} significant digits first.
-\end{description}
-\end{minipage}\hfill
-\begin{minipage}{0.5\textwidth}
-\includegraphics[width=\textwidth]{ibmcardsorter.jpg}
-\end{minipage}
+
+\columnbreak
+
+\includegraphics[scale=3.0]{ibmcardsorter.jpg}
+
+\end{multicols}
+
+\end{frame}
 
 \sect{Radix sort}
 \begin{codebox}
@@ -297,6 +330,8 @@ in output as in input.
   \li use a stable sort to sort $A$ on digit $i$
   \End
 \end{codebox}
+
+\end{frame}
 
 \sect{Radix sort correctness}
 \bi
@@ -315,6 +350,8 @@ by inductive hypothesis.  Stable sort leaves them that way.
 \ei
 \ei
 
+\end{frame}
+
 \sect{Radix sort analysis}
 
 Assume we use counting sort on each digit.
@@ -324,6 +361,8 @@ Assume we use counting sort on each digit.
 \ii $\Theta(d(n+k))$ total
 \ii If $k=O(n)$, time $= \Theta(dn)$.
 \ei
+
+\end{frame}
 
 \sect{Radix sort: How to break each key into digits?}
 \bi
@@ -341,6 +380,8 @@ Example: 32-bit words, 8-bit digits.
 \ii Time $=\Theta\left(\frac{b}{r}(n+2^r)\right)$
 \ei
 
+\end{frame}
+
 \sect{How to choose $r$?}
 \bi
 
@@ -357,6 +398,8 @@ improve.
 bits. $\lceil b/r \rceil = 2$ passes.
 \ei
 
+\end{frame}
+
 \sect{Compare radix to merge and quick}
 \bi
 \ii 1 million ($2^{20}$) 32-bit integers.
@@ -366,6 +409,8 @@ bits. $\lceil b/r \rceil = 2$ passes.
 \bi \ii one to take census
 \ii one to move data \ei
 \ei
+
+\end{frame}
 
 \sect{How does radix sort violate the $\Omega(n\lg n)$ speed limit?}
 \bi
@@ -377,5 +422,7 @@ of each key.
 \ii branching factor of the decision tree is $k$
 \ei
 \ei
+
+\end{frame}
 
 \end{document}
