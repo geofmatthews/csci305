@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+
+\title{CSCI 305, Homework \# 5}
+\author{YOUR NAME HERE}
+\date{Due date:  Midnight, May 14}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+\item Analysis of d-ary heaps (problem 6-2 in the text).
+
+ A \textbf{d-ary heap} is like a binary heap, but (with one possible
+ exception) non-leaf nodes have $d$ children instead of 2 children.
+ \begin{enumerate}
+ \item How would you represent a $d$-ary heap in an array?
+   \item What is the height of a $d$-ary heap of $n$ elements in terms
+     of $n$ and $d$?
+   \item Give an efficient implementation of \textsc{Extract-Max} in
+       a $d$-ary max-heap.  Analyze its running time in terms of $d$
+       and $n$.
+     \item Give an efficient implementation of \textsc{Insert} in
+       a $d$-ary max-heap.  Analyze its running time in terms of $d$
+       and $n$.
+     \item Give an efficient implementation of
+       \textsc{Increase-Key}$(A,i,k)$,
+       which flags an error if $k < A[i]$, but otherwise sets $A[i] =
+       k$ and then updates the $d$-ary max-heap structure
+       appropriately.    Analyze its running time in terms of $d$
+       and $n$.
+ \end{enumerate}
+\end{enumerate}
+
+\end{document}

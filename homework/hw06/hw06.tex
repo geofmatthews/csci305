@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+
+\title{CSCI 305, Homework \# 6}
+\author{YOUR NAME HERE}
+\date{Due date:  Midnight, May 14}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+\item Alternative quicksort analysis (problem 7-3 in the text).
+
+  An alternative analysis of the running time of randomized quicksort
+  focuses on the expected running time of each individial recursive
+  call to {\sc Randomized-Quicksort}, rather than on the number of
+  comparisons performed.
+
+  \begin{enumerate}
+    \item Argue that, given an array of size $n$, the probability that
+      any particular element is chosen as the pivot is $1/n$.  Use
+      this to define indicator random variables
+      \[
+      X_i = I\{\mbox{$i$th smallest element is chosen as the pivot}\}
+      \]
+      What is $E[X_i]$?
+
+    \item
+      Let $T(n)$ be a random variable denoting the running time of
+      quicksort on an array of size $n$.  Argue that
+      \begin{align}
+      E[T(n)] &= E\left[
+        \sum_{q=1}^n X_q(T(q-1) + T(n-q) + \Theta(n))
+        \right]
+      \label{eqn1}
+      \end{align}
+
+    \item
+      Show that we can rewrite equation \ref{eqn1} as
+      \begin{align}
+        E[T(n)] &= \frac{2}{n}\sum_{q=2}^{n-1}E[T(q)] + \Theta(n)
+          \label{eqn2}
+      \end{align}
+
+    \item
+      Show that
+      \begin{align}
+        \sum_{k=2}^{n-1} k \lg k \leq \frac{1}{2}n^2\lg n -
+        \frac{1}{8} n^2
+        \label{eqn3}
+      \end{align}
+      (Hint: Split the summation into two parts, one for
+      $k=2,3,...,\lceil n/2 \rceil - 1$
+      and one for
+      $k= \lceil n/2\rceil,...,n-1$
+
+    \item
+      Using the bound from equation \ref{eqn3}, show that the
+      recurrence in equation \ref{eqn2} has the solution
+      $E[T(n)] = \Theta(n\lg n)$.  (Hint: Show, by substitution, that
+      $E[T(n)\leq an\lg n$ for sufficiently large $n$ and for some
+        positive constant $a$.) 
+
+  \end{enumerate}
+\end{enumerate}
+
+\end{document}
