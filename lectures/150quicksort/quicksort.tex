@@ -131,22 +131,24 @@ Initial call is \textsc{Quicksort$(A,1,n)$}
 \vfill
  Loop invariant:
 \begin{enumerate}
-  \ii All entries in $A[p..i]$ are $\leq$ pivot
-  \ii All entries in $A[i+1..j-1]$ are $>$ pivot
+  \ii All entries in $A[p,...,i]$ are $\leq$ pivot
+  \ii All entries in $A[i+1,...,j-1]$ are $>$ pivot
   \ii $A[r] =$ pivot
 \end{enumerate}
 
 \end{frame}
+
 \sect{}
-
-\includegraphics[height=0.9\textheight]{Fig-7-1.pdf}
-
-\end{frame}
-\sect{}
-
-
   \includegraphics[height=0.9\textheight]{Fig-7-3.pdf}
+\end{frame}
 
+
+\sect{}
+\begin{multicols}{2}
+\includegraphics[height=0.9\textheight]{Fig-7-1.pdf}
+\columnbreak
+\hfill\includegraphics{Partition}
+\end{multicols}
 \end{frame}
 
 \sect{Partition}
@@ -172,8 +174,8 @@ Initial call is \textsc{Quicksort$(A,1,n)$}
 \ii Always selects $A[r]$ as the \textbf{pivot}
 \ii Loop invariant:
 \begin{enumerate}
-  \ii All entries in $A[p..i]$ are $\leq$ pivot
-  \ii All entries in $A[i+1..j-1]$ are $>$ pivot
+  \ii All entries in $A[p,...,i]$ are $\leq$ pivot
+  \ii All entries in $A[i+1,...,j-1]$ are $>$ pivot
   \ii $A[r] =$ pivot
 \end{enumerate}
 \ei
@@ -368,6 +370,8 @@ that either $z_i$ or $z_j$ is chosen first.
 randomly and independently.
 \ii The probability that any one of them is chosen first is
 $1/(j-i+1)$.
+\ei
+
 \begin{align*}
   \pr{z_i \mbox{ is compared to } z_j}
   &=
@@ -379,7 +383,6 @@ $1/(j-i+1)$.
   \frac{2}{j-i+1}
 \end{align*}
 
-\ei
 
 \end{frame}
 
