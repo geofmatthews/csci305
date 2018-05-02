@@ -1,6 +1,6 @@
-\documentclass[landscape]{article}
+\documentclass{beamer}
 \usepackage{multicol}
-\usepackage[margin=1in]{geometry}
+
 \usepackage{clrscode3e}
 \usepackage{amsmath,amsfonts}
 \usepackage{graphicx,color}
@@ -15,9 +15,12 @@
 \newcommand{\flr}[1]{\ensuremath{\left\lfloor#1\right\rfloor}}
 \newcommand{\ceil}[1]{\ensuremath{\left\lceil#1\right\rceil}}
 
-\newcommand{\sect}[1]{\newpage{\textbf{#1}}}
+\newcommand{\sect}[1]{
+\section{#1}
+\begin{frame}[fragile]\frametitle{#1}
+}
 
-\setlength{\parindent}{0in}
+
 \setlength{\tabcolsep}{4\tabcolsep}
 
 \newcommand{\nop}[1]{}
@@ -30,9 +33,10 @@
 \title{Notes on Red-black Trees}
 \author{Geoffrey Matthews}
 \begin{document}
-\maketitle
-\titlepage
-\huge
+\begin{frame}
+  \maketitle
+\end{frame}
+
 
 \sect{Red-black trees}
 \bi
@@ -40,6 +44,8 @@
 \ii \textbf{Balanced:} height is $O(\lg n)$, where $n$ is number of nodes.
 \ii Operations will take $O(\lg n)$ in worst case.
 \ei
+
+\end{frame}
 
 \sect{Red-black trees}
 \bi
@@ -53,18 +59,27 @@ red-black tree $T$.
 \ei
 
 
+\end{frame}
+
 \sect{Red-black tree properties}
+
 \begin{enumerate}
   \ii Every node is either red or black.
   \ii The root is black.
   \ii Every leaf ($\attrib{T}{nil}$) is black.
   \ii If a node is red, then both its children are black
-  \bi\ii Hence no two reds in a row.\ei
+
+  Hence no two reds in a row.
   \ii For each node, all paths from the node to descendant leaves
   contain the same number of black nodes.
 \end{enumerate}
+\end{frame}
 
-\includegraphics[height=\textheight]{Fig-13-1.pdf}
+\sect{Red-black tree}
+
+\includegraphics[height=0.8\textheight]{Fig-13-1.pdf}
+
+\end{frame}
 
 \sect{Height of a red-black tree} \bi \ii \textbf{Height of a node} is
 the number of edges in longest path to leaf.  \ii
@@ -77,6 +92,8 @@ ancestors.  \ei
 
 \ei
 
+\end{frame}
+
 \sect{Claim 1:} Any node with height $h$ has black-height $\geq h/2$.
 
 \bigskip
@@ -85,6 +102,8 @@ ancestors.  \ei
 \bi\ii
   By property 4, $\leq h/2$ nodes on the path from node to a leaf are
   red.\ii  Hence $\geq h/2$ are black.\ei
+
+\end{frame}
 
 \sect{Claim 2:} The subtree rooted at $x$ contains $\geq
   2^{\id{bh}(x)}   - 1$ internal nodes.
@@ -107,6 +126,8 @@ internal nodes. \ii
 Thus, the subtree rooted at $x$ contains $\geq 2\cdot
 (2^{\id{bh}(x)-1}-1) + 1 = 2^{\id{bh}(x)}-1$ internal nodes.
 \ei  
+
+\end{frame}
 
 \sect{Lemma:} A red-black tree with $n$ internal nodes
 and height $h$ has
@@ -135,24 +156,32 @@ h \leq 2\lg(n+1)
 \]
 
 
+\end{frame}
+
 \sect{Operations on red-black trees}
 \bi
 \ii $\proc{Minimum}$, $\proc{Maximum}$, $\proc{Successor}$,
 $\proc{Predecessor}$ and $\proc{Search}$ all run in $O(h) = O(\lg n)$
 time.
 \ii $\proc{Insert}$, what color to make the new node?
-\bi \ii Red?  Might violate property 4.
-\ii Black?  Might violate property 5.
+\bi \ii Red?
+\bi\ii Might violate property 4.\ei
+\ii Black?
+\bi\ii Might violate property 5.\ei
 \ei
 \ii $\proc{Delete}$, what color was the old node?
 \bi
 \ii Red?  OK.
 \bi\ii Unless successor is black?\ei
-\ii Black? Could cause two reds in a row, and violate properties 2 and 5.
+\ii Black?
+\bi\ii Could cause two reds in a row, and violate properties 2 and 5.\ei
 \ei
 \ei
 
+\end{frame}
+
 \sect{Rotations}
+
 \bi
 \ii Only pointers are changed.
 \ii Won't upset binary-search-tree property.
@@ -186,37 +215,44 @@ time.
 \ii root's parent is $\attrib{T}{nil}$
 \ei
 
-\vfill
-
 \end{multicols}
 
-
+\end{frame}
+\sect{Rotations}
 
 \includegraphics[width=\textwidth]{Fig-13-3.pdf}
 
+\end{frame}
 
 \sect{Insertions}
+\scriptsize
+\begin{multicols}{2}
 \bi
 \ii Start by doing regular binary-tree insertion.
 \ii Color new node red.
 \ii May violate red-black tree properties:
-
+\ei
 
 \begin{enumerate}
   \ii Every node is either red or black.
-  \bi\ii OK.\ei
+
+  OK.
   \ii The root is black.
-  \bi\ii New node might be root.\ei
+
+  New node might be root.
   \ii Every leaf ($\attrib{T}{nil}$) is black.
-  \bi\ii OK.\ei
+
+   OK.
   \ii If a node is red, then both its children are black.
-  \bi\ii New node's parent might be red.\ei
+  
+  New node's parent might be red.
   \ii For each node, all paths from the node to descendant leaves
   contain the same number of black nodes.
-  \bi\ii OK.\ei
+
+  OK.
 \end{enumerate}
 
-\ei
+\columnbreak
 
 \begin{codebox}
   \Procname{$\proc{RB-Insert-Fixup}(T,z)$}
@@ -238,12 +274,18 @@ time.
   \li $\attrib{\attrib{\attrib{z}{p}}{p}}{color} \gets \const{red}$
   \li $\proc{Right-Rotate}(T,\attrib{\attrib{z}{p}}{p})$
 \End
-  \li \Else (same as \textbf{then}  with ``right'' and ``left'' exchanged) \End
+  \li \Else \li (``right'' $\rightleftharpoons$ ``left'') \End
 \End
   \li $\attrib{\attrib{T}{root}}{color} \gets \const{black}$
 \end{codebox}
+\end{multicols}
+\end{frame}
 
-\includegraphics[height=\textheight]{Fig-13-4.pdf}
+\sect{RB-Insert-Fixup}
+
+\includegraphics[height=0.8\textheight]{Fig-13-4.pdf}
+
+\end{frame}
 
 \sect{Insert fixup loop invariant.}
 \bi
@@ -255,13 +297,19 @@ time.
 \ei
 \ei
 
+\end{frame}
+
 \sect{Parent is red and  uncle is red:}
 
 \includegraphics[width=\textwidth]{Fig-13-5.pdf}
 
+\end{frame}
+
 \sect{Parent is red and  uncle is black:}
 
 \includegraphics[width=\textwidth]{Fig-13-6.pdf}
+
+\end{frame}
 
 \sect{Analysis}
 \bi
@@ -276,13 +324,15 @@ time.
 \ii Insertion into red-black tree is $O(\lg n)$.
 \ei
 
+\end{frame}
+
 \sect{Deletion}
 
 \bi\ii Not covered here.
 \ii But also $O(\lg n)$.
 \ei
 
-\nop{
+
   \begin{codebox}
   \Procname{$\proc{RB-Delete}(T,z)$}
   \li $ y \gets z $
@@ -291,25 +341,8 @@ time.
   \li $x \gets \att{z}{right}$
   \li $\proc{RB-Transplant}(T,z,\att{z}{right}$
   \end{codebox}
-elseif  ́:right == T:nil
-x D  ́:left
-RB-T RANSPLANT .T;  ́;  ́:left/
-else y D T REE -M INIMUM . ́:right/
-y-original-color D y:color
-x D y:right
-if y:p ==  ́
-x:p D y
-else RB-T RANSPLANT .T; y; y:right/
-y:right D  ́:right
-y:right:p D y
-RB-T RANSPLANT .T;  ́; y/
-y:left D  ́:left
-y:left:p D y
-y:color D  ́:color
-if y-original-color == BLACK
-RB-D ELETE -F IXUP .T; x/
-}
 
+\end{frame}
 %\includegraphics[width=\textwidth]{Fig-13-7.pdf}
 %\includegraphics[width=\textwidth]{Fig-13-8.pdf}
 %\includegraphics[width=\textwidth]{Fig-13-9.pdf}

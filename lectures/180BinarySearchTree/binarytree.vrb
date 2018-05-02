@@ -1,0 +1,24 @@
+\frametitle{Problem 12-2, Radix trees} 
+
+$\{0,011,100,10,1011\}$
+
+\includegraphics[width=0.5\textwidth]{Fig-12-5.pdf}
+
+
+\bi
+\ii $a=a_0a_1\ldots a_p$ is \textbf{lexicographically less than}
+$b=b_0b_1\ldots b_q$:
+  \begin{enumerate}
+  \item
+    there exists and integer $j$, where $0\leq j \leq\min(p,q)$,
+  such that\\ $a_i=b_i$ for all $i=0,1,\ldots,j-1$ and $a_j<b_j$, or
+\item
+  $p<q$ and $a_i=b_i$ for all $i=0,1,\ldots,p$.
+  \end{enumerate}
+
+  \ii Show that
+  a set $S$ of bit strings can be sorted lexicographically
+in $\Theta(n)$ time,\\ where $n$ is the sum of the lengths of the
+strings in $S$.
+\ei
+

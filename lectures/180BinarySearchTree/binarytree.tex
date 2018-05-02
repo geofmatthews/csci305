@@ -1,6 +1,6 @@
-\documentclass[landscape]{article}
+\documentclass{beamer}
 \usepackage{multicol}
-\usepackage[margin=1in]{geometry}
+
 \usepackage{clrscode3e}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -15,18 +15,20 @@
 \newcommand{\flr}[1]{\ensuremath{\left\lfloor#1\right\rfloor}}
 \newcommand{\ceil}[1]{\ensuremath{\left\lceil#1\right\rceil}}
 
-\newcommand{\sect}[1]{\newpage{\textbf{#1}}}
+\newcommand{\sect}[1]{
+\section{#1}
+\begin{frame}[fragile]\frametitle{#1}
+}
 
-\setlength{\parindent}{0in}
 
 \newcommand{\nop}[1]{}
 
 \title{Notes on Binary Search Trees}
 \author{Geoffrey Matthews}
 \begin{document}
+\begin{frame}
 \maketitle
-\titlepage
-\huge
+\end{frame}
 
 
 \sect{Search Trees}
@@ -46,6 +48,8 @@
 \ei
 \ei
 
+\end{frame}
+
 \sect{Binary search trees}
 \bi
 \ii Many dynamic-set operations in $O(h)$ time, where $h = $ height of
@@ -62,6 +66,8 @@ node is an object.
 \ei
 \ei
 
+\end{frame}
+
 \sect{Binary search tree property}
 \bi
 \ii If $y$ is in the left subtree of $x$, then $y.key \leq x.key$
@@ -73,7 +79,9 @@ node is an object.
 
 \bi\ii Frequently we assume keys are unique.\ei
 
-\newpage
+\end{frame}
+\sect{Inorder-Tree-Walk}
+
 \begin{codebox}
   \Procname{$\proc{Inorder-Tree-Walk}(x)$}
   \li \If $x \not\isequal \const{nil}$ \Do
@@ -92,7 +100,8 @@ $\Theta(n)$, because we visit and print each node once.
 in book.\ei
 \ei
 
-\newpage
+\end{frame}
+\sect{Tree-Search}
 \begin{codebox}
   \Procname{$\proc{Tree-Search}(x,k)$}
   \li \If $x \isequal \const{nil}$ or $k\isequal\attrib{x}{key}$ \Do
@@ -102,6 +111,7 @@ in book.\ei
   \li \Else \Return $\proc{Tree-Search}(\attrib{x}{right}, k)$ \End
 \end{codebox}
 
+\begin{multicols}{2}
 \includegraphics[width=0.5\textwidth]{Fig-12-2.pdf}
 
 \bi
@@ -109,6 +119,9 @@ in book.\ei
 root.
 \ii Time: $O(h)$ where $h$ is the height of the tree.
 \ei
+\end{multicols}
+
+\end{frame}
 
 \sect{Iterative version}
 
@@ -137,7 +150,10 @@ root.
 
 \bi\ii Tail recursion is easy to eliminate.\ei
 
+\end{frame}
+
 \sect{Minimum and maximum}
+\footnotesize
 
 \begin{multicols}{2}
 \begin{codebox}
@@ -180,7 +196,10 @@ root.
 \ei
 
 
+\end{frame}
+
 \sect{Successor and predecessor}
+\footnotesize
 \bi
 \ii Assume all keys are distinct.
 \ii The successor of a node $x$
@@ -196,9 +215,10 @@ $>\attrib{x}{key}$.\ei
  move up the tree until the first right turn.
 \end{enumerate}
 \ei
+\begin{multicols}{2}
 \includegraphics[width=0.45\textwidth]{Fig-12-2.pdf}
 
-\begin{codebox}
+  \begin{codebox}
   \Procname{$\proc{Tree-Successor}(x)$}
   \li \If $\attrib{x}{right} \not\isequal \const{nil}$ \Do
   \li \Return $\proc{Tree-Minimum}(\attrib{x}{right})$ \End
@@ -209,7 +229,8 @@ $>\attrib{x}{key}$.\ei
   \li $y\gets \attrib{y}{p}$\End
   \li \Return $y$
 \end{codebox}
-\includegraphics[width=0.4\textwidth]{Fig-12-2.pdf}
+
+\end{multicols}
 
 
 \vfill
@@ -248,9 +269,11 @@ $>\attrib{x}{key}$.\ei
 to sort.
 \ei
 
-\sect{Recursive tree insert}
+\end{frame}
 
-\begin{minipage}{0.6\textwidth}
+\sect{Recursive tree insert}
+\footnotesize
+\begin{multicols}{2}
 \begin{codebox}
   \Procname{$\proc{Tree-Insert-Rec}(T,z)$}
   \li $\attrib{T}{root} \gets \proc{Node-Insert}(\attrib{T}{root}, z)$
@@ -267,17 +290,22 @@ to sort.
 \End
 \li \Return $x$
 \end{codebox}
-\end{minipage}
-\hspace{-1cm}\includegraphics[width=0.5\textwidth]{Fig-12-3.pdf}
+
+\includegraphics[width=0.5\textwidth]{Fig-12-3.pdf}
+\end{multicols}
+\end{frame}
 
 \sect{Deletion}
-
+\begin{multicols}{2}
+  \scriptsize
 To delete node $z$ from tree $T$:
-\begin{enumerate}
-  \ii If $z$ has no children, just remove it.
-  \ii If $z$ has just one child, then make that child take $z$'s
-  position in the tree, dragging the child's subtrees along.
-  \ii If $z$ has two children, then
+
+(a) If $z$ has no children, just remove it.
+
+(b) If $z$ has just one child, then make that child take $z$'s
+  position in the tree.
+
+(c) If $z$ has two children, then
   \bi
   \ii Find $z$'s successor $y$.
   \ii $y$ must be in $z$'s right subtree and have no left child.
@@ -288,22 +316,24 @@ To delete node $z$ from tree $T$:
   one child.
   \ii $z$'s right subtree (now without $y$) becomes $y$'s right subtree.
   \ii $z$'s left child becomes $y$'s left child.
-  \bi
-  \ii This case is tricky when $y$ is $z$'s right child.
   \ei
-  \ei
-\end{enumerate}
 
+\columnbreak
 
-\includegraphics[height=\textheight]{Fig-12-4.pdf}
+\includegraphics[height=0.6\textheight]{Fig-12-4.pdf}
+\end{multicols}
+
+\end{frame}
 
 \sect{Transplant}
+\footnotesize
 
-\bi
-\ii \textsc{Transplant}$(T,u,v)$ replaces the subtree rooted at $u$
+
+\textsc{Transplant}$(T,u,v)$ replaces the subtree rooted at $u$
 with the subtree rooted at $v$.
-\ei
 
+\begin{multicols}{2}
+  
 \begin{codebox}
   \Procname{$\proc{Transplant}(T,u,v)$}
     \li\If $\attrib{u}{p} \isequal \const{nil}$ \Do
@@ -316,7 +346,7 @@ with the subtree rooted at $v$.
     \End
 \end{codebox}
 
-
+\columnbreak
 
 \begin{codebox}
   \Procname{$\proc{Tree-Delete}(T,z)$}
@@ -336,16 +366,23 @@ with the subtree rooted at $v$.
   \End
 \end{codebox}
 
+\end{multicols}
+
 \vfill
 
 \bi\ii$O(h)$\ei
 
-\vfill
+
+
+\end{frame}
 
 \sect{Theorem 12.4}
 
 The expected height of a randomly built binary search tree on
 $n$ distinct keys is $O(\lg n)$.
+
+\vfill
+Proof in text.
 
 \vfill
 
@@ -356,6 +393,8 @@ in worst case.
 
 \vfill
 
+\end{frame}
+
 \sect{Problem 12-2, Radix trees}
 
 $\{0,011,100,10,1011\}$
@@ -364,7 +403,7 @@ $\{0,011,100,10,1011\}$
 
 
 \bi
-\ii $a=a_0a_1\ldots a_p$ is \textbf{lexicolgraphically less than}
+\ii $a=a_0a_1\ldots a_p$ is \textbf{lexicographically less than}
 $b=b_0b_1\ldots b_q$: 
   \begin{enumerate}
   \item
@@ -374,9 +413,12 @@ $b=b_0b_1\ldots b_q$:
   $p<q$ and $a_i=b_i$ for all $i=0,1,\ldots,p$.
   \end{enumerate}
 
-\ii A set $S$ of bit strings can be sorted lexicographically
+  \ii Show that
+  a set $S$ of bit strings can be sorted lexicographically
 in $\Theta(n)$ time,\\ where $n$ is the sum of the lengths of the
 strings in $S$.
 \ei
+
+\end{frame}
 
 \end{document}

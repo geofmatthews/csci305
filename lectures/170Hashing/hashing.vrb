@@ -1,18 +1,2 @@
-\frametitle{Analysis of open address hashing, successful search} 
-
-{\bf Theorem 11.8}
-
-Assuming uniform hashing and every key is equally likely,
-in an open-address hash table with load factor $\alpha < 1$
-the expected number of probes in a successful search is at most
-\[
-\frac{1}{\alpha}\ln\frac{1}{1-\alpha}
-\]
-
-\bi
-\ii If $\alpha = 0.5$, then we expect less than 1.387 probes on
-average.
-\ii If $\alpha = 0.9$, then we expect less than 2.559 probes on
-average.
-\ei
-
+\frametitle{Perfect hashing} 
+\includegraphics[width=\textwidth]{Fig-11-6.pdf}

@@ -56,17 +56,17 @@
 \headcommand {\beamer@subsectionpages {11}{11}}
 \headcommand {\slideentry {11}{0}{1}{12/12}{}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\sectionentry {12}{Implementation of heap with chaining}{13}{Implementation of heap with chaining}{0}}
+\headcommand {\sectionentry {12}{Implementation of hash table with chaining}{13}{Implementation of hash table with chaining}{0}}
 \headcommand {\beamer@sectionpages {12}{12}}
 \headcommand {\beamer@subsectionpages {12}{12}}
 \headcommand {\slideentry {12}{0}{1}{13/13}{}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\sectionentry {13}{Implementation of heap with chaining}{14}{Implementation of heap with chaining}{0}}
+\headcommand {\sectionentry {13}{Implementation of hash table with chaining}{14}{Implementation of hash table with chaining}{0}}
 \headcommand {\beamer@sectionpages {13}{13}}
 \headcommand {\beamer@subsectionpages {13}{13}}
 \headcommand {\slideentry {13}{0}{1}{14/14}{}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\sectionentry {14}{Implementation of heap with chaining}{15}{Implementation of heap with chaining}{0}}
+\headcommand {\sectionentry {14}{Implementation of hash table with chaining}{15}{Implementation of hash table with chaining}{0}}
 \headcommand {\beamer@sectionpages {14}{14}}
 \headcommand {\beamer@subsectionpages {14}{14}}
 \headcommand {\slideentry {14}{0}{1}{15/15}{}{0}}
@@ -131,7 +131,7 @@
 \headcommand {\beamer@subsectionpages {26}{26}}
 \headcommand {\slideentry {26}{0}{1}{27/27}{}{0}}
 \headcommand {\beamer@framepages {27}{27}}
-\headcommand {\sectionentry {27}{Multiplication method for hash functions}{28}{Multiplication method for hash functions}{0}}
+\headcommand {\sectionentry {27}{Division method example}{28}{Division method example}{0}}
 \headcommand {\beamer@sectionpages {27}{27}}
 \headcommand {\beamer@subsectionpages {27}{27}}
 \headcommand {\slideentry {27}{0}{1}{28/28}{}{0}}
@@ -141,93 +141,133 @@
 \headcommand {\beamer@subsectionpages {28}{28}}
 \headcommand {\slideentry {28}{0}{1}{29/29}{}{0}}
 \headcommand {\beamer@framepages {29}{29}}
-\headcommand {\sectionentry {29}{Open addressing}{30}{Open addressing}{0}}
+\headcommand {\sectionentry {29}{Easy implementation of: $ h(k) = \delimiter "4262304 m (kA \unhbox \voidb@x \hbox { mod } 1)\delimiter "5263305 $}{30}{Easy implementation of: $ h(k) = \delimiter "4262304 m (kA \unhbox \voidb@x \hbox { mod } 1)\delimiter "5263305 $}{0}}
 \headcommand {\beamer@sectionpages {29}{29}}
 \headcommand {\beamer@subsectionpages {29}{29}}
 \headcommand {\slideentry {29}{0}{1}{30/30}{}{0}}
 \headcommand {\beamer@framepages {30}{30}}
-\headcommand {\sectionentry {30}{Open addressing}{31}{Open addressing}{0}}
+\headcommand {\sectionentry {30}{Easy implementation of: $ h(k) = \delimiter "4262304 m (kA \unhbox \voidb@x \hbox { mod } 1)\delimiter "5263305 $}{31}{Easy implementation of: $ h(k) = \delimiter "4262304 m (kA \unhbox \voidb@x \hbox { mod } 1)\delimiter "5263305 $}{0}}
 \headcommand {\beamer@sectionpages {30}{30}}
 \headcommand {\beamer@subsectionpages {30}{30}}
 \headcommand {\slideentry {30}{0}{1}{31/31}{}{0}}
 \headcommand {\beamer@framepages {31}{31}}
-\headcommand {\sectionentry {31}{Hash insertion and search, open addressing}{32}{Hash insertion and search, open addressing}{0}}
+\headcommand {\sectionentry {31}{Example computation of: $ h(k) = \delimiter "4262304 m (kA \unhbox \voidb@x \hbox { mod } 1)\delimiter "5263305 $}{32}{Example computation of: $ h(k) = \delimiter "4262304 m (kA \unhbox \voidb@x \hbox { mod } 1)\delimiter "5263305 $}{0}}
 \headcommand {\beamer@sectionpages {31}{31}}
 \headcommand {\beamer@subsectionpages {31}{31}}
 \headcommand {\slideentry {31}{0}{1}{32/32}{}{0}}
 \headcommand {\beamer@framepages {32}{32}}
-\headcommand {\sectionentry {32}{Hash deletion, open addressing}{33}{Hash deletion, open addressing}{0}}
+\headcommand {\sectionentry {32}{Multiplication method for hash functions}{33}{Multiplication method for hash functions}{0}}
 \headcommand {\beamer@sectionpages {32}{32}}
 \headcommand {\beamer@subsectionpages {32}{32}}
 \headcommand {\slideentry {32}{0}{1}{33/33}{}{0}}
 \headcommand {\beamer@framepages {33}{33}}
-\headcommand {\sectionentry {33}{Uniform hashing with open addressing}{34}{Uniform hashing with open addressing}{0}}
+\headcommand {\sectionentry {33}{Universal hashing---randomized hashing}{34}{Universal hashing---randomized hashing}{0}}
 \headcommand {\beamer@sectionpages {33}{33}}
 \headcommand {\beamer@subsectionpages {33}{33}}
 \headcommand {\slideentry {33}{0}{1}{34/34}{}{0}}
 \headcommand {\beamer@framepages {34}{34}}
-\headcommand {\sectionentry {34}{Linear probing}{35}{Linear probing}{0}}
+\headcommand {\sectionentry {34}{Universal hashing}{35}{Universal hashing}{0}}
 \headcommand {\beamer@sectionpages {34}{34}}
 \headcommand {\beamer@subsectionpages {34}{34}}
-\headcommand {\slideentry {34}{0}{1}{35/36}{}{0}}
-\headcommand {\beamer@framepages {35}{36}}
-\headcommand {\sectionentry {35}{Quadratic probing}{37}{Quadratic probing}{0}}
-\headcommand {\beamer@sectionpages {35}{36}}
-\headcommand {\beamer@subsectionpages {35}{36}}
-\headcommand {\slideentry {35}{0}{1}{37/37}{}{0}}
+\headcommand {\slideentry {34}{0}{1}{35/35}{}{0}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\sectionentry {35}{Open addressing}{36}{Open addressing}{0}}
+\headcommand {\beamer@sectionpages {35}{35}}
+\headcommand {\beamer@subsectionpages {35}{35}}
+\headcommand {\slideentry {35}{0}{1}{36/36}{}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\sectionentry {36}{Open addressing}{37}{Open addressing}{0}}
+\headcommand {\beamer@sectionpages {36}{36}}
+\headcommand {\beamer@subsectionpages {36}{36}}
+\headcommand {\slideentry {36}{0}{1}{37/37}{}{0}}
 \headcommand {\beamer@framepages {37}{37}}
-\headcommand {\sectionentry {36}{Double hashing}{38}{Double hashing}{0}}
+\headcommand {\sectionentry {37}{Hash insertion and search, open addressing}{38}{Hash insertion and search, open addressing}{0}}
 \headcommand {\beamer@sectionpages {37}{37}}
 \headcommand {\beamer@subsectionpages {37}{37}}
-\headcommand {\slideentry {36}{0}{1}{38/38}{}{0}}
+\headcommand {\slideentry {37}{0}{1}{38/38}{}{0}}
 \headcommand {\beamer@framepages {38}{38}}
-\headcommand {\sectionentry {37}{Double hashing}{39}{Double hashing}{0}}
+\headcommand {\sectionentry {38}{Hash deletion, open addressing}{39}{Hash deletion, open addressing}{0}}
 \headcommand {\beamer@sectionpages {38}{38}}
 \headcommand {\beamer@subsectionpages {38}{38}}
-\headcommand {\slideentry {37}{0}{1}{39/39}{}{0}}
+\headcommand {\slideentry {38}{0}{1}{39/39}{}{0}}
 \headcommand {\beamer@framepages {39}{39}}
-\headcommand {\sectionentry {38}{Analysis of open-address hashing, unsuccessful search}{40}{Analysis of open-address hashing, unsuccessful search}{0}}
+\headcommand {\sectionentry {39}{Uniform hashing with open addressing}{40}{Uniform hashing with open addressing}{0}}
 \headcommand {\beamer@sectionpages {39}{39}}
 \headcommand {\beamer@subsectionpages {39}{39}}
-\headcommand {\slideentry {38}{0}{1}{40/40}{}{0}}
+\headcommand {\slideentry {39}{0}{1}{40/40}{}{0}}
 \headcommand {\beamer@framepages {40}{40}}
-\headcommand {\sectionentry {39}{Probability that $i$ probes find occupied slot}{41}{Probability that $i$ probes find occupied slot}{0}}
+\headcommand {\sectionentry {40}{Linear probing}{41}{Linear probing}{0}}
 \headcommand {\beamer@sectionpages {40}{40}}
 \headcommand {\beamer@subsectionpages {40}{40}}
-\headcommand {\slideentry {39}{0}{1}{41/41}{}{0}}
-\headcommand {\beamer@framepages {41}{41}}
-\headcommand {\sectionentry {40}{Expected number of probes in unsuccessful search}{42}{Expected number of probes in unsuccessful search}{0}}
-\headcommand {\beamer@sectionpages {41}{41}}
-\headcommand {\beamer@subsectionpages {41}{41}}
-\headcommand {\slideentry {40}{0}{1}{42/42}{}{0}}
-\headcommand {\beamer@framepages {42}{42}}
-\headcommand {\sectionentry {41}{Analysis of open-address hashing, unsuccessful search}{43}{Analysis of open-address hashing, unsuccessful search}{0}}
-\headcommand {\beamer@sectionpages {42}{42}}
-\headcommand {\beamer@subsectionpages {42}{42}}
+\headcommand {\slideentry {40}{0}{1}{41/42}{}{0}}
+\headcommand {\beamer@framepages {41}{42}}
+\headcommand {\sectionentry {41}{Quadratic probing}{43}{Quadratic probing}{0}}
+\headcommand {\beamer@sectionpages {41}{42}}
+\headcommand {\beamer@subsectionpages {41}{42}}
 \headcommand {\slideentry {41}{0}{1}{43/43}{}{0}}
 \headcommand {\beamer@framepages {43}{43}}
-\headcommand {\sectionentry {42}{Expected number of probes for {\sc Hash-Insert}}{44}{Expected number of probes for {\sc Hash-Insert}}{0}}
+\headcommand {\sectionentry {42}{Double hashing}{44}{Double hashing}{0}}
 \headcommand {\beamer@sectionpages {43}{43}}
 \headcommand {\beamer@subsectionpages {43}{43}}
 \headcommand {\slideentry {42}{0}{1}{44/44}{}{0}}
 \headcommand {\beamer@framepages {44}{44}}
-\headcommand {\sectionentry {43}{Analysis of open address hashing, successful search}{45}{Analysis of open address hashing, successful search}{0}}
+\headcommand {\sectionentry {43}{Double hashing}{45}{Double hashing}{0}}
 \headcommand {\beamer@sectionpages {44}{44}}
 \headcommand {\beamer@subsectionpages {44}{44}}
 \headcommand {\slideentry {43}{0}{1}{45/45}{}{0}}
 \headcommand {\beamer@framepages {45}{45}}
-\headcommand {\sectionentry {44}{Averaging over the $n$ keys in the table:}{46}{Averaging over the $n$ keys in the table:}{0}}
+\headcommand {\sectionentry {44}{Analysis of open-address hashing, unsuccessful search}{46}{Analysis of open-address hashing, unsuccessful search}{0}}
 \headcommand {\beamer@sectionpages {45}{45}}
 \headcommand {\beamer@subsectionpages {45}{45}}
 \headcommand {\slideentry {44}{0}{1}{46/46}{}{0}}
 \headcommand {\beamer@framepages {46}{46}}
-\headcommand {\sectionentry {45}{Analysis of open address hashing, successful search}{47}{Analysis of open address hashing, successful search}{0}}
+\headcommand {\sectionentry {45}{Probability that $i$ probes find occupied slot}{47}{Probability that $i$ probes find occupied slot}{0}}
 \headcommand {\beamer@sectionpages {46}{46}}
 \headcommand {\beamer@subsectionpages {46}{46}}
 \headcommand {\slideentry {45}{0}{1}{47/47}{}{0}}
 \headcommand {\beamer@framepages {47}{47}}
-\headcommand {\beamer@partpages {1}{47}}
-\headcommand {\beamer@subsectionpages {47}{47}}
+\headcommand {\sectionentry {46}{Expected number of probes in unsuccessful search}{48}{Expected number of probes in unsuccessful search}{0}}
 \headcommand {\beamer@sectionpages {47}{47}}
-\headcommand {\beamer@documentpages {47}}
-\headcommand {\def \inserttotalframenumber {46}}
+\headcommand {\beamer@subsectionpages {47}{47}}
+\headcommand {\slideentry {46}{0}{1}{48/48}{}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\sectionentry {47}{Analysis of open-address hashing, unsuccessful search}{49}{Analysis of open-address hashing, unsuccessful search}{0}}
+\headcommand {\beamer@sectionpages {48}{48}}
+\headcommand {\beamer@subsectionpages {48}{48}}
+\headcommand {\slideentry {47}{0}{1}{49/49}{}{0}}
+\headcommand {\beamer@framepages {49}{49}}
+\headcommand {\sectionentry {48}{Expected number of probes for {\sc Hash-Insert}}{50}{Expected number of probes for {\sc Hash-Insert}}{0}}
+\headcommand {\beamer@sectionpages {49}{49}}
+\headcommand {\beamer@subsectionpages {49}{49}}
+\headcommand {\slideentry {48}{0}{1}{50/50}{}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\sectionentry {49}{Analysis of open address hashing, successful search}{51}{Analysis of open address hashing, successful search}{0}}
+\headcommand {\beamer@sectionpages {50}{50}}
+\headcommand {\beamer@subsectionpages {50}{50}}
+\headcommand {\slideentry {49}{0}{1}{51/51}{}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\sectionentry {50}{Averaging over the $n$ keys in the table:}{52}{Averaging over the $n$ keys in the table:}{0}}
+\headcommand {\beamer@sectionpages {51}{51}}
+\headcommand {\beamer@subsectionpages {51}{51}}
+\headcommand {\slideentry {50}{0}{1}{52/52}{}{0}}
+\headcommand {\beamer@framepages {52}{52}}
+\headcommand {\sectionentry {51}{Analysis of open address hashing, successful search}{53}{Analysis of open address hashing, successful search}{0}}
+\headcommand {\beamer@sectionpages {52}{52}}
+\headcommand {\beamer@subsectionpages {52}{52}}
+\headcommand {\slideentry {51}{0}{1}{53/53}{}{0}}
+\headcommand {\beamer@framepages {53}{53}}
+\headcommand {\sectionentry {52}{Perfect hashing}{54}{Perfect hashing}{0}}
+\headcommand {\beamer@sectionpages {53}{53}}
+\headcommand {\beamer@subsectionpages {53}{53}}
+\headcommand {\slideentry {52}{0}{1}{54/54}{}{0}}
+\headcommand {\beamer@framepages {54}{54}}
+\headcommand {\sectionentry {53}{Perfect hashing}{55}{Perfect hashing}{0}}
+\headcommand {\beamer@sectionpages {54}{54}}
+\headcommand {\beamer@subsectionpages {54}{54}}
+\headcommand {\slideentry {53}{0}{1}{55/55}{}{0}}
+\headcommand {\beamer@framepages {55}{55}}
+\headcommand {\beamer@partpages {1}{55}}
+\headcommand {\beamer@subsectionpages {55}{55}}
+\headcommand {\beamer@sectionpages {55}{55}}
+\headcommand {\beamer@documentpages {55}}
+\headcommand {\def \inserttotalframenumber {54}}

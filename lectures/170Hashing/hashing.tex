@@ -4,6 +4,7 @@
 \usepackage{clrscode3e}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{tikz}
 
 \newcommand{\bi}{\begin{itemize}}
 \newcommand{\ii}{\item}
@@ -182,7 +183,7 @@ happen.
 
 \end{frame}
 
-\sect{Implementation of heap with chaining}
+\sect{Implementation of hash table with chaining}
 
   \begin{codebox}
     \Procname{Chained-Hash-Insert$(T,x)$}
@@ -197,7 +198,7 @@ happen.
 
 \end{frame}
 
-\sect{Implementation of heap with chaining}
+\sect{Implementation of hash table with chaining}
 
   \begin{codebox}
     \Procname{Chained-Hash-Search$(T,k)$}
@@ -209,7 +210,7 @@ happen.
 
 \end{frame}
 
-\sect{Implementation of heap with chaining}
+\sect{Implementation of hash table with chaining}
 
   \begin{codebox}
     \Procname{Chained-Hash-Delete$(T,x)$}
@@ -399,18 +400,21 @@ all dictionary operations take average time $O(1)$.
 \ii Ideally, satisfies the assumption of simple uniform hashing.
 \ii In practice, impossible since we don't know the
 distribution of input keys.
-\ii In practice, many functions work OK.
+\ii Often use heuristics, based on the domain of the keys,
+to create hash functions that work well.
 \ei
 
 \end{frame}
 
 \sect{Keys as natural numbers}
 \bi
+\ii Hash functions usually assume keys are natural numbers.
 \ii Can interpret any computer data as natural number.
+\ii Interpret as radix $2^p$ number.
 \ii Strings, for example: \textsc{CLRS}
 \bi
 \ii ASCII: 67, 76, 82, 83
-\ii There are 128 ASCII values
+\ii There are 128 ASCII values, use radix $2^7$:
 \ii $h(\textsc{CLRS}) = 67(128^3) + 76(128^2) + 82(128^1) + 83(128^0) = 141,764,947$
 \ei
 \ei
@@ -420,42 +424,150 @@ distribution of input keys.
 \sect{Division method for hash functions}
 \[ h(k) = k \mbox{ mod } m \]
 \bi
-\ii Fast
+\ii Example:  $m=20$ and $k=91 \Rightarrow h(k) = 11$
+\ii Fast: requires only one division.
+\ii Bad ideas:
+\bi
 \ii Powers of 2 are bad values for $m$:\\ just uses least significant bits.
-\ii Good choice for $m$:\\  prime number not too close to a power of 2.
-\ii Example:
+\ii If $k$ is a character string interpreted as radix $2^p$ number,
+then $m=2^p-1$ is bad:  permuting characters does not change hash value.
+\ei
+\ii Good choice for $m$:\\  Prime number not too close to a power of 2.
+\ei
+\end{frame}
+
+\sect{Division method example}
 \bi
 \ii Store $n \approx 2000$ character strings.
 \ii Don't mind searching 3 strings per unsuccessful search.
 \ii Choose $m=701$.
 \ii This is a prime near $2000/3$ but not near any power of 2.
 \ei
-\ei
+
 
 \end{frame}
 
 \sect{Multiplication method for hash functions}
-\begin{align*}
-  h(k) &= \lfloor m ((kA) \mbox{ mod } 1)\rfloor
-  & 0 < A < 1\\
-  && m = 2^p
-\end{align*}
-\vfill
 
-\includegraphics[height=0.5\textheight]{Fig-11-4.pdf}
+  \begin{enumerate}
+  \ii Choose $0 < A < 1$
+  \ii Multiply $k$ by $A$
+  \ii Extract the fractional part
+  \ii Multiply by $m$
+  \ii Take the floor.
+  \end{enumerate}
+
+\begin{align*}
+  h(k) &= \lfloor m (kA \mbox{ mod } 1)\rfloor
+\end{align*}
+where
+\[
+kA\mod 1 = kA-\lfloor kA\rfloor
+\]
+gives the fractional part.
 
 \end{frame}
+
+\sect{Easy implementation of: $  h(k) = \lfloor m (kA \mbox{ mod } 1)\rfloor$}
+\includegraphics[scale=0.12]{Fig-11-4.pdf}
+
+\bi
+\ii Choose $m=2^p$.
+\ii Let word size be $w$ bits.
+\ii Assume $k$ fits in a single word.
+\ii Let $s$ be an integer in the range $0<s<2^w$.
+\ii Let $A$ be $s/2^w$.
+\ei
+\end{frame}
+
+\sect{Easy implementation of: $  h(k) = \lfloor m (kA \mbox{ mod } 1)\rfloor$}
+\includegraphics[scale=0.12]{Fig-11-4.pdf}
+
+\bi
+\ii Multiply $k$ by $s$.
+\ii Result is $2w$ bits.
+\ii We can ignore $r_1$, since $r_0$ is the fractional part.
+\ii Multiplying by $m=2^p$ just shifts $r_0$ left $p$ places.
+\ii Instead, just take the $p$ most significant bits of $r_0$.
+\ei
+\end{frame}
+
+\sect{Example computation of: $  h(k) = \lfloor m (kA \mbox{ mod } 1)\rfloor$}
+
+\bi
+\ii Choose $m=2^3=8$, $w=5$, $k=21$.
+\ii Choose $0 < s < 2^5$, s = 13, therefore $A = 13/32$.
+\ei
+\hrulefill
+\bi
+\ii $kA = 21(13/32) = 273/32 = 8\frac{17}{32}$
+\ii $kA\mod 1 = 17/32$
+\ii $m(kA\mod 1) = 8(17/32) = 17/4 = 4\frac{1}{4}$
+\ii $\lfloor m(kA\mod 1)\rfloor = 4 = h(k)$
+\ei
+\hrulefill
+\begin{multicols}{2}
+  \bi
+  \ii $ks = 21(13) = 273 = 8(2^5) + 17$
+  \ii $r_1 = 8$, $r_0=17 = 10001_b$.
+  \ii $p=3$ most significant bits is $100_b = 4$.
+  
+  \ei
+\columnbreak
+\includegraphics[scale=0.08]{Fig-11-4.pdf}
+\end{multicols}
+
+\end{frame}
+
+
 \sect{Multiplication method for hash functions}
   \[h(k) = \lfloor m ((kA) \mbox{ mod } 1)\rfloor\]
 \bi
-\ii Slower than division method.
-\ii Value of $m$ is not critical.
-\bi\ii Can even use $m=2^p$\ei 
-\ii Knuth suggests a good value for $A$:
+\ii Disadvantage: slower than division method.
+\ii Advantage: value of $m$ is not critical, $2^p$ a good choice.
+\ii Knuth suggests a value for $A$:
 \[\frac{\sqrt{5} -1}{2} = 0.6180339887... \]
+\ii  Look up the Golden Ratio.
 \ei
-
+\hfill\tikz[overlay]\node{\makebox{\includegraphics[scale=0.25]{monalisa}}};
+\vfill
 \end{frame}
+
+
+\sect{Universal hashing---randomized hashing}
+\bi
+\ii For any hash function, the world {\em could} give us
+keys that all hash to the same spot.  If the world was very, very mean.
+
+\ii To randomize this, choose a hash function randomly from a
+collection of hash functions, each time the program starts.
+
+\ii A collection of hash functions, $\mathcal{H}$ that map a universe
+$U$ into keys $0\leq k < m$ is called {\bf universal} if
+for each pair, $k,\ell\in U$, $k\neq \ell$, 
+\[
+\mbox{Pr}_{h\in \mathcal{H}} \{h(k) = h(\ell)\} \leq \frac{1}{m}
+\]
+
+\ii In other words, the chance of a collision between $k$ and $\ell$
+is no more than $1/m$, when $h$ is chosen at random from $\mathcal{H}$.
+\ii Such collections of hash functions are easy to design.
+
+\ei
+\end{frame}
+\sect{Universal hashing}
+Using chaining and universal hashing on key $k$:
+\bi
+\ii If $k$ is not in the table,
+\[ E[n_{h(k)}] \leq \alpha \]
+\ii If $k$ is in the table,
+\[ E[n_{h(k)}] \leq 1 + \alpha \]
+\ii
+So the expected time for {\sc Search} is $O(1)$.
+\ei
+\end{frame}
+
+
 
 \sect{Open addressing}
 
@@ -773,10 +885,30 @@ average.
 
 \end{frame}
 
+\sect{Perfect hashing}
 
-%\sect{Perfect hashing}
-%\includegraphics[width=\textwidth]{Fig-11-6.pdf}
-%\end{frame}
+\bi
+\ii In some applications the keys are static:
+\bi
+\ii Reserved words in a programming language.
+\ii File names on a write-only CD-rom.
+\ei
+\ii In this case we can guarantee {\bf worst-case} $O(1)$.
+\ii Use a double hashing scheme.
+\ii Choose a good primary $h$ from a universal hash, $\mathcal{H}$.
+\ii For each slot $j$, choose a $h_j$ into a secondary hash table, $S_j$.
+\ii If size of $S_j$ is proportional to $n_j^2$, we can find
+$h_j$ with no collisions.
+\ii If we choose $h$ carefully, expected
+size of all secondary hash tables is
+still $O(n)$.
+\ei
+
+\end{frame}
+
+\sect{Perfect hashing}
+\includegraphics[width=\textwidth]{Fig-11-6.pdf}
+\end{frame}
 
 
 
