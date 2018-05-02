@@ -175,24 +175,28 @@ Proof by induction on $h$:
 \end{codebox}
 \columnbreak
 
-{\footnotesize
+{\small
 
-{\bf A:}\begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
+{\bf A:}\\\begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
  $2_1$ & $5_1$ & $3_1$ & $0_1$ & $2_2$ & $3_2$ & $0_2$ & $3_3$ \\\hline
 \end{tabular}\\
 
-After second {\bf for} loop:\\
-{\bf C:}\begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
+\vspace{1.25cm}
+
+After {\bf for} loop of lines 4-5:\\
+{\bf C:} \begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
  2 & 0 & 2 & 3 & 0 & 1\\\hline
-  \end{tabular}\\
+  \end{tabular}
 
+\vspace{0.5cm}
 
-After third {\bf for} loop:\\
-{\bf C:}\begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
+After {\bf for} loop of lines 6-7:\\
+{\bf C:} \begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
  2 & 2 & 4 & 7 & 7 & 8\\\hline
   \end{tabular}
 
 }
+
 \end{multicols}
 \end{frame}
 
@@ -214,16 +218,21 @@ After third {\bf for} loop:\\
 \end{codebox}
 \columnbreak
 
-{\footnotesize
+{\small
 
 {\bf A:}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
  $2_1$ & $5_1$ & $3_1$ & $0_1$ & $2_2$ & $3_2$ & $0_2$ & $3_3$ \\\hline
-\end{tabular}\\
+\end{tabular}
 
-{\bf C:}\begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
+\vfill
+
+{\bf C:}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
  2 & 2 & 4 & 7 & 7 & 8\\\hline
-  \end{tabular}\\
+  \end{tabular}
+
+\vfill
 
 {\bf B:}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
@@ -296,6 +305,7 @@ in output as in input.
 \vfill
 \bi
 \ii Sort on each digit individually.
+\ii Start with least significant digit.
 \ii Must use a stable sort subroutine.
 \ii Subroutine only works on a small range of numbers.
 \ei
@@ -389,13 +399,16 @@ Example: 32-bit words, 8-bit digits.
 \ii Balance $b/r$ and $n+2^r$.
 \ii Choosing $r \approx \lg n$ gives
 \[
-\Theta\left(\frac{b}{\lg n}(n+n)\right) = \Theta(bn/\lg n)
+\Theta\left(\frac{b}{\lg n}(n+n)\right) = \Theta\left(\frac{bn}{\lg n}\right)
 \]
-\ii If we choose $r < \lg n$ then $b/r > b/\lg n$ and $n+2^r$ doesn't
-improve.
+\ii If we choose $r < \lg n$ then $\frac{b}{r} > \frac{b}{\lg n}$
+and $n+2^r$ is still $\Theta(n)$.
 \ii If we choose $r > \lg n$ then $n+2^r$ term gets big.
-\ii Sort $2^{16}$ 32-bit numbers, use $r=\lg 2^{16} = 16$
-bits. $\lceil b/r \rceil = 2$ passes.
+\ii Sort $2^{16}$ 32-bit numbers:
+
+Use $r=\lg 2^{16} = 16$ bits.
+
+ $\lceil b/r \rceil = 2$ passes.
 \ei
 
 \end{frame}
@@ -404,10 +417,12 @@ bits. $\lceil b/r \rceil = 2$ passes.
 \bi
 \ii 1 million ($2^{20}$) 32-bit integers.
 \ii Radix sort: $\lceil 32/20 \rceil = 2$ passes.
+\bi
+\ii Each radix ``pass'' is 2 passes:\\
+ one to take census\\
+ one to move data
+ \ei
 \ii Merge/quick: $\lg n = 20$ passes.
-\ii Each radix ``pass'' is 2 passes:
-\bi \ii one to take census
-\ii one to move data \ei
 \ei
 
 \end{frame}
@@ -415,12 +430,14 @@ bits. $\lceil b/r \rceil = 2$ passes.
 \sect{How does radix sort violate the $\Omega(n\lg n)$ speed limit?}
 \bi
 \ii Counting sort allows us to gain information
-about keys\bi\ii other than by directly comparing 2 keys.\ei
-\ii Used keys as array indices,
-\bi\ii thus getting far more information out
+about keys other than by directly comparing two keys.
+\ii Directly comparing keys only gives one bit of information.
+\ii Using keys as array indices
+gets far more information out
 of each key.
-\ii branching factor of the decision tree is $k$
-\ei
+\ii Branching factor of the decision tree is $k$.
+\ii Choosing one of $k$ branches gets $\lceil \lg k\rceil$
+bits of information.
 \ei
 
 \end{frame}
