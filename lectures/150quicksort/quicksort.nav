@@ -75,7 +75,7 @@
 \headcommand {\beamer@subsectionpages {17}{17}}
 \headcommand {\slideentry {16}{0}{1}{18/18}{}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\sectionentry {17}{Average-case analysis of randomized quicksort}{19}{Average-case analysis of randomized quicksort}{0}}
+\headcommand {\sectionentry {17}{Quicksort}{19}{Quicksort}{0}}
 \headcommand {\beamer@sectionpages {18}{18}}
 \headcommand {\beamer@subsectionpages {18}{18}}
 \headcommand {\slideentry {17}{0}{1}{19/19}{}{0}}
@@ -85,18 +85,23 @@
 \headcommand {\beamer@subsectionpages {19}{19}}
 \headcommand {\slideentry {18}{0}{1}{20/20}{}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\sectionentry {19}{Probability $z_i$ is compared to $z_j$ }{21}{Probability $z_i$ is compared to $z_j$ }{0}}
+\headcommand {\sectionentry {19}{Average-case analysis of randomized quicksort}{21}{Average-case analysis of randomized quicksort}{0}}
 \headcommand {\beamer@sectionpages {20}{20}}
 \headcommand {\beamer@subsectionpages {20}{20}}
 \headcommand {\slideentry {19}{0}{1}{21/21}{}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\sectionentry {20}{Expected number of comparisons}{22}{Expected number of comparisons}{0}}
+\headcommand {\sectionentry {20}{Probability $z_i$ is compared to $z_j$ }{22}{Probability $z_i$ is compared to $z_j$ }{0}}
 \headcommand {\beamer@sectionpages {21}{21}}
 \headcommand {\beamer@subsectionpages {21}{21}}
 \headcommand {\slideentry {20}{0}{1}{22/22}{}{0}}
 \headcommand {\beamer@framepages {22}{22}}
-\headcommand {\beamer@partpages {1}{22}}
-\headcommand {\beamer@subsectionpages {22}{22}}
+\headcommand {\sectionentry {21}{Expected number of comparisons}{23}{Expected number of comparisons}{0}}
 \headcommand {\beamer@sectionpages {22}{22}}
-\headcommand {\beamer@documentpages {22}}
-\headcommand {\def \inserttotalframenumber {21}}
+\headcommand {\beamer@subsectionpages {22}{22}}
+\headcommand {\slideentry {21}{0}{1}{23/23}{}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\beamer@partpages {1}{23}}
+\headcommand {\beamer@subsectionpages {23}{23}}
+\headcommand {\beamer@sectionpages {23}{23}}
+\headcommand {\beamer@documentpages {23}}
+\headcommand {\def \inserttotalframenumber {22}}

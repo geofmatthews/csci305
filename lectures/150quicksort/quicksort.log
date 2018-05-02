@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  1 MAY 2018 16:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  2 MAY 2018 11:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -956,13 +956,13 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10.95> not available
 ]
 \openout4 = `quicksort.vrb'.
 
- (./quicksort.vrb <Quicksort.pdf, id=174, 138.59781pt x 65.5248pt>
+ (./quicksort.vrb <Quicksort.pdf, id=178, 138.59781pt x 65.5248pt>
 File: Quicksort.pdf Graphic file (type pdf)
 
 <use Quicksort.pdf>
 Package pdftex.def Info: Quicksort.pdf used on input line 3.
 (pdftex.def)             Requested size: 138.59746pt x 65.52463pt.
- <Merge-Sort.pdf, id=175, 290.8466pt x 78.5334pt>
+ <Merge-Sort.pdf, id=179, 290.8466pt x 78.5334pt>
 File: Merge-Sort.pdf Graphic file (type pdf)
 
 <use Merge-Sort.pdf>
@@ -979,13 +979,13 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <14.4> not available
 \openout4 = `quicksort.vrb'.
 
  (./quicksort.vrb
-<Partition.pdf, id=217, 154.3366pt x 116.1138pt>
+<Partition.pdf, id=221, 154.3366pt x 116.1138pt>
 File: Partition.pdf Graphic file (type pdf)
  <use Partition.pdf>
 Package pdftex.def Info: Partition.pdf used on input line 3.
 (pdftex.def)             Requested size: 123.46942pt x 92.89116pt.
 
-<Merge.pdf, id=218, 227.89139pt x 234.6366pt>
+<Merge.pdf, id=222, 227.89139pt x 234.6366pt>
 File: Merge.pdf Graphic file (type pdf)
  <use Merge.pdf>
 Package pdftex.def Info: Merge.pdf used on input line 5.
@@ -996,7 +996,7 @@ Package pdftex.def Info: Merge.pdf used on input line 5.
 \openout4 = `quicksort.vrb'.
 
  (./quicksort.vrb
-<Fig-7-2.pdf, id=260, 1810.765pt x 334.24875pt>
+<Fig-7-2.pdf, id=264, 1810.765pt x 334.24875pt>
 File: Fig-7-2.pdf Graphic file (type pdf)
  <use Fig-7-2.pdf>
 Package pdftex.def Info: Fig-7-2.pdf used on input line 3.
@@ -1006,7 +1006,7 @@ Package pdftex.def Info: Fig-7-2.pdf used on input line 3.
  <./Fig-7-2.pdf>]
 \openout4 = `quicksort.vrb'.
 
- (./quicksort.vrb <Fig-7-3.pdf, id=295, 2019.545pt x 1744.5175pt>
+ (./quicksort.vrb <Fig-7-3.pdf, id=299, 2019.545pt x 1744.5175pt>
 File: Fig-7-3.pdf Graphic file (type pdf)
 
 <use Fig-7-3.pdf>
@@ -1018,7 +1018,7 @@ Package pdftex.def Info: Fig-7-3.pdf used on input line 2.
 \openout4 = `quicksort.vrb'.
 
  (./quicksort.vrb
-<Fig-7-1.pdf, id=331, 1184.425pt x 2473.24pt>
+<Fig-7-1.pdf, id=335, 1184.425pt x 2473.24pt>
 File: Fig-7-1.pdf Graphic file (type pdf)
  <use Fig-7-1.pdf>
 Package pdftex.def Info: Fig-7-1.pdf used on input line 3.
@@ -1068,7 +1068,7 @@ Overfull \hbox (5.69127pt too wide) in paragraph at lines 3--6
 \openout4 = `quicksort.vrb'.
 
  (./quicksort.vrb
-<Fig-7-4.pdf, id=519, 2562.57375pt x 1669.23625pt>
+<Fig-7-4.pdf, id=523, 2562.57375pt x 1669.23625pt>
 File: Fig-7-4.pdf Graphic file (type pdf)
  <use Fig-7-4.pdf>
 Package pdftex.def Info: Fig-7-4.pdf used on input line 9.
@@ -1084,7 +1084,7 @@ Overfull \hbox (2.59091pt too wide) in paragraph at lines 9--10
 \openout4 = `quicksort.vrb'.
 
  (./quicksort.vrb
-<Fig-7-5.pdf, id=553, 3206.98125pt x 730.73pt>
+<Fig-7-5.pdf, id=557, 3206.98125pt x 730.73pt>
 File: Fig-7-5.pdf Graphic file (type pdf)
  <use Fig-7-5.pdf>
 Package pdftex.def Info: Fig-7-5.pdf used on input line 2.
@@ -1113,43 +1113,48 @@ Package pdftex.def Info: Fig-7-5.pdf used on input line 2.
  (./quicksort.vrb) [20
 
 ]
+\openout4 = `quicksort.vrb'.
+
+ (./quicksort.vrb) [21
+
+]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 359.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 359.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 359.
+(hyperref)                removing `math shift' on input line 386.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 359.
+(hyperref)                removing `subscript' on input line 386.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 359.
+(hyperref)                removing `math shift' on input line 386.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 359.
+(hyperref)                removing `math shift' on input line 386.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 386.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 386.
 
 \openout4 = `quicksort.vrb'.
 
 (./quicksort.vrb
-Overfull \hbox (31.16312pt too wide) in paragraph at lines 26--26
+Overfull \hbox (1.5282pt too wide) in paragraph at lines 27--27
 []  
  []
 
-) [21
+) [22
 
 ]
 \openout4 = `quicksort.vrb'.
 
- (./quicksort.vrb) [22
+ (./quicksort.vrb) [23
 
 ]
 \tf@nav=\write6
@@ -1161,26 +1166,26 @@ Overfull \hbox (31.16312pt too wide) in paragraph at lines 26--26
 \tf@snm=\write8
 \openout8 = `quicksort.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 404.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 404.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 432.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 432.
  (./quicksort.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 404.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 404.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 432.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 432.
 Package rerunfilecheck Info: File `quicksort.out' has not changed.
-(rerunfilecheck)             Checksum: F733E0861BC46A1D48D689447C0132CA;1159.
+(rerunfilecheck)             Checksum: A967C354646CEB086690D793EDE324B3;1205.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 404.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 432.
  ) 
 Here is how much of TeX's memory you used:
- 16977 strings out of 494827
- 320965 string characters out of 6176977
+ 16986 strings out of 494827
+ 321051 string characters out of 6176977
  391751 words of memory out of 5000000
- 19784 multiletter control sequences out of 15000+600000
- 17606 words of font info for 65 fonts, out of 8000000 for 9000
+ 19788 multiletter control sequences out of 15000+600000
+ 17018 words of font info for 63 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  48i,14n,51p,385b,555s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
@@ -1197,10 +1202,10 @@ onts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sam7.pfb>
-Output written on quicksort.pdf (22 pages, 1064649 bytes).
+Output written on quicksort.pdf (23 pages, 1066585 bytes).
 PDF statistics:
- 804 PDF objects out of 1000 (max. 8388607)
- 725 compressed objects within 8 object streams
- 65 named destinations out of 1000 (max. 500000)
- 232 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 834 PDF objects out of 1000 (max. 8388607)
+ 754 compressed objects within 8 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 240 words of extra memory for PDF output out of 10000 (max. 10000000)
 

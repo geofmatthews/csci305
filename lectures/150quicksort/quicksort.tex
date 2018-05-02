@@ -317,6 +317,33 @@ constant factor, just randomize the choice of pivot.
 
 \end{frame}
 
+\sect{Quicksort}
+
+\begin{codebox}
+  \Procname{$\proc{Quicksort}(A,p,r)$}
+  \li \If $p < r$ \Do
+  \li $q\gets \proc{Partition}(A,p,r)$
+  \li $\proc{Quicksort}(A,p,q-1)$
+  \li $\proc{Quicksort}(A,q+1,r)$
+\End
+\end{codebox}
+
+\begin{codebox}
+  \Procname{$\proc{Partition}(A,p,r)$}
+  \li $x \gets A[r]$
+  \li $i\gets p-1$
+  \li \For $j=p$ \To $r-1$ \Do
+  \li \If $A[j] \leq x$ \Do
+  \li $i \gets i+1$
+  \li exchange $A[i]$ with $A[j]$
+\End
+\End
+\li exchange $A[i+1]$ with $A[r]$
+\li \Return $i+1$
+\end{codebox}
+
+\end{frame}
+
 \sect{Average-case analysis of randomized quicksort}
 \bi
 \ii The dominant cost of the algorithm is in the calls to  \textsc{Partition}. 
@@ -340,7 +367,7 @@ $i$th smallest.
 \ii Define $Z_{ij} = \{z_i,z_{i+1},...,z_j\}$
 \ii Each pair of elements is compared at most once.
 \bi\ii Compared only to the pivot, and then the pivot is removed.\ei
-\ii Let $X_{ij} = \textbf{I}\{z_i \mbox{ is compared to } z_j\}$
+\ii Let $X_{ij} = {I}\{z_i \mbox{ is compared to } z_j\}$
 \ii Since each pair is compared at most once,
 \begin{align*}
   X &= \sum_{i=1}^{n-1}\sum_{j=i+1}^{n}X_{ij}
@@ -357,6 +384,7 @@ $i$th smallest.
 \end{frame}
 
 \sect{Probability $z_i$  is compared to  $z_j$ }
+\small
 \bi
 \ii Numbers in separate partitions will not be compared.
 \ii If a pivot $x$ is chosen such that $z_i < x < z_j$, $z_i$ and

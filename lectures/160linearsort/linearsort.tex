@@ -126,7 +126,6 @@ Proof by induction on $h$:
 \sect{Theorem: any decision tree that sorts $n$ elements has height
   $\Omega(n\lg n)$ }
 \bi
-\ii $\ell \geq n!$
 \ii $n! \leq \ell \leq 2^h$
 \ii $h \geq \lg(n!)$
 \ii Sterling's approximation: $n! > (n/e)^n$
@@ -146,9 +145,9 @@ Proof by induction on $h$:
 \bi
 \ii Impossible with any comparison sort.
 \ii {\bf Counting sort}
-\bi
 \ii Key assumption:  numbers to be sorted are integers in $\{0,\ldots,k\}$.
-\ei
+\ii Key idea: count how many numbers are $\leq$ each number.
+\ii This tells you where it goes in the array.
 \ei
 \begin{description}
   \ii[Input:] $A[1..n]$ where $A[j] \in\{0,...,k\}$
@@ -314,7 +313,8 @@ in output as in input.
 \ii Human-machine cyborg algorithm!
 \ii {\bf Key idea:} Sort {\em least} significant digits first.
 \ei
-
+\vfill
+\includegraphics[scale=0.2]{hollerith.jpg}
 \columnbreak
 
 \includegraphics[scale=3.0]{ibmcardsorter.jpg}

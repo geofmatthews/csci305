@@ -13,7 +13,8 @@
 \beamer@sectionintoc {14}{``Average'' running time for quicksort}{16}{0}{12}
 \beamer@sectionintoc {15}{Randomized quicksort}{17}{0}{13}
 \beamer@sectionintoc {16}{Worst-case analysis of randomized quicksort}{18}{0}{14}
-\beamer@sectionintoc {17}{Average-case analysis of randomized quicksort}{19}{0}{15}
+\beamer@sectionintoc {17}{Quicksort}{19}{0}{15}
 \beamer@sectionintoc {18}{Average-case analysis of randomized quicksort}{20}{0}{16}
-\beamer@sectionintoc {19}{Probability $z_i$ is compared to $z_j$ }{21}{0}{17}
-\beamer@sectionintoc {20}{Expected number of comparisons}{22}{0}{18}
+\beamer@sectionintoc {19}{Average-case analysis of randomized quicksort}{21}{0}{17}
+\beamer@sectionintoc {20}{Probability $z_i$ is compared to $z_j$ }{22}{0}{18}
+\beamer@sectionintoc {21}{Expected number of comparisons}{23}{0}{19}
