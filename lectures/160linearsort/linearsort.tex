@@ -442,4 +442,75 @@ bits of information.
 
 \end{frame}
 
+\sect{Bucket sort}
+\bi
+\item Assume input is randomly distribued over $[0,1)$.
+\item Divide $[0,1)$ into $n$ equal-sized {\em buckets}.
+\item Distribute the $n$ input values into the buckets.
+\item Sort each bucket.
+\item Go through the buckets in order, listing elements in each one.
+  
+\ei
+\end{frame}
+
+\sect{Bucket sort}
+\includegraphics[scale=0.2]{Fig-8-4}
+\end{frame}
+
+\sect{Bucket sort}
+
+\begin{description}
+\item[Input:] $A[1..n]$, where $0 \leq A[i] < 1$ for all $i$.
+\item[Auxiliary array:] $B[0..n-1]$ of linked lists.
+\end{description}
+\vfill
+\includegraphics{Bucket-Sort.pdf}
+\end{frame}
+
+\sect{Bucket sort correctness}
+
+\bi
+\item
+  Consider $A[i], A[j]$.
+\item
+  Assume without loss of generality $A[i] \leq A[j]$.
+\item
+  Then $\lfloor n\cdot A[i]\rfloor \leq\lfloor n\cdot A[j]\rfloor$
+\item
+  Therefore $A[i]$ is placed into the same or lower bucket.
+\item
+  If same bucket, insertion sort fixes it up.
+\item
+  If earlier bucket, concatenation of lists fixes it up.
+  \ei
+  
+
+\end{frame}
+
+\sect{Bucket sort analysis}
+\bi
+\item Relies on no bucket getting too many values.
+\item
+  All lines of algorithm except insertion sorting take $\Theta(n)$ altogether.
+\item
+  If each bucket gets a constant number of elements, it takes $O(1)$
+  time to sort each bucket.
+\item
+  Therefore  $O(n)$ for all buckets.
+\item
+  We expect each bucket to have few elements, since the average is 1
+  element per bucket.
+\item
+  Uniform distribution of numbers should lead to this.
+  \ei
+\end{frame}
+
+\sect{Bucket sort analysis}
+\bi
+\item Define $n_i = \mbox{ the number of elements placed in } B[i]$
+
+\ei
+
+\end{frame}
+
 \end{document}

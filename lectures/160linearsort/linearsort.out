@@ -19,3 +19,9 @@
 \BOOKMARK [2][]{Outline0.19}{How to choose r?}{}% 19
 \BOOKMARK [2][]{Outline0.20}{Compare radix to merge and quick}{}% 20
 \BOOKMARK [2][]{Outline0.21}{How does radix sort violate the \(nlgn\) speed limit?}{}% 21
+\BOOKMARK [2][]{Outline0.22}{Bucket sort}{}% 22
+\BOOKMARK [2][]{Outline0.23}{Bucket sort}{}% 23
+\BOOKMARK [2][]{Outline0.24}{Bucket sort}{}% 24
+\BOOKMARK [2][]{Outline0.25}{Bucket sort correctness}{}% 25
+\BOOKMARK [2][]{Outline0.26}{Bucket sort analysis}{}% 26
+\BOOKMARK [2][]{Outline0.27}{Bucket sort analysis}{}% 27

@@ -1,13 +1,6 @@
-\frametitle{How does radix sort violate the $\Omega (n\lg n)$ speed limit?} 
+\frametitle{Bucket sort analysis} 
 \bi
-\ii Counting sort allows us to gain information
-about keys other than by directly comparing two keys.
-\ii Directly comparing keys only gives one bit of information.
-\ii Using keys as array indices
-gets far more information out
-of each key.
-\ii Branching factor of the decision tree is $k$.
-\ii Choosing one of $k$ branches gets $\lceil \lg k\rceil$
-bits of information.
+\item Define $n_i = \mbox{ the number of elements placed in } B[i]$
+
 \ei
 

@@ -20,3 +20,9 @@
 \beamer@sectionintoc {19}{How to choose $r$?}{20}{0}{19}
 \beamer@sectionintoc {20}{Compare radix to merge and quick}{21}{0}{20}
 \beamer@sectionintoc {21}{How does radix sort violate the $\Omega (n\qopname \relax o{lg}n)$ speed limit?}{22}{0}{21}
+\beamer@sectionintoc {22}{Bucket sort}{23}{0}{22}
+\beamer@sectionintoc {23}{Bucket sort}{24}{0}{23}
+\beamer@sectionintoc {24}{Bucket sort}{25}{0}{24}
+\beamer@sectionintoc {25}{Bucket sort correctness}{26}{0}{25}
+\beamer@sectionintoc {26}{Bucket sort analysis}{27}{0}{26}
+\beamer@sectionintoc {27}{Bucket sort analysis}{28}{0}{27}
