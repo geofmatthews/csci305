@@ -1,6 +1,12 @@
-\frametitle{Bucket sort analysis} 
+\frametitle{Bucket sort} 
 \bi
-\item Define $n_i = \mbox{ the number of elements placed in } B[i]$
-
-\ei
-
+\item
+  Expected running time is linear.  $\Theta(n)$
+\item
+  Not a comparison sort. $\Theta(n\lg n)$
+\item
+  We assumed input numbers were uniformly distributed.
+\item
+  If input not uniformly distributed, algorithm is correct but
+  running time could be $\Theta(n^2)$.
+  \ei

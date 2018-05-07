@@ -136,8 +136,33 @@
 \headcommand {\beamer@subsectionpages {27}{27}}
 \headcommand {\slideentry {27}{0}{1}{28/28}{}{0}}
 \headcommand {\beamer@framepages {28}{28}}
-\headcommand {\beamer@partpages {1}{28}}
-\headcommand {\beamer@subsectionpages {28}{28}}
+\headcommand {\sectionentry {28}{Proving $E[n_i^2] = 2-(1/n)$}{29}{Proving $E[n_i^2] = 2-(1/n)$}{0}}
 \headcommand {\beamer@sectionpages {28}{28}}
-\headcommand {\beamer@documentpages {28}}
-\headcommand {\def \inserttotalframenumber {28}}
+\headcommand {\beamer@subsectionpages {28}{28}}
+\headcommand {\slideentry {28}{0}{1}{29/29}{}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\sectionentry {29}{Proving $E[n_i^2] = 2-(1/n)$}{30}{Proving $E[n_i^2] = 2-(1/n)$}{0}}
+\headcommand {\beamer@sectionpages {29}{29}}
+\headcommand {\beamer@subsectionpages {29}{29}}
+\headcommand {\slideentry {29}{0}{1}{30/30}{}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\sectionentry {30}{Proving $E[n_i^2] = 2-(1/n)$}{31}{Proving $E[n_i^2] = 2-(1/n)$}{0}}
+\headcommand {\beamer@sectionpages {30}{30}}
+\headcommand {\beamer@subsectionpages {30}{30}}
+\headcommand {\slideentry {30}{0}{1}{31/31}{}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\sectionentry {31}{Expected running time of bucket sort}{32}{Expected running time of bucket sort}{0}}
+\headcommand {\beamer@sectionpages {31}{31}}
+\headcommand {\beamer@subsectionpages {31}{31}}
+\headcommand {\slideentry {31}{0}{1}{32/32}{}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\sectionentry {32}{Bucket sort}{33}{Bucket sort}{0}}
+\headcommand {\beamer@sectionpages {32}{32}}
+\headcommand {\beamer@subsectionpages {32}{32}}
+\headcommand {\slideentry {32}{0}{1}{33/33}{}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\beamer@partpages {1}{33}}
+\headcommand {\beamer@subsectionpages {33}{33}}
+\headcommand {\beamer@sectionpages {33}{33}}
+\headcommand {\beamer@documentpages {33}}
+\headcommand {\def \inserttotalframenumber {33}}

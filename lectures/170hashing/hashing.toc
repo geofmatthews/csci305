@@ -32,7 +32,7 @@
 \beamer@sectionintoc {31}{Example computation of: $ h(k) = \delimiter "4262304 m (kA \unhbox \voidb@x \hbox { mod } 1)\delimiter "5263305 $}{32}{0}{31}
 \beamer@sectionintoc {32}{Multiplication method for hash functions}{33}{0}{32}
 \beamer@sectionintoc {33}{Universal hashing---randomized hashing}{34}{0}{33}
-\beamer@sectionintoc {34}{Universal hashing}{35}{0}{34}
+\beamer@sectionintoc {34}{Universal hashing expected chain lengths}{35}{0}{34}
 \beamer@sectionintoc {35}{Open addressing}{36}{0}{35}
 \beamer@sectionintoc {36}{Open addressing}{37}{0}{36}
 \beamer@sectionintoc {37}{Hash insertion and search, open addressing}{38}{0}{37}

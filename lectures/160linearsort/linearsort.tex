@@ -506,11 +506,102 @@ bits of information.
 \end{frame}
 
 \sect{Bucket sort analysis}
-\bi
-\item Define $n_i = \mbox{ the number of elements placed in } B[i]$
-
-\ei
+\begin{align*}
+  n_i &= \mbox{ the number of elements placed in } B[i]
+  \\
+  T(n) &= \Theta(n) + \sum_{i=0}^{n-1}O(n_i^2)
+  \\
+  E[T(n)] &= E\left[\Theta(n) + \sum_{i=0}^{n-1}O(n_i^2)\right]
+  \\
+  &= \Theta(n) + \sum_{i=0}^{n-1} E[O(n_i^2)]
+  \\
+  &= \Theta(n) + \sum_{i=0}^{n-1} O(E[n_i^2]) &E[aX] = aE[X]
+\end{align*}
 
 \end{frame}
 
+\sect{Proving $E[n_i^2] = 2-(1/n)$}
+\begin{align*}
+  X_{ij} &= I\{\mbox{bucket $i$ gets $A[j]$}\}
+  \\
+   1/n &= \pr{\mbox{bucket $i$ gets $A[j]$}}
+  \\
+  n_i &= \sum_{j=1}^{n} X_{ij}
+  \\
+  E[n_i^2] &= \left[\left(\sum_{j=1}^{n} X_{ij}\right)^2\right]
+  \\
+  &= E\left[\sum_{j=1}^n X_{ij}^2 +
+    2\sum_{j=1}^{n-1}\sum_{k=j+1}^nX_{ij}X_{ik}\right]
+  \\
+  &= \sum_{j=1}^n E[X_{ij}^2] +
+    2\sum_{j=1}^{n-1}\sum_{k=j+1}^n E[X_{ij}X_{ik}]
+\end{align*}
+
+\end{frame}
+
+\sect{Proving $E[n_i^2] = 2-(1/n)$}
+\begin{align*}
+  E[X_{ij}^2]
+    &= 0^2(\pr{\mbox{$i$ doesn't get $A[j]$}}) +
+  1^2(\pr{\mbox{$i$ gets $A[j]$}})
+  \\
+  &= 0(1-1/n) + 1(1/n)\\
+  &= 1/n
+\end{align*}
+If $j\neq k$ then $X_{ij}$ and $X_{ik}$ are independent.
+\begin{align*}
+  E[X_{ij}X_{ik}] &=   E[X_{ij}]E[X_{ik}]
+  \\
+  &= 1/n^2
+\end{align*}
+
+
+\end{frame}
+
+\sect{Proving $E[n_i^2] = 2-(1/n)$}
+\begin{align*}
+  E[n_i^2]  &= \sum_{j=1}^n E[X_{ij}^2] +
+  2\sum_{j=1}^{n-1}\sum_{k=j+1}^n E[X_{ij}X_{ik}]
+  \\
+   &= \sum_{j=1}^n \frac{1}{n} +
+  2\sum_{j=1}^{n-1}\sum_{k=j+1}^n \frac{1}{n^2}
+  \\
+  &= 1 + 2\binom{n}{2}\frac{1}{n^2}
+  \\
+  &= 1 + 2\cdot\frac{n(n-1)}{2}\cdot\frac{1}{n^2}
+  \\
+  &= 1 + \frac{n-1}{n}
+  \\
+  &= 1 + 1 - \frac{1}{n}
+  \\
+  &= 2 - \frac{1}{n}
+\end{align*}
+\end{frame}
+
+\sect{Expected running time of bucket sort}
+\begin{align*}
+  E[n_i^2]  &= 2 - \frac{1}{n}
+  \\
+  E[T(n)] &= \Theta(n) + \sum_{i=0}^{n-1}O(E[n_i^2])
+  \\
+  &= \Theta(n) + \sum_{i=0}^{n-1}O(2-1/n)
+  \\
+  &= \Theta(n) + O(n)\\
+  &= \Theta(n)
+\end{align*}
+\end{frame}
+
+\sect{Bucket sort}
+\bi
+\item
+  Expected running time is linear.  $\Theta(n)$
+\item
+  Not a comparison sort. $\Theta(n\lg n)$
+\item
+  We assumed input numbers were uniformly distributed.
+\item
+  If input not uniformly distributed, algorithm is correct but
+  running time could be $\Theta(n^2)$.
+  \ei
+\end{frame}
 \end{document}

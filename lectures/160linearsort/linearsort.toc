@@ -26,3 +26,8 @@
 \beamer@sectionintoc {25}{Bucket sort correctness}{26}{0}{25}
 \beamer@sectionintoc {26}{Bucket sort analysis}{27}{0}{26}
 \beamer@sectionintoc {27}{Bucket sort analysis}{28}{0}{27}
+\beamer@sectionintoc {28}{Proving $E[n_i^2] = 2-(1/n)$}{29}{0}{28}
+\beamer@sectionintoc {29}{Proving $E[n_i^2] = 2-(1/n)$}{30}{0}{29}
+\beamer@sectionintoc {30}{Proving $E[n_i^2] = 2-(1/n)$}{31}{0}{30}
+\beamer@sectionintoc {31}{Expected running time of bucket sort}{32}{0}{31}
+\beamer@sectionintoc {32}{Bucket sort}{33}{0}{32}
