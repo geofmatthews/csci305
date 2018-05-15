@@ -681,7 +681,7 @@ Any slot preceded by $i$ full slots gets filled with probability
 and hence long chains get longer.
 \pause
 \ii
-Note: it does not matter if we use \[h(k,i) = h'(k) + ai + b\].  Why not?
+Note: it does not matter if we use \[h(k,i) = (h'(k) + ai + b)\mod m\].  Why not?
 \ei
 \end{frame}
 
@@ -893,7 +893,7 @@ average.
 \ii In some applications the keys are static:
 \bi
 \ii Reserved words in a programming language.
-\ii File names on a write-only CD-rom.
+\ii File names on a write-once CD-rom.
 \ei
 \ii In this case we can guarantee {\bf worst-case} $O(1)$.
 \ii Use a double hashing scheme.
@@ -910,6 +910,16 @@ still $O(n)$.
 
 \sect{Perfect hashing}
 \includegraphics[width=\textwidth]{Fig-11-6.pdf}
+\vfill
+
+\bi
+\ii $m_i, a_i, b_i$ are parameters to choose a hash function from
+a set of universal hash functions:
+\[
+h_{ab}(k) = ((ak+b)\mod p)\mod m
+\]
+\ei
+
 \end{frame}
 
 

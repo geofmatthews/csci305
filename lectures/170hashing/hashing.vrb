@@ -1,2 +1,12 @@
 \frametitle{Perfect hashing} 
 \includegraphics[width=\textwidth]{Fig-11-6.pdf}
+\vfill
+
+\bi
+\ii $m_i, a_i, b_i$ are parameters to choose a hash function from
+a set of universal hash functions:
+\[
+h_{ab}(k) = ((ak+b)\mod p)\mod m
+\]
+\ei
+

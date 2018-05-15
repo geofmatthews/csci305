@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  2 MAY 2018 11:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  15 MAY 2018 10:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**quicksort
-(./quicksort.tex
+**qsort
+(./qsort.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
@@ -752,8 +752,8 @@ Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
 \mult@nat@firstbox=\box78
 \colbreak@box=\box79
 \mc@col@check@num=\count164
-) (./quicksort.aux)
-\openout1 = `quicksort.aux'.
+) (./qsort.aux)
+\openout1 = `qsort.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
@@ -848,9 +848,9 @@ LaTeX Info: Redefining \ref on input line 27.
 LaTeX Info: Redefining \pageref on input line 27.
 LaTeX Info: Redefining \nameref on input line 27.
 
-(./quicksort.out) (./quicksort.out)
+(./qsort.out) (./qsort.out)
 \@outlinefile=\write5
-\openout5 = `quicksort.out'.
+\openout5 = `qsort.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 27.
@@ -920,7 +920,7 @@ orem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 LaTeX Info: Redefining \includegraphics on input line 27.
- (./quicksort.nav)
+ (./qsort.nav)
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (Font)              size <5> substituted on input line 30.
@@ -928,9 +928,9 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-\openout4 = `quicksort.vrb'.
+\openout4 = `qsort.vrb'.
 
- (./quicksort.vrb
+ (./qsort.vrb
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -943,10 +943,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )) [2
 
 ]
-\openout4 = `quicksort.vrb'.
+\openout4 = `qsort.vrb'.
 
-
-(./quicksort.vrb
+ (./qsort.vrb
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10.95> not available
 (Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 18.
@@ -954,9 +953,9 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10.95> not available
 ) [3
 
 ]
-\openout4 = `quicksort.vrb'.
+\openout4 = `qsort.vrb'.
 
- (./quicksort.vrb <Quicksort.pdf, id=178, 138.59781pt x 65.5248pt>
+ (./qsort.vrb <Quicksort.pdf, id=178, 138.59781pt x 65.5248pt>
 File: Quicksort.pdf Graphic file (type pdf)
 
 <use Quicksort.pdf>
@@ -976,9 +975,9 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <14.4> not available
 [4
 
  <./Quicksort.pdf> <./Merge-Sort.pdf>]
-\openout4 = `quicksort.vrb'.
+\openout4 = `qsort.vrb'.
 
- (./quicksort.vrb
+ (./qsort.vrb
 <Partition.pdf, id=221, 154.3366pt x 116.1138pt>
 File: Partition.pdf Graphic file (type pdf)
  <use Partition.pdf>
@@ -993,9 +992,9 @@ Package pdftex.def Info: Merge.pdf used on input line 5.
 ) [5
 
  <./Partition.pdf> <./Merge.pdf>]
-\openout4 = `quicksort.vrb'.
+\openout4 = `qsort.vrb'.
 
- (./quicksort.vrb
+ (./qsort.vrb
 <Fig-7-2.pdf, id=264, 1810.765pt x 334.24875pt>
 File: Fig-7-2.pdf Graphic file (type pdf)
  <use Fig-7-2.pdf>
@@ -1004,9 +1003,9 @@ Package pdftex.def Info: Fig-7-2.pdf used on input line 3.
 ) [6
 
  <./Fig-7-2.pdf>]
-\openout4 = `quicksort.vrb'.
+\openout4 = `qsort.vrb'.
 
- (./quicksort.vrb <Fig-7-3.pdf, id=299, 2019.545pt x 1744.5175pt>
+ (./qsort.vrb <Fig-7-3.pdf, id=299, 2019.545pt x 1744.5175pt>
 File: Fig-7-3.pdf Graphic file (type pdf)
 
 <use Fig-7-3.pdf>
@@ -1015,9 +1014,9 @@ Package pdftex.def Info: Fig-7-3.pdf used on input line 2.
 ) [7
 
  <./Fig-7-3.pdf>]
-\openout4 = `quicksort.vrb'.
+\openout4 = `qsort.vrb'.
 
- (./quicksort.vrb
+ (./qsort.vrb
 <Fig-7-1.pdf, id=335, 1184.425pt x 2473.24pt>
 File: Fig-7-1.pdf Graphic file (type pdf)
  <use Fig-7-1.pdf>
@@ -1036,38 +1035,37 @@ Overfull \hbox (5.69127pt too wide) in paragraph at lines 3--6
 ) [8
 
  <./Fig-7-1.pdf>]
-\openout4 = `quicksort.vrb'.
+\openout4 = `qsort.vrb'.
 
- (./quicksort.vrb) [9
-
-]
-\openout4 = `quicksort.vrb'.
-
- (./quicksort.vrb) [10
+ (./qsort.vrb) [9
 
 ]
-(./quicksort.vrb) [11
+\openout4 = `qsort.vrb'.
+
+ (./qsort.vrb) [10
+
+] (./qsort.vrb)
+[11
 
 ]
-\openout4 = `quicksort.vrb'.
+\openout4 = `qsort.vrb'.
 
- (./quicksort.vrb) [12
-
-]
-\openout4 = `quicksort.vrb'.
-
- (./quicksort.vrb) [13
+ (./qsort.vrb) [12
 
 ]
-\openout4 = `quicksort.vrb'.
+\openout4 = `qsort.vrb'.
 
-
-(./quicksort.vrb) [14
+ (./qsort.vrb) [13
 
 ]
-\openout4 = `quicksort.vrb'.
+\openout4 = `qsort.vrb'.
 
- (./quicksort.vrb
+ (./qsort.vrb) [14
+
+]
+\openout4 = `qsort.vrb'.
+
+ (./qsort.vrb
 <Fig-7-4.pdf, id=523, 2562.57375pt x 1669.23625pt>
 File: Fig-7-4.pdf Graphic file (type pdf)
  <use Fig-7-4.pdf>
@@ -1081,9 +1079,9 @@ Overfull \hbox (2.59091pt too wide) in paragraph at lines 9--10
 ) [15
 
  <./Fig-7-4.pdf>]
-\openout4 = `quicksort.vrb'.
+\openout4 = `qsort.vrb'.
 
- (./quicksort.vrb
+ (./qsort.vrb
 <Fig-7-5.pdf, id=557, 3206.98125pt x 730.73pt>
 File: Fig-7-5.pdf Graphic file (type pdf)
  <use Fig-7-5.pdf>
@@ -1092,30 +1090,30 @@ Package pdftex.def Info: Fig-7-5.pdf used on input line 2.
 ) [16
 
  <./Fig-7-5.pdf>]
-\openout4 = `quicksort.vrb'.
+\openout4 = `qsort.vrb'.
 
- (./quicksort.vrb) [17
-
-]
-\openout4 = `quicksort.vrb'.
-
- (./quicksort.vrb) [18
+ (./qsort.vrb) [17
 
 ]
-\openout4 = `quicksort.vrb'.
+\openout4 = `qsort.vrb'.
 
- (./quicksort.vrb)
-[19
-
-]
-\openout4 = `quicksort.vrb'.
-
- (./quicksort.vrb) [20
+ (./qsort.vrb) [18
 
 ]
-\openout4 = `quicksort.vrb'.
+\openout4 = `qsort.vrb'.
 
- (./quicksort.vrb) [21
+ (./qsort.vrb) [19
+
+]
+\openout4 = `qsort.vrb'.
+
+ (./qsort.vrb)
+[20
+
+]
+\openout4 = `qsort.vrb'.
+
+ (./qsort.vrb) [21
 
 ]
 
@@ -1142,9 +1140,9 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 386.
 
-\openout4 = `quicksort.vrb'.
+\openout4 = `qsort.vrb'.
 
-(./quicksort.vrb
+(./qsort.vrb
 Overfull \hbox (1.5282pt too wide) in paragraph at lines 27--27
 []  
  []
@@ -1152,26 +1150,26 @@ Overfull \hbox (1.5282pt too wide) in paragraph at lines 27--27
 ) [22
 
 ]
-\openout4 = `quicksort.vrb'.
+\openout4 = `qsort.vrb'.
 
- (./quicksort.vrb) [23
+ (./qsort.vrb) [23
 
 ]
 \tf@nav=\write6
-\openout6 = `quicksort.nav'.
+\openout6 = `qsort.nav'.
 
 \tf@toc=\write7
-\openout7 = `quicksort.toc'.
+\openout7 = `qsort.toc'.
 
 \tf@snm=\write8
-\openout8 = `quicksort.snm'.
+\openout8 = `qsort.snm'.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 432.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 432.
- (./quicksort.aux)
+ (./qsort.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 432.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 432.
-Package rerunfilecheck Info: File `quicksort.out' has not changed.
+Package rerunfilecheck Info: File `qsort.out' has not changed.
 (rerunfilecheck)             Checksum: A967C354646CEB086690D793EDE324B3;1205.
 
 
@@ -1182,12 +1180,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 432.
  ) 
 Here is how much of TeX's memory you used:
  16986 strings out of 494827
- 321051 string characters out of 6176977
- 391751 words of memory out of 5000000
+ 320815 string characters out of 6176977
+ 391728 words of memory out of 5000000
  19788 multiletter control sequences out of 15000+600000
  17018 words of font info for 63 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
- 48i,14n,51p,385b,555s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,14n,51p,381b,555s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
@@ -1202,7 +1200,7 @@ onts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sam7.pfb>
-Output written on quicksort.pdf (23 pages, 1066585 bytes).
+Output written on qsort.pdf (23 pages, 1066587 bytes).
 PDF statistics:
  834 PDF objects out of 1000 (max. 8388607)
  754 compressed objects within 8 object streams
