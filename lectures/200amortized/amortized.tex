@@ -1,6 +1,6 @@
-\documentclass[landscape]{article}
+\documentclass{beamer}
 \usepackage{multicol}
-\usepackage[margin=1in]{geometry}
+
 \usepackage{clrscode3e}
 \usepackage{amsmath,amsfonts}
 \usepackage{graphicx}
@@ -15,9 +15,12 @@
 \newcommand{\flr}[1]{\ensuremath{\left\lfloor#1\right\rfloor}}
 \newcommand{\ceil}[1]{\ensuremath{\left\lceil#1\right\rceil}}
 
-\newcommand{\sect}[1]{\newpage{\textbf{#1}}}
+\newcommand{\sect}[1]{
+\section{#1}
+\begin{frame}[fragile]\frametitle{#1}
+}
 
-\setlength{\parindent}{0in}
+
 \setlength{\tabcolsep}{4\tabcolsep}
 
 \newcommand{\nop}[1]{}
@@ -25,10 +28,11 @@
 \title{Notes on Amortized Analysis}
 \author{Geoffrey Matthews}
 \begin{document}
+\begin{frame}
+  
 \maketitle
-\titlepage
-\huge
 
+\end{frame}
 
 \sect{Amortized analysis}
 \bi
@@ -53,11 +57,13 @@ of operations.
 \bi\ii dynamic tables\ei
 \ei
 
+\end{frame}
+
 \sect{Stack operations}
-\bi
-\ii $\textsc{Push}(S,x)$: $O(1)$
-\ii $\textsc{Pop}(S)$: $O(1)$
-\ei
+
+$\textsc{Push}(S,x)$: $O(1)$
+
+$\textsc{Pop}(S)$: $O(1)$
 
 \begin{codebox}
   \Procname{$\proc{Multipop}(S,k)$}
@@ -72,6 +78,8 @@ of operations.
 \mbox{}\hspace{0cm}$\textsc{Multipop}(S,4)$
 \hspace{1cm}$\textsc{Multipop}(S,7)$
 
+\end{frame}
+
 \sect{Running time of \textsc{Multipop}:}
 \bi
 \ii Linear in \# of \textsc{Pop} operations.
@@ -84,6 +92,8 @@ of operations.
 
 
 
+\end{frame}
+
 \sect{Worst-case analysis without amortization}
 \bi
 \ii Sequence of $n$ \textsc{Push}, \textsc{Pop}, and \textsc{Multipop}
@@ -95,6 +105,8 @@ operations.
 \ii Therefore, worst-case cost of sequence of $n$ operations is
 $O(n^2)$.
 \ei
+\end{frame}
+
 \sect{Something wrong with worst-case analysis}
 \bi
 \ii There's clearly something wrong with this analysis.
@@ -106,6 +118,8 @@ as a function of $n$?
 because that affects the time spent in the others.
 \ei
 
+
+\end{frame}
 
 \sect{Aggregate analysis}
 \bi
@@ -125,7 +139,23 @@ including those in \textsc{Multipop}.
 \ii Therefore, $O(1)$ per operation on average.
 \ei\ei
 
+\end{frame}
+
 \sect{Binary counter}
+\begin{multicols}{2}
+  \includegraphics[scale=0.125]{Fig-17-2.pdf}
+\columnbreak
+  \bi
+  \ii Bits that flip upon increment shaded.
+  \ii Total cost of flipping bits at right.
+  \ii Total cost always less than twice number of increments.
+  \ei
+\end{multicols}
+
+\end{frame}
+
+\sect{Binary counter}
+%\begin{multicols}{2}
 \bi
 \ii $k$-bit binary counter $A[0..k-1]$ of bits.
 \ii $A[0]$ is the least significant bit.
@@ -133,6 +163,8 @@ including those in \textsc{Multipop}.
 \ii Value of counter is \[\sum_{i=0}^{k-1} A[i]\cdot 2^i\]
 \ii Initially counter is 0, so $A[0..k-1] = 0$.
 \ii To increment, add 1 (mod $2^k$):
+\ei
+%\columnbreak
 \begin{codebox}
   \Procname{$\proc{Increment}(A,k)$}
   \li $i\gets 0$
@@ -142,18 +174,8 @@ including those in \textsc{Multipop}.
   \li \If $i < k$ \Do
   \li $A[i] \gets 1$ \End
 \end{codebox}
-\ei
-
-\begin{minipage}{0.5\textwidth}
-  \includegraphics[width=\textwidth]{Fig-17-2.pdf}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-  \bi
-  \ii Bits that flip upon increment shaded.
-  \ii Total cost of flipping bits at right.
-  \ii Total cost always less than twice number of increments.
-  \ei
-\end{minipage}
+%\end{multicols}
+\end{frame}
 
 \sect{Worst case analysis of binary counter}
 \bi
@@ -161,26 +183,29 @@ including those in \textsc{Multipop}.
 \ii $n$ increments is $O(nk)$.
 \ei
 
-\newcommand{\floor}[1]{\ensuremath{\lfloor #1 \rfloor}}
+\end{frame}
+
 \sect{Aggregate analysis of binary counter}
 \bi
 \ii Not every bit flips every time.
-
+\ei
 \begin{tabular}{ccc}
   bit & flips how often & times in $n$ \textsc{Increment}s \\\hline
   0 & every time & $n$\\
-  1 & 1/2 the time & \floor{n/2} \\
-  2 & 1/4 the time & \floor{n/4}\\
+  1 & 1/2 the time & \flr{n/2} \\
+  2 & 1/4 the time & \flr{n/4}\\
   & $\vdots$ & \\
-  $i$ & $1/2^i$ the time & \floor{n/2^i}\\
+  $i$ & $1/2^i$ the time & \flr{n/2^i}\\
   & $\vdots$ & \\
   $i\geq k$ & never & 0 \\
   \end{tabular}
-\ei
+
+
+\end{frame}
 
 \sect{Total number of flips}
 \begin{align*}
-  \sum_{i=0}^{k-1}\floor{n/2^i}
+  \sum_{i=0}^{k-1}\flr{n/2^i}
   &< n\sum_{i=0}^{k-1}{(1/2)^i}\\
   &= n\frac{(1/2)^k-1}{1/2-1}\\
   &= n\frac{1-(1/2)^k}{1-1/2}\\
@@ -193,6 +218,8 @@ including those in \textsc{Multipop}.
 \ii Average cost per operation $O(1)$.
 \ei
 
+
+\end{frame}
 
 \sect{Accounting Method and Potential Method}
 
@@ -216,6 +243,8 @@ including those in \textsc{Multipop}.
 \ei
 \ei
 
+
+\end{frame}
 
 \sect{Accounting method}
 \bi
@@ -241,6 +270,8 @@ cost is not an upper bound on actual cost.
 \ei
 
 
+\end{frame}
+
 \sect{Accounting method costs}
 
 \begin{align*}
@@ -257,6 +288,8 @@ Total credit stored
 \end{align*}
 must never be negative.
 
+
+\end{frame}
 
 \sect{Accounting method amortized analysis of stack operations}
 \vfill
@@ -282,6 +315,8 @@ negative.
 
 \vfill
 
+\end{frame}
+
 \sect{Accounting method amortized analysis of binary counter}
 
 \bi
@@ -303,6 +338,8 @@ negative.
 \ei
 \ei
 
+\end{frame}
+
 \sect{The Potential Method}
 \bi
 \ii Like the accounting method, but think of the credit
@@ -313,6 +350,8 @@ whole.
 \ii Can release potential to pay for future operations.
 \ii Most flexible of the amortized analysis methods.
 \ei
+
+\end{frame}
 
 \sect{Potential function}
 \begin{align*}
@@ -335,6 +374,8 @@ structure $D_i$.
 The amortized cost is the \textit{increase in potential} due to the
 $i$th operation.
 
+\end{frame}
+
 \sect{Total amortized cost}
 
 \begin{align*}
@@ -352,6 +393,8 @@ amortized cost is always an upper bound on the actual cost.
   \Phi(D_i) &\geq 0 &\mbox{for all $i$}
 \end{align*}
 \ei
+
+\end{frame}
 
 \sect{Amortized analysis of stack operations using the potential
   method}
@@ -383,7 +426,10 @@ Therefore the amortized cost of a sequence of $n$ operations is $O(n)$.
 
 \vfill
 
-\sect{Amortized analysis of binary counter using potential method}
+\end{frame}
+
+\sect{Amortized analysis of binary counter: potential method}
+\small
 \bi
 \ii
 $\Phi = b_i = $ \# of 1's after $i$th \textsc{Increment}
@@ -418,6 +464,8 @@ one, so
 
 
 
+\end{frame}
+
 \sect{Dynamic Tables}
 \bi
 \ii Nice application of amortized analysis.
@@ -436,6 +484,8 @@ table?
 in worst case we have to copy all $n$ elements into new array?
 \ei
 
+\end{frame}
+
 \sect{Dynamic Table Goals}
 \begin{enumerate}
 \ii $O(1)$ amortized time per operation.
@@ -449,7 +499,10 @@ in worst case we have to copy all $n$ elements into new array?
 \ei
 
 
+\end{frame}
+
 \sect{Table expansion}
+\small
 \bi
 \ii First we consider only expansion.
 \ii When table becomes full, double its size and reinsert all existing
@@ -473,6 +526,8 @@ items.
   \end{codebox}
   
   
+\end{frame}
+
 \sect{Running time}
 \bi
 \ii Charge 1 per elementary insertion.
@@ -488,10 +543,12 @@ c_i&=O(n)\\
 \mbox{$n$ operations} &= O(n^2)
 \end{align*}
 
+\end{frame}
+
 \sect{Aggregate analysis}
 
   \bi
-  \ii Of course, we don't \textit{alwyas} expand:
+  \ii Of course, we don't \textit{always} expand:
   \ei
 \[
 c_i = \left\{\begin{array}{ll}
@@ -500,16 +557,18 @@ i & \mbox{if $i-1$ is exact power of 2.}\\
 \]
 \begin{align*}
   \mbox{Total cost} &= \sum_{i=1}^{n} c_i\\
-  &\leq n + \sum_{j=0}^{\floor{\lg n}} 2^j\\
-  &= n + \frac{2^{\floor{\lg n} + 1} -1}{2-1}\\
+  &\leq n + \sum_{j=0}^{\flr{\lg n}} 2^j\\
+  &= n + \frac{2^{\flr{\lg n} + 1} -1}{2-1}\\
   &< n + 2n\\
   &= 3n
 \end{align*}
 
 \bi
-\ii Aggregate analysis tells us the amortized cost per operation is 3.
+\ii Aggregate analysis: the amortized cost per operation is 3.
 \ei
 
+
+\end{frame}
 
 \sect{Accounting method}
 
@@ -536,6 +595,8 @@ to move.
 \ii Credit always $\geq 0$.
 \ei
 
+\end{frame}
+
 \sect{Potential method}
 
 \[
@@ -560,12 +621,14 @@ we have enough potential to pay for moving all items.
 
 \ei
 
+\end{frame}
 
 \sect{Amortized cost of $i$th operation}
+
 \begin{align*}
   \id{num}_i &= \mbox{$\id{num}$ after $i$th operation}\\
   \id{size}_i &= \mbox{$\id{size}$ after $i$th operation}\\
-  \Phi_i &= \mbox{$\Phi$ after $i$th operation}\\
+  \Phi_i &= \mbox{$\Phi$ after $i$th operation}
 \end{align*}
 \bi
 \ii If no expansion:
@@ -586,6 +649,8 @@ Then we have
 
 \ei
 
+\end{frame}
+\small
 \sect{Amortized cost of $i$th operation}
 \bi
 \ii If expansion:
@@ -605,15 +670,17 @@ Then we have
   &= 3
 \end{align*}
 \ei
+\end{frame}
 
-
-\includegraphics[height=0.85\textheight]{Fig-17-3.pdf}
+\sect{}
+\includegraphics[scale=0.125]{Fig-17-3.pdf}
 
 \bi
 \ii As we insert items, the potential builds up until we have enough
 to pay for moving all items, when the potential drops back to zero.
 \ei
 
+\end{frame}
 
 \sect{Expansion and contraction}
 
@@ -627,6 +694,8 @@ Still want:
 \ii $\alpha$ bounded from below by a constant
 \ii amortized cost of $O(1)$
 \ei
+
+\end{frame}
 
 \sect{``Obvious strategy''}
 \bi
@@ -647,6 +716,8 @@ two inserts & $\Rightarrow$ & double\\&...
 contraction to pay for the next one.
 \ei
 
+\end{frame}
+
 \sect{Simple solution}
 \bi
 \ii Double when full ($\alpha = 1$).
@@ -654,6 +725,8 @@ contraction to pay for the next one.
 \ii Immediately after expansion \textit{or} contraction, $\alpha=1/2$.
 \ii Always have $1/4\leq\alpha\leq 1$
 \ei
+
+\end{frame}
 
 \sect{Intuition}
 \bi
@@ -684,6 +757,8 @@ $\alpha \leq 1/2 \Rightarrow \id{num} < \id{size}/2 \Rightarrow \Phi
 \geq 0$
 
 
+\end{frame}
+
 \sect{Further intuition}
 \bi
 \ii $\Phi$ measures how far from $\alpha=1/2$ we are.
@@ -694,6 +769,8 @@ $\alpha \leq 1/2 \Rightarrow \id{num} < \id{size}/2 \Rightarrow \Phi
 \ii Therefore, when we double or halve, we have enough potential to
 pay for moving all $\id{num}$ items.
 \ei
+\end{frame}
+
 \sect{Further intuition}
 \bi
 \ii Potential increases linearly between $\alpha=1/2$ and $\alpha=1$.
@@ -721,6 +798,8 @@ starting from $1/2$, rate of increase of $\Phi$ differs.
 
 
 
+\end{frame}
+
 \sect{Eight cases for calculating amortized costs}
 \bi
 \ii insert \textit{vs.} delete
@@ -728,11 +807,15 @@ starting from $1/2$, rate of increase of $\Phi$ differs.
 \ii $\id{size}$ changes \textit{vs.} $\id{size}$ doesn't change
 \ei
 
+\end{frame}
+
 \sect{Insert, $\alpha\geq 1/2$, with or without expansion}
 \bi
 \ii Same analysis as before.
 \ii $\hat{c_i} = 3$
 \ei
+
+\end{frame}
 
 \sect{Insert, $\alpha_{i-1}< 1/2$, no expansion}
 \bi
@@ -759,33 +842,40 @@ starting from $1/2$, rate of increase of $\Phi$ differs.
 \end{align*}
 \ei
 
+\end{frame}
+
 \sect{Insert, $\alpha<1/2$, expansion}
 \bi
 \ii Cannot happen.
 \ei
 
+\end{frame}
+
 \sect{Insert}
 
-\begin{tabular}{lccc}
-expansion  & $\alpha \geq 1/2$ &&  $\hat{c_i} = 3$ \\
-no expansion & $\alpha \geq 1/2$ &&  $\hat{c_i} = 3$ \\
-expansion & $\alpha < 1/2$ &&  impossible\\
-no expansion & $\alpha_{i-1}<1/2$&$\alpha_{i} < 1/2$ & $\hat{c_i} = 0$\\
-no expansion &  $\alpha_{i-1} < 1/2$&$ \alpha_{i}\geq 1/2$  &  $\hat{c_i} = 3$\\
+\begin{tabular}{lcc}
+expansion  & $\alpha \geq 1/2$ &  $\hat{c_i} = 3$ \\
+no expansion & $\alpha \geq 1/2$ &  $\hat{c_i} = 3$ \\
+expansion & $\alpha < 1/2$ &  impossible\\
+no expansion & $\alpha_{i-1}<1/2, \alpha_{i} < 1/2$ & $\hat{c_i} = 0$\\
+no expansion &  $\alpha_{i-1} < 1/2, \alpha_{i}\geq 1/2$  &  $\hat{c_i} = 3$\\
 \end{tabular}
+
 \bi
 \ii Therefore, in all cases, the amortized cost of insertion is $\leq 3$.
 \ei
 
 
+\end{frame}
+
 \sect{Delete}
 
-\begin{tabular}{lccc}
-contraction & $\alpha < 1/2$ &&  $\hat{c_i} = 1$ \\
-no contraction  & $\alpha < 1/2$ &&  $\hat{c_i} = 2$ \\
-contraction  & $\alpha \geq 1/2$ &&  impossible\\
-no contraction & $\alpha_{i-1} \geq 1/2$&$\alpha_{i} \geq 1/2$ & $\hat{c_i} = -1$\\
-no contraction &  $\alpha_{i-1} \geq 1/2$&$ \alpha_{i} < 1/2$  &  $\hat{c_i} = 2$
+\begin{tabular}{lcc}
+contraction & $\alpha < 1/2$ &  $\hat{c_i} = 1$ \\
+no contraction  & $\alpha < 1/2$ &  $\hat{c_i} = 2$ \\
+contraction  & $\alpha \geq 1/2$ &  impossible\\
+no contraction & $\alpha_{i-1} \geq 1/2, \alpha_{i} \geq 1/2$ & $\hat{c_i} = -1$\\
+no contraction &  $\alpha_{i-1} \geq 1/2, \alpha_{i} < 1/2$  &  $\hat{c_i} = 2$
 \end{tabular}
 
 \bi
@@ -795,8 +885,10 @@ amortized cost is $\leq 2$.
 
 \vfill
 
-\newpage
+\end{frame}
 
+\sect{}
 \includegraphics[width=\textwidth]{Fig-17-4.pdf}
+\end{frame}
 
 \end{document}

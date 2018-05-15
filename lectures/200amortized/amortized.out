@@ -1,0 +1,42 @@
+\BOOKMARK [2][]{Outline0.1}{Amortized analysis}{}% 1
+\BOOKMARK [2][]{Outline0.2}{Stack operations}{}% 2
+\BOOKMARK [2][]{Outline0.3}{Running time of Multipop:}{}% 3
+\BOOKMARK [2][]{Outline0.4}{Worst-case analysis without amortization}{}% 4
+\BOOKMARK [2][]{Outline0.5}{Something wrong with worst-case analysis}{}% 5
+\BOOKMARK [2][]{Outline0.6}{Aggregate analysis}{}% 6
+\BOOKMARK [2][]{Outline0.7}{Binary counter}{}% 7
+\BOOKMARK [2][]{Outline0.8}{Binary counter}{}% 8
+\BOOKMARK [2][]{Outline0.9}{Worst case analysis of binary counter}{}% 9
+\BOOKMARK [2][]{Outline0.10}{Aggregate analysis of binary counter}{}% 10
+\BOOKMARK [2][]{Outline0.11}{Total number of flips}{}% 11
+\BOOKMARK [2][]{Outline0.12}{Accounting Method and Potential Method}{}% 12
+\BOOKMARK [2][]{Outline0.13}{Accounting method}{}% 13
+\BOOKMARK [2][]{Outline0.14}{Accounting method costs}{}% 14
+\BOOKMARK [2][]{Outline0.15}{Accounting method amortized analysis of stack operations}{}% 15
+\BOOKMARK [2][]{Outline0.16}{Accounting method amortized analysis of binary counter}{}% 16
+\BOOKMARK [2][]{Outline0.17}{The Potential Method}{}% 17
+\BOOKMARK [2][]{Outline0.18}{Potential function}{}% 18
+\BOOKMARK [2][]{Outline0.19}{Total amortized cost}{}% 19
+\BOOKMARK [2][]{Outline0.20}{Amortized analysis of stack operations using the potential method}{}% 20
+\BOOKMARK [2][]{Outline0.21}{Amortized analysis of binary counter: potential method}{}% 21
+\BOOKMARK [2][]{Outline0.22}{Dynamic Tables}{}% 22
+\BOOKMARK [2][]{Outline0.23}{Dynamic Table Goals}{}% 23
+\BOOKMARK [2][]{Outline0.24}{Table expansion}{}% 24
+\BOOKMARK [2][]{Outline0.25}{Running time}{}% 25
+\BOOKMARK [2][]{Outline0.26}{Aggregate analysis}{}% 26
+\BOOKMARK [2][]{Outline0.27}{Accounting method}{}% 27
+\BOOKMARK [2][]{Outline0.28}{Potential method}{}% 28
+\BOOKMARK [2][]{Outline0.29}{Amortized cost of ith operation}{}% 29
+\BOOKMARK [2][]{Outline0.30}{Amortized cost of ith operation}{}% 30
+\BOOKMARK [2][]{Outline0.32}{Expansion and contraction}{}% 31
+\BOOKMARK [2][]{Outline0.33}{``Obvious strategy''}{}% 32
+\BOOKMARK [2][]{Outline0.34}{Simple solution}{}% 33
+\BOOKMARK [2][]{Outline0.35}{Intuition}{}% 34
+\BOOKMARK [2][]{Outline0.36}{Further intuition}{}% 35
+\BOOKMARK [2][]{Outline0.37}{Further intuition}{}% 36
+\BOOKMARK [2][]{Outline0.38}{Eight cases for calculating amortized costs}{}% 37
+\BOOKMARK [2][]{Outline0.39}{Insert, 1/2, with or without expansion}{}% 38
+\BOOKMARK [2][]{Outline0.40}{Insert, i-1< 1/2, no expansion}{}% 39
+\BOOKMARK [2][]{Outline0.41}{Insert, <1/2, expansion}{}% 40
+\BOOKMARK [2][]{Outline0.42}{Insert}{}% 41
+\BOOKMARK [2][]{Outline0.43}{Delete}{}% 42

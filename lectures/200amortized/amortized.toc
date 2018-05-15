@@ -1,0 +1,43 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Amortized analysis}{2}{0}{1}
+\beamer@sectionintoc {2}{Stack operations}{3}{0}{2}
+\beamer@sectionintoc {3}{Running time of \textsc {Multipop}:}{4}{0}{3}
+\beamer@sectionintoc {4}{Worst-case analysis without amortization}{5}{0}{4}
+\beamer@sectionintoc {5}{Something wrong with worst-case analysis}{6}{0}{5}
+\beamer@sectionintoc {6}{Aggregate analysis}{7}{0}{6}
+\beamer@sectionintoc {7}{Binary counter}{8}{0}{7}
+\beamer@sectionintoc {8}{Binary counter}{9}{0}{8}
+\beamer@sectionintoc {9}{Worst case analysis of binary counter}{10}{0}{9}
+\beamer@sectionintoc {10}{Aggregate analysis of binary counter}{11}{0}{10}
+\beamer@sectionintoc {11}{Total number of flips}{12}{0}{11}
+\beamer@sectionintoc {12}{Accounting Method and Potential Method}{13}{0}{12}
+\beamer@sectionintoc {13}{Accounting method}{14}{0}{13}
+\beamer@sectionintoc {14}{Accounting method costs}{15}{0}{14}
+\beamer@sectionintoc {15}{Accounting method amortized analysis of stack operations}{16}{0}{15}
+\beamer@sectionintoc {16}{Accounting method amortized analysis of binary counter}{17}{0}{16}
+\beamer@sectionintoc {17}{The Potential Method}{18}{0}{17}
+\beamer@sectionintoc {18}{Potential function}{19}{0}{18}
+\beamer@sectionintoc {19}{Total amortized cost}{20}{0}{19}
+\beamer@sectionintoc {20}{Amortized analysis of stack operations using the potential method}{21}{0}{20}
+\beamer@sectionintoc {21}{Amortized analysis of binary counter: potential method}{22}{0}{21}
+\beamer@sectionintoc {22}{Dynamic Tables}{23}{0}{22}
+\beamer@sectionintoc {23}{Dynamic Table Goals}{24}{0}{23}
+\beamer@sectionintoc {24}{Table expansion}{25}{0}{24}
+\beamer@sectionintoc {25}{Running time}{26}{0}{25}
+\beamer@sectionintoc {26}{Aggregate analysis}{27}{0}{26}
+\beamer@sectionintoc {27}{Accounting method}{28}{0}{27}
+\beamer@sectionintoc {28}{Potential method}{29}{0}{28}
+\beamer@sectionintoc {29}{Amortized cost of $i$th operation}{30}{0}{29}
+\beamer@sectionintoc {30}{Amortized cost of $i$th operation}{31}{0}{30}
+\beamer@sectionintoc {32}{Expansion and contraction}{33}{0}{31}
+\beamer@sectionintoc {33}{``Obvious strategy''}{34}{0}{32}
+\beamer@sectionintoc {34}{Simple solution}{35}{0}{33}
+\beamer@sectionintoc {35}{Intuition}{36}{0}{34}
+\beamer@sectionintoc {36}{Further intuition}{37}{0}{35}
+\beamer@sectionintoc {37}{Further intuition}{38}{0}{36}
+\beamer@sectionintoc {38}{Eight cases for calculating amortized costs}{39}{0}{37}
+\beamer@sectionintoc {39}{Insert, $\alpha \geq 1/2$, with or without expansion}{40}{0}{38}
+\beamer@sectionintoc {40}{Insert, $\alpha _{i-1}< 1/2$, no expansion}{41}{0}{39}
+\beamer@sectionintoc {41}{Insert, $\alpha <1/2$, expansion}{42}{0}{40}
+\beamer@sectionintoc {42}{Insert}{43}{0}{41}
+\beamer@sectionintoc {43}{Delete}{44}{0}{42}
