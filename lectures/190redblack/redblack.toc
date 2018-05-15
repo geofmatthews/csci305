@@ -16,4 +16,4 @@
 \beamer@sectionintoc {15}{Parent is red and uncle is red:}{16}{0}{15}
 \beamer@sectionintoc {16}{Parent is red and uncle is black:}{17}{0}{16}
 \beamer@sectionintoc {17}{Analysis}{18}{0}{17}
-\beamer@sectionintoc {18}{Deletion}{19}{0}{18}
+\beamer@sectionintoc {18}{\sc RB-Transplant}{19}{0}{18}

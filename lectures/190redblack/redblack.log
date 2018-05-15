@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  2 MAY 2018 10:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  11 MAY 2018 08:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**binarytree
-(./binarytree.tex
+**redblack
+(./redblack.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
@@ -752,23 +752,23 @@ Package: clrscode3e
 \savecode=\box79
 \codeboxwidth=\skip60
 \c@thisindent=\count164
-) (./binarytree.aux)
-\openout1 = `binarytree.aux'.
+) (./redblack.aux)
+\openout1 = `redblack.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -834,7 +834,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box81
-Package hyperref Info: Link coloring OFF on input line 28.
+Package hyperref Info: Link coloring OFF on input line 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -844,56 +844,56 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count171
 )
-LaTeX Info: Redefining \ref on input line 28.
-LaTeX Info: Redefining \pageref on input line 28.
-LaTeX Info: Redefining \nameref on input line 28.
+LaTeX Info: Redefining \ref on input line 35.
+LaTeX Info: Redefining \pageref on input line 35.
+LaTeX Info: Redefining \nameref on input line 35.
 
-(./binarytree.out) (./binarytree.out)
+(./redblack.out) (./redblack.out)
 \@outlinefile=\write5
-\openout5 = `binarytree.out'.
+\openout5 = `redblack.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 28.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 35.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 28.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 35.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 28.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 28.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 28.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 28.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 35.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 28.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 28.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 28.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 35.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 28.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 28.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 28.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 35.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 28.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 28.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 35.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 28.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 35.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 28.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 28.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 28.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 28.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 28.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 28.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bas
 ic-dictionary/translator-basic-dictionary-English.dict
@@ -919,18 +919,18 @@ Dictionary: translator-numbers-dictionary, Language: English
 orem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 28.
- (./binarytree.nav)
+LaTeX Info: Redefining \includegraphics on input line 35.
+ (./redblack.nav)
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 31.
+(Font)              size <5> substituted on input line 38.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-\openout4 = `binarytree.vrb'.
+\openout4 = `redblack.vrb'.
 
- (./binarytree.vrb
+ (./redblack.vrb
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -943,227 +943,272 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )) [2
 
 ]
-\openout4 = `binarytree.vrb'.
+\openout4 = `redblack.vrb'.
 
-
-(./binarytree.vrb
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 13.
-
-) [3
+ (./redblack.vrb) [3
 
 ]
-\openout4 = `binarytree.vrb'.
+\openout4 = `redblack.vrb'.
 
- (./binarytree.vrb <Fig-12-1.pdf, id=151, 2656.92625pt x 1163.34625pt>
-File: Fig-12-1.pdf Graphic file (type pdf)
+ (./redblack.vrb <example.jpg, id=170, 488.57532pt x 300.3722pt>
+File: example.jpg Graphic file (type jpg)
 
-<use Fig-12-1.pdf>
-Package pdftex.def Info: Fig-12-1.pdf used on input line 6.
-(pdftex.def)             Requested size: 307.28987pt x 134.53642pt.
+<use example.jpg>
+Package pdftex.def Info: example.jpg used on input line 12.
+(pdftex.def)             Requested size: 244.28706pt x 150.18571pt.
 ) [4
 
- <./Fig-12-1.pdf>]
-\openout4 = `binarytree.vrb'.
+ <./example.jpg>]
+\openout4 = `redblack.vrb'.
 
- (./binarytree.vrb
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10.95> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 5.
-
-Warning: Indentation ends at level 1 in codebox on page 5.
-<Fig-12-2.pdf, id=186, 1585.925pt x 1019.81pt>
-File: Fig-12-2.pdf Graphic file (type pdf)
- <use Fig-12-2.pdf>
-Package pdftex.def Info: Fig-12-2.pdf used on input line 11.
-(pdftex.def)             Requested size: 153.64493pt x 98.79695pt.
+ (./redblack.vrb
+<Fig-13-1.pdf, id=196, 3258.1725pt x 3480.00125pt>
+File: Fig-13-1.pdf Graphic file (type pdf)
+ <use Fig-13-1.pdf>
+Package pdftex.def Info: Fig-13-1.pdf used on input line 3.
+(pdftex.def)             Requested size: 201.54723pt x 215.31812pt.
 ) [5
 
- <./Fig-12-2.pdf>]
-\openout4 = `binarytree.vrb'.
+ <./Fig-13-1.pdf>]
+\openout4 = `redblack.vrb'.
 
- (./binarytree.vrb
-Warning: Indentation ends at level -1 in codebox on page 6.
-File: Fig-12-2.pdf Graphic file (type pdf)
-<use Fig-12-2.pdf>
-Package pdftex.def Info: Fig-12-2.pdf used on input line 12.
-(pdftex.def)             Requested size: 153.64493pt x 98.79695pt.
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 12--13
-[][]  
- []
-
-) [6
+ (./redblack.vrb) [6
 
 ]
-\openout4 = `binarytree.vrb'.
+\openout4 = `redblack.vrb'.
 
- (./binarytree.vrb
-Warning: Indentation ends at level -1 in codebox on page 7.
-) [7
+ (./redblack.vrb) [7
 
 ]
-\openout4 = `binarytree.vrb'.
+\openout4 = `redblack.vrb'.
 
- (./binarytree.vrb
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <9> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 7.
-
-
-Overfull \hbox (8.87822pt too wide) in paragraph at lines 17--17
-[]| []  
- []
-
-
-Overfull \hbox (14.50314pt too wide) in paragraph at lines 35--35
-[]| []  
- []
-
-) [8
+ (./redblack.vrb)
+[8
 
 ]
-\openout4 = `binarytree.vrb'.
+\openout4 = `redblack.vrb'.
 
- (./binarytree.vrb
-File: Fig-12-2.pdf Graphic file (type pdf)
- <use Fig-12-2.pdf>
-Package pdftex.def Info: Fig-12-2.pdf used on input line 19.
-(pdftex.def)             Requested size: 138.2795pt x 88.91571pt.
+ (./redblack.vrb) [9
 
-Overfull \hbox (11.9417pt too wide) in paragraph at lines 31--31
-[]| []  
- []
+]
+\openout4 = `redblack.vrb'.
 
-<Fig-12-3.pdf, id=302, 1471.4975pt x 793.96625pt>
-File: Fig-12-3.pdf Graphic file (type pdf)
- <use Fig-12-3.pdf>
-Package pdftex.def Info: Fig-12-3.pdf used on input line 63.
-(pdftex.def)             Requested size: 153.64493pt x 82.89037pt.
-)
-Overfull \vbox (284.28296pt too high) detected at line 272
- []
+ (./redblack.vrb
 
-[9
-
- <./Fig-12-3.pdf>]
-\openout4 = `binarytree.vrb'.
-
- (./binarytree.vrb
-Overfull \hbox (7.54106pt too wide) in paragraph at lines 7--7
-[]| []  
- []
-
-
-Overfull \hbox (25.26563pt too wide) in paragraph at lines 19--19
-[]| []  
- []
-
-File: Fig-12-3.pdf Graphic file (type pdf)
-<use Fig-12-3.pdf>
-Package pdftex.def Info: Fig-12-3.pdf used on input line 21.
-(pdftex.def)             Requested size: 153.64493pt x 82.89037pt.
-
-Overfull \hbox (5.0pt too wide) in paragraph at lines 21--22
-[][]  
- []
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10.95> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 3.
 
 ) [10
 
 ]
-\openout4 = `binarytree.vrb'.
+\openout4 = `redblack.vrb'.
 
- (./binarytree.vrb <Fig-12-4.pdf, id=361, 3247.13126pt x 3207.985pt>
-File: Fig-12-4.pdf Graphic file (type pdf)
+ (./redblack.vrb <Fig-13-2.pdf, id=365, 1808.7575pt x 495.8525pt>
+File: Fig-13-2.pdf Graphic file (type pdf)
 
-<use Fig-12-4.pdf>
-Package pdftex.def Info: Fig-12-4.pdf used on input line 26.
-(pdftex.def)             Requested size: 163.4561pt x 161.48961pt.
+<use Fig-13-2.pdf>
+Package pdftex.def Info: Fig-13-2.pdf used on input line 26.
+(pdftex.def)             Requested size: 153.64493pt x 42.11285pt.
 
-Overfull \hbox (14.81117pt too wide) in paragraph at lines 26--27
-[][]  
+Overfull \hbox (5.0pt too wide) in paragraph at lines 26--27
+[]  
  []
 
 ) [11
 
- <./Fig-12-4.pdf>]
-\openout4 = `binarytree.vrb'.
+ <./Fig-13-2.pdf>]
+\openout4 = `redblack.vrb'.
 
- (./binarytree.vrb
-Overfull \hbox (17.71252pt too wide) in paragraph at lines 40--40
+ (./redblack.vrb
+<Fig-13-3.pdf, id=400, 2637.855pt x 1809.76125pt>
+File: Fig-13-3.pdf Graphic file (type pdf)
+ <use Fig-13-3.pdf>
+Package pdftex.def Info: Fig-13-3.pdf used on input line 3.
+(pdftex.def)             Requested size: 307.28987pt x 210.8106pt.
+) [12
+
+ <./Fig-13-3.pdf>]
+\openout4 = `redblack.vrb'.
+
+ (./redblack.vrb
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 39.
+
+Overfull \hbox (158.64494pt too wide) in paragraph at lines 54--54
 []| []  
  []
 
-) [12
+) [13
 
 ]
-\openout4 = `binarytree.vrb'.
+\openout4 = `redblack.vrb'.
 
- (./binarytree.vrb) [13
+ (./redblack.vrb <Fig-13-4.pdf, id=461, 2678.005pt x 3240.105pt>
+File: Fig-13-4.pdf Graphic file (type pdf)
 
-]
-\openout4 = `binarytree.vrb'.
-
- (./binarytree.vrb
-<Fig-12-5.pdf, id=449, 1584.92125pt x 1019.81pt>
-File: Fig-12-5.pdf Graphic file (type pdf)
- <use Fig-12-5.pdf>
-Package pdftex.def Info: Fig-12-5.pdf used on input line 5.
-(pdftex.def)             Requested size: 153.64493pt x 98.8592pt.
+<use Fig-13-4.pdf>
+Package pdftex.def Info: Fig-13-4.pdf used on input line 3.
+(pdftex.def)             Requested size: 177.95842pt x 215.31812pt.
 ) [14
 
- <./Fig-12-5.pdf>]
+ <./Fig-13-4.pdf>]
+\openout4 = `redblack.vrb'.
+
+ (./redblack.vrb) [15
+
+]
+\openout4 = `redblack.vrb'.
+
+ (./redblack.vrb <Fig-13-5.pdf, id=521, 3347.50626pt x 1398.22375pt>
+File: Fig-13-5.pdf Graphic file (type pdf)
+ <use Fig-13-5.pdf>
+Package pdftex.def Info: Fig-13-5.pdf used on input line 3.
+(pdftex.def)             Requested size: 307.28987pt x 128.35225pt.
+)
+[16
+
+ <./Fig-13-5.pdf>]
+\openout4 = `redblack.vrb'.
+
+ (./redblack.vrb
+<Fig-13-6.pdf, id=555, 2786.41pt x 779.91376pt>
+File: Fig-13-6.pdf Graphic file (type pdf)
+ <use Fig-13-6.pdf>
+Package pdftex.def Info: Fig-13-6.pdf used on input line 3.
+(pdftex.def)             Requested size: 307.28987pt x 86.00499pt.
+) [17
+
+ <./Fig-13-6.pdf>]
+\openout4 = `redblack.vrb'.
+
+ (./redblack.vrb) [18
+
+]
+\openout4 = `redblack.vrb'.
+
+ (./redblack.vrb
+<RB-Transplant.pdf, id=615, 119.32579pt x 91.54199pt>
+File: RB-Transplant.pdf Graphic file (type pdf)
+ <use RB-Transplant.pdf>
+Package pdftex.def Info: RB-Transplant.pdf used on input line 2.
+(pdftex.def)             Requested size: 119.32549pt x 91.54176pt.
+)
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <14.4> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 333.
+
+[19
+
+ <./RB-Transplant.pdf>]
+\openout4 = `redblack.vrb'.
+
+ (./redblack.vrb
+<RB-Delete.pdf, id=650, 192.8806pt x 299.519pt>
+File: RB-Delete.pdf Graphic file (type pdf)
+ <use RB-Delete.pdf>
+Package pdftex.def Info: RB-Delete.pdf used on input line 3.
+(pdftex.def)             Requested size: 154.30469pt x 239.61551pt.
+) [20
+
+ <./RB-Delete.pdf>]
+\openout4 = `redblack.vrb'.
+
+ (./redblack.vrb
+<RB-Delete-Fixup.pdf, id=685, 356.2108pt x 310.11859pt>
+File: RB-Delete-Fixup.pdf Graphic file (type pdf)
+
+<use RB-Delete-Fixup.pdf>
+Package pdftex.def Info: RB-Delete-Fixup.pdf used on input line 3.
+(pdftex.def)             Requested size: 284.96902pt x 248.09518pt.
+) [21
+
+ <./RB-Delete-Fixup.pdf>]
+\openout4 = `redblack.vrb'.
+
+ (./redblack.vrb
+<Fig-13-7.pdf, id=721, 3280.255pt x 2904.8525pt>
+File: Fig-13-7.pdf Graphic file (type pdf)
+ <use Fig-13-7.pdf>
+Package pdftex.def Info: Fig-13-7.pdf used on input line 2.
+(pdftex.def)             Requested size: 307.28987pt x 272.10764pt.
+)
+Overfull \vbox (3.96101pt too high) detected at line 347
+ []
+
+[22
+
+ <./Fig-13-7.pdf>]
+\openout4 = `redblack.vrb'.
+
+ (./redblack.vrb
+<Fig-13-8.pdf, id=756, 2882.77pt x 1311.90125pt>
+File: Fig-13-8.pdf Graphic file (type pdf)
+ <use Fig-13-8.pdf>
+Package pdftex.def Info: Fig-13-8.pdf used on input line 2.
+(pdftex.def)             Requested size: 307.28987pt x 139.82555pt.
+) [23
+
+ <./Fig-13-8.pdf>]
+\openout4 = `redblack.vrb'.
+
+ (./redblack.vrb <Fig-13-9.pdf, id=790, 1359.0775pt x 794.97pt>
+File: Fig-13-9.pdf Graphic file (type pdf)
+
+<use Fig-13-9.pdf>
+Package pdftex.def Info: Fig-13-9.pdf used on input line 2.
+(pdftex.def)             Requested size: 307.28987pt x 179.7339pt.
+) [24
+
+ <./Fig-13-9.pdf>]
 \tf@nav=\write6
-\openout6 = `binarytree.nav'.
+\openout6 = `redblack.nav'.
 
 \tf@toc=\write7
-\openout7 = `binarytree.toc'.
+\openout7 = `redblack.toc'.
 
 \tf@snm=\write8
-\openout8 = `binarytree.snm'.
+\openout8 = `redblack.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 424.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 424.
- (./binarytree.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 424.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 424.
-Package rerunfilecheck Info: File `binarytree.out' has not changed.
-(rerunfilecheck)             Checksum: 9538B3C5937B307A6F896A027FB15A98;686.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 356.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 356.
+ (./redblack.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 356.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 356.
+Package rerunfilecheck Info: File `redblack.out' has not changed.
+(rerunfilecheck)             Checksum: DDA8ED539AB3CB8485A638451E3A6D59;950.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 424.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 356.
  ) 
 Here is how much of TeX's memory you used:
- 16875 strings out of 494827
- 319562 string characters out of 6176977
- 400790 words of memory out of 5000000
- 19723 multiletter control sequences out of 15000+600000
- 17923 words of font info for 66 fonts, out of 8000000 for 9000
+ 17034 strings out of 494827
+ 322081 string characters out of 6176977
+ 399820 words of memory out of 5000000
+ 19826 multiletter control sequences out of 15000+600000
+ 16187 words of font info for 60 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
- 48i,14n,51p,407b,551s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,14n,58p,405b,551s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ssi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on binarytree.pdf (14 pages, 840915 bytes).
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+Output written on redblack.pdf (24 pages, 2795094 bytes).
 PDF statistics:
- 546 PDF objects out of 1000 (max. 8388607)
- 488 compressed objects within 5 object streams
- 42 named destinations out of 1000 (max. 500000)
- 172 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 890 PDF objects out of 1000 (max. 8388607)
+ 798 compressed objects within 8 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 252 words of extra memory for PDF output out of 10000 (max. 10000000)
 

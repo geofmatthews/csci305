@@ -41,33 +41,38 @@
 \headcommand {\beamer@subsectionpages {8}{8}}
 \headcommand {\slideentry {8}{0}{1}{9/9}{}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\sectionentry {9}{Recursive tree insert}{10}{Recursive tree insert}{0}}
+\headcommand {\sectionentry {9}{Tree insert}{10}{Tree insert}{0}}
 \headcommand {\beamer@sectionpages {9}{9}}
 \headcommand {\beamer@subsectionpages {9}{9}}
 \headcommand {\slideentry {9}{0}{1}{10/10}{}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\sectionentry {10}{Deletion}{11}{Deletion}{0}}
+\headcommand {\sectionentry {10}{Recursive tree insert}{11}{Recursive tree insert}{0}}
 \headcommand {\beamer@sectionpages {10}{10}}
 \headcommand {\beamer@subsectionpages {10}{10}}
 \headcommand {\slideentry {10}{0}{1}{11/11}{}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\sectionentry {11}{Transplant}{12}{Transplant}{0}}
+\headcommand {\sectionentry {11}{Deletion}{12}{Deletion}{0}}
 \headcommand {\beamer@sectionpages {11}{11}}
 \headcommand {\beamer@subsectionpages {11}{11}}
 \headcommand {\slideentry {11}{0}{1}{12/12}{}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\sectionentry {12}{Theorem 12.4}{13}{Theorem 12.4}{0}}
+\headcommand {\sectionentry {12}{{\sc Transplant} and {\sc Tree-Delete}}{13}{{\sc Transplant} and {\sc Tree-Delete}}{0}}
 \headcommand {\beamer@sectionpages {12}{12}}
 \headcommand {\beamer@subsectionpages {12}{12}}
 \headcommand {\slideentry {12}{0}{1}{13/13}{}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\sectionentry {13}{Problem 12-2, Radix trees}{14}{Problem 12-2, Radix trees}{0}}
+\headcommand {\sectionentry {13}{Theorem 12.4}{14}{Theorem 12.4}{0}}
 \headcommand {\beamer@sectionpages {13}{13}}
 \headcommand {\beamer@subsectionpages {13}{13}}
 \headcommand {\slideentry {13}{0}{1}{14/14}{}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\beamer@partpages {1}{14}}
-\headcommand {\beamer@subsectionpages {14}{14}}
+\headcommand {\sectionentry {14}{Problem 12-2, Radix trees}{15}{Problem 12-2, Radix trees}{0}}
 \headcommand {\beamer@sectionpages {14}{14}}
-\headcommand {\beamer@documentpages {14}}
-\headcommand {\def \inserttotalframenumber {14}}
+\headcommand {\beamer@subsectionpages {14}{14}}
+\headcommand {\slideentry {14}{0}{1}{15/15}{}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\beamer@partpages {1}{15}}
+\headcommand {\beamer@subsectionpages {15}{15}}
+\headcommand {\beamer@sectionpages {15}{15}}
+\headcommand {\beamer@documentpages {15}}
+\headcommand {\def \inserttotalframenumber {15}}

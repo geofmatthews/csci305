@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{clrscode3e}
+
+\title{CSCI 305, Homework \# 7}
+\author{YOUR NAME HERE}
+\date{Due date:  Midnight, Tuesday, May 29}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{description}
+\item[Quadratic probing.]  This is problem 11-3
+  in the book.
+
+  Suppose that we are given a key $k$ to search for in a hash table
+  with positions $0,1,...,m-1$, and suppose that we have a hash
+  function $h$ mapping the key space into the set $\{0,1,...,m-1\}$.
+  The search scheme is as follows:
+
+  \begin{enumerate}
+  \item Compute the value $j=h(k)$ and set $i=0$.
+    \item Probe in position $j$ for the desired key $k$.  If you find
+      it, or if this position is empty, terminate the search.
+      \item Set $i=i+1$.  If $i$ now equals $m$, the table is full, so
+        terminate the search.  Otherwise, set $j=(i+j)\mod m$ and
+        return to step 2.
+  \end{enumerate}
+  Assume that $m$ is a power of 2.
+  \renewcommand{\theenumi}{\alph{enumi}}
+  \begin{enumerate}
+    \item Show that this scheme is an instance of the general
+      ``quadratic probing'' scheme by exhibiting the appropriate
+      constants $c_1$ and $c_2$ for equation (11.5).
+      \item Prove that this algorithm examines every table position in
+        the worst case.
+  \end{enumerate}
+  
+
+\end{description}
+
+
+\end{document}

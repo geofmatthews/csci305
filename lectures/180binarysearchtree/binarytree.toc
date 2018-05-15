@@ -7,8 +7,9 @@
 \beamer@sectionintoc {6}{Iterative version}{7}{0}{6}
 \beamer@sectionintoc {7}{Minimum and maximum}{8}{0}{7}
 \beamer@sectionintoc {8}{Successor and predecessor}{9}{0}{8}
-\beamer@sectionintoc {9}{Recursive tree insert}{10}{0}{9}
-\beamer@sectionintoc {10}{Deletion}{11}{0}{10}
-\beamer@sectionintoc {11}{Transplant}{12}{0}{11}
-\beamer@sectionintoc {12}{Theorem 12.4}{13}{0}{12}
-\beamer@sectionintoc {13}{Problem 12-2, Radix trees}{14}{0}{13}
+\beamer@sectionintoc {9}{Tree insert}{10}{0}{9}
+\beamer@sectionintoc {10}{Recursive tree insert}{11}{0}{10}
+\beamer@sectionintoc {11}{Deletion}{12}{0}{11}
+\beamer@sectionintoc {12}{{\sc Transplant} and {\sc Tree-Delete}}{13}{0}{12}
+\beamer@sectionintoc {13}{Theorem 12.4}{14}{0}{13}
+\beamer@sectionintoc {14}{Problem 12-2, Radix trees}{15}{0}{14}
