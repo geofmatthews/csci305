@@ -1,7 +1,7 @@
 \beamer@endinputifotherversion {3.36pt}
 \beamer@sectionintoc {1}{Red-black trees}{2}{0}{1}
 \beamer@sectionintoc {2}{Red-black trees}{3}{0}{2}
-\beamer@sectionintoc {3}{Red-black tree properties}{4}{0}{3}
+\beamer@sectionintoc {3}{Red-black tree properties \hspace {3cm} (remember!)}{4}{0}{3}
 \beamer@sectionintoc {4}{Red-black tree}{5}{0}{4}
 \beamer@sectionintoc {5}{Height of a red-black tree}{6}{0}{5}
 \beamer@sectionintoc {6}{Claim 1:}{7}{0}{6}
@@ -10,10 +10,13 @@
 \beamer@sectionintoc {9}{Operations on red-black trees}{10}{0}{9}
 \beamer@sectionintoc {10}{Rotations}{11}{0}{10}
 \beamer@sectionintoc {11}{Rotations}{12}{0}{11}
-\beamer@sectionintoc {12}{Insertions}{13}{0}{12}
-\beamer@sectionintoc {13}{RB-Insert-Fixup}{14}{0}{13}
-\beamer@sectionintoc {14}{Insert fixup loop invariant.}{15}{0}{14}
-\beamer@sectionintoc {15}{Parent is red and uncle is red:}{16}{0}{15}
-\beamer@sectionintoc {16}{Parent is red and uncle is black:}{17}{0}{16}
-\beamer@sectionintoc {17}{Analysis}{18}{0}{17}
-\beamer@sectionintoc {18}{\sc RB-Transplant}{19}{0}{18}
+\beamer@sectionintoc {13}{Insertion fixup}{14}{0}{12}
+\beamer@sectionintoc {15}{Insertion fixup}{16}{0}{13}
+\beamer@sectionintoc {17}{Loop invariant}{18}{0}{14}
+\beamer@sectionintoc {18}{Maintenance, Case 1, uncle is red}{19}{0}{15}
+\beamer@sectionintoc {19}{Maintenance, Case 2\&3, uncle is black:}{20}{0}{16}
+\beamer@sectionintoc {20}{Analysis}{21}{0}{17}
+\beamer@sectionintoc {21}{\sc RB-Transplant}{22}{0}{18}
+\beamer@sectionintoc {23}{What violations could occur if $y$ was black?}{24}{0}{19}
+\beamer@sectionintoc {24}{\sc RB-Delete-Fixup}{25}{0}{20}
+\beamer@sectionintoc {27}{Analysis}{28}{0}{21}

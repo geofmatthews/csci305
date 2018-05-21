@@ -63,7 +63,7 @@ red-black tree $T$.
 
 \end{frame}
 
-\sect{Red-black tree properties}
+\sect{Red-black tree properties \hspace{3cm} (remember!)}
 
 \begin{enumerate}
   \ii Every node is either red or black.
@@ -173,8 +173,8 @@ time.
 \ei
 \ii $\proc{Delete}$, what color was the old node?
 \bi
-\ii Red?  OK.
-\bi\ii Unless successor is black?\ei
+\ii Red?
+\bi\ii Successor might be black.\ei
 \ii Black?
 \bi\ii Could cause two reds in a row, and violate properties 2 and 5.\ei
 \ei
@@ -211,11 +211,14 @@ time.
 
 \vfill
 
+
  Assumes
 \bi
 \ii $\attrib{x}{right}\not = \attrib{T}{nil}$
 \ii root's parent is $\attrib{T}{nil}$
 \ei
+
+\[\Theta(1)\]
 
 \end{multicols}
 
@@ -226,13 +229,23 @@ time.
 
 \end{frame}
 
-\sect{Insertions}
-\scriptsize
+\sect{}
 \begin{multicols}{2}
+  \includegraphics[scale=1]{Tree-Insert}
+  \vfill
+  \mbox{}
+\columnbreak
+\includegraphics[scale=1]{RB-Insert}
+\end{multicols}
+\end{frame}
+
+\sect{Insertion fixup}
+%\scriptsize
+%\begin{multicols}{2}
 \bi
 \ii Start by doing regular binary-tree insertion.
 \ii Color new node red.
-\ii May violate red-black tree properties:
+\ii May violate red-black tree properties 2 or 4:
 \ei
 
 \begin{enumerate}
@@ -254,8 +267,41 @@ time.
   OK.
 \end{enumerate}
 
+%\columnbreak
+\end{frame}
+
+\sect{}
+\includegraphics[scale=0.9]{RB-Insert-Fixup}
+%\end{multicols}
+\end{frame}
+
+\sect{Insertion fixup}
+\begin{multicols}{2}
+\includegraphics[height=0.8\textheight]{Fig-13-4.pdf}
 \columnbreak
 
+  \begin{description}
+  \ii Case 1, uncle red:
+  \bi
+  \ii make gramma's children black
+  \ii make gramma red
+  \ii make gramma new $z$
+  \ii loop
+  \ei
+\ii Case 2 (optional):
+\bi
+\ii rotate left
+\ei
+\ii Case 3:
+\bi
+\ii rotate right
+\ii make parent black
+\ei
+  \end{description}
+\end{multicols}
+\end{frame}
+
+\newcommand{\rbinsertfixup}{
 \begin{codebox}
   \Procname{$\proc{RB-Insert-Fixup}(T,z)$}
   \li \While $\attrib{\attrib{z}{p}}{color} \isequal \const{red}$\Do
@@ -264,15 +310,15 @@ time.
   \li $y \gets \attrib{\attrib{\attrib{z}{p}}{p}}{right}$
   \li \If $\attrib{y}{color} \isequal \const{red}$\Do 
   \li $\attrib{\attrib{z}{p}}{color} \gets \const{black}$
-  \RComment{\color{red} case 1}
+%  \RComment{\color{red} case 1}
   \li $\attrib{y}{color}\gets \const{black}$
   \li $\attrib{\attrib{\attrib{z}{p}}{p}}{color} \gets \const{red}$
   \li $z\gets\attrib{\attrib{z}{p}}{p}$
   \li \Else \If $z\isequal\attrib{\attrib{z}{p}}{right}$ \Do
-             \li $z\gets\attrib{z}{p}$ \RComment{ \color{red} case 2}
+             \li $z\gets\attrib{z}{p}$ %\RComment{ \color{red} case 2}
              \li $\proc{Left-Rotate}(T,z)$ \End
   \li $\attrib{\attrib{z}{p}}{color} \gets \const{black}$
-  \RComment{\color{red} case 3}
+%  \RComment{\color{red} case 3}
   \li $\attrib{\attrib{\attrib{z}{p}}{p}}{color} \gets \const{red}$
   \li $\proc{Right-Rotate}(T,\attrib{\attrib{z}{p}}{p})$
 \End
@@ -280,34 +326,111 @@ time.
 \End
   \li $\attrib{\attrib{T}{root}}{color} \gets \const{black}$
 \end{codebox}
-\end{multicols}
-\end{frame}
+}
+\sect{}
+\begin{multicols}{2}
+\footnotesize
+\begin{codebox}
+  \Procname{$\proc{RB-Insert-Fixup}(T,z)$}
+  \li \While $\attrib{\attrib{z}{p}}{color} \isequal \const{red}$\Do
+  \li \If $\attrib{z}{p} \isequal
+  \attrib{\attrib{\attrib{z}{p}}{p}}{left}$ \Do
+  \li $y \gets \attrib{\attrib{\attrib{z}{p}}{p}}{right}$
+  \li \If $\attrib{y}{color} \isequal \const{red}$\Do 
+  \li $\attrib{\attrib{z}{p}}{color} \gets \const{black}$
+%  \RComment{\color{red} case 1}
+  \li $\attrib{y}{color}\gets \const{black}$
+  \li $\attrib{\attrib{\attrib{z}{p}}{p}}{color} \gets \const{red}$
+  \li $z\gets\attrib{\attrib{z}{p}}{p}$
+  \li \Else \If $z\isequal\attrib{\attrib{z}{p}}{right}$ \Do
+             \li $z\gets\attrib{z}{p}$ %\RComment{ \color{red} case 2}
+             \li $\proc{Left-Rotate}(T,z)$ \End
+  \li $\attrib{\attrib{z}{p}}{color} \gets \const{black}$
+%  \RComment{\color{red} case 3}
+  \li $\attrib{\attrib{\attrib{z}{p}}{p}}{color} \gets \const{red}$
+  \li $\proc{Right-Rotate}(T,\attrib{\attrib{z}{p}}{p})$
+\End
+  \li \Else \li (``right'' $\rightleftharpoons$ ``left'') \End
+\End
+  \li $\attrib{\attrib{T}{root}}{color} \gets \const{black}$
+\end{codebox}
 
-\sect{RB-Insert-Fixup}
-
-\includegraphics[height=0.8\textheight]{Fig-13-4.pdf}
-
-\end{frame}
-
-\sect{Insert fixup loop invariant.}
+  \columnbreak
+  
+Loop Invariant:  at the start of each iteration of the {\bf while} loop:
 \bi
 \ii $z$ is red
+\ii If $z.p$ is the root, then $z.p$ is black.
 \ii There is at most one red-black violation:
 \bi
 \ii $z$ is a red root.
 \ii $z$ and $\attrib{z}{p}$ are both red.
 \ei
 \ei
+\end{multicols}
+\end{frame}
+
+\sect{Loop invariant}
+
+
+
+Loop Invariant:  at the start of each iteration of the {\bf while} loop:
+\begin{enumerate}
+\ii $z$ is red\label{zisred}
+\ii If $z.p$ is the root, then $z.p$ is black.\label{parentisblack}
+\ii There is at most one red-black violation:\label{redblack}
+\begin{enumerate}
+\ii $z$ is a red root.\label{redroot}
+\ii $z$ and $\attrib{z}{p}$ are both red.\label{redred}
+\end{enumerate}
+\end{enumerate}
+
+\begin{description}
+\item[Initialization:]
+  \bi
+  \ii \ref{zisred} because we set it that way.
+  \ii \ref{parentisblack} because it was root to begin with.
+  \ii \ref{redblack}.\ref{redroot} possible if $z$ is new root.
+  \ii \ref{redblack}.\ref{redred} possible if $z.p$ was red.
+  \ei
+\item[Termination:] 
+  \bi
+  \ii \ref{redblack}.\ref{redroot} last line fixes red root.
+  \ii \ref{redblack}.\ref{redred} loop only terminates when $z.p$ is black.
+  \ei 
+\end{description}
 
 \end{frame}
 
-\sect{Parent is red and  uncle is red:}
+\sect{Maintenance, Case 1, uncle is red}
+
+Loop Invariant:  at the start of each iteration of the {\bf while} loop:
+\begin{enumerate}
+\ii $z$ is red\label{zisred}
+\ii If $z.p$ is the root, then $z.p$ is black.\label{parentisblack}
+\ii There is at most one red-black violation:\label{redblack}
+\begin{enumerate}
+\ii $z$ is a red root.\label{redroot}
+\ii $z$ and $\attrib{z}{p}$ are both red.\label{redred}
+\end{enumerate}
+\end{enumerate}
 
 \includegraphics[width=\textwidth]{Fig-13-5.pdf}
 
 \end{frame}
 
-\sect{Parent is red and  uncle is black:}
+\sect{Maintenance, Case 2\&3, uncle is black:}
+
+Loop Invariant:  at the start of each iteration of the {\bf while} loop:
+\begin{enumerate}
+\ii $z$ is red\label{zisred}
+\ii If $z.p$ is the root, then $z.p$ is black.\label{parentisblack}
+\ii There is at most one red-black violation:\label{redblack}
+\begin{enumerate}
+\ii $z$ is a red root.\label{redroot}
+\ii $z$ and $\attrib{z}{p}$ are both red.\label{redred}
+\end{enumerate}
+\end{enumerate}
 
 \includegraphics[width=\textwidth]{Fig-13-6.pdf}
 
@@ -319,7 +442,7 @@ time.
 \ii Fixup also $O(\lg n)$:
 \bi
 \ii Each pass through the loop takes $O(1)$ time.
-\ii Each iteration moves $z$ up two levels.
+\ii Each iteration moves $z$ up two levels or stops.
 \ii $O(\lg n)$ levels.
 \ii Also note that there are at most 2 rotations overall.
 \ei
@@ -329,28 +452,149 @@ time.
 \end{frame}
 
 \sect{\sc RB-Transplant}
+
+\begin{multicols}{2}
+\includegraphics{Transplant}
+
+\columnbreak
 \includegraphics{RB-Transplant}
+
+\end{multicols}
+
 \end{frame}
 
 \sect{}
+\scriptsize
+\begin{multicols}{2}
+
+  
+\begin{codebox}
+  \Procname{$\proc{Tree-Delete}(T,z)$}
+  \li\If $\attrib{z}{left}\isequal\const{nil}$  \Do
+  \li $\proc{Transplant}(T,z,\attrib{z}{right})$ 
+  \li \ElseIf $\attrib{z}{right} \isequal \const{nil}$ \Do
+  \li $\proc{Transplant}(T,z,\attrib{z}{left})$
+  \li \Else 
+  \li $y\gets \proc{Tree-Minimum}(\attrib{z}{right})$
+  \li \If $\attrib{y}{p} \not\isequal z$ \Do
+  \li $\proc{Transplant}(T,y,\attrib{y}{right})$
+  \li $\attrib{y}{right}\gets\attrib{z}{right}$
+  \li $\attrib{\attrib{y}{right}}{p} \gets y$\End
+  \li $\proc{Transplant}(T,z,y)$
+  \li $\attrib{y}{left}\gets\attrib{z}{left}$
+  \li $\attrib{\attrib{y}{left}}{p} \gets y$
+  \End
+\end{codebox}
+
+Differences:
+\bi
+\ii $y$ is either $z$ or the node moved
+\ii save $y$'s color
+\ii $x$ is node that moves into $y$'s original position
+\ii set $x.p$ to original position of $y.p$
+\bi
+\ii in $x.p = y$, or
+\ii in {\sc RB-Transplant}
+\ei
+\ii {\sc RB-Delete-Fixup} if $y$ was black
+\ei
+
+\columnbreak
 
 \includegraphics[scale=0.8]{RB-Delete}
-\end{frame}
-\sect{}
 
+\end{multicols}
+\end{frame}
+
+\sect{What violations could occur if $y$ was black?}
+\begin{enumerate}
+  \ii Every node is either red or black.
+Still  OK.
+  \ii The root is black.
+
+  Violation if $y$ is the root and $x$ is red.
+  \ii Every leaf ($\attrib{T}{nil}$) is black.
+Still
+  OK.
+
+  \ii If a node is red, then both its children are black.
+
+  Violation if $x.p$ and $x$ are both red.
+  \ii All paths from a node to descendent leaves
+  have same number of black nodes.
+
+  Any paths containing $y$ now have 1 fewer black.
+
+  \bi
+  \ii Correct by giving $x$ an ``extra black.''
+  \ii Add 1 to count of black nodes on paths containing $x$.
+  \ii Now 5 is OK, but 1 is not.
+  \ii $x$ is either {\bf black\&black} or {\bf red\&black}
+  \ii $x.color$ is still either {\sc red} or {\sc black}
+  \ii $x$ just marks the node with a black to move somewhere.
+  \ei
+\end{enumerate}
+\end{frame}
+
+\sect{\sc RB-Delete-Fixup}
+\bi
+\ii Idea: move the extra black up the tree until
+\bi
+\ii $x$ points to a {\bf red\&black} node $\implies$ turn it black,
+\ii $x$ points to the root $\implies$ just remove the extra black, or
+\ii we can do rotations and recolorings to finish.
+\ei
+\ii Within the {\bf while} loop:
+\bi
+\ii $x$ always points to a nonroot doubly black node
+\ii $w$ is $x$'s sibling
+\ii $w$ cannot be $T.nil$ since that would violate 5 at $x.p$.
+\ei
+\ii Four cases when $x$ is a left child:
+\bi
+\ii Case 1: $w$ is red
+\ii Case 2: $w$'s children both black
+\ii Case 3: $w$'s left child red, right child black
+\ii Case 4: $x$'s right child red
+\ei
+\ei
+\end{frame}
+
+\sect{}
+\includegraphics[height=0.9\textheight]{Fig-13-7.pdf}
+\end{frame}
+
+\sect{}
 \includegraphics[scale=0.8]{RB-Delete-Fixup}
+\end{frame}
 
+\sect{Analysis}
+\bi
+\ii $O(\lg n)$ time for {\sc RB-Delete} up to the call
+of {\sc RB-Delete-Fixup}
+\ii Within {\sc RB-Delete-Fixup}:
+\bi
+\ii Case 2 is the only case in which more iterations occur:
+\bi
+\ii $x$ moves up 1 level
+\ii Hence $O(\lg n)$ iterations
+\ei
+\ii Each of cases 1, 3, and 4 has 1 rotation $\implies$
+$\leq 3$ rotations in all
+\ii Hence, $O(\lg n)$ time.
+\ei
+\ii Note:
+\ii Red-black trees use at most a constant number of rotations.
+\ii AVL trees in worst case use $\Omega(\lg n)$ rotations.
+\ei
+\end{frame}
 
-\end{frame}
-\sect{}
-\includegraphics[width=\textwidth]{Fig-13-7.pdf}
-\end{frame}
-\sect{}
-\includegraphics[width=\textwidth]{Fig-13-8.pdf}
-\end{frame}
-\sect{}
-\includegraphics[width=\textwidth]{Fig-13-9.pdf}
-\end{frame}
+%\sect{}
+%\includegraphics[width=\textwidth]{Fig-13-8.pdf}
+%\end{frame}
+%\sect{}
+%\includegraphics[width=\textwidth]{Fig-13-9.pdf}
+%\end{frame}
 
 
 \end{document}

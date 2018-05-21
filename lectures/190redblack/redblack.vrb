@@ -1,2 +1,19 @@
-\frametitle{} 
-\includegraphics[width=\textwidth]{Fig-13-9.pdf}
+\frametitle{Analysis} 
+\bi
+\ii $O(\lg n)$ time for {\sc RB-Delete} up to the call
+of {\sc RB-Delete-Fixup}
+\ii Within {\sc RB-Delete-Fixup}:
+\bi
+\ii Case 2 is the only case in which more iterations occur:
+\bi
+\ii $x$ moves up 1 level
+\ii Hence $O(\lg n)$ iterations
+\ei
+\ii Each of cases 1, 3, and 4 has 1 rotation $\implies$
+$\leq 3$ rotations in all
+\ii Hence, $O(\lg n)$ time.
+\ei
+\ii Note:
+\ii Red-black trees use at most a constant number of rotations.
+\ii AVL trees in worst case use $\Omega(\lg n)$ rotations.
+\ei
