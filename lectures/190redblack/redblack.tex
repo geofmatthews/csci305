@@ -539,7 +539,7 @@ Differences:
     child { node {$\alpha$} }
     child { node {$\beta$} }
   }  ;
-  \node [right of=x] {$y,x$};
+  \node [right of=x] {$x$};
 \end{tikzpicture}
 \vfill
 \columnbreak
@@ -642,6 +642,17 @@ Differences:
 \end{multicols}
 \end{frame}
 
+\sect{What violations could occur if $y$ was red?}
+\begin{enumerate}
+\ii Every node red or black. OK.
+\ii Root is black.  $y$ could not have been the root, OK.
+\ii All leaves are black.  OK.
+\ii No red nodes became adjacent (check).  OK.
+\ii No black heights have changed.  OK.
+\end{enumerate}
+\end{frame}
+
+
 \sect{What violations could occur if $y$ was black?}
 \begin{enumerate}
   \ii Every node is either red or black.
@@ -664,7 +675,7 @@ Still
   \bi
   \ii Correct by giving $x$ an ``extra black.''
   \ii Add 1 to count of black nodes on paths containing $x$.
-  \ii Now 5 is OK, but 1 is not.
+  \ii Now 5 is OK, but 1 is not, and possibly 3.
   \ii $x$ is either {\bf black\&black} or {\bf red\&black}
   \ii $x.color$ is still either {\sc red} or {\sc black}
   \ii $x$ just marks the node with a black to move somewhere.
@@ -677,13 +688,14 @@ Still
 \ii Idea: move the extra black up the tree until
 \bi
 \ii $x$ points to a {\bf red\&black} node $\implies$ turn it black,
+\bi\ii This also handles problem of $x$ and $x.p$ both red. \ei
 \ii $x$ points to the root $\implies$ just remove the extra black, or
 \ii we can do rotations and recolorings to finish.
 \ei
 \ii Within the {\bf while} loop:
 \bi
 \ii $x$ always points to a nonroot doubly black node
-\ii $x$ is $x$'s sibling
+\ii $w$ is $x$'s sibling
 \ii $w$ cannot be $T.nil$ since that would violate 5 at $x.p$.
 \ei
 \ii Four cases when $x$ is a left child:
