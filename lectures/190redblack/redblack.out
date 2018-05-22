@@ -16,6 +16,6 @@
 \BOOKMARK [2][]{Outline0.19}{Maintenance, Case 2\0463, uncle is black:}{}% 16
 \BOOKMARK [2][]{Outline0.20}{Analysis}{}% 17
 \BOOKMARK [2][]{Outline0.21}{RB-Transplant}{}% 18
-\BOOKMARK [2][]{Outline0.23}{What violations could occur if y was black?}{}% 19
-\BOOKMARK [2][]{Outline0.24}{RB-Delete-Fixup}{}% 20
-\BOOKMARK [2][]{Outline0.27}{Analysis}{}% 21
+\BOOKMARK [2][]{Outline0.26}{What violations could occur if y was black?}{}% 19
+\BOOKMARK [2][]{Outline0.27}{RB-Delete-Fixup}{}% 20
+\BOOKMARK [2][]{Outline0.30}{Analysis}{}% 21

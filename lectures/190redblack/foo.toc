@@ -1,0 +1,19 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Red-black trees}{2}{0}{1}
+\beamer@sectionintoc {2}{Red-black trees}{3}{0}{2}
+\beamer@sectionintoc {3}{Red-black tree properties}{4}{0}{3}
+\beamer@sectionintoc {4}{Red-black tree}{5}{0}{4}
+\beamer@sectionintoc {5}{Height of a red-black tree}{6}{0}{5}
+\beamer@sectionintoc {6}{Claim 1:}{7}{0}{6}
+\beamer@sectionintoc {7}{Claim 2:}{8}{0}{7}
+\beamer@sectionintoc {8}{Lemma:}{9}{0}{8}
+\beamer@sectionintoc {9}{Operations on red-black trees}{10}{0}{9}
+\beamer@sectionintoc {10}{Rotations}{11}{0}{10}
+\beamer@sectionintoc {11}{Rotations}{12}{0}{11}
+\beamer@sectionintoc {12}{Insertions}{13}{0}{12}
+\beamer@sectionintoc {13}{RB-Insert-Fixup}{14}{0}{13}
+\beamer@sectionintoc {14}{Insert fixup loop invariant.}{15}{0}{14}
+\beamer@sectionintoc {15}{Parent is red and uncle is red:}{16}{0}{15}
+\beamer@sectionintoc {16}{Parent is red and uncle is black:}{17}{0}{16}
+\beamer@sectionintoc {17}{Analysis}{18}{0}{17}
+\beamer@sectionintoc {18}{Deletion}{19}{0}{18}

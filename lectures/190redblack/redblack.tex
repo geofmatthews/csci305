@@ -4,6 +4,21 @@
 \usepackage{clrscode3e}
 \usepackage{amsmath,amsfonts}
 \usepackage{graphicx,color}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\tikzset{
+  treenode/.style = {align=center, inner sep=0pt, text centered,
+    font=\sffamily},
+  arn_n/.style = {treenode, circle, white, font=\sffamily\bfseries, draw=black,
+    fill=black, text width=1.5em},% arbre rouge noir, noeud noir
+  arn_r/.style = {treenode, circle, red, draw=red, 
+    text width=1.5em, very thick},% arbre rouge noir, noeud rouge
+  arn_x/.style = {treenode, rectangle, draw=black,
+    minimum width=0.5em, minimum height=0.5em},% arbre rouge noir, nil
+  arn_u/.style = {treenode, circle, gray, draw=gray,
+    fill=gray,text width=1.5em, very thick}
+}
 
 \newcommand{\bi}{\begin{itemize}}
 \newcommand{\ii}{\item}
@@ -453,13 +468,9 @@ Loop Invariant:  at the start of each iteration of the {\bf while} loop:
 
 \sect{\sc RB-Transplant}
 
-\begin{multicols}{2}
 \includegraphics{Transplant}
-
-\columnbreak
+\hfill
 \includegraphics{RB-Transplant}
-
-\end{multicols}
 
 \end{frame}
 
@@ -506,6 +517,131 @@ Differences:
 \end{multicols}
 \end{frame}
 
+
+\sect{}
+\begin{multicols}{2}
+\begin{tikzpicture}[->,>=stealth',level/.style={sibling distance = 2cm/#1,
+  level distance = 1cm}] 
+  \node [arn_n] (z) {} 
+  child{ node [arn_x] {} }
+  child{ node [arn_u] (x) {}
+    child { node {$\alpha$} }
+    child { node {$\beta$} }
+  }
+  ;
+  \node [right of=z] {$y,z$};
+  \node [right of=x] {$x$};
+\end{tikzpicture}
+\vfill
+\begin{tikzpicture}[->,>=stealth',level/.style={sibling distance = 2cm/#1,
+  level distance = 1cm}] 
+  \node [arn_u] (x) {} {
+    child { node {$\alpha$} }
+    child { node {$\beta$} }
+  }  ;
+  \node [right of=x] {$y,x$};
+\end{tikzpicture}
+\vfill
+\columnbreak
+\includegraphics[scale=0.75]{RB-Delete}
+\end{multicols}
+\end{frame}
+\sect{}
+\begin{multicols}{2}
+\begin{tikzpicture}[->,>=stealth',level/.style={sibling distance = 2cm/#1,
+  level distance = 1cm}] 
+  \node [arn_u] (z) {} 
+  child{ node [arn_u] (l) {} 
+    child {}
+    child {}
+  }
+  child{ node [arn_n] (y) {} 
+    child { node [arn_x] {}
+    }
+    child { node [arn_u] (x)  {}
+      child {}
+      child {}
+    }
+  }
+  ;
+  \node [left of=l] {$l$};
+  \node [right of=z] {$z$};
+  \node [right of=x] {$x$};
+  \node [right of=y] {$y$};
+\end{tikzpicture}
+\vfill
+\begin{tikzpicture}[->,>=stealth',level/.style={sibling distance = 2cm/#1,
+  level distance = 1cm}] 
+  \node [arn_u] (y) {} 
+  child { node [arn_u] (l) {} 
+    child {}
+    child {}
+  }
+  child { node [arn_u] (x) {} 
+    child {}
+    child {}
+  }
+  ;
+  \node [left of=l] {$l$};
+  \node [right of=x] {$x$};
+  \node [right of=y] {$y$};
+\end{tikzpicture}
+\vfill
+\columnbreak
+\includegraphics[scale=0.75]{RB-Delete}
+\end{multicols}
+\end{frame}
+
+\sect{}
+\begin{multicols}{2}
+\begin{tikzpicture}[->,>=stealth',level/.style={sibling distance = 2cm/#1,
+  level distance = 1cm}] 
+  \node [arn_u] (z) {} 
+  child{ node [arn_u] (l) {} 
+  }
+  child{ node [arn_u] (r) {}
+      child { node [arn_n] (y) {}
+        child { node [arn_x] {} }
+        child { node [arn_u] (x) {}
+          child
+          child
+        }
+    }
+    child
+  }
+  ;
+  \node [left of=l] {$l$};
+  \node [right of=z] {$z$};
+  \node [right of=x] {$x$};
+  \node [left of=y] {$y$};
+  \node [right of=r] {$r$};
+\end{tikzpicture}
+\vfill
+\begin{tikzpicture}[->,>=stealth',level/.style={sibling distance = 2cm/#1,
+  level distance = 1cm}] 
+  \node [arn_u] (y) {} 
+  child{ node [arn_u] (l) {} 
+  }
+  child{ node [arn_u] (r) {}
+      child { node [arn_u] (x) {}
+        child
+        child
+    }
+    child
+  }
+  ;
+  \node [left of=l] {$l$};
+  \node [left of=x] {$x$};
+  \node [left of=y] {$y$};
+  \node [right of=r] {$r$};
+\end{tikzpicture}
+
+\vfill
+\columnbreak
+\includegraphics[scale=0.75]{RB-Delete}
+\end{multicols}
+\end{frame}
+
 \sect{What violations could occur if $y$ was black?}
 \begin{enumerate}
   \ii Every node is either red or black.
@@ -547,7 +683,7 @@ Still
 \ii Within the {\bf while} loop:
 \bi
 \ii $x$ always points to a nonroot doubly black node
-\ii $w$ is $x$'s sibling
+\ii $x$ is $x$'s sibling
 \ii $w$ cannot be $T.nil$ since that would violate 5 at $x.p$.
 \ei
 \ii Four cases when $x$ is a left child:
@@ -555,7 +691,7 @@ Still
 \ii Case 1: $w$ is red
 \ii Case 2: $w$'s children both black
 \ii Case 3: $w$'s left child red, right child black
-\ii Case 4: $x$'s right child red
+\ii Case 4: $w$'s right child red
 \ei
 \ei
 \end{frame}

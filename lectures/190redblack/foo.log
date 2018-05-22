@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  22 MAY 2018 07:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  22 MAY 2018 07:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**redblack
-(./redblack.tex
+**foo
+(./foo.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
@@ -753,132 +753,23 @@ Package: clrscode3e
 \codeboxwidth=\skip60
 \c@thisindent=\count164
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+No file foo.aux.
+\openout1 = `foo.aux'.
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box80
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
-.sty
-Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen197
-\pgf@nodesepend=\dimen198
-)
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
-.sty
-Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
-)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen199
-\pgffor@skip=\dimen256
-\pgffor@stack=\toks43
-\pgffor@toks=\toks44
-))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
-.code.tex
-File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count165
-\pgfplotmarksize=\dimen257
-)
-\tikz@lastx=\dimen258
-\tikz@lasty=\dimen259
-\tikz@lastxsaved=\dimen260
-\tikz@lastysaved=\dimen261
-\tikzleveldistance=\dimen262
-\tikzsiblingdistance=\dimen263
-\tikz@figbox=\box81
-\tikz@figbox@bg=\box82
-\tikz@tempbox=\box83
-\tikz@tempbox@bg=\box84
-\tikztreelevel=\count166
-\tikznumberofchildren=\count167
-\tikznumberofcurrentchild=\count168
-\tikz@fig@count=\count169
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count170
-\pgfmatrixcurrentcolumn=\count171
-\pgf@matrix@numberofcolumns=\count172
-)
-\tikz@expandcount=\count173
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
-)))
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
-zlibraryarrows.code.tex
-File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
-tex
-File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen264
-)) (./redblack.aux
-
-LaTeX Warning: Label `zisred' multiply defined.
-
-
-LaTeX Warning: Label `parentisblack' multiply defined.
-
-
-LaTeX Warning: Label `redblack' multiply defined.
-
-
-LaTeX Warning: Label `redroot' multiply defined.
-
-
-LaTeX Warning: Label `redred' multiply defined.
-
-
-LaTeX Warning: Label `zisred' multiply defined.
-
-
-LaTeX Warning: Label `parentisblack' multiply defined.
-
-
-LaTeX Warning: Label `redblack' multiply defined.
-
-
-LaTeX Warning: Label `redroot' multiply defined.
-
-
-LaTeX Warning: Label `redred' multiply defined.
-
-)
-\openout1 = `redblack.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -915,17 +806,17 @@ LaTeX Font Info:    ... okay on input line 50.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count174
-\scratchdimen=\dimen265
-\scratchbox=\box85
-\nofMPsegments=\count175
-\nofMParguments=\count176
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count177
-\MPscratchDim=\dimen266
-\MPnumerator=\count178
-\makeMPintoPDFobject=\count179
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count165
+\scratchdimen=\dimen197
+\scratchbox=\box80
+\nofMPsegments=\count166
+\nofMParguments=\count167
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count168
+\MPscratchDim=\dimen198
+\MPnumerator=\count169
+\makeMPintoPDFobject=\count170
+\everyMPtoPDFconversion=\toks44
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -942,8 +833,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box86
-Package hyperref Info: Link coloring OFF on input line 50.
+\AtBeginShipoutBox=\box81
+Package hyperref Info: Link coloring OFF on input line 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -951,58 +842,56 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count180
+\c@section@level=\count171
 )
-LaTeX Info: Redefining \ref on input line 50.
-LaTeX Info: Redefining \pageref on input line 50.
-LaTeX Info: Redefining \nameref on input line 50.
-
-(./redblack.out) (./redblack.out)
+LaTeX Info: Redefining \ref on input line 35.
+LaTeX Info: Redefining \pageref on input line 35.
+LaTeX Info: Redefining \nameref on input line 35.
 \@outlinefile=\write5
-\openout5 = `redblack.out'.
+\openout5 = `foo.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 50.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 35.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 50.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 35.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 50.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 50.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 50.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 50.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 35.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 50.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 50.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 50.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 35.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 50.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 50.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 50.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 35.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 50.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 50.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 35.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 50.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 35.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 50.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 50.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 50.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 50.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 50.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 35.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 50.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bas
 ic-dictionary/translator-basic-dictionary-English.dict
@@ -1028,18 +917,19 @@ Dictionary: translator-numbers-dictionary, Language: English
 orem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 50.
- (./redblack.nav)
+LaTeX Info: Redefining \includegraphics on input line 35.
+
+No file foo.nav.
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 53.
+(Font)              size <5> substituted on input line 38.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-\openout4 = `redblack.vrb'.
+\openout4 = `foo.vrb'.
 
- (./redblack.vrb
+ (./foo.vrb
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1052,26 +942,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )) [2
 
 ]
-\openout4 = `redblack.vrb'.
+\openout4 = `foo.vrb'.
 
- (./redblack.vrb) [3
+ (./foo.vrb)
+[3
 
 ]
-\openout4 = `redblack.vrb'.
+\openout4 = `foo.vrb'.
 
- (./redblack.vrb <example.jpg, id=182, 488.57532pt x 300.3722pt>
-File: example.jpg Graphic file (type jpg)
+ (./foo.vrb) [4
 
-<use example.jpg>
-Package pdftex.def Info: example.jpg used on input line 12.
-(pdftex.def)             Requested size: 244.28706pt x 150.18571pt.
-) [4
+]
+\openout4 = `foo.vrb'.
 
- <./example.jpg>]
-\openout4 = `redblack.vrb'.
-
- (./redblack.vrb
-<Fig-13-1.pdf, id=208, 3258.1725pt x 3480.00125pt>
+ (./foo.vrb
+<Fig-13-1.pdf, id=124, 3258.1725pt x 3480.00125pt>
 File: Fig-13-1.pdf Graphic file (type pdf)
  <use Fig-13-1.pdf>
 Package pdftex.def Info: Fig-13-1.pdf used on input line 3.
@@ -1079,30 +964,30 @@ Package pdftex.def Info: Fig-13-1.pdf used on input line 3.
 ) [5
 
  <./Fig-13-1.pdf>]
-\openout4 = `redblack.vrb'.
+\openout4 = `foo.vrb'.
 
- (./redblack.vrb) [6
-
-]
-\openout4 = `redblack.vrb'.
-
- (./redblack.vrb) [7
+ (./foo.vrb) [6
 
 ]
-\openout4 = `redblack.vrb'.
+\openout4 = `foo.vrb'.
 
- (./redblack.vrb)
-[8
-
-]
-\openout4 = `redblack.vrb'.
-
- (./redblack.vrb) [9
+ (./foo.vrb) [7
 
 ]
-\openout4 = `redblack.vrb'.
+\openout4 = `foo.vrb'.
 
- (./redblack.vrb
+ (./foo.vrb) [8
+
+]
+\openout4 = `foo.vrb'.
+
+ (./foo.vrb)
+[9
+
+]
+\openout4 = `foo.vrb'.
+
+ (./foo.vrb
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10.95> not available
 (Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 3.
@@ -1110,9 +995,9 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10.95> not available
 ) [10
 
 ]
-\openout4 = `redblack.vrb'.
+\openout4 = `foo.vrb'.
 
- (./redblack.vrb <Fig-13-2.pdf, id=377, 1808.7575pt x 495.8525pt>
+ (./foo.vrb <Fig-13-2.pdf, id=299, 1808.7575pt x 495.8525pt>
 File: Fig-13-2.pdf Graphic file (type pdf)
 
 <use Fig-13-2.pdf>
@@ -1126,10 +1011,10 @@ Overfull \hbox (5.0pt too wide) in paragraph at lines 26--27
 ) [11
 
  <./Fig-13-2.pdf>]
-\openout4 = `redblack.vrb'.
+\openout4 = `foo.vrb'.
 
- (./redblack.vrb
-<Fig-13-3.pdf, id=412, 2637.855pt x 1809.76125pt>
+ (./foo.vrb
+<Fig-13-3.pdf, id=334, 2637.855pt x 1809.76125pt>
 File: Fig-13-3.pdf Graphic file (type pdf)
  <use Fig-13-3.pdf>
 Package pdftex.def Info: Fig-13-3.pdf used on input line 3.
@@ -1137,346 +1022,125 @@ Package pdftex.def Info: Fig-13-3.pdf used on input line 3.
 ) [12
 
  <./Fig-13-3.pdf>]
-\openout4 = `redblack.vrb'.
+\openout4 = `foo.vrb'.
 
- (./redblack.vrb
-<Tree-Insert.pdf, id=446, 195.7714pt x 182.6022pt>
-File: Tree-Insert.pdf Graphic file (type pdf)
- <use Tree-Insert.pdf>
-Package pdftex.def Info: Tree-Insert.pdf used on input line 3.
-(pdftex.def)             Requested size: 195.7709pt x 182.60175pt.
+ (./foo.vrb
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 39.
 
-Overfull \hbox (47.12598pt too wide) in paragraph at lines 3--4
-[][]  
+Overfull \hbox (158.64494pt too wide) in paragraph at lines 54--54
+[]| []  
  []
 
-<RB-Insert.pdf, id=447, 118.5228pt x 234.47601pt>
-File: RB-Insert.pdf Graphic file (type pdf)
- <use RB-Insert.pdf>
-Package pdftex.def Info: RB-Insert.pdf used on input line 7.
-(pdftex.def)             Requested size: 118.52249pt x 234.47543pt.
 ) [13
 
- <./Tree-Insert.pdf> <./RB-Insert.pdf>]
-\openout4 = `redblack.vrb'.
-
- (./redblack.vrb) [14
-
 ]
-\openout4 = `redblack.vrb'.
+\openout4 = `foo.vrb'.
 
- (./redblack.vrb
-<RB-Insert-Fixup.pdf, id=517, 356.2108pt x 219.219pt>
-File: RB-Insert-Fixup.pdf Graphic file (type pdf)
-
-<use RB-Insert-Fixup.pdf>
-Package pdftex.def Info: RB-Insert-Fixup.pdf used on input line 2.
-(pdftex.def)             Requested size: 320.58676pt x 197.29526pt.
-)
-Overfull \hbox (13.29689pt too wide) in paragraph at lines 2--291
-[][]  
- []
-
-[15
-
- <./RB-Insert-Fixup.pdf>]
-\openout4 = `redblack.vrb'.
-
- (./redblack.vrb
-<Fig-13-4.pdf, id=552, 2678.005pt x 3240.105pt>
+ (./foo.vrb <Fig-13-4.pdf, id=398, 2678.005pt x 3240.105pt>
 File: Fig-13-4.pdf Graphic file (type pdf)
- <use Fig-13-4.pdf>
+
+<use Fig-13-4.pdf>
 Package pdftex.def Info: Fig-13-4.pdf used on input line 3.
 (pdftex.def)             Requested size: 177.95842pt x 215.31812pt.
-
-Overfull \hbox (29.31349pt too wide) in paragraph at lines 3--5
-[][]  
- []
-
-) [16
+) [14
 
  <./Fig-13-4.pdf>]
-\openout4 = `redblack.vrb'.
+\openout4 = `foo.vrb'.
 
- (./redblack.vrb
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <9> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 6.
-
-
-Overfull \hbox (30.30997pt too wide) in paragraph at lines 27--27
-[]| []  
- []
-
-) [17
+ (./foo.vrb) [15
 
 ]
-\openout4 = `redblack.vrb'.
+\openout4 = `foo.vrb'.
 
- (./redblack.vrb) [18
-
-]
-\openout4 = `redblack.vrb'.
-
- (./redblack.vrbpdfTeX warning (ext4): destination with the same identifier (na
-me{zisred}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5 \ii $z$ is red\label{zisred}
-                                pdfTeX warning (ext4): destination with the sam
-e identifier (name{parentisblack}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.6 ..., then $z.p$ is black.\label{parentisblack}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{redblack}) has been already used, duplicat
-e ignored
-<to be read again> 
-                   \relax 
-l.7 ...st one red-black violation:\label{redblack}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{redroot}) has been already used, duplicate
- ignored
-<to be read again> 
-                   \relax 
-l.9 \ii $z$ is a red root.\label{redroot}
-                                         pdfTeX warning (ext4): destination wit
-h the same identifier (name{redred}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.10 ...\attrib{z}{p}$ are both red.\label{redred}
-                                                  
-<Fig-13-5.pdf, id=655, 3347.50626pt x 1398.22375pt>
+ (./foo.vrb
+<Fig-13-5.pdf, id=459, 3347.50626pt x 1398.22375pt>
 File: Fig-13-5.pdf Graphic file (type pdf)
  <use Fig-13-5.pdf>
-Package pdftex.def Info: Fig-13-5.pdf used on input line 14.
+Package pdftex.def Info: Fig-13-5.pdf used on input line 3.
 (pdftex.def)             Requested size: 307.28987pt x 128.35225pt.
 )
-[19
+[16
 
  <./Fig-13-5.pdf>]
-\openout4 = `redblack.vrb'.
+\openout4 = `foo.vrb'.
 
- (./redblack.vrbpdfTeX warning (ext4): destination with the same identifier (na
-me{zisred}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5 \ii $z$ is red\label{zisred}
-                                pdfTeX warning (ext4): destination with the sam
-e identifier (name{parentisblack}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.6 ..., then $z.p$ is black.\label{parentisblack}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{redblack}) has been already used, duplicat
-e ignored
-<to be read again> 
-                   \relax 
-l.7 ...st one red-black violation:\label{redblack}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{redroot}) has been already used, duplicate
- ignored
-<to be read again> 
-                   \relax 
-l.9 \ii $z$ is a red root.\label{redroot}
-                                         pdfTeX warning (ext4): destination wit
-h the same identifier (name{redred}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.10 ...\attrib{z}{p}$ are both red.\label{redred}
-                                                  
-<Fig-13-6.pdf, id=690, 2786.41pt x 779.91376pt>
+ (./foo.vrb
+<Fig-13-6.pdf, id=495, 2786.41pt x 779.91376pt>
 File: Fig-13-6.pdf Graphic file (type pdf)
  <use Fig-13-6.pdf>
-Package pdftex.def Info: Fig-13-6.pdf used on input line 14.
+Package pdftex.def Info: Fig-13-6.pdf used on input line 3.
 (pdftex.def)             Requested size: 307.28987pt x 86.00499pt.
-) [20
+) [17
 
  <./Fig-13-6.pdf>]
-\openout4 = `redblack.vrb'.
+\openout4 = `foo.vrb'.
 
- (./redblack.vrb) [21
-
-]
-\openout4 = `redblack.vrb'.
-
- (./redblack.vrb
-<Transplant.pdf, id=750, 99.57199pt x 104.5506pt>
-File: Transplant.pdf Graphic file (type pdf)
- <use Transplant.pdf>
-Package pdftex.def Info: Transplant.pdf used on input line 3.
-(pdftex.def)             Requested size: 99.57173pt x 104.55034pt.
-
-<RB-Transplant.pdf, id=751, 119.32579pt x 91.54199pt>
-File: RB-Transplant.pdf Graphic file (type pdf)
- <use RB-Transplant.pdf>
-Package pdftex.def Info: RB-Transplant.pdf used on input line 5.
-(pdftex.def)             Requested size: 119.32549pt x 91.54176pt.
-)
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <14.4> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 475.
-
-[22
-
- <./Transplant.pdf> <./RB-Transplant.pdf>]
-\openout4 = `redblack.vrb'.
-
- (./redblack.vrb
-Overfull \hbox (2.53981pt too wide) in paragraph at lines 22--22
-[]| []  
- []
-
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 32.
-
-<RB-Delete.pdf, id=793, 192.8806pt x 299.519pt>
-File: RB-Delete.pdf Graphic file (type pdf)
- <use RB-Delete.pdf>
-Package pdftex.def Info: RB-Delete.pdf used on input line 39.
-(pdftex.def)             Requested size: 154.30469pt x 239.61551pt.
-
-Overfull \hbox (5.65976pt too wide) in paragraph at lines 39--40
-[][]  
- []
-
-) [23
-
- <./RB-Delete.pdf>]
-\openout4 = `redblack.vrb'.
-
- (./redblack.vrb
-File: RB-Delete.pdf Graphic file (type pdf)
- <use RB-Delete.pdf>
-Package pdftex.def Info: RB-Delete.pdf used on input line 26.
-(pdftex.def)             Requested size: 144.6601pt x 224.63869pt.
-) [24
+ (./foo.vrb) [18
 
 ]
-\openout4 = `redblack.vrb'.
+\openout4 = `foo.vrb'.
 
-
-(./redblack.vrb
-File: RB-Delete.pdf Graphic file (type pdf)
- <use RB-Delete.pdf>
-Package pdftex.def Info: RB-Delete.pdf used on input line 43.
-(pdftex.def)             Requested size: 144.6601pt x 224.63869pt.
-) [25
-
-]
-\openout4 = `redblack.vrb'.
-
- (./redblack.vrb
-File: RB-Delete.pdf Graphic file (type pdf)
- <use RB-Delete.pdf>
-Package pdftex.def Info: RB-Delete.pdf used on input line 47.
-(pdftex.def)             Requested size: 144.6601pt x 224.63869pt.
-)
-[26
-
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 645.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 645.
-
-\openout4 = `redblack.vrb'.
-
-(./redblack.vrb) [27
-
-]
-\openout4 = `redblack.vrb'.
-
- (./redblack.vrb) [28
-
-]
-\openout4 = `redblack.vrb'.
-
- (./redblack.vrb
-<Fig-13-7.pdf, id=960, 3280.255pt x 2904.8525pt>
-File: Fig-13-7.pdf Graphic file (type pdf)
- <use Fig-13-7.pdf>
-Package pdftex.def Info: Fig-13-7.pdf used on input line 2.
-(pdftex.def)             Requested size: 273.48738pt x 242.23032pt.
-) [29
-
- <./Fig-13-7.pdf>]
-\openout4 = `redblack.vrb'.
-
- (./redblack.vrb
-<RB-Delete-Fixup.pdf, id=995, 356.2108pt x 310.11859pt>
-File: RB-Delete-Fixup.pdf Graphic file (type pdf)
-
-<use RB-Delete-Fixup.pdf>
-Package pdftex.def Info: RB-Delete-Fixup.pdf used on input line 2.
-(pdftex.def)             Requested size: 284.96902pt x 248.09518pt.
-) [30
-
- <./RB-Delete-Fixup.pdf>]
-\openout4 = `redblack.vrb'.
-
- (./redblack.vrb)
-[31
+ (./foo.vrb
+Warning: Indentation ends at level 1 in codebox on page 19.
+) [19
 
 ]
 \tf@nav=\write6
-\openout6 = `redblack.nav'.
+\openout6 = `foo.nav'.
 
 \tf@toc=\write7
-\openout7 = `redblack.toc'.
+\openout7 = `foo.toc'.
 
 \tf@snm=\write8
-\openout8 = `redblack.snm'.
+\openout8 = `foo.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 736.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 736.
- (./redblack.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 736.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 736.
-Package rerunfilecheck Info: File `redblack.out' has not changed.
-(rerunfilecheck)             Checksum: AADA2F88B33AF65A41CFBA5D5E786D58;1147.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 350.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 350.
+ (./foo.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 350.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 350.
 
+
+Package rerunfilecheck Warning: File `foo.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `foo.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  ADF531654DD544D4D9F23CB3541E8D92;945.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 736.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 350.
  ) 
 Here is how much of TeX's memory you used:
- 20711 strings out of 494827
- 408996 string characters out of 6176977
- 486465 words of memory out of 5000000
- 23397 multiletter control sequences out of 15000+600000
- 20418 words of font info for 75 fonts, out of 8000000 for 9000
+ 16837 strings out of 494827
+ 319751 string characters out of 6176977
+ 399698 words of memory out of 5000000
+ 19670 multiletter control sequences out of 15000+600000
+ 15886 words of font info for 59 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
- 57i,14n,79p,405b,1569s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,14n,58p,400b,551s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on redblack.pdf (31 pages, 2913644 bytes).
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+Output written on foo.pdf (19 pages, 1721753 bytes).
 PDF statistics:
- 1133 PDF objects out of 1200 (max. 8388607)
- 1023 compressed objects within 11 object streams
- 98 named destinations out of 1000 (max. 500000)
- 286 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 646 PDF objects out of 1000 (max. 8388607)
+ 580 compressed objects within 6 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -17,6 +17,6 @@
 \beamer@sectionintoc {19}{Maintenance, Case 2\&3, uncle is black:}{20}{0}{16}
 \beamer@sectionintoc {20}{Analysis}{21}{0}{17}
 \beamer@sectionintoc {21}{\sc RB-Transplant}{22}{0}{18}
-\beamer@sectionintoc {23}{What violations could occur if $y$ was black?}{24}{0}{19}
-\beamer@sectionintoc {24}{\sc RB-Delete-Fixup}{25}{0}{20}
-\beamer@sectionintoc {27}{Analysis}{28}{0}{21}
+\beamer@sectionintoc {26}{What violations could occur if $y$ was black?}{27}{0}{19}
+\beamer@sectionintoc {27}{\sc RB-Delete-Fixup}{28}{0}{20}
+\beamer@sectionintoc {30}{Analysis}{31}{0}{21}
