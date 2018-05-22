@@ -33,11 +33,11 @@
 \beamer@sectionintoc {33}{``Obvious strategy''}{34}{0}{32}
 \beamer@sectionintoc {34}{Simple solution}{35}{0}{33}
 \beamer@sectionintoc {35}{Intuition}{36}{0}{34}
-\beamer@sectionintoc {36}{Further intuition}{37}{0}{35}
-\beamer@sectionintoc {37}{Further intuition}{38}{0}{36}
-\beamer@sectionintoc {38}{Eight cases for calculating amortized costs}{39}{0}{37}
-\beamer@sectionintoc {39}{Insert, $\alpha \geq 1/2$, with or without expansion}{40}{0}{38}
-\beamer@sectionintoc {40}{Insert, $\alpha _{i-1}< 1/2$, no expansion}{41}{0}{39}
-\beamer@sectionintoc {41}{Insert, $\alpha <1/2$, expansion}{42}{0}{40}
-\beamer@sectionintoc {42}{Insert}{43}{0}{41}
-\beamer@sectionintoc {43}{Delete}{44}{0}{42}
+\beamer@sectionintoc {37}{Further intuition}{38}{0}{35}
+\beamer@sectionintoc {38}{Further intuition}{39}{0}{36}
+\beamer@sectionintoc {39}{Eight cases for calculating amortized costs}{40}{0}{37}
+\beamer@sectionintoc {40}{Insert, $\alpha \geq 1/2$, with or without expansion}{41}{0}{38}
+\beamer@sectionintoc {41}{Insert, $\alpha _{i-1}< 1/2$, no expansion}{42}{0}{39}
+\beamer@sectionintoc {42}{Insert, $\alpha <1/2$, expansion}{43}{0}{40}
+\beamer@sectionintoc {43}{Insert}{44}{0}{41}
+\beamer@sectionintoc {44}{Delete}{45}{0}{42}

@@ -32,11 +32,11 @@
 \BOOKMARK [2][]{Outline0.33}{``Obvious strategy''}{}% 32
 \BOOKMARK [2][]{Outline0.34}{Simple solution}{}% 33
 \BOOKMARK [2][]{Outline0.35}{Intuition}{}% 34
-\BOOKMARK [2][]{Outline0.36}{Further intuition}{}% 35
-\BOOKMARK [2][]{Outline0.37}{Further intuition}{}% 36
-\BOOKMARK [2][]{Outline0.38}{Eight cases for calculating amortized costs}{}% 37
-\BOOKMARK [2][]{Outline0.39}{Insert, 1/2, with or without expansion}{}% 38
-\BOOKMARK [2][]{Outline0.40}{Insert, i-1< 1/2, no expansion}{}% 39
-\BOOKMARK [2][]{Outline0.41}{Insert, <1/2, expansion}{}% 40
-\BOOKMARK [2][]{Outline0.42}{Insert}{}% 41
-\BOOKMARK [2][]{Outline0.43}{Delete}{}% 42
+\BOOKMARK [2][]{Outline0.37}{Further intuition}{}% 35
+\BOOKMARK [2][]{Outline0.38}{Further intuition}{}% 36
+\BOOKMARK [2][]{Outline0.39}{Eight cases for calculating amortized costs}{}% 37
+\BOOKMARK [2][]{Outline0.40}{Insert, 1/2, with or without expansion}{}% 38
+\BOOKMARK [2][]{Outline0.41}{Insert, i-1< 1/2, no expansion}{}% 39
+\BOOKMARK [2][]{Outline0.42}{Insert, <1/2, expansion}{}% 40
+\BOOKMARK [2][]{Outline0.43}{Insert}{}% 41
+\BOOKMARK [2][]{Outline0.44}{Delete}{}% 42

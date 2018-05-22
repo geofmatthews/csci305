@@ -169,10 +169,10 @@ including those in \textsc{Multipop}.
   \Procname{$\proc{Increment}(A,k)$}
   \li $i\gets 0$
   \li \While $i<k$ and $A[i] \isequal 1$ \Do
-  \li $A[i]\gets 0$
+  \li $A[i]\gets 0$ \RComment reset to 0
   \li $i\gets i+1$  \End
   \li \If $i < k$ \Do
-  \li $A[i] \gets 1$ \End
+  \li $A[i] \gets 1$ \End \RComment set to 1
 \end{codebox}
 %\end{multicols}
 \end{frame}
@@ -206,10 +206,8 @@ including those in \textsc{Multipop}.
 \sect{Total number of flips}
 \begin{align*}
   \sum_{i=0}^{k-1}\flr{n/2^i}
-  &< n\sum_{i=0}^{k-1}{(1/2)^i}\\
-  &= n\frac{(1/2)^k-1}{1/2-1}\\
-  &= n\frac{1-(1/2)^k}{1-1/2}\\
-  &< n\left(\frac{1}{1/2}\right)\\
+  &< n\sum_{i=0}^{\infty}{1/2^i}\\
+  &= n\left(\frac{1}{1-1/2}\right)\\
   &= 2n
 \end{align*}
 
@@ -278,7 +276,7 @@ cost is not an upper bound on actual cost.
   c_i &= \mbox{actual cost of $i$th operation}\\
   \hat{c_i} &= \mbox{amortized cost of $i$th operation}
 \end{align*}
-Require
+Require, for {\em all} sequences of $n$ operations:
 \begin{align*}
   \sum_{i=1}^{n}\hat{c_i} &\geq   \sum_{i=1}^{n}{c_i} 
 \end{align*}
@@ -410,15 +408,15 @@ Since \# of objects in stack is always $\geq 0$,
   \Phi(D_i) &\geq 0 = \Phi(D_0) &\mbox{for all $i$}
 \end{align*}
 
-\vfill
-
-\begin{tabular}{lccc}
-  operation & actual cost & $\Delta\Phi$ & amortized cost \\\hline
-  \textsc{Push} & 1 & $(s+1)-s = 1$ & $1+1=2$\\
-  \textsc{Pop} & 1 & $(s-1)-s = -1$ & $1-1=0$\\
-  \textsc{Multipop} & $k'=\min(k,s)$ & $(s-k')-s = k'$ & $k'-k' = 0$
-\end{tabular}
-
+Let $s =$ \# objects intially
+\[
+\begin{array}{lccc}
+\mbox{operation} & \mbox{actual cost} & \Delta\Phi & \mbox{amortized cost} \\\hline
+  \textsc{Push} & 1 & (s+1)-s = 1 & 1+1=2\\
+  \textsc{Pop} & 1 & (s-1)-s = -1 & 1-1=0\\
+  \textsc{Multipop} & k'=\min(k,s) & (s-k')-s = -k' & k'-k' = 0\\
+\end{array}
+\]
 \vfill
 
 Therefore the amortized cost of a sequence of $n$ operations is $O(n)$.
@@ -460,6 +458,7 @@ one, so
 
 \ii Therefore, amortized cost of $n$ operations is $O(n)$.
 
+\ii Method works even if counter does not start at 0.
 \ei
 
 
@@ -756,6 +755,17 @@ $\alpha \geq 1/2 \Rightarrow \id{num} \geq \id{size}/2 \Rightarrow
 $\alpha \leq 1/2 \Rightarrow \id{num} < \id{size}/2 \Rightarrow \Phi
 \geq 0$
 
+\end{frame}
+
+\sect{}
+\[
+\Phi(T) = \left\{\begin{array}{ll}
+2\cdot\attrib{T}{num} - \attrib{T}{size} & \mbox{ if $\alpha \geq
+  1/2$}\\
+\attrib{T}{size}/2 - \attrib{T}{num} & \mbox{ if $\alpha < 1/2$}
+\end{array}\right.
+\]
+\centerline{\includegraphics[scale=0.5]{dyntablephi}}
 
 \end{frame}
 

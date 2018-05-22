@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  15 MAY 2018 11:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  22 MAY 2018 11:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1007,7 +1007,10 @@ Overfull \hbox (6.685pt too wide) in paragraph at lines 3--6
  <./Fig-17-2.pdf>]
 \openout4 = `amortized.vrb'.
 
- (./amortized.vrb) [9
+ (./amortized.vrb
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 16.
+) [9
 
 ]
 \openout4 = `amortized.vrb'.
@@ -1081,8 +1084,8 @@ Overfull \hbox (4.7346pt too wide) in paragraph at lines 4--10
 \openout4 = `amortized.vrb'.
 
  (./amortized.vrb
-Overfull \hbox (147.76451pt too wide) in paragraph at lines 16--22
-[][]  
+Overfull \hbox (2.9578pt too wide) detected at line 22
+[]
  []
 
 ) [21
@@ -1090,7 +1093,11 @@ Overfull \hbox (147.76451pt too wide) in paragraph at lines 16--22
 ]
 \openout4 = `amortized.vrb'.
 
- (./amortized.vrb) [22
+ (./amortized.vrb)
+Overfull \vbox (9.72688pt too high) detected at line 466
+ []
+
+[22
 
 ]
 \openout4 = `amortized.vrb'.
@@ -1105,8 +1112,7 @@ Overfull \hbox (147.76451pt too wide) in paragraph at lines 16--22
 ]
 \openout4 = `amortized.vrb'.
 
-
-(./amortized.vrb
+ (./amortized.vrb
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 12.
 ) [25
@@ -1114,7 +1120,8 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 ]
 \openout4 = `amortized.vrb'.
 
- (./amortized.vrb) [26
+
+(./amortized.vrb) [26
 
 ]
 \openout4 = `amortized.vrb'.
@@ -1124,22 +1131,22 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 ]
 \openout4 = `amortized.vrb'.
 
-
-(./amortized.vrb) [28
+ (./amortized.vrb) [28
 
 ]
 \openout4 = `amortized.vrb'.
 
- (./amortized.vrb) [29
+
+(./amortized.vrb) [29
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 626.
+(hyperref)                removing `math shift' on input line 625.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 626.
+(hyperref)                removing `math shift' on input line 625.
 
 \openout4 = `amortized.vrb'.
 
@@ -1148,11 +1155,11 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 654.
+(hyperref)                removing `math shift' on input line 653.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 654.
+(hyperref)                removing `math shift' on input line 653.
 
 \openout4 = `amortized.vrb'.
 
@@ -1194,13 +1201,22 @@ Package pdftex.def Info: Fig-17-3.pdf used on input line 2.
 ]
 \openout4 = `amortized.vrb'.
 
- (./amortized.vrb) [37
+ (./amortized.vrb
+<dyntablephi.pdf, id=1144, 504.88625pt x 504.88625pt>
+File: dyntablephi.pdf Graphic file (type pdf)
+ <use dyntablephi.pdf>
+Package pdftex.def Info: dyntablephi.pdf used on input line 9.
+(pdftex.def)             Requested size: 252.44249pt x 252.44249pt.
+)
+Overfull \vbox (24.2961pt too high) detected at line 770
+ []
 
-]
+[37
+
+ <./dyntablephi.pdf>]
 \openout4 = `amortized.vrb'.
 
-
-(./amortized.vrb) [38
+ (./amortized.vrb) [38
 
 ]
 \openout4 = `amortized.vrb'.
@@ -1208,42 +1224,27 @@ Package pdftex.def Info: Fig-17-3.pdf used on input line 2.
  (./amortized.vrb) [39
 
 ]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 812.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 812.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\geq' on input line 812.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 812.
-
 \openout4 = `amortized.vrb'.
+
 
 (./amortized.vrb) [40
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 820.
+(hyperref)                removing `math shift' on input line 822.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 820.
+(hyperref)                removing `\alpha' on input line 822.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 820.
+(hyperref)                removing `\geq' on input line 822.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 820.
+(hyperref)                removing `math shift' on input line 822.
 
 \openout4 = `amortized.vrb'.
 
@@ -1252,19 +1253,40 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 847.
+(hyperref)                removing `math shift' on input line 830.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 847.
+(hyperref)                removing `\alpha' on input line 830.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 847.
+(hyperref)                removing `subscript' on input line 830.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 830.
 
 \openout4 = `amortized.vrb'.
 
 (./amortized.vrb) [42
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 857.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\alpha' on input line 857.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 857.
+
+\openout4 = `amortized.vrb'.
+
+(./amortized.vrb) [43
 
 ]
 \openout4 = `amortized.vrb'.
@@ -1274,7 +1296,7 @@ Overfull \hbox (23.43231pt too wide) in paragraph at lines 3--10
 [][]  
  []
 
-) [43
+) [44
 
 ]
 \openout4 = `amortized.vrb'.
@@ -1284,18 +1306,18 @@ Overfull \hbox (29.90456pt too wide) in paragraph at lines 3--10
 [][]  
  []
 
-) [44
+) [45
 
 ]
 \openout4 = `amortized.vrb'.
 
- (./amortized.vrb <Fig-17-4.pdf, id=1348, 2366.8425pt x 1462.46375pt>
+ (./amortized.vrb <Fig-17-4.pdf, id=1380, 2366.8425pt x 1462.46375pt>
 File: Fig-17-4.pdf Graphic file (type pdf)
 
 <use Fig-17-4.pdf>
 Package pdftex.def Info: Fig-17-4.pdf used on input line 2.
 (pdftex.def)             Requested size: 307.28987pt x 189.85918pt.
-) [45
+) [46
 
  <./Fig-17-4.pdf>]
 \tf@nav=\write6
@@ -1307,26 +1329,26 @@ Package pdftex.def Info: Fig-17-4.pdf used on input line 2.
 \tf@snm=\write8
 \openout8 = `amortized.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 894.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 894.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 904.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 904.
  (./amortized.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 894.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 894.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 904.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 904.
 Package rerunfilecheck Info: File `amortized.out' has not changed.
-(rerunfilecheck)             Checksum: 91992746C10A7503967EE838A5408972;2602.
+(rerunfilecheck)             Checksum: 5397CAFA66BD57B305EBB4919661E9C4;2602.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 894.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 904.
  ) 
 Here is how much of TeX's memory you used:
- 17219 strings out of 494827
- 323424 string characters out of 6176977
+ 17234 strings out of 494827
+ 323635 string characters out of 6176977
  391781 words of memory out of 5000000
- 19915 multiletter control sequences out of 15000+600000
- 18089 words of font info for 67 fonts, out of 8000000 for 9000
+ 19923 multiletter control sequences out of 15000+600000
+ 18257 words of font info for 68 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  48i,14n,51p,406b,557s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
@@ -1346,10 +1368,10 @@ m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on amortized.pdf (45 pages, 883327 bytes).
+Output written on amortized.pdf (46 pages, 889937 bytes).
 PDF statistics:
- 1472 PDF objects out of 1728 (max. 8388607)
- 1375 compressed objects within 14 object streams
- 135 named destinations out of 1000 (max. 500000)
- 399 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1505 PDF objects out of 1728 (max. 8388607)
+ 1404 compressed objects within 15 object streams
+ 138 named destinations out of 1000 (max. 500000)
+ 404 words of extra memory for PDF output out of 10000 (max. 10000000)
 

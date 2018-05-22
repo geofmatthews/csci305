@@ -173,9 +173,6 @@
 \headcommand {\beamer@subsectionpages {35}{35}}
 \headcommand {\slideentry {35}{0}{1}{36/36}{}{0}}
 \headcommand {\beamer@framepages {36}{36}}
-\headcommand {\sectionentry {36}{Further intuition}{37}{Further intuition}{0}}
-\headcommand {\beamer@sectionpages {36}{36}}
-\headcommand {\beamer@subsectionpages {36}{36}}
 \headcommand {\slideentry {36}{0}{1}{37/37}{}{0}}
 \headcommand {\beamer@framepages {37}{37}}
 \headcommand {\sectionentry {37}{Further intuition}{38}{Further intuition}{0}}
@@ -183,40 +180,45 @@
 \headcommand {\beamer@subsectionpages {37}{37}}
 \headcommand {\slideentry {37}{0}{1}{38/38}{}{0}}
 \headcommand {\beamer@framepages {38}{38}}
-\headcommand {\sectionentry {38}{Eight cases for calculating amortized costs}{39}{Eight cases for calculating amortized costs}{0}}
+\headcommand {\sectionentry {38}{Further intuition}{39}{Further intuition}{0}}
 \headcommand {\beamer@sectionpages {38}{38}}
 \headcommand {\beamer@subsectionpages {38}{38}}
 \headcommand {\slideentry {38}{0}{1}{39/39}{}{0}}
 \headcommand {\beamer@framepages {39}{39}}
-\headcommand {\sectionentry {39}{Insert, $\alpha \geq 1/2$, with or without expansion}{40}{Insert, $\alpha \geq 1/2$, with or without expansion}{0}}
+\headcommand {\sectionentry {39}{Eight cases for calculating amortized costs}{40}{Eight cases for calculating amortized costs}{0}}
 \headcommand {\beamer@sectionpages {39}{39}}
 \headcommand {\beamer@subsectionpages {39}{39}}
 \headcommand {\slideentry {39}{0}{1}{40/40}{}{0}}
 \headcommand {\beamer@framepages {40}{40}}
-\headcommand {\sectionentry {40}{Insert, $\alpha _{i-1}< 1/2$, no expansion}{41}{Insert, $\alpha _{i-1}< 1/2$, no expansion}{0}}
+\headcommand {\sectionentry {40}{Insert, $\alpha \geq 1/2$, with or without expansion}{41}{Insert, $\alpha \geq 1/2$, with or without expansion}{0}}
 \headcommand {\beamer@sectionpages {40}{40}}
 \headcommand {\beamer@subsectionpages {40}{40}}
 \headcommand {\slideentry {40}{0}{1}{41/41}{}{0}}
 \headcommand {\beamer@framepages {41}{41}}
-\headcommand {\sectionentry {41}{Insert, $\alpha <1/2$, expansion}{42}{Insert, $\alpha <1/2$, expansion}{0}}
+\headcommand {\sectionentry {41}{Insert, $\alpha _{i-1}< 1/2$, no expansion}{42}{Insert, $\alpha _{i-1}< 1/2$, no expansion}{0}}
 \headcommand {\beamer@sectionpages {41}{41}}
 \headcommand {\beamer@subsectionpages {41}{41}}
 \headcommand {\slideentry {41}{0}{1}{42/42}{}{0}}
 \headcommand {\beamer@framepages {42}{42}}
-\headcommand {\sectionentry {42}{Insert}{43}{Insert}{0}}
+\headcommand {\sectionentry {42}{Insert, $\alpha <1/2$, expansion}{43}{Insert, $\alpha <1/2$, expansion}{0}}
 \headcommand {\beamer@sectionpages {42}{42}}
 \headcommand {\beamer@subsectionpages {42}{42}}
 \headcommand {\slideentry {42}{0}{1}{43/43}{}{0}}
 \headcommand {\beamer@framepages {43}{43}}
-\headcommand {\sectionentry {43}{Delete}{44}{Delete}{0}}
+\headcommand {\sectionentry {43}{Insert}{44}{Insert}{0}}
 \headcommand {\beamer@sectionpages {43}{43}}
 \headcommand {\beamer@subsectionpages {43}{43}}
 \headcommand {\slideentry {43}{0}{1}{44/44}{}{0}}
 \headcommand {\beamer@framepages {44}{44}}
+\headcommand {\sectionentry {44}{Delete}{45}{Delete}{0}}
+\headcommand {\beamer@sectionpages {44}{44}}
+\headcommand {\beamer@subsectionpages {44}{44}}
 \headcommand {\slideentry {44}{0}{1}{45/45}{}{0}}
 \headcommand {\beamer@framepages {45}{45}}
-\headcommand {\beamer@partpages {1}{45}}
-\headcommand {\beamer@subsectionpages {45}{45}}
-\headcommand {\beamer@sectionpages {45}{45}}
-\headcommand {\beamer@documentpages {45}}
-\headcommand {\def \inserttotalframenumber {45}}
+\headcommand {\slideentry {45}{0}{1}{46/46}{}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\beamer@partpages {1}{46}}
+\headcommand {\beamer@subsectionpages {46}{46}}
+\headcommand {\beamer@sectionpages {46}{46}}
+\headcommand {\beamer@documentpages {46}}
+\headcommand {\def \inserttotalframenumber {46}}
