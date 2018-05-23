@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  23 MAY 2018 08:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.3)  23 MAY 2018 09:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1480,9 +1480,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 820.
  (./redblack.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 820.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 820.
-Package rerunfilecheck Info: File `redblack.out' has not changed.
-(rerunfilecheck)             Checksum: 87E4BE701FC912D264C0B71078E3D779;1276.
 
+
+Package rerunfilecheck Warning: File `redblack.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `redblack.out':
+(rerunfilecheck)             Before: 87E4BE701FC912D264C0B71078E3D779;1276
+(rerunfilecheck)             After:  26096096DAA2EAEB0840EF70CBD25446;1337.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -1516,7 +1522,7 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on redblack.pdf (34 pages, 2921014 bytes).
+Output written on redblack.pdf (34 pages, 2921080 bytes).
 PDF statistics:
  1219 PDF objects out of 1440 (max. 8388607)
  1105 compressed objects within 12 object streams

@@ -20,5 +20,6 @@
 \beamer@sectionintoc {26}{What violations could occur if $y$ was red?}{27}{0}{19}
 \beamer@sectionintoc {27}{What violations could occur if $y$ was black?}{28}{0}{20}
 \beamer@sectionintoc {28}{\sc RB-Delete-Fixup}{29}{0}{21}
-\beamer@sectionintoc {32}{Possible paths}{33}{0}{22}
-\beamer@sectionintoc {33}{Analysis}{34}{0}{23}
+\beamer@sectionintoc {31}{Case 1 always terminates}{32}{0}{22}
+\beamer@sectionintoc {32}{Possible paths}{33}{0}{23}
+\beamer@sectionintoc {33}{Analysis}{34}{0}{24}
