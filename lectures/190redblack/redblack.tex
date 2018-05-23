@@ -715,6 +715,76 @@ Still
 \sect{}
 \includegraphics[scale=0.8]{RB-Delete-Fixup}
 \end{frame}
+\newcommand{\bnode}[1]{ node [arn_n] (#1) {#1} }
+\newcommand{\rnode}[1]{ node [arn_r] (#1) {#1} }
+\sect{}
+\footnotesize
+\begin{multicols}{2}
+Case 1:
+
+\begin{tikzpicture}[->,>=stealth',level/.style={sibling distance = 3cm/#1,
+  level distance = 0.75cm}] 
+\node [arn_n] (B) {B}
+child {\bnode {A}
+}
+child{\rnode{D}
+  child {\bnode{C}}
+  child {\bnode{E}}
+}
+;
+\end{tikzpicture}
+
+Case 2, 3, or 4:
+
+\begin{tikzpicture}[->,>=stealth',level/.style={sibling distance = 3cm/#1,
+  level distance = 0.75cm}] 
+\node [arn_n] (D) {D}
+child {\rnode {B}
+  child {\bnode{A}}
+  child {\bnode{C}}
+}
+child{\bnode{E}
+}
+;  
+\end{tikzpicture}
+
+Cases 3 and 4 terminate.  Case 2:
+
+\begin{tikzpicture}[->,>=stealth',level/.style={sibling distance = 3cm/#1,
+  level distance = 0.75cm}] 
+\node [arn_n] (D) {D}
+child {\rnode {B}
+  child {\bnode{A}}
+  child {\rnode{C}}
+}
+child{\bnode{E}
+}
+;  
+\end{tikzpicture}
+
+Also terminates, because $x$ is now red.
+
+\columnbreak
+
+\includegraphics[scale=0.6]{RB-Delete-Fixup}
+\end{multicols}
+\end{frame}
+
+\sect{Possible paths}
+\scriptsize
+\begin{multicols}{2}
+  \bi
+  \ii Case 1 \\ Case 2 \\ Terminate
+  \ii Case 1 \\ Case 3 \\ Case 4 \\ Terminate
+  \ii Case 1 \\ Case 4 \\ Terminate
+  \ii Case 2 \\ Loop
+  \ii Case 3 \\ Case 4  \\ Terminate
+  \ii Case  4  \\ Terminate
+\ei
+\columnbreak
+\includegraphics[scale=0.6]{RB-Delete-Fixup}
+\end{multicols}
+\end{frame}
 
 \sect{Analysis}
 \bi
@@ -736,6 +806,8 @@ $\leq 3$ rotations in all
 \ii AVL trees in worst case use $\Omega(\lg n)$ rotations.
 \ei
 \end{frame}
+
+
 
 %\sect{}
 %\includegraphics[width=\textwidth]{Fig-13-8.pdf}
